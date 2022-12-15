@@ -1,6 +1,6 @@
 ---
 title: "Temario"
-date: 2022-12-15T12:44:30-05:00
+date: 2022-12-15T09:44:30-05:00
 draft: false
 ---
 
@@ -8,7 +8,7 @@ draft: false
 # Induccion a la Programación
 
 {{< lead >}}
-Instrucciones para postular al programa de Desarrollo Web en Funval
+Instrucciones para postular al programa de Desarrollo Web en Funval 😃
 {{< /lead >}}
 
 Bienvenido a Funval, si estás en esta página es porque deseas postular al programa de Desarrollo Web que ofrece la Fundacion FUNVAL. Para lograr esto te explicaré brevemente como funciona el proceso de inducción y el material que usarás.

@@ -31,10 +31,10 @@ enableCodeCopy = true
   showRecent = false
 
 [article]
-  showDate = true
-  showDateUpdated = false
+  showDate = false
+  showDateUpdated = true
   showAuthor = true
-  showBreadcrumbs = false
+  showBreadcrumbs = true
   showDraftLabel = true
   showEdit = false
   # editURL = "https://github.com/username/repo/"
