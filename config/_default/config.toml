@@ -1,0 +1,22 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+# The link
+# https://github.com/jpanther/congo
+theme = "congo"
+
+baseURL = "https://your_domain.com/"
+languageCode = "es"
+
+defaultContentLanguage = "es"
+
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# start the server command:
+# hugo server
