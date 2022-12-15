@@ -6,7 +6,7 @@
 # https://github.com/jpanther/congo
 theme = "congo"
 
-baseURL = "https://your_domain.com/"
+baseURL = "https://funvalprogra.github.io/platform/"
 languageCode = "es"
 
 defaultContentLanguage = "es"

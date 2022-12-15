@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Funval International</title>
+    <link>https://funvalprogra.github.io/platform/posts/</link>
+    <description>Recent content on Funval International</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 15 Dec 2022 10:55:51 -0500</lastBuildDate><atom:link href="https://funvalprogra.github.io/platform/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Induccion a Nivel 0</title>
+      <link>https://funvalprogra.github.io/platform/posts/test/</link>
+      <pubDate>Thu, 15 Dec 2022 10:55:51 -0500</pubDate>
+      
+      <guid>https://funvalprogra.github.io/platform/posts/test/</guid>
+      <description>Holaaaa</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://funvalprogra.github.io/platform/posts/algo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://funvalprogra.github.io/platform/posts/algo/</guid>
+      <description>test</description>
+    </item>
+    
+  </channel>
+</rss>
