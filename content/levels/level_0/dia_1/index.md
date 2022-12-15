@@ -26,6 +26,15 @@ Es más facil aprender esto haciendo, así que dejemos por un momento la teoría
 [Khan Academy : HTML](https://es.khanacademy.org/computing/computer-programming/html-css/intro-to-html/v/making-webpages-intro)
 
 Ingresa al enlace de arriba e intenta completar las lecciónes antes de pasar al siguiente tutorial.
+
+### Instalación de VS code
+
+Antes de continuar con el siguiente apartado, es importante que puedas instalar un programa en tu pc para que escribir código sea mas facil, este es VS code, sigue las instrucciones de este video para que lo instales 😄
+
+{{ youtube lhndxjnUEgY }}
+
+### Más etiquetas de HTML
+
 Una vez que realizaste el tutorial de Khan academy, te recomiendo seguir con el tutorial que verás a continuación.
 
 {{< youtube "MJkdaVFHrto" >}}
