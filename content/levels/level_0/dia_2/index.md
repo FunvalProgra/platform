@@ -9,16 +9,6 @@ Temas de la semana 📖
 
 ## Día 2 : JavaScript
 
-## VS Code
-
-Antes de seguir 
-
-{{ youtube lhndxjnUEgY}}
-
-Dentro del desarrllo web, te encontrarás con diferentes tecnologías que te ayudarán a dar vida a las páginas web.
-Entre los lenguajes que necesitas aprender para lograr ese objetivo está JavaScript, quien tiene como objetivo añadirle funcionalidad a nuestra página web.
-Sigue la serie de videos que se mostrarán a continuación para que entiendas mejor qué es este lenguaje y porque es tan importante que lo aprendas.
-
 ### Introducción a JavaScript
 JavaScript es actualmente el lenguaje de programación más utilizado dentro del desarrollo web, su popularidad ha crecido a lo largo de los años hasta posicionarlo como uno de los lenguajes mas queridos, en el siguiente video aprenderás un poco más de sus origenes y su utilidad.
 
@@ -37,3 +27,9 @@ Todo lenguaje de programación cuenta con una forma de escribir en particular, a
 Teniendo ya una noción mas clara de lo que es Javascript, hablemos de la unidad de almacenamiento mas comun en este lenguaje, las **variables**.
 
 {{< youtube tmRa0_EvMoc >}}
+
+### Constantes y otros tipos de datos
+
+En JavaScript tambien existe un tipo de dato similar a las variables llamado **constante**, en el siguiente video aprenderás de este dato y haremos un primer vistazo a otros tipos de dato más complejos. Respecto a estos ultimos, es importante que conozcas de su existencia, sin embargo para esta parte del proceso no es necesario que aprendas a manejarlos, pero si que entiendas a nivel teorico sus funciones basicas.
+
+{{< youtube PIHZRj99nHU >}}

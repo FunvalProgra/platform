@@ -36,6 +36,8 @@ cuenta con una comunidad muy grande, quienes desean que más personas aprendan s
 aquí te daremos el material necesario para que aprendas las bases en el tiempo previsto, el cual ha sido previamente revisado y con el que sabemos, podrás aprender estas tecnologías de manera práctica
 y sencilla.
 
+Asimismo te invitamos a tomar nota de lo que vayas aprendiendo para que puedas repasarlo luego de las clase 😄
+
 ## Acerca de la evaluación
 
 Luego de aprender lo necesario, necesitamos poner a prueba tu conocimiento para evaluar que cuentas con el conocimiento minimo antes de empezar el curso,
