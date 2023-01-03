@@ -13,8 +13,8 @@ Recuerda que podemos almacenar cualquier tipo de dato en una variable, incluso p
 
 ```js
 // Sin error
-let number = "3";
-number = 6;
+let number = "3"; // variable que contiene un string
+number = 6; // cambiamos el valor a un dato tipo number
 ```
 
 ### Cadenas de Texto (Strings)
@@ -31,13 +31,15 @@ number = 6;
 
 ### Tipos de Operadores
 
+Hasta este punto, hemos visto los tipos de datos más básicos dentro del lenguaje, conocidos como **primitivos**. Existen otros tipos de datos llamados **compuestos** como: Objetos, Arrays, Functions y Classes; los cuales por ahora no cubriremos. Con los tipos de datos primitivos tenemos una base para entender más conceptos de JavaScript.
+
 {{< youtube _8Z5AeGVIXE >}}
 
 ### Condicionales
 
 Algunas veces, necesitamos ejecutar diferentes acciones basadas en diferentes condiciones.
 
-Para esto podemos usar la sentencia `if(...)` la cual evalúa la condicion entre los paréntesis, y si el resultado `true` ejecuta un bloque de código.
+Para esto podemos usar la sentencia `if(...)` la cual evalúa la condicion entre los paréntesis, y si el resultado es `true` ejecuta un bloque de código.
 
 Por ejemplo:
 
@@ -58,6 +60,6 @@ if (year == 2015) {
 
 Se recomienda siempre encerrar nuestro bloque de código en llaves `{}` siempre que se utilice la sentencia `if`, inclusive si solo se va a ejecutar una sola sentencia en este caso. Hacer eso mejora la legibilidad.
 
-Para aprender más de este concepto, mira el siguiente video. Por el momento solo es importante la seccion donde se menciona el uso de la condicional `if`, `else` y `else if`. La sección sobre la condición `switch` no es necesaria por el momento.
+Para aprender más de este concepto, mira el siguiente video. Por el momento solo es importante la seccion donde se menciona el uso de la condicional `if`, `else` y `else if`. **La sección sobre la condición `switch` no es necesaria por el momento**.
 
 {{< youtube  9h5hyh_wDjo >}}

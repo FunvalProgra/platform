@@ -29,7 +29,7 @@ Ingresa al enlace de arriba e intenta completar las lecciónes antes de pasar al
 
 ### Instalación de VS code
 
-Antes de continuar con el siguiente apartado, es importante que puedas instalar un programa en tu pc para que escribir código sea mas facil, este es VS code, sigue las instrucciones de este video para que lo instales 😄
+Antes de continuar con el siguiente apartado, es importante que puedas instalar un programa en tu pc para que escribir código sea mas facil, este es **VS code**, sigue las instrucciones de este video para que lo instales 😄
 
 {{< youtube lhndxjnUEgY >}}
 
