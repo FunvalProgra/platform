@@ -41,8 +41,8 @@ Asimismo te invitamos a tomar nota de lo que vayas aprendiendo para que puedas r
 ## Acerca de la evaluación
 
 Luego de aprender lo necesario, necesitamos poner a prueba tu conocimiento para evaluar que cuentas con el conocimiento minimo antes de empezar el curso,
-para ello la evaluación se dividirá en dos segmentos: teoría y practica. Ambas evaluaciones suman un total de 100 puntos, de los cuales tú necesitas almenos 80 puntos
-para ingresar al programa de Desarollo web.
+por lo que la evaluación de Programación tendrá un puntaje de 50 pts sobre promedio final, y se enfoncará en teoría de lo aprendido. El resto de puntos será distribuido entre Excel (34 pts) y Typing (16 pts) podiendo obtener un total de 100pts. Es necesario que logres un mínimo de 80pts sobre promedio final para lograr ingresar al programa.
+
 
 Desde Funval te deseamos los mejores éxitos en este proceso, si tienes dudas sobre alguno de los puntos mencionados o del material que encontrarás, puedes contactar a tu reclutador.
 
