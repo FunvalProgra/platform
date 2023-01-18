@@ -411,6 +411,7 @@ img,
 video {
   max-width: 100%;
   height: auto;
+  margin: auto; /* Added by Isaias Zuñiga */
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
