@@ -11,3 +11,8 @@ Para insertar esta página podemos usar la siguiente config:
 ```html
 <iframe src="link" width="100%" height="1000"></iframe>
 ```
+
+🌏 [Demo site](https://jpanther.github.io/congo/)  
+📑 [Theme documentation](https://jpanther.github.io/congo/docs/)  
+🐛 [Bug reports & issues](https://github.com/jpanther/congo/issues)  
+💡 [Questions & feature requests](https://github.com/jpanther/congo/discussions)
