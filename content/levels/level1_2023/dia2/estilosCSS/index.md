@@ -2,6 +2,8 @@
 title: "Estilos base de CSS y Selectores"
 date: 2023-01-23T14:49:34-05:00
 draft: false
+showPagination: false
+
 ---
 
 ## Que es CSS?
