@@ -1,5 +1,5 @@
 ---
-title: "Introducción a la programación"
+title: "Introducción al Desarrollo Web"
 date: 2023-01-17T18:05:20-05:00
 draft: false
 showPagination: false
@@ -96,6 +96,28 @@ Estas sí están conectadas a una base de Datos, por lo que el usuario, o sea no
 
 En páginas como Twitter, tú si puedes interactuar. Puedes dejarla de esa forma y dentro de unos 15 minutos si actualizas, la información será distinta. Esta página está en comunicación con el servidor para traer los nuevos cambios según el usuario lo solicite. La información que ves allí es específica para ti, y otro usuario podría ver twits distintos.
 
+## Recursos Para comenzar
+
+Antes de continuar, debemos asegurarnos de tener los siguientes programas que formarán parte de este curso:
+
+- **VSCode**: Este es el editor de código que estaremos utilizando a lo largo del curso, si bien es cierto que existen varios editores y puedes usar el que te sea mas cómodo, te recomendamos este para que todos estemos trabajando en las mismas situaciones y sea más fácil poder interactuar. En caso aun no lo tengas, puedes descargarlo desde el siguiente enlace:
+
+  [Download VS Code](https://code.visualstudio.com/)
+
+- **Navegadores**: Es probable que ya cuentes con algunos de estos, sin embargo cuando trabajamos en desarrollo web, es importante contar con diferentes opciones ya que nuestra página web puede comportarse de manera diferente en cada uno de estos por los distintos motores de interpretación que utilizan. Algunos de los navegadores que te recomendamos tener para tus pruebas son:
+  - [Brave](https://brave.com/es/)
+  - [Chrome](https://www.google.com/intl/es_es/chrome/?brand=YTUH&gclid=CjwKCAiAzp6eBhByEiwA_gGq5FTemkko6uohJnQ3PrDyk7Y3yPA5khabAUrfgoxJhAvWAoA0lGT8qBoCY7oQAvD_BwE&gclsrc=aw.ds)
+  - [Edge](https://www.microsoft.com/es-es/edge?form=MA13FJ)
+  - [Firefox](https://www.mozilla.org/es-ES/firefox/new/)
+
+En cada uno de los anteriores links, tendrás una opción de descarga.
+
+Si tienes dificultades para instalar alguno de los recursos mencionados, puedes postear tu error o duda en el chat grupal donde podremos ayudarte 😀
+
 ## Enlaces
 
-[Articulo Tekla - ¿Qué es desarrollo web?](https://tekla.io/blog/que-es-desarrollo-web/)
+Al terminar la lectura anterior, revisa los siguientes artículos donde encontrarás más información de los temas:
+
+[Páginas Estaticas vs Dinámicas - Open Webinars](https://openwebinars.net/blog/paginas-web-estaticas-vs-paginas-web-dinamicas/)
+
+[¿Qué es desarrollo web? - Articulo Tekla](https://tekla.io/blog/que-es-desarrollo-web/)
