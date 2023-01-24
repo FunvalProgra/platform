@@ -72,6 +72,8 @@ Entender este punto, te puede ayudar a realizar diseño con CSS de manera más s
 
 {{< youtube c3Ok7uIKwU8 >}}
 
+Aqui tienes un articulo donde puedes aprender más sobre [box-model](https://dev.to/lupitacode/que-es-el-box-model-4mnj).
+
 ### Display
 
 Ahora que entiendes un poco mejor lo que es el box model, es importante que sepas que las cajas en CSS pueden comportarse de manera distinta de acuerdo a una propiedad conocida como `display`. Esta propiedad nos indica la forma en la que el elemento será representado en el navegador y usar alguno de estos display, alterará considerablemente el comportamiento del navegador con el elemento y sus hijos.
