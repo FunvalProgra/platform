@@ -25,7 +25,7 @@ En este aspecto, JavaScript es muy diferente a otro lenguaje llamado [Java](http
 
 <div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <div style="gap: 1rem;" class="flex py-3 items-center ltr:pr-3 rtl:pl-3 text-primary-400">
-    <span>{{< icon "triangle-exclamation" >}}</span>
+    <span>{{< icon "circle-info" >}}</span>
     <b>¿Por qué se llama JavaScript?</b>
   </div>
   <span class="dark:text-neutral-300">
@@ -45,7 +45,7 @@ Es bueno recordar estos términos porque son usados en artículos para desarroll
 
 <div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <div style="gap: 1rem;" class="flex py-3 items-center ltr:pr-3 rtl:pl-3 text-primary-400">
-    <span>{{< icon "triangle-exclamation" >}}</span>
+    <span>{{< icon "circle-info" >}}</span>
     <b>¿Como trabajan los motores?</b>
   </div>
   <span class="dark:text-neutral-300">
@@ -124,3 +124,284 @@ alert( "el resultado es ${1 + 2}" );
 // el resultado es ${1 + 2} 
 // (las comillas dobles no hacen nada)
 ```
+
+### Boolean (tipo lógico)
+El tipo boolean tiene sólo dos valores posibles: `true` y `false`.
+
+Este tipo se utiliza comúnmente para almacenar valores de sí/no: `true` significa “sí, correcto, verdadero”, y `false` significa “no, incorrecto, falso”.
+
+Por ejemplo:
+
+```js
+let nameFieldChecked = true; // sí, el campo name está marcado
+let ageFieldChecked = false; // no, el campo age no está marcado
+```
+
+Los valores booleanos también son el resultado de comparaciones:
+
+```js
+let isGreater = 4 > 1;
+
+alert( isGreater ); // verdadero (el resultado de la comparación es "sí")
+```
+
+### Object y Symbol
+El tipo `object` (objeto) es especial.
+
+Todos los demás tipos se llaman “primitivos” porque sus valores pueden contener una sola cosa (ya sea una cadena, un número o lo que sea). Por el contrario, los objetos se utilizan para almacenar colecciones de datos y entidades más complejas.
+
+Siendo así de importantes, los objetos merecen un trato especial. Nos ocuparemos de ellos más adelante después de aprender más sobre los primitivos.
+
+### El operador typeof
+El operador `typeof` devuelve el tipo de dato del operando. Es útil cuando queremos procesar valores de diferentes tipos de forma diferente o simplemente queremos hacer una comprobación rápida.
+
+La llamada a `typeof x` devuelve un string con el nombre del tipo:
+
+```js
+typeof undefined // "undefined"
+
+typeof 0 // "number"
+
+typeof 10n // "bigint"
+
+typeof true // "boolean"
+
+typeof "foo" // "string"
+
+typeof Symbol("id") // "symbol"
+
+typeof Math // "object"  (1)
+
+typeof null // "object"  (2)
+
+typeof alert // "function"  (3)
+```
+
+## Operadores Básicos
+
+Conocemos varios operadores matemáticos porque nos los enseñaron en la escuela. Son cosas como la suma `+`, multiplicación `*`, resta `-`, etcétera.
+
+### Términos: “unario”, “binario”, “operando”
+
+Antes de continuar, comprendamos la terminología común.
+
+- Un operando – es a lo que se aplican los operadores. Por ejemplo, en la multiplicación de `5 * 2` hay dos operandos: el operando izquierdo es `5` y el operando derecho es `2`. A veces, la gente los llama “argumentos” en lugar de “operandos”.
+
+- Un operador es unario si tiene un solo operando. Por ejemplo, la negación unaria `-` invierte el signo de un número:
+
+  ```js
+  let x = 1;
+
+  x = -x;
+  alert( x ); // -1, se aplicó negación unaria
+  ```
+
+- Un operador es binario si tiene dos operandos. El mismo negativo también existe en forma binaria:
+
+  ```js
+  let x = 1, y = 3;
+  alert( y - x ); // 2, binario negativo resta valores
+  ```
+
+Formalmente, estamos hablando de dos operadores distintos: la negación unaria (un operando: revierte el símbolo) y la resta binaria (dos operandos: resta).
+
+### Matemáticas
+
+Están soportadas las siguientes operaciones:
+
+- Suma `+`,
+- Resta `-`,
+- Multiplicación `*`,
+- División `/`,
+- Resto `%`,
+- Exponenciación *`*`.
+
+Los primeros cuatro son conocidos mientras que `%` y `**` deben ser explicados más ampliamente.
+
+### Resto %
+
+El operador resto `%`, a pesar de su apariencia, no está relacionado con porcentajes.
+
+El resultado de `a % b` es el resto de la división entera de `a` por `b`.
+
+Por ejemplo:
+
+```js
+alert( 5 % 2 ); // 1, es el resto de 5 dividido por 2
+alert( 8 % 3 ); // 2, es el resto de 8 dividido por 3
+alert( 8 % 4 ); // 0, es el resto de 8 dividido por 4
+```
+
+### Exponenciación **
+
+El operador exponenciación `a ** b` eleva a a la potencia de `b`.
+
+En matemáticas de la escuela, lo escribimos como a<sup>b</sup>.
+
+Por ejemplo:
+
+```js
+alert( 2 ** 2 ); // 2² = 4
+alert( 2 ** 3 ); // 2³ = 8
+alert( 2 ** 4 ); // 2⁴ = 16
+```
+
+Matemáticamente, la exponenciación está definida para operadores no enteros también.
+
+Por ejemplo, la raíz cuadrada es el exponente ½:
+
+```js
+alert( 4 ** (1/2) ); // 2 (potencia de 1/2 es lo mismo que raíz cuadrada)
+alert( 8 ** (1/3) ); // 2 (potencia de 1/3 es lo mismo que raíz cúbica)
+```
+
+### Concatenación de cadenas con el binario +
+
+Ahora veamos las características de los operadores de JavaScript que van más allá de la aritmética escolar.
+
+Normalmente el operador `+` suma números.
+
+Pero si se aplica el `+` binario a una cadena, los une (concatena):
+
+```js
+let s = "my" + "string";
+alert(s); // mystring
+```
+
+Tenga presente que si uno de los operandos es una cadena, el otro es convertido a una cadena también.
+
+Por ejemplo:
+
+```js run
+alert( '1' + 2 ); // "12"
+alert( 2 + '1' ); // "21"
+```
+
+Vieron, no importa si el primer operando es una cadena o el segundo.
+
+Aquí hay un ejemplo algo más complejo:
+
+```js run
+alert(2 + 2 + '1' ); // "41" y no "221"
+```
+
+Aquí, los operadores trabajan uno después de otro. El primer `+` suma dos números entonces devuelve `4`, luego el siguiente `+` le agrega la cadena `1`, así que se evalúa como `4 + '1' = 41`.
+
+```js run
+alert('1' + 2 + 2); // "122", no es "14"
+```
+Aquí el primer operando es una cadena, el compilador trata los otros dos operandos como cadenas también. El `2` es concatenado a `'1'`, entonces es como `'1' + 2 = "12"` y `"12" + 2 = "122"`.
+
+El binario `+` es el único operador que soporta cadenas en esa forma. Otros operadores matemáticos trabajan solamente con números y siempre convierten sus operandos a números.
+
+Por ejemplo, resta y división:
+
+```js run
+alert( 2 - '1' ); // 1
+alert( '6' / '2' ); // 3
+```
+
+## Operadores Lógicos
+
+Hay cuatro operadores lógicos en JavaScript: `||` (O), `&&` (Y), `!` (NO), `??` (Fusión de nulos). Aquí cubrimos los primeros tres, el operador  `??` se verá más adelante. 
+
+Aunque sean llamados lógicos, pueden ser aplicados a valores de cualquier tipo, no solo booleanos. El resultado también puede ser de cualquier tipo.
+
+Veamos los detalles.
+
+### || (OR)
+
+El operador `OR` se representa con dos símbolos de linea vertical:
+
+```js
+result = a || b;
+```
+
+En la programación clásica, el OR lógico esta pensado para manipular solo valores booleanos. Si cualquiera de sus argumentos es `true`, retorna `true`, de lo contrario retorna `false`.
+
+En JavaScript, el operador es un poco más complicado y poderoso. Pero primero, veamos qué pasa con los valores booleanos.
+
+Hay cuatro combinaciones lógicas posibles:
+
+```js run
+alert(true || true); // true (verdadero)
+alert(false || true); // true
+alert(true || false); // true
+alert(false || false); // false (falso)
+```
+
+Como podemos ver, el resultado es siempre `true` excepto cuando ambos operandos son `false`.
+
+Si un operando no es un booleano, se lo convierte a booleano para la evaluación.
+
+Por ejemplo, el número `1` es tratado como `true`, el número `0` como `false`:
+
+```js run
+if (1 || 0) { // Funciona como if( true || false )
+	alert("valor verdadero!");
+}
+```
+
+La mayoría de las veces, OR `||` es usado en una declaración `if` para probar si *alguna* de las condiciones dadas es `true`.
+
+Por ejemplo:
+
+```js run
+let hour = 9;
+*!*
+if (hour < 10 || hour > 18) {
+*/!*
+  alert( 'La oficina esta cerrada.' );
+}
+```
+
+Podemos pasar mas condiciones:
+
+```js run
+let hour = 12;
+let isWeekend = true;
+if (hour < 10 || hour > 18 || isWeekend) {
+	alert("La oficina esta cerrada."); // Es fin de semana
+}
+```
+
+### && (AND)
+
+El operador AND es representado con dos ampersands `&&`:
+
+```js
+result = a && b;
+```
+
+En la programación clásica, AND retorna `true` si ambos operandos son valores verdaderos y `false` en cualquier otro caso.
+
+```js run
+alert(true && true); // true
+alert(false && true); // false
+alert(true && false); // false
+alert(false && false); // false
+```
+
+Un ejemplo con `if`:
+
+```js run
+let hour = 12;
+let minute = 30;
+if (hour == 12 && minute == 30) {
+	alert("La hora es 12:30");
+}
+```
+
+Al igual que con OR, cualquier valor es permitido como operando de AND: 
+
+```js run
+if (1 && 0) { // evaluado como true && false
+  alert( "no funcionará porque el resultado es un valor falso" );
+}
+```
+
+### Más operadores en JS
+
+Para seguir aprendiendo de estos operadores, mira el siguiente video donde reforzarás el conocimiento sobre los operadores que acabamos de ver y aprenderás algunos más que son comuness:
+
+{{< youtube _8Z5AeGVIXE >}}
