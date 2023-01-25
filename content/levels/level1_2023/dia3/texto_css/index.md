@@ -2,6 +2,7 @@
 title: "Propiedades de Fuente y Texto"
 date: 2023-01-24T12:09:19-05:00
 draft: false
+showPagination: false
 ---
 
 ## Fuentes

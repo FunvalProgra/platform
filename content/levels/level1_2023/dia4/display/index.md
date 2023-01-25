@@ -2,6 +2,7 @@
 title: "Display"
 date: 2023-01-24T12:44:35-05:00
 draft: false
+showPagination: false
 ---
 
 Entender el Box Model es una de las cosas más importantes para trabajar correctamente con HTML y CSS, una vez este concepto nos queda claro, es posible que se nos facilite mucho la construcción de sitios web.

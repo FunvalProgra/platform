@@ -2,6 +2,7 @@
 title: "Condicionales y Bucles"
 date: 2023-01-24T11:11:22-05:00
 draft: false
+showPagination: false
 ---
 
 Algunas veces, necesitamos ejecutar diferentes acciones basadas en diferentes condiciones.
