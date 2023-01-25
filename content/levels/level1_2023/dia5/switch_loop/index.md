@@ -2,7 +2,7 @@
 title: "Switch y Bucles"
 date: 2023-01-25T12:52:12-05:00
 draft: false
-showPaginations: false
+showPagination: false
 ---
 
 ## Switch

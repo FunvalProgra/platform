@@ -2,7 +2,7 @@
 title: "Position y Z-index"
 date: 2023-01-25T12:17:24-05:00
 draft: false
-showPaginations: false
+showPagination: false
 ---
 
 La posicion y la profundidad son aspectos importantes en el diseño web, y en CSS tenemos las propiedades `position` y `z-index` para controlarlos.
