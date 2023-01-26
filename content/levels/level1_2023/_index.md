@@ -2,7 +2,7 @@
 title: "Nivel 1 - Intro al desarrollo web"
 date: 2023-01-17T17:45:58-05:00
 draft: false
-showPaginations: false
+showPagination: false
 ---
 
 # Introducción al Desarrollo Web
