@@ -1,6 +1,7 @@
 ---
-title: "Dom"
+title: "DOM"
 date: 2023-01-27T10:11:21-05:00
-draft: true
+draft: false
+showPagination: false
 ---
 
