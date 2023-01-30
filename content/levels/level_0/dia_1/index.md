@@ -21,7 +21,7 @@ HTML ha ido evolucionando a través del tiempo y hoy nos encontramos en la versi
 
 <!-- Cambiar imagen, el ejemplo es errado -->
 
-![alt text](html.png)
+{{< figure src="./html.png">}}
 
 Es más facil aprender esto haciendo, así que dejemos por un momento la teoría.
 
