@@ -19,6 +19,8 @@ HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) e
 
 HTML ha ido evolucionando a través del tiempo y hoy nos encontramos en la versión 5 (HTML5). Este lenguaje se basa en una estructura de etiquetas, las cuales tienen la siguiente forma:
 
+<!-- Cambiar imagen, el ejemplo es errado -->
+
 ![alt text](html.png)
 
 Es más facil aprender esto haciendo, así que dejemos por un momento la teoría.

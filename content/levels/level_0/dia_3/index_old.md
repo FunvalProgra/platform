@@ -1,10 +1,10 @@
 ---
-title: "Día 4"
-date: 2022-12-16T11:18:26-05:00
+title: "Día 3"
+date: 2022-12-16T10:28:24-05:00
 draft: false
 ---
 
-## Día 4 : Tipos de Datos y Operadores
+## Día 3 : Tipos de Datos y Operadores
 
 En JavaScript trabajamos con distintos valores, cada valor pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.
 En JavaScript hay ocho tipos de datos básicos. En esta sección aprenderemos sobre algunos de ellos. 

@@ -1,13 +1,13 @@
 ---
-title: "Día 3"
-date: 2022-12-16T10:28:24-05:00
+title: "Día 2"
+date: 2022-12-15T17:39:29-05:00
 draft: false
 ---
 {{< lead >}}
 Temas de la semana 📖
 {{< /lead >}}
 
-## Día 3 : JavaScript
+## Día 2 : JavaScript
 
 ### Introducción a JavaScript
 JavaScript es actualmente el lenguaje de programación más utilizado dentro del desarrollo web, su popularidad ha crecido a lo largo de los años hasta posicionarlo como uno de los lenguajes mas queridos, en el siguiente video aprenderás un poco más de sus origenes y su utilidad.

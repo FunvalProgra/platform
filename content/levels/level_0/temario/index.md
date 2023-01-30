@@ -5,7 +5,7 @@ draft: false
 ---
 
 
-# Induccion a la Programación
+# Inducción a la Programación
 
 {{< lead >}}
 Instrucciones para postular al programa de Desarrollo Web en Funval 😃
@@ -22,9 +22,9 @@ diseño(estilos) respectivamente.
 
 Este proceso está estructurado para funcionar de la siguiente forma:
 
-- 5 días de aprendizaje
-- 3 horas de estudio en cada día (15 horas en total)
--  un sexto día de evaluación
+- 4 días de aprendizaje
+- 3 horas de estudio en cada día aprox. (12 horas en total)
+-  un quinto día de evaluación
 
 ## Acerca del material
 
@@ -41,7 +41,7 @@ Asimismo te invitamos a tomar nota de lo que vayas aprendiendo para que puedas r
 ## Acerca de la evaluación
 
 Luego de aprender lo necesario, necesitamos poner a prueba tu conocimiento para evaluar que cuentas con el conocimiento minimo antes de empezar el curso,
-por lo que la evaluación de Programación tendrá un puntaje sobre 100 pts. Es necesario que logres un mínimo de 80pts sobre promedio final para lograr ingresar al programa.
+por lo que la evaluación de Programación tendrá un puntaje sobre 100 pts. Es necesario que logres un mínimo de 75pts sobre promedio final para lograr ingresar al programa.
 
 <!-- tendrá un puntaje de 50 pts sobre promedio final, y se enfoncará en teoría de lo aprendido. El resto de puntos será distribuido entre Excel (34 pts) y Typing (16 pts) podiendo obtener un total de 100pts. Es necesario que logres un mínimo de 80pts sobre promedio final para lograr ingresar al programa. -->
 

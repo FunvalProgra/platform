@@ -1,10 +1,10 @@
 ---
-title: "Día 2"
-date: 2022-12-15T17:39:29-05:00
+title: "Día 4"
+date: 2022-12-16T11:18:26-05:00
 draft: false
 ---
 
-## Día 2 : Más estilos CSS
+## Día 4 : Más estilos CSS
 
 Hoy profundizaremos en los estilos de CSS. El siguiente video creado por el canal de youtube **Hola Mundo** explican de manera clara más estilos que debes tener en cuenta al momento de desarrollar para la web. Antes de ello, te menciono 3 formas comunes de escribir estilos CSS: inline, internal y external.
 
