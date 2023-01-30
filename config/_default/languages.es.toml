@@ -6,7 +6,7 @@ weight = 1
 rtl = false
 
 title = "Funval International"
-# logo = "img/logo.jpg"
+logo = "/img/logo.jpg"
 # description = "My awesome website"
 # copyright = "Copy, _right?_ :thinking_face:"
 
