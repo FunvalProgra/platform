@@ -12,8 +12,9 @@ Temas de la semana 📖
 ### Introducción a JavaScript
 JavaScript es actualmente el lenguaje de programación más utilizado dentro del desarrollo web, su popularidad ha crecido a lo largo de los años hasta posicionarlo como uno de los lenguajes mas queridos, en el siguiente video aprenderás un poco más de sus origenes y su utilidad.
 
-
 {{< youtube 2SetvwBV-SU >}}
+
+Es importante recordar que JavaScript es un <mark>lenguaje de alto nivel</mark>. Un lenguaje de programación de alto nivel es un tipo de lenguaje de programación que es más fácil de leer y escribir para los humanos que los lenguajes de bajo nivel. Estos lenguajes están diseñados para ser más cercanos a la forma en que las personas piensan y hablan y tienen una sintaxis más simple y abstracciones más elevadas. Algunos ejemplos de lenguajes de programación de alto nivel incluyen Python, Java, C# y Ruby.
 
 
 ### Gramática y Caracteristicas del lenguaje
