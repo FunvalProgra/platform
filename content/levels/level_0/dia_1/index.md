@@ -14,7 +14,7 @@ Para esta clase estaremos viendo una serie de videos del canal de youtube <mark>
 
 Así que, si estás interesado en aprender a programar y desarrollar software, este es el lugar perfecto para empezar. Estamos emocionados de acompañarte en este viaje y ayudarte a adquirir habilidades valiosas que lo ayudarán a lograr tus metas. ¡Empecemos!
 
-## Lógica, programa, programación
+## Lógica de Programación: Princios básicos
 
 {{< youtube GF7szwUx22k >}}
 
@@ -28,7 +28,7 @@ Antes de ver este video debes tener en cuenta lo siguiente:
 
 Si bien es cierto aquí el tipo de dato numérico está representado en dos partes, entero y flotante, esto puede no cumplirse en todos los lenguajes como en JavaScript, donde ambos se consideran tipo de dato numérico. Aun así, en muchos otros lenguajes si se hace la distinción entre estos dos.
 
-Esto tambien es similar con el dato <mark>caracter</mark> y <mark>cadena de caracteres</mark> el cual en JavaScript solo se considera como `string` (cadena de caracteres) para cualquiera de los dos casos.
+Esto tambien es similar con el dato **caracter** y **cadena de caracteres** el cual en JavaScript solo se considera como `string` (cadena de caracteres) para cualquiera de los dos casos.
 
 {{< youtube bx4xsJ4I5VM >}}
 
