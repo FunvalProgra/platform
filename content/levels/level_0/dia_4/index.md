@@ -1,65 +1,33 @@
 ---
 title: "Día 4"
-date: 2022-12-16T11:18:26-05:00
+date: 2022-12-16T11:18:32-05:00
 draft: false
 ---
 
-## Día 4 : Tipos de Datos y Operadores
+## Día 4 : JavaScript
 
-En JavaScript trabajamos con distintos valores, cada valor pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.
-En JavaScript hay ocho tipos de datos básicos. En esta sección aprenderemos sobre algunos de ellos. 
+### Introducción a JavaScript
+JavaScript es actualmente el lenguaje de programación más utilizado dentro del desarrollo web, su popularidad ha crecido a lo largo de los años hasta posicionarlo como uno de los lenguajes mas queridos, en el siguiente video aprenderás un poco más de sus origenes y su utilidad.
 
-Recuerda que podemos almacenar cualquier tipo de dato en una variable, incluso podemos reasignar el valor de una variable con un tipo de dato distinto:
+{{< youtube 2SetvwBV-SU >}}
 
-```js
-// Sin error
-let number = "3"; // variable que contiene un string
-number = 6; // cambiamos el valor a un dato tipo number
-```
+Es importante recordar que JavaScript es un <mark>lenguaje de alto nivel</mark>. Un lenguaje de programación de alto nivel es un tipo de lenguaje de programación que es más fácil de leer y escribir para los humanos que los lenguajes de bajo nivel. Estos lenguajes están diseñados para ser más cercanos a la forma en que las personas piensan y hablan y tienen una sintaxis más simple y abstracciones más elevadas. Algunos ejemplos de lenguajes de programación de alto nivel incluyen Python, Java, C# y Ruby.
 
-### Cadenas de Texto (Strings)
 
-{{< youtube s-C8OpALC6E >}}
+### Gramática y Caracteristicas del lenguaje
 
-### Números
+Todo lenguaje de programación cuenta con una forma de escribir en particular, aunque muchos de los lenguajes de programación guardan similitudes, también tienen diferencias que es importante que conozcamos. Así como `HTML` tiene una forma especial de escribir, JavaScript tambien cuenta con una sintáxis especial y una serie de reglas que aprenderemos antes que empecemos a escribir código de manera apresurada.
 
-{{< youtube o4p6p1z2P5A >}}
+{{< youtube C5FXZ2ki13k >}}
 
-### Booleanos
+### Variables dentro de JavaScript: Var vs Let
 
-{{< youtube Csu9tRuuX0M >}}
+Teniendo ya una noción mas clara de lo que es Javascript, hablemos de la unidad de almacenamiento mas comun en este lenguaje, las **variables**.
 
-### Tipos de Operadores
+{{< youtube tmRa0_EvMoc >}}
 
-Hasta este punto, hemos visto los tipos de datos más básicos dentro del lenguaje, conocidos como **primitivos**. Existen otros tipos de datos llamados **compuestos** como: Objetos, Arrays, Functions y Classes; los cuales por ahora no cubriremos. Con los tipos de datos primitivos tenemos una base para entender más conceptos de JavaScript.
+### Constantes y otros tipos de datos
 
-{{< youtube _8Z5AeGVIXE >}}
+En JavaScript tambien existe un tipo de dato similar a las variables llamado **constante**, en el siguiente video aprenderás de este dato y haremos un primer vistazo a otros tipos de dato más complejos. Respecto a estos ultimos, es importante que conozcas de su existencia, sin embargo para esta parte del proceso no es necesario que aprendas a manejarlos, pero si que entiendas a nivel teorico sus funciones basicas.
 
-### Condicionales
-
-Algunas veces, necesitamos ejecutar diferentes acciones basadas en diferentes condiciones.
-
-Para esto podemos usar la sentencia `if(...)` la cual evalúa la condicion entre los paréntesis, y si el resultado es `true` ejecuta un bloque de código.
-
-Por ejemplo:
-
-```js
-if (year == 2015) alert( '¡Estás en lo cierto!' );
-```
-
-Aquí la condición es de igualdad (`year == 2015`), en caso sea `true` se ejecutará la alerta, pero podría ser más compleja.
-
-Si quisiéramos ejecutar más de una sentencia, debemos encerrar nuestro bloque de código entre llaves:
-
-```js
-if (year == 2015) {
-  alert( "¡Es Correcto!" );
-  alert( "¡Eres muy inteligente!" );
-}
-```
-
-Se recomienda siempre encerrar nuestro bloque de código en llaves `{}` siempre que se utilice la sentencia `if`, inclusive si solo se va a ejecutar una sola sentencia en este caso. Hacer eso mejora la legibilidad.
-
-Para aprender más de este concepto, mira el siguiente video. Por el momento solo es importante la seccion donde se menciona el uso de la condicional `if`, `else` y `else if`. **La sección sobre la condición `switch` no es necesaria por el momento**.
-
-{{< youtube  9h5hyh_wDjo >}}
+{{< youtube PIHZRj99nHU >}}
