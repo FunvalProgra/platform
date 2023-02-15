@@ -10,7 +10,7 @@ Por ejemplo, si la etiqueta es `<body id="page">`, entonces el objeto DOM tiene 
 
 ¡Pero el mapeo de propiedades y atributos no es uno a uno! En esta clase, prestaremos atención para separar estas dos nociones, para ver cómo trabajar con ellos, cuándo son iguales y cuándo son diferentes.
 
-## Propiedads del DOM
+## Propiedades del DOM
 
 Ya hemos visto propiedades DOM integradas. Hay muchas. Pero técnicamente nadie nos limita, y si no hay suficientes, podemos agregar las nuestras.
 
@@ -34,6 +34,8 @@ document.body.sayTagName = function() {
 };
 document.body.sayTagName(); // BODY (el valor de 'this' en el método es document.body)
 ```
+
+
 
 <!-- https://javascript.info/dom-attributes-and-properties -->
 
