@@ -1201,6 +1201,12 @@ body:has(#menu-controller:checked) {
   vertical-align: top;
 }
 
+/* Personal config: Body 100% width */
+.chroma .lntd:last-child {
+  width: 100% ;
+}
+/* END Personal config: Body 100% width */
+
 /* LineTable */
 
 .chroma .lntable {
