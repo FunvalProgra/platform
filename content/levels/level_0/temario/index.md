@@ -24,7 +24,7 @@ Este proceso está estructurado para funcionar de la siguiente forma:
 
 - 5 días de aprendizaje
 - 3 horas de estudio en cada día aprox. (15 horas en total)
--  un sexto día de evaluación
+-  un día de evaluación
 
 ## Acerca del material
 
