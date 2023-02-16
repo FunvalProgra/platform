@@ -1178,14 +1178,16 @@ body:has(#menu-controller:checked) {
   position: static;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--color-neutral-50), var(--tw-bg-opacity));
+  /* background-color: rgba(var(--color-neutral-50), var(--tw-bg-opacity)); */
+  background-color: #f7f4f3;
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-700), var(--tw-text-opacity));
 }
 
 .dark .prose .chroma {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--color-neutral-700), var(--tw-bg-opacity));
+  /* background-color: rgba(var(--color-neutral-700), var(--tw-bg-opacity)); */
+  background-color: #282a36;
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-200), var(--tw-text-opacity));
 }
@@ -1237,7 +1239,8 @@ body:has(#menu-controller:checked) {
 
 .dark .chroma .hl {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--color-primary-900), var(--tw-bg-opacity));
+  /* background-color: rgba(var(--color-primary-900), var(--tw-bg-opacity)); */
+  background-color: #44475a;
 }
 
 /* LineNumbersTable */
