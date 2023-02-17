@@ -2,6 +2,7 @@
 title: "GIT"
 date: 2023-02-15T16:42:07-05:00
 draft: false
+showPagination: false
 ---
 
 <!-- Git y Github, que son y primeros pasos -->

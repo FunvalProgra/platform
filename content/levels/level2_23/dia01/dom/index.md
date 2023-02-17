@@ -2,6 +2,7 @@
 title: "Manipulación del DOM"
 date: 2023-02-14T15:13:43-05:00
 draft: false
+showPagination: false
 ---
 
 Cuando el navegador carga la página, lee (o “parser”(analiza en inglés)) el HTML y genera objetos DOM a partir de él. Para los nodos de elementos, la mayoría de los atributos HTML estándar se convierten automáticamente en propiedades de los objetos DOM.

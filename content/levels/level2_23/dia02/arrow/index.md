@@ -2,6 +2,7 @@
 title: "Arrow Functions (Funciones Flecha)"
 date: 2023-02-16T16:35:40-05:00
 draft: false
+showPagination: false
 ---
 
 Hay otra sintaxis muy simple y concisa para crear funciones, que a menudo es mejor que las Expresiones de funciones.
@@ -93,5 +94,3 @@ Las funciones de flecha son útiles para acciones simples, especialmente las de 
 
 1. Sin llaves: `(...args) => expression` -- el lado derecho es una expresión: la función la evalúa y devuelve el resultado. Pueden omitirse los paréntesis si solo hay un argumento, por ejemplo `n => n*2`.
 2. Con llaves: `(...args) => { body }` -- las llaves nos permiten escribir varias declaraciones dentro de la función, pero necesitamos un `return` explícito para devolver algo.
-
-# 
