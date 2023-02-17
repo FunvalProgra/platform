@@ -83,9 +83,15 @@ Para comprender mejor las funciones flecha (Arrow Functions), veremos el siguien
 
 {{< youtube WuCw9agV3Rc >}}
 
+En el siguiente video, seguiremos aprendiendo de estas funciones, y como usarlas en lugar de las funciones normales:
+
+{{< youtube Zaw29SwR8L8 >}}
+
 ## Resumen
 
 Las funciones de flecha son útiles para acciones simples, especialmente las de una sola línea. Vienen en dos variantes:
 
 1. Sin llaves: `(...args) => expression` -- el lado derecho es una expresión: la función la evalúa y devuelve el resultado. Pueden omitirse los paréntesis si solo hay un argumento, por ejemplo `n => n*2`.
 2. Con llaves: `(...args) => { body }` -- las llaves nos permiten escribir varias declaraciones dentro de la función, pero necesitamos un `return` explícito para devolver algo.
+
+# 
