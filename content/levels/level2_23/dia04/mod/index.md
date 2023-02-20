@@ -69,6 +69,6 @@ Si intenta abrir una página web localmente a través del protocolo `file://`, e
 
 ## Import y Export
 
-En el siguiente video del canal de youtube <mark>Fazt</mark> se explica de manera muy clara y sencilla como importar y exportar modulos en javascript.
+En el siguiente video del canal de youtube <mark>Fazt Code</mark> se explica de manera muy clara y sencilla como importar y exportar modulos en javascript.
 
 {{< youtube 0t-Le4kdaMg >}}
