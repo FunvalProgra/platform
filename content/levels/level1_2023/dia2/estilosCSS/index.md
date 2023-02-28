@@ -98,6 +98,16 @@ Ejemplo usando un ID:
 }
 ```
 
+<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
+    <span>{{< icon "circle-info" >}}</span>
+    <b>Complejidad de Selectores</b>
+  </div>
+  <span class="dark:text-neutral-300">
+Lo que viene a continuación son conceptos más complejos de CSS, pero no es necesario que los entiendas para comenzar a usar CSS. Sin embargo, te aconsejo que le des un vistazo para que veas hasta donde puede llegar el uso de los selectores.
+  </span>
+</div>
+
 ### Combinando Selectores
 
 Hasta ahora hemos visto cómo apuntar a un elemento, una clase o una identificación. Introduzcamos selectores más potentes.
