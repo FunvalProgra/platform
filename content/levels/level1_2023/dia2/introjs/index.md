@@ -145,7 +145,7 @@ let isGreater = 4 > 1;
 alert( isGreater ); // verdadero (el resultado de la comparación es "sí")
 ```
 
-### Object y Symbol
+### Object
 El tipo `object` (objeto) es especial.
 
 Todos los demás tipos se llaman “primitivos” porque sus valores pueden contener una sola cosa (ya sea una cadena, un número o lo que sea). Por el contrario, los objetos se utilizan para almacenar colecciones de datos y entidades más complejas.
