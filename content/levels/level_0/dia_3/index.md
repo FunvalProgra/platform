@@ -41,4 +41,6 @@ la ruta del archivo CSS-->
 
 ### CSS con Hola Mundo
 
+En este tutorial, Puedes aprender desde el inicio hasta la seccion en la que aprendes de `background`(minuto 56:10). En caso sientas que puedes ir un poco más alla, puedes ir a la seccion siguiente donde se habla de `box model` (termina en 1:04:55) pero esta ultima no se incluirá dentro del examen.
+
 {{< youtube wZniZEbPAzk >}}

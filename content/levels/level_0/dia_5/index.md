@@ -20,9 +20,13 @@ number = 6; // cambiamos el valor a un dato tipo number
 
 ### Cadenas de Texto (Strings)
 
+En esta seccion te recomendamos ver hasta el minuto 10, donde se aprenden las bases de este tipo de dato. La información que viene despues no se incluirá en el examen pero podría serte util dentro del curso.
+
 {{< youtube s-C8OpALC6E >}}
 
 ### Números
+
+En este tutorial, dentro de los primeros 5 minutos se cubre los aspectos básicos de este tipo de dato. La información que viene despues no se incluirá en el examen pero podría serte util dentro del curso.
 
 {{< youtube o4p6p1z2P5A >}}
 
@@ -33,6 +37,8 @@ number = 6; // cambiamos el valor a un dato tipo number
 ### Tipos de Operadores
 
 Hasta este punto, hemos visto los tipos de datos más básicos dentro del lenguaje, conocidos como **primitivos**. Existen otros tipos de datos llamados **compuestos** como: Objetos, Arrays, Functions y Classes; los cuales por ahora no cubriremos. Con los tipos de datos primitivos tenemos una base para entender más conceptos de JavaScript.
+
+En este video solo mira los 10 primeros minutos donde se varios de los operadores que usarás al trabajar con JavaScript y los necesarios para el examen.  La información que viene despues no se incluirá en el examen pero podría serte util dentro del curso.
 
 {{< youtube _8Z5AeGVIXE >}}
 
@@ -64,7 +70,7 @@ Se recomienda siempre encerrar nuestro bloque de código en llaves `{}` siempre 
 Para aprender más de este concepto, mira el siguiente video: 
 
 {{< alert >}}
-Por el momento solo es importante la seccion donde se menciona el uso de la condicional `if`, `else` y `else if`. **La sección sobre la condición `switch` no es necesaria por el momento**.
+Por el momento solo es importante la seccion donde se menciona el uso de la condicional `if` y `else` (hasta el minuto 10). **La sección sobre la condición `switch` no es necesaria por el momento**.
 {{< /alert >}}
 
 <br />
