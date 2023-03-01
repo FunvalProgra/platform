@@ -26,15 +26,15 @@ Es más facil aprender esto haciendo, así que dejemos por un momento la teoría
 
 Ingresa al enlace de arriba e intenta completar las lecciónes antes de pasar al siguiente tutorial.
 
-### Instalación de VS code
+<!-- ### Instalación de VS code
 
 Antes de continuar con el siguiente apartado, es importante que puedas instalar un programa en tu pc para que escribir código sea mas facil, este es **VS code**, sigue las instrucciones de este video para que lo instales 😄
 
-{{< youtube lhndxjnUEgY >}}
+{{< youtube lhndxjnUEgY >}} -->
 
 ### Más etiquetas de HTML
 
-Una vez que realizaste el tutorial de Khan academy, te recomiendo seguir con el tutorial que verás a continuación. Toma nota de los conceptos que consideres más importantes, no es necesario que mires todo el video pero si por lo menos la mitad de este tutorial donde se explican los conceptos básicos dentro de este lenguaje. La seccion donde se explica los `formularios` (minuto 35:27 hasta 51:34) puedes saltarla ya que no se incluirá en la evaluación.
+Una vez que realizaste el tutorial de Khan academy, te recomiendo seguir con el tutorial que verás a continuación. Toma nota de los conceptos que consideres más importantes, no es necesario que mires todo el video pero si por lo menos la mitad de este tutorial donde se explican los conceptos básicos dentro de este lenguaje. La seccion donde se explica los `formularios` (minuto 35:27 hasta 51:34) puedes saltarla ya que no se incluirá en la evaluación. Si ya viste como crear listas en el tutorial de Khan academy, puedes saltarte el resto del video, sino continua hasta aprender de las listas y con eso puedes concluir.
 
 {{< youtube "MJkdaVFHrto" >}}
 
