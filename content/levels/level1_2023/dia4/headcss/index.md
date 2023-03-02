@@ -254,7 +254,7 @@ El siguiente video explica como trabajar con cada uno de los conceptos multimedi
 
 {{< youtube eflzJ6gNlsI >}}
 
-## Selectoes
+## Selectores
 
 Hace poco vimos como funciona la especificidad en CSS y algunos selectores que podemos usar. Ahora repasemos brevemente como funciona la especificidad con esta imagen:
 
