@@ -44,7 +44,7 @@ Ejecutar el siguiente código hará que el `<body>` sea de color rojo durante 3 
 
 ```js run
 document.body.style.background = 'red'; // establece un color de fondo rojo
-setTimeout(() => document.body.style.background = '', 3000); // volver atrás
+setTimeout(() => document.body.style.background = '', 3000); // regresa el color de fondo original despues de 3 segundos
 ```
 
 En el caso anterior usamos `style.background` para cambiar el color de fondo del `document.body`, sin embargo existen muchas otras propiedades, tales como:
