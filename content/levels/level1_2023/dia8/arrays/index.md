@@ -161,14 +161,15 @@ alert( message ); // <-- ¡Error! La variable es local para esta función
 
 Una función también puede acceder a una variable externa, por ejemplo:
 
-```js run no-beautify
-let *!*userName*/!* = 'Juan';
+{{< highlight js "linenos=table,hl_lines=1 3" >}}
+let userName = 'Juan';
 function showMessage() {
-  let message = 'Hola, ' + *!*userName*/!*;
+  let message = 'Hola, ' + userName;
   alert(message);
 }
 showMessage(); // Hola, Juan
-```
+{{< /highlight >}}
+
 
 La función tiene acceso completo a la variable externa. Puede modificarlo también.
 
