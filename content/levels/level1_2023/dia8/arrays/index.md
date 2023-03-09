@@ -175,35 +175,37 @@ La función tiene acceso completo a la variable externa. Puede modificarlo tambi
 
 Por ejemplo:
 
-```js run
-let *!*userName*/!* = 'Juan';
+<!-- FIX -->
+
+{{< highlight js "linenos=table,hl_lines=1 3-4 7 9" >}}
+let userName = 'Juan';
 function showMessage() {
-  *!*userName*/!* = "Bob"; // (1) Cambió la variable externa
-  let message = 'Hola, ' + *!*userName*/!*;
+  userName = "Bob"; // (1) Cambió la variable externa
+  let message = 'Hola, ' + userName;
   alert(message);
 }
-alert( userName ); // *!*Juan*/!* antes de llamar la función
+alert( userName ); // Juan antes de llamar la función
 showMessage();
-alert( userName ); // *!*Bob*/!*, el valor fué modificado por la función
-```
+alert( userName ); // Bob, el valor fué modificado por la función
+{{< /highlight >}}
 
 La variable externa solo se usa si no hay una local.
 
 Si una variable con el mismo nombre se declara dentro de la función, le *hace sombra* a la externa. Por ejemplo, en el siguiente código, la función usa la variable `userName` local. La exterior se ignora:
 
-```js run
+{{< highlight js "linenos=table,hl_lines=3-6 11" >}}
 let userName = 'John';
 function showMessage() {
-*!*
+
   let userName = "Bob"; // declara variable local
-*/!*
-  let message = 'Hello, ' + userName; // *!*Bob*/!*
+
+  let message = 'Hello, ' + userName; // Bob
   alert(message);
 }
 // la función crea y utiliza su propia variable local userName
 showMessage();
-alert( userName ); // *!*John*/!*, se mantiene, la función no accedió a la variable externa
-```
+alert( userName ); // John, se mantiene, la función no accedió a la variable externa
+{{< /highlight >}}
 
 <div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
