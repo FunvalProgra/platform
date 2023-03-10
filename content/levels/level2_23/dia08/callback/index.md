@@ -1,9 +1,31 @@
 ---
-title: "Recursividad | Consumo de API's"
+title: "Callback | Consumo de API's"
 date: 2023-02-20T17:06:27-05:00
 draft: false
 showPagination: false
 ---
+
+
+# Callbacks
+
+Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
+
+<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
+    <span>{{< icon "circle-info" >}}</span>
+    <b>Terminos a considerar</b>
+  </div>
+  <span class="dark:text-neutral-300">
+
+Los callback son un concepto que pueden llegar a ser confuso, pero es importante entenderlos para poder consumir API's que cubriremos mas adelante. Para esto debemos entender que significa las siguientes palabras:
+<br>
+- <b>Sincrono</b>: Significa que las instrucciones se ejecutan una a una, en el orden en que fueron escritas.
+<br>
+- <b>Asincrono</b>: Significa que las instrucciones se ejecutan en cualquier orden, no necesariamente en el orden en que fueron escritas.
+  </span>
+</div>
+
+## HOla
 
 La recursividad es un concepto avanzado de las funciones de JavaScript.
 

@@ -5,85 +5,93 @@ draft: false
 showPagination: false
 ---
 
-Cuando el navegador carga la página, lee (o “parser”(analiza en inglés)) el HTML y genera objetos DOM a partir de él. Para los nodos de elementos, la mayoría de los atributos HTML estándar se convierten automáticamente en propiedades de los objetos DOM.
+<!-- Explicar como se debe buscar elementos del DOM desde JavaScript -->
 
-Por ejemplo, si la etiqueta es `<body id="page">`, entonces el objeto DOM tiene `body.id="page"`.
+## Buscando elementos del DOM
 
-¡Pero el mapeo de propiedades y atributos no es uno a uno! En esta clase, prestaremos atención para separar estas dos nociones, para ver cómo trabajar con ellos, cuándo son iguales y cuándo son diferentes.
+Para buscar elementos del DOM, podemos usar los métodos `getElementById`, `getElementsByClassName`, `getElementsByTagName` y `querySelector` y `querySelectorAll` del objeto `document`.
 
-## Propiedades del DOM
+## Búsqueda de elementos
 
-Ya hemos visto propiedades DOM integradas. Hay muchas. Pero técnicamente nadie nos limita, y si no hay suficientes, podemos agregar las nuestras.
-
-Los nodos DOM son objetos JavaScript normales. Podemos alterarlos.
-
-Por ejemplo, creemos una nueva propiedad en `document.body`:
+El método `getElementById` busca un elemento por su atributo `id`:
 
 ```js
-document.body.myData = {
-  name: 'Cesar',
-  title: 'Emperador'
-};
-alert(document.body.myData.title); // Emperador
+let elem = document.getElementById('id');
 ```
 
-También podemos agregar un método:
+El método `getElementsByClassName` busca elementos por su atributo `class`. Aqui debemos tener en cuenta que nos devolverá un arreglo de elementos que coincidan con la clase especificada:
 
 ```js
-document.body.sayTagName = function() {
-  alert(this.tagName);
-};
-document.body.sayTagName(); // BODY (el valor de 'this' en el método es document.body)
+let elems = document.getElementsByClassName('clase');
 ```
 
-Por lo tanto, las propiedades y métodos DOM se comportan igual que los objetos JavaScript normales:
+El método `getElementsByTagName` busca elementos por su nombre de etiqueta:
 
-- Pueden tener cualquier valor.
-- Distingue entre mayúsculas y minúsculas (escribir `elem.nodeType`, no es lo mismo que `elem.NoDeTyPe`).
+```js
+let elems = document.getElementsByTagName('div');
+```
 
-## Atributos HTML
+El método `querySelector` busca un elemento que coincida con el selector CSS especificado:
 
-En HTML, las etiquetas pueden tener atributos. Cuando el navegador analiza el HTML para crear objetos DOM para etiquetas, reconoce los atributos *estándar* y crea propiedades DOM a partir de ellos.
+```js
+let elem = document.querySelector('#elemento');
+let elem = document.querySelector('.clase');
+let elem = document.querySelector('div');
+```
 
-Entonces, cuando un elemento tiene `id` u otro atributo *estándar*, se crea la propiedad correspondiente. Pero eso no sucede si el atributo no es estándar.
+El método `querySelectorAll` busca todos los elementos que coincidan con el selector CSS especificado y los retorna dentro de un array:
 
-{{< highlight html "linenos=table,hl_lines=5-6" >}}
-<body id="test" something="non-standard"> 
-<!-- "ID" existe como propiedad, pero "something" no, la hemos creado nosotros --> 
-  <script>
-    alert(document.body.id); // test
-    // el atributo no estándar no produce una propiedad
-    alert(document.body.something); // undefined
-  </script>
-</body>
-{{< /highlight >}}
+```js
+let elems = document.querySelectorAll('#elemento');
+let elems = document.querySelectorAll('.clase');
+let elems = document.querySelectorAll('div');
+```
 
-Tenga en cuenta que un atributo estándar para un elemento puede ser desconocido para otro. Por ejemplo, "type" es estándar para `<input>`(HTMLInputElement), pero no para `<body>` (HTMLBodyElement). Los atributos estándar se describen en la especificación para la clase del elemento correspondiente.
+## Agregando y eliminando elementos del DOM
 
-Aquí podemos ver esto:
+Para agregar elementos al DOM, podemos usar el método `appendChild` de un elemento del DOM:
 
-{{< highlight html "linenos=table,hl_lines=5" >}}
-<body id="body" type="...">
-  <input id="input" type="text">
-  <script>
-    alert(input.type); // text
-    alert(body.type); // undefined: Propiedad DOM no creada, porque no es estándar
-  </script>
-</body>
-{{< /highlight >}}
+```js
+let elemento = document.createElement('div');
+elemento.textContent = 'Hola Mundo';
+document.body.appendChild(elemento);
+```
 
-Entonces, si un atributo no es estándar, no habrá una propiedad DOM para él. ¿Hay alguna manera de acceder a tales atributos?
+Para eliminar elementos del DOM, podemos usar el método `removeChild` de un elemento del DOM:
 
-Claro. Todos los atributos son accesibles usando los siguientes métodos:
+```js
+let elemento = document.querySelector('#elemento');
+document.body.removeChild(elemento);
+```
 
-- `elem.hasAttribute(nombre)` -- comprueba si existe.
-- `elem.getAttribute(nombre)` -- obtiene el valor.
-- `elem.setAttribute(nombre, valor)` -- establece el valor.
-- `elem.removeAttribute(nombre)` -- elimina el atributo.
+## Cambiando atributos del DOM
 
-Para seguir aprendiendo más los atributos dentro del DOM, mira el siguiente video del canal de youtube <mark>jonmircha</mark> donde explora más a detalle estos conceptos:
+Para cambiar atributos del DOM, podemos usar el método `setAttribute` de un elemento del DOM:
 
-{{< youtube l6npGZa_vgc >}}
-<!-- https://javascript.info/dom-attributes-and-properties -->
+```js
+let elemento = document.querySelector('#elemento');
+elemento.setAttribute('class', 'clase');
+```
 
-<!-- https://www.youtube.com/watch?v=l6npGZa_vgc -->
+Para eliminar atributos del DOM, podemos usar el método `removeAttribute` de un elemento del DOM:
+
+```js
+let elemento = document.querySelector('#elemento');
+elemento.removeAttribute('class');
+```
+
+## Cambiando el estilo del DOM
+
+Para cambiar el estilo del DOM, podemos usar el método `style` de un elemento del DOM:
+
+```js
+let elemento = document.querySelector('#elemento');
+elemento.style.backgroundColor = '#000';
+```
+
+
+# Manejo de Nodos
+
+En el siguiente video aprenderemos a manipular el DOM con JavaScript:
+
+{{< youtube zBmtmlB5b5g >}}
