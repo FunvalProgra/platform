@@ -12,8 +12,8 @@ Y estas librerías y plugins de React Native/Reactjs no defraudan a la hora de c
 Aquí están las mejores librerías y plugins de react tour que puedes tener en tus manos:
 
 # - React Joyride
-
 React Joyride te proporciona los mejores react tours que puedes encontrar en una librería de código abierto.
+
 
 Con más de 4,3k estrellas en GitHub, React Joyride es un plugin ampliamente utilizado que puede ayudarte a crear tours de UI para nuevos usuarios y también puede ser utilizado para crear elementos in-app para introducir nuevas características a los usuarios existentes.
 

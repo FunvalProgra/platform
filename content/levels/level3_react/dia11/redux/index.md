@@ -67,3 +67,5 @@ Si aún no usa npm o un paquete de módulos moderno, y prefiere una compilación
 Documentación
 
 Los documentos de React Redux se publican en https://react-redux.js.org.
+
+{{< youtube j-jzI3wkkVk >}}
