@@ -17,94 +17,104 @@ Una función de callback es una función que se pasa a otra función como un arg
   </div>
   <span class="dark:text-neutral-300">
 
-Los callback son un concepto que pueden llegar a ser confuso, pero es importante entenderlos para poder consumir API's que cubriremos mas adelante. Para esto debemos entender que significa las siguientes palabras:
+Callback's es un concepto que pueden llegar a ser confuso, pero es importante entenderlos para poder consumir API's. Ya hemos visto un poco de ellos en los métodos de Array. Para esto debemos entender que significa las siguientes palabras:
 <br>
 - <b>Sincrono</b>: Significa que las instrucciones se ejecutan una a una, en el orden en que fueron escritas.
 <br>
 - <b>Asincrono</b>: Significa que las instrucciones se ejecutan en cualquier orden, no necesariamente en el orden en que fueron escritas.
   </span>
 </div>
+<br>
 
-## HOla
+# Secuencia de la función
 
-La recursividad es un concepto avanzado de las funciones de JavaScript.
+Las funciones de JavaScript se ejecutan en la secuencia en que se llaman. No en la secuencia en que se definen. 
 
-La recursión es un patrón de programación que es útil en situaciones en las que una tarea puede dividirse naturalmente en varias tareas del mismo tipo, pero más simples. O cuando una tarea se puede simplificar en una acción fácil más una variante más simple de la misma tarea. O, como veremos pronto, tratar con ciertas estructuras de datos.
+Por ejemplo, al tener un documento HTML con un elemento `<p>` con el id `demo`.
 
-Sabemos que cuando una función resuelve una tarea, en el proceso puede llamar a muchas otras funciones. Un caso particular de esto se da cuando una función *se llama a sí misma*. Esto es lo que se llama *recursividad*.
+Este ejemplo terminará mostrando "Goodbye":
 
-## Dos formas de pensar
+{{< highlight js "linenos=table,hl_lines=13-14" >}}
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
 
-Para comenzar con algo simple, escribamos una función `pow(x, n)` que eleve `x` a una potencia natural de`n`. En otras palabras, multiplica `x` por sí mismo `n` veces.
+function myFirst() {
+  myDisplayer("Hello");
+}
 
-```js
-pow(2, 2) = 4
-pow(2, 3) = 8
-pow(2, 4) = 16
-```
+function mySecond() {
+  myDisplayer("Goodbye");
+}
 
-Hay dos formas de implementarlo.
+myFirst();
+mySecond();
 
-1. Pensamiento iterativo: el bucle `for`:
+{{< /highlight >}}
 
-    ```js run
-    function pow(x, n) {
-      let result = 1;
-      // multiplicar el resultado por x n veces en el ciclo
-      for (let i = 0; i < n; i++) {
-        result *= x;
-      }
-      return result;
-    }
-    alert( pow(2, 3) ); // 8
-    ```
+En este ejemplo, estamos invocando primero a la funcion `myFirst` la cual invoca a la funcion `myDisplayer` con el argumento `"Hello"`. Luego, invocamos a la funcion `mySecond` la cual invoca a la funcion `myDisplayer` con el argumento `"Goodbye"`.
 
-2. Pensamiento recursivo: simplifica la tarea y se llama a sí mismo:
 
-    ```js run
-    function pow(x, n) {
-      if (n == 1) {
-        return x;
-      } else {
-        return x * pow(x, n - 1);
-      }
-    }
-    alert( pow(2, 3) ); // 8
-    ```
+Este otro ejemplo terminará mostrando "Hello":
 
-Note cómo la variante recursiva es fundamentalmente diferente.
+{{< highlight js "linenos=table,hl_lines=13-14" >}}
 
-Cuando se llama a `pow(x, n)`, la ejecución se divide en dos ramas:
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
 
-```js
-              if n==1  = x
-             /
-pow(x, n) =
-             \
-              else     = x * pow(x, n - 1)
-```
+function myFirst() {
+  myDisplayer("Hello");
+}
 
-1. Si `n == 1`, entonces todo es trivial. Esto se llama *base* de la recursividad, porque produce inmediatamente el resultado obvio: `pow (x, 1)` es igual a `x`.
-2. De lo contrario, podemos representar `pow (x, n)` como `x * pow (x, n - 1)`. En matemáticas, uno escribiría <code>x<sup>n</sup> = x * x <sup>n-1</sup></code>. Esto se llama *paso recursivo*: transformamos la tarea en una acción más simple (multiplicación por `x`) y una llamada más simple de la misma tarea (`pow` con menor `n`). Los siguientes pasos lo simplifican más y más hasta que `n` llegue a` 1`.
+function mySecond() {
+  myDisplayer("Goodbye");
+}
 
-{{< figure src="./recursion-pow.svg" >}}
+mySecond();
+myFirst();
 
-Por ejemplo, para calcular `pow (2, 4)` la variante recursiva realiza estos pasos:
+{{< /highlight >}}
 
-1. `pow(2, 4) = 2 * pow(2, 3)`
-2. `pow(2, 3) = 2 * pow(2, 2)`
-3. `pow(2, 2) = 2 * pow(2, 1)`
-4. `pow(2, 1) = 2`
 
-Por lo tanto, la recursión reduce una llamada de función a una más simple y luego... a una más simple, y así sucesivamente, hasta que el resultado se vuelve obvio.
+## Convirtiendo a callback
 
-El número máximo de llamadas anidadas (incluida la primera) se llama *profundidad de recursión*. En nuestro caso, será exactamente `n`.
+Ahora, vamos a convertir el ejemplo anterior en un callback. Para esto, vamos a crear una función que reciba como argumento una función y un argumento para esa función. 
 
-La profundidad máxima de recursión está limitada por el motor de JavaScript. Podemos confiar en que sea 10 000; algunos motores permiten más, pero 100 000 probablemente esté fuera del límite para la mayoría de ellos. Hay optimizaciones automáticas que ayudan a aliviar esto ("optimizaciones de llamadas de cola"), pero aún no tienen soporte en todas partes y funcionan solo en casos simples.
+{{< highlight js "linenos=table,hl_lines=13-14" >}}
 
-Eso limita la aplicación de la recursividad, pero sigue siendo muy amplia. Hay muchas tareas donde la forma recursiva de pensar proporciona un código más simple y fácil de mantener.
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
 
-## Uso de la Recursividad
+function myFirst(callback) {
+  callback("Hello");
+}
+
+function mySecond(callback) {
+  callback("Goodbye");
+}
+
+myFirst(myDisplayer);
+mySecond(myDisplayer);
+
+{{< /highlight >}}
+
+En este ejemplo, la función `myFirst` recibe como argumento la función `myDisplayer` y el argumento `"Hello"`. Luego, la función `mySecond` recibe como argumento la función `myDisplayer` y el argumento `"Goodbye"`. Analiza el código con calma y entiende como funciona. puedes hacer unas pruebas con el.
+
+Al trabajar con Arrays y usar sus métodos como `filter`, `forEach`, `map` entre otros, usamos funciones callbacks. Por ejemplo, el método `filter` recibe como argumento una función que se ejecuta para cada elemento del array. Si la función retorna `true`, el elemento se agrega al nuevo array. Si retorna `false`, el elemento no se agrega al nuevo array.
+
+Ya hemos usado esos métodos durante este curso, pero comprender el concepto de callback es importante para crear nuestras propias funciones que reciban como argumento una función. Al trabajar con API's, es muy común usar funciones callbacks.
+
+<!-- midudev hablando de callbacks -->
+
+# Callback explicación por Midudev
+
+En el siguiente video aprendarás con ejemplos de código cómo funciona el concepto de callback y cómo usarlo en tus proyectos. Recuerda que existen más videos sobre el tema, pero este concepto puede llegar a ser complicado, así que te recomendamos ir con calma y analizar el código que se escribe.
+
+{{< youtube kjCH7vvISsE >}}
+
+<!-- ## Uso de la Recursividad
 
 Este concepto puede ser confuso, en el siguiente video del canal de Youtube <mark>Hola Mundo</mark> verás una forma sencilla de usarla y lo útil que puede llegar a ser.
 
@@ -114,4 +124,4 @@ Este concepto puede ser confuso, en el siguiente video del canal de Youtube <mar
 
 Antes de terminar este capítulo, sigamos viendo ejemplos de consulos de API's. En este video, veremos un desafío de programación que consiste en crear una página web que consume una API en 10 minutos, te sugerimos que puedas analizar el video, pausar y retroceder según necesites para que veas cómo poder usar esta herramienda de forma sencilla:
 
-{{< youtube rfOrTHC6utU >}}
+{{< youtube rfOrTHC6utU >}} -->
