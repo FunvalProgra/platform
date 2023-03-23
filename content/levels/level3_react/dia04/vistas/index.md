@@ -4,7 +4,7 @@ date: 2023-03-12T11:46:35-06:00
 draft: false
 showPagination: false
 ---
-Componentes con estado / sin estado
+# Componentes con estado / sin estado
 
 Para comenzar queremos analizar estos dos conceptos en contraposición. Cuando empezamos con React pueden provocar dudas, pero realmente es sencillo. Básicamente, la diferencia entre componentes con o sin estado estriba en que los componentes con estado permiten mantener datos propios a lo largo del tiempo e implementar comportamientos en sus diferentes métodos del ciclo de vida.
 Componentes sin estado
@@ -14,7 +14,7 @@ Nota: El ciclo de vida de los componentes es algo que todavía no hemos abordado
 Ejemplo de componente sin estado
 
 Para que quede más claro, esto sería una implementación de componente sin estado que recibe un timestamp como propiedad y genera una vista donde ese instante se muestra convertido en una fecha en español.
-
+```js
 import React from 'react';
 
 export default function (props) {
@@ -24,10 +24,10 @@ export default function (props) {
         <span>{fecha}</span>
     );
 }
-
+```
 Este componente se podría usar importándolo y luego colocando la etiqueta correspondiente. Me parece interesante mostrar cómo se usaría porque el componente en sí, tal como se ha definido, no tiene nombre. El nombre se lo asignamos a la hora de importarlo.
 Nota: El estilo anterior para la creación del componente se conoce en React como "stateless function component". Es una alternativa a la creación del componente a partir de una clase, que solo podemos usar para los componentes sin estado.
-
+```js
 import React, { Component } from 'react'
 import TimestampToDate from './utils/TimestampToDate'
 
@@ -39,7 +39,7 @@ class App extends Component {
     );
   }
 }
-
+```
 Otro detalle interesante aquí es la forma como le pasamos un valor numérico a un componente. Dentro del componente la propiedad timestamp se esperaría que fuera un entero y para que así sea tenemos que indicarle el valor sin comillas. Lo metemos entre llaves porque si no le colocas comillas JSX te obliga a que sea una expresión Javascript. Esa expresión se evalúa como un número entero.
 
 Con este ejemplo queremos dejar claro que las propiedades de los componentes se pueden manipular para transformarlas en cualquier otro dato. Pero atención, en los componentes stateless las propiedades debemos tratarlas como valores de solo lectura, para evitar posibles situaciones inesperadas.. Si queremos manipular las propiedades y transformarlas en otra cosa lo más normal es guardemos los datos nuevos generados como variables, o estado si fuera necesario. Incluso, si solo se trata de una transformación sencilla para visualizar en la vista, podrías incluirla como una expresión Javascript embebida entre llaves dentro del JSX, aunque por claridad del código es preferible crear variables locales para generar esos cambios, como en el ejemplo anterior. En todo caso, quédate con que las propiedades deben trabajar como solo lectura.
@@ -53,7 +53,7 @@ El componente podrá además reaccionar al cambio de estado, de modo que actuali
 Código necesario para implementar componente con estado
 
 Seguro que estarás deseando ver ya un componente con estado. Enseguida nos ponemos con ello, pero quiero que veamos antes el código de "boilerplate" para crear un componente con estado.
-
+```js
 import React from 'react'
 
 
@@ -69,7 +69,7 @@ export default class Contador extends React.Component {
     )
   }
 }
-
+```
 Lo primero decir que este componente todavía no tiene un estado implementado, es solo un código de partida para ver un par de cosas.
 
 Como primer detalle no estamos importando implícitamente la clase Component, para hacer el extends. No es problema porque depende de React. Así que ahora estamos haciendo "extends React.Component", lo que es perfectamente válido. Esto no tiene mucho que ver con el tema que nos ocupa, de los estados, pero así vemos más variantes de codificación.
@@ -83,7 +83,7 @@ En el boilerplate encuentras también el método render(), que ya sabemos que es
 Ejemplo de componente con estado
 
 Ahora veamos ya una implementación de un componente completo con estado. En nuestro ejemplo vamos a crear el típico del contador. El valor actual del contador será nuestro estado y lo tendremos que inicializar en el constructor.
-
+```js
 import React from 'react'
 
 
@@ -102,13 +102,13 @@ export default class Contador extends React.Component {
     )
   }
 }
-
+```
 Ahora nuestro constructor ya tiene sentido, porque está realizando la inicialización de la propiedad "state" del componente. Como puedes ver el estado es un objeto, en el que ponemos tantos atributos como sea necesarios guardar como estado.
 
 A la hora de renderizar el componente, por supuesto, podremos usar el estado para mostrar la salida. En este caso puedes ver cómo se vuelca el estado en la vista, con la expresión {this.state.contador}. Algo muy parecido a lo que hacíamos con las propiedades, solo que ahora los datos nos llegan del estado.
 
 Solo nos falta implementar un botón para incrementar ese contador para ello tenemos que entrar en un tema nuevo, que son los eventos. Veamos el siguiente código.
-
+```js
 import React from 'react'
 
 export default class Contador extends React.Component {
@@ -134,7 +134,7 @@ export default class Contador extends React.Component {
     )
   }
 }
-
+```
 Ahora tenemos un botón y al hacer clic sobre él se invocará a la función incrementar(). Sin querer entrar en demasiados detalles sobre eventos, pues no es el asunto de este artículo, cabe decir que se pueden definir como si fueran atributos de los elementos o componentes. Como valor le colocamos su manejador de eventos. Además el "bind(this)" lo hacemos para bindear el contexto. Sobre eventos hablaremos más adelante.
 
 Lo que es interesante, para lo que respecta al estado, está en el manejador de evento incrementar(). Este usa el método setState() para modificar el estado. El detalle que no se te puede escapar es que, para manipular el estado no se debe modificar "a pelo" (a mano) la propiedad this.state, sino que tenemos que hacerlo a través de this.setState(). El motivo es que setState(), además de alterar el estado, desencadena toda una serie de acciones implementadas en el core de React, que se encargan de realizar todo el trabajo por debajo para que ese cambio de estado tenga una representación en la vista.
@@ -145,13 +145,13 @@ Asincronía en la manipulación del estado
 Hay un detalle extra que no queremos dejar pasar, sobre la asincronía en el manejo del estado por parte de React. Resulta que React, por motivos de rendimiento, puede llegar a acumular varias llamadas a setState, para procesarlas en un mismo instante.
 
 Lo anterior significa que this.state puede ser actualizado de manera asíncrona. Es decir, this.setState() puede no ejecutarse inmediatamente, sino esperar a que React juzgue oportuno hacer las actualizaciones del estado. Esto podría resultar en una situación complicada de resolver, cuando el cálculo del nuevo valor del estado necesita basarse en el estado que haya anteriormente.
-
+```js
 incrementar() {
   this.setState({
     contador: this.state.contador + 1
   })
 }
-
+```
 En el código del método incrementar anterior, nos basamos en el estado actual del contador, para incrementarlo en una unidad. Sin embargo, si no sabemos realmente cuándo se va a ejecutar this.setState. Por ello, podría ocurrir que ese incremento se realice a partir de un valor del estado que no era realmente el válido.
 
 Para resolver esta situación en React se puede usar un mecanismo de manipulación del estado basado en una función. Veamos el código para clarificarlo un poco.
@@ -170,3 +170,7 @@ Conclusión
 De momento hemos dado bastante información sobre el estado de los componentes, hemos podido distinguir componentes con estado y componentes sin estado, y aunque todavía nos quedan cosas que aprender, hemos podido ver ejemplos para hacernos una idea de cada tipo de componente.
 
 En futuros artículos tenemos que abordar otros asuntos clave, como la inicialización de propiedades y estado ante diversos estilos de codificación, así como el ciclo de vida de los componentes, que es necesario conocer a fondo para resolver muchas de las necesidades de desarrollo en React. 
+
+## video Componentes
+
+{{< youtube qPu3WBi65PA >}}

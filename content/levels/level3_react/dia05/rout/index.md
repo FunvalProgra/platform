@@ -203,14 +203,14 @@ From: le pasamos un string u object para indicarle desde donde se va hacer el re
 To: le pasamos un string u object hacia dónde vamos a realizar el redireccionamiento.
 
 Push: si es verdadero no modifica el location del historial por el contrario agrega esta nueva locación al historial.
-
+```js
 <Redirect from="/redirect" to="/about" />
-
+```
 Agregamos ese componente dentro de Switch, ahora si vamos al navegador y en la barra de dirección escribimos lo siguiente http://localhost:3000/redirect vamos a ver que nos hace un redirect a la ruta /about. No olvides hacer el import de Redirect.
 Hook useParams
 
 Con este Hook podemos acceder a los params de las rutas veamos un ejemplo para eso debemos crear un nuevo componente el cual se va encargar de usar el hook y debemos agregar un nuevo link al menú de navegación al igual que un Route.
-
+```js
 // App.js
 import Blog from './pages/Blog'
 
@@ -236,6 +236,9 @@ const Blog = () => {
 }
 
 export default Blog
-
+```
 Lo primero es importar el hook y obtener el params que definimos en el Route, con este hook es muy fácil acceder al params que indicamos en el Route si vamos al navegador y damos click en el nuevo link que tiene como nombre aprende vamos a ver lo siguiente.
 Hook Params
+
+# VIDEO React Router 
+{{< youtube pp2ZmjTBB5M >}}
