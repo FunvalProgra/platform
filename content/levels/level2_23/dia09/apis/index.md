@@ -13,6 +13,8 @@ En este video presta atencion a la forma en la que se crea el API de manera loca
 
 {{< youtube g0IZP95Mc18 >}}
 
+<br>
+
 # API REST: Consumo de API
 
 Ahora ya que tenemos nuestra API creada, veremos como consumirla con una herramienta llamada INSOMNIA que nos ayuda a hacer pruebas con API's de manera sencilla.
