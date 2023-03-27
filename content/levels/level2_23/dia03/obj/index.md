@@ -121,6 +121,7 @@ Simple: no utilices el operador `==`. En lugar, compáralas elemento a elemento 
 ## Métodos de Array
 
 {{< youtube bkgXlQp5hbI >}}
+<br>
 
 # Objects
 
@@ -166,7 +167,7 @@ let user = {
 };
 ```
 
-## La prueba de propiedad existente, el operador "in"
+<!-- ## La prueba de propiedad existente, el operador "in"
 
 Una notable característica de los objetos en JavaScript, en comparación con muchos otros lenguajes, es que es posible acceder a cualquier propiedad. ¡No habrá error si la propiedad no existe!
 
@@ -218,7 +219,7 @@ alert( "test" in obj ); //es true, ¡La propiedad sí existe!
 
 En el código anterior, la propiedad  `obj.test` técnicamente existe. Entonces el operador `in` funciona correctamente.
 
-Situaciones como esta suceden raramente ya que `undefined` no debe ser explícitamente asignado. Comúnmente usamos `null` para valores "desconocidos" o "vacíos". Por lo que el operador `in` es un invitado exótico en nuestro código.
+Situaciones como esta suceden raramente ya que `undefined` no debe ser explícitamente asignado. Comúnmente usamos `null` para valores "desconocidos" o "vacíos". Por lo que el operador `in` es un invitado exótico en nuestro código. -->
 
 ## Métodos del objeto
 
@@ -234,8 +235,6 @@ let user = {
 Y en el mundo real un usuario puede *actuar*: seleccionar algo del carrito de compras, hacer login, logout, etc.
 
 Las acciones son representadas en JavaScript por funciones en las propiedades.
-
-{{< youtube NWt6-iYJJnA >}}
 
 ### Ejemplos de Métodos
 
@@ -290,72 +289,7 @@ user.sayHi(); // ¡Hola!
   </span>
 </div>
 
-## "this" en métodos
+## Más sobre Métodos
 
-Es común que un método de objeto necesite acceder a la información almacenada en el objeto para cumplir su tarea.
-
-Por ejemplo, el código dentro de `user.sayHi()` puede necesitar el nombre del usuario `user`.
-
-**Para acceder al objeto, un método puede usar la palabra clave `this`.**
-
-El valor de `this` es el objeto "antes del punto", el usado para llamar al método.
-
-Por ejemplo:
-
-{{< highlight js "linenos=table,hl_lines=5-6" >}}
-let user = {
-  name: "John",
-  age: 30,
-  sayHi() {
-    // "this" es el "objeto actual"
-    alert(this.name);
-  }
-};
-user.sayHi(); // John
-{{< /highlight >}}
-
-Aquí durante la ejecución de `user.sayHi()`, el valor de `this` será `user`.
-
-Técnicamente, también es posible acceder al objeto sin `this`, haciendo referencia a él por medio de la variable externa:
-
-{{< highlight js "linenos=table,hl_lines=5" >}}
-let user = {
-  name: "John",
-  age: 30,
-  sayHi() {
-    alert(user.name); // "user" en vez de "this"
-  }
-};
-{{< /highlight >}}
-
-...Pero tal código no es confiable. Si decidimos copiar `user` a otra variable, por ejemplo `admin = user` y sobrescribir `user` con otra cosa, entonces accederá al objeto incorrecto.
-
-Eso queda demostrado en las siguientes lineas:
-
-{{< highlight js "linenos=table,hl_lines=5 15" >}}
-let user = {
-  name: "John",
-  age: 30,
-
-  sayHi() {
-    alert( user.name ); // lleva a un error
-  }
-
-};
-
-
-let admin = user;
-user = null; // sobrescribimos para hacer las cosas evidentes
-
-admin.sayHi(); // TypeError: No se puede leer la propiedad 'name' de null
-{{< /highlight >}}
-
-Si usamos `this.name` en vez de `user.name` dentro de `alert`, entonces el código funciona.
-
-## Complejidad de Objetos
-
-El método "this" es un concepto simple, pero tiene algunas peculiaridades que pueden ser confusas al principio. Si bien es cierto en este curso no tocaremos a fondo la POO, es importante entender cómo funciona `this`, ya que es un concepto clave en JavaScript.
-
-Si deseas saber más de este concepto, puedes ver el siguiente video donde se realiza ejemplo de apliacación de este concepto. Aunque no es obligatorio verlo, te lo recomendamos para que tengas una mejor comprensión de este concepto:
-
-{{< youtube NWt6-iYJJnA >}}
+<!-- 15 minutos -->
+{{< youtube B8-RBdKVKug >}}
