@@ -1,5 +1,5 @@
 ---
-title: "Resonsive Design - Diseño adaptable"
+title: "Responsive Design - Diseño adaptable"
 date: 2023-03-26T20:44:14-05:00
 draft: false
 showPagination: false
