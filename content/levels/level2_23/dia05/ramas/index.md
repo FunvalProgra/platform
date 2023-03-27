@@ -33,10 +33,10 @@ showPagination: false
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/3GymExBkKjE?start=3905&end=4144" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <br>
-<!-- 
+
 # Curso GIT y GitHub 
 Hasta ahora hemos visto a detalle como funciona cada uno de los comandos. En general, en el día a día, esto suele ser mas sencillo de aplicar. Para ello, veremos el siguiente tutorial de Fazt en el que se explica como crear un repositorio en GitHub y como subirlo a la nube.
-{{< youtube HiXLkL42tMU >}} -->
+{{< youtube HiXLkL42tMU >}}
 
 # Comandos
 
