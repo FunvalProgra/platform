@@ -17,7 +17,7 @@ Hoy vamos a repasar los conceptos que hemos aprendido en JS, te recomendamos ver
 
 {{< youtube kjCH7vvISsE >}}
 
-El siguiente video se profundiza en callbacks, te recomiendo que puedas verlo para amplicar un poco el panorama, pero si te llega a ver muy confuso puedes pasar a la siguiente sección.
+El siguiente video se profundiza en callbacks, te recomiendo que puedas verlo para ampliar un poco el panorama, pero si te llega a ver muy confuso puedes pasar a la siguiente sección.
 
 {{< youtube IJNaoJokDco >}}
 
