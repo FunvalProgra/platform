@@ -1,99 +1,73 @@
 ---
-title: "Debug & Testing"
+title: "Caracterìsticas de Next.js"
 date: 2023-03-12T11:49:44-06:00
 draft: false
 showPagination: false
 ---
-# ¿Qué testear?
+# Características de Next.js
 
-Los test se realizan para garantizar que su aplicación funcione según lo previsto para sus usuarios finales. Tener pruebas hará que su aplicación sea más robusta y menos propensa a errores. Es una forma de verificar que el código está haciendo lo que pretendían los desarrolladores.
+A continuación explicaremos las características de Next.js y lo que puedes ganar utilizando Next.js en tu proyecto.
+## Enrutamiento
 
-# Posibles desventajas:
+El enrutamiento es una de las características esenciales de Next.js. Next.js utiliza el sistema de enrutamiento basado en archivos de las páginas para estructurar cómo será el enrutamiento de tu aplicación. Cada archivo y carpeta creada dentro de la carpeta pages se convierte automáticamente en ruta en Next.js.
 
-La redacción de la prueba requiere mucho tiempo y es difícil.
-En ciertos escenarios, ejecutar test en CI puede costar dinero real.
-Si se hace incorrectamente, puede darte falsos positivos. Sus pruebas pasan, pero su aplicación no funciona según lo previsto.
-O falsos negativos. Sus pruebas fallan, pero su aplicación funciona según lo previsto.
+El sistema de enrutamiento de Next.js se divide en 3 tipos diferentes, y a continuación exploraremos cada uno de ellos.
+## Enrutamiento de Índice
 
-# ¿Qué testear?
+La carpeta pages tiene automáticamente index.js, que se convierte en la ruta de la página de inicio /. También puedes definir una página index.js para todas tus rutas en cualquier carpeta. Por ejemplo, puedes definir pages/profiles/index.js, que se asignará automáticamente a la página /profiles.
 
-Para desarrollar el punto anterior, sus pruebas deben probar la funcionalidad de la aplicación, que imita cómo la usarán sus usuarios finales. Esto le dará la confianza de que su aplicación funcionará según lo previsto en su entorno de producción. Por supuesto, entraremos en muchos más detalles a lo largo de este artículo, pero esta es la esencia básica.
-¿Qué no testear?
+Mira este ejemplo, por ejemplo:
 
-Me gusta usar la filosofía de Kent C dodds aquí de que no debe probar los detalles de implementación.
+- pages
+  - index.js
+  - profile
+    - index.js
+    - [user].js
 
-Detalles de implementación que significan probar cosas que no son la funcionalidad del usuario final. Veremos un ejemplo de esto en la sección Enzima a continuación.
+La estructura de páginas anterior mapeará las carpetas y archivos a una estructura de URL. Por ejemplo, / para las pages/index.js, /profile/  para las pages/profile/index.js, y /profile/user para las pages/profile/user.js, respectivamente.
+## Rutas Anidadas
 
-Parece que está probando la funcionalidad allí, pero en realidad no es así. Estás probando el nombre de la función. Porque puede cambiar el nombre de la función y sus pruebas fallarán, pero su aplicación seguirá funcionando y le dará un falso negativo.
+Las rutas anidadas se crean dentro de una ruta padre. Para crear una ruta anidada, tienes que crear una ruta/carpeta padre dentro de la carpeta pages y añadir carpetas o archivos dentro para crear una ruta anidada.
 
-Tener que preocuparse constantemente por los nombres de funciones y variables es un dolor de cabeza, y tener que reescribir las pruebas cada vez que las cambia es tedioso, le mostraré un mejor enfoque.
+Echa un vistazo a este ejemplo:
 
-Const variables: estas son variables que no cambian, no es necesario probarlas.
+- pages
+  - index.js
+  - dashboard
+    - index.js
+    - user.js
 
-Bibliotecas de terceros: No es su trabajo probar estas bibliotecas. Depende de los creadores de estas bibliotecas probarlo. Si no está seguro de si una biblioteca está probada, no debe usarla. O puede leer el código fuente para ver si el autor incluye pruebas. Puede descargar el código fuente y ejecutar estas pruebas usted mismo. También puede preguntarle al autor si su biblioteca está lista para la producción o no.
+En el script anterior, los archivos user.js e index.js están anidados con la ruta padre del panel de control, lo que significa que sólo se puede acceder a las URLs con la ruta del panel de control.
 
-## Montaje superficial vs.
+## Rutas Dinámicas
 
-Mount en realidad ejecuta el código html, css y js como lo haría un navegador, pero lo hace de forma simulada. Es "sin cabeza", por ejemplo, lo que significa que no representa ni pinta nada en una interfaz de usuario, sino que actúa como un navegador web simulado y ejecuta el código en segundo plano.
+Se consigue mediante rutas dinámicas. Las rutas dinámicas son siempre indeterminadas. Pueden generarse mediante llamadas a la API o asignar un ID o slug a la URL.
 
-No perder tiempo pintando nada en la interfaz de usuario hace que sus pruebas sean mucho más rápidas. Sin embargo, las pruebas de montaje siguen siendo mucho más lentas que las pruebas superficiales.
+Para crear una ruta dinámica en Next.js, añade un corchete [id].js alrededor del nombre del archivo o del directorio. Puedes nombrar el archivo o el directorio con cualquier nombre de tu elección, pero debes adjuntar un corchete [] para que sea dinámico.
 
-Esta es la razón por la que desmonta o limpia el componente después de cada prueba, porque es casi una aplicación en vivo y una prueba afectará a otra prueba.
+Echa un vistazo a este ejemplo:
 
-Mount/render se usa normalmente para prueba de integración y superficial para prueba unitaria.
+- pages
+  - dashboard
+    - [user].js
+        - profile
 
-la renderización superficial solo renderiza el único componente que estamos probando. No renderiza componentes secundarios. Esto nos permite probar nuestro componente de forma aislada.
+El script anterior hace que el [usuario].js sea dinámico, lo que significa que se debe acceder a la página del perfil con /dashboard/2/profile o /dashboard/johndoe/profile.
 
-Por ejemplo, considere este componente hijo y padre.
-```js
-import React from 'react';
+En la documentación oficial, puedes aprender más y los diferentes trucos para crear un sistema de enrutamiento más avanzado en Next.js.
 
-const App = () => {
-  return (
-    <div> 
-      <ChildComponent /> 
-    </div> 
-  )
-}
+## Servir Archivos Estáticos
 
-const ChildComponent = () => {
-  return (
-    <div>
-     <p> Child components</p>
-    </div>
-  )
-}
-```
-Si usamos una representación superficial de App.jsobtendríamos algo como esto, observe que ninguno de los nodos DOM para el componente secundario está presente, de ahí el término representación superficial.
-```js
-<App>
-  <div> 
-    <ChildComponent /> 
-  </div>
-</App> 
-```
-Ahora podemos comparar esto con el montaje del componente:
-```js
-<App>
-  <div> 
-    <ChildComponent> 
-      <div>
-       <p> Child components</p>
-      </div>
-    </ChildComponent>
-   </div>
-</App> 
-```
-Lo que tenemos arriba está mucho más cerca de cómo se verá nuestra aplicación en el navegador, de ahí la superioridad de mount/render.
+En Next.js, el servicio de archivos estáticos o activos como iconos, fuentes autoalojadas o imágenes se realiza a través de la carpeta public, la única fuente de verdad para los activos estáticos.
 
-# Unidad vs integración vs extremo a extremo
+La carpeta public no debe ser renombrada según los documentos de Next.js. Servir activos estáticos a través de la carpeta public es muy sencillo, según la configuración de Next.js.
+Renderización Previa
 
+Una de las enormes características de Next.js es el pre-renderizado, que hace que Next.js funcione muy bien y muy rápido. Next.js pre-renderiza cada página generando de antemano el HTML de cada página junto con el JavaScript mínimo que necesitan para ejecutarse a través de un proceso conocido como Hidratación.
 
-## unit testing : 
-probando una parte aislada de su aplicación, generalmente realizada en combinación con una representación superficial. Ejemplo: un componente se renderiza con los accesorios predeterminados.
+## Hay dos formas de pre-renderizado en Next.js:
 
-## pruebas de integración:
-probar si las diferentes partes funcionan o se integran entre sí. Por lo general, se realiza con el montaje o renderizado de un componente. Ejemplo: prueba si un componente secundario puede actualizar el estado del contexto en un componente principal.
+    Renderización del lado del servidor (SSR)
+    Generación estática (SG)
 
-## e to e testing : 
-significa "de extremo a extremo". Por lo general, una prueba de varios pasos que combina múltiples pruebas unitarias y de integración en una gran prueba. Por lo general, muy poco se burla o se critica. Las pruebas se realizan en un navegador simulado, puede haber o no una interfaz de usuario mientras se ejecuta la prueba. Ejemplo: probar un flujo de autenticación completo.
+La diferencia crucial entre SG y SSR es cómo se obtienen los datos. En el caso de SG, los datos se obtienen en el momento de la construcción y se reutilizan en cada solicitud (lo que hace que sea más rápido porque se puede almacenar en caché), mientras que en SSR, los datos se obtienen en cada solicitud.

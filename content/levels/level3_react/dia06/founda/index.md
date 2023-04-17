@@ -1,86 +1,52 @@
 ---
-title: "Reaccionar + Fundación"
+title: "Introduccion Next.js"
 date: 2023-03-12T11:48:09-06:00
 draft: false
 showPagination: false
 ---
-# Reaccionar + Fundación
-## Motivación
+# NEXT.JS 
+## Framework de JavaScript
 
-### Instalar
+Next.js se ha convertido en el framework de React para usar en producción, y ha quedado claro que con Next.js se pueden crear y desplegar rápidamente aplicaciones a gran escala y listas para usar en producción con Next.js.
 
-        npm i react-foundation
+Next.js viene con características que garantizan que tu aplicación pase de cero a producción en muy poco tiempo, a la vez que ofrece una curva de aprendizaje fácil, simplicidad y potentes herramientas a tu disposición.
 
-Foundation es rico en funciones y fácil de personalizar. React, por otro lado, es increíble debido a su simplicidad. Es aún más increíble cuando se combina con Redux e Immutable .
+Next.js amplía la biblioteca React original de Facebook y el paquete create-react-app para proporcionar un framework React extensible, fácil de usar y a prueba de producción.
 
-Después de crear bastantes aplicaciones con React y Foundation, notamos que estábamos escribiendo los mismos componentes una y otra vez. Primero tratamos de encontrar una biblioteca que hiciera el trabajo, pero no había ninguna que satisficiera nuestras necesidades. Así que recopilamos nuestras notas, comenzamos a codificar y aquí está el resultado.
+## ¿Qué Es Next.js?
 
-¡Esperamos que lo disfrutes tanto como nosotros!
-¿Qué hay en la caja?
+Next.js es un framework de React que te permite construir sitios web y aplicaciones web estáticas supercargadas, amigables con el SEO y extremadamente orientadas al usuario, utilizando el framework de React. Next.js es conocido por la mejor experiencia de los desarrolladores a la hora de construir aplicaciones listas para usar en producción con todas las características que necesitas.
 
-El objetivo es envolver cada parte de Foundation en componentes React reutilizables siguiendo las mejores prácticas del marco. El enfoque principal es la facilidad de uso y la extensibilidad. Utilizamos componentes de renderizado puro, también conocidos como componentes sin estado, siempre que sea posible para mantener el uso de la memoria al mínimo. Los componentes con estado solo se usan para componentes más grandes, como ResponsiveNavigation, donde el estado es realmente necesario. Todos los componentes se someten a pruebas unitarias para garantizar su calidad.
+Dispone de renderizado híbrido estático y de servidor, compatibilidad con TypeScript, agrupación inteligente, precarga de rutas y mucho más, sin necesidad de configuración adicional.
 
-Aquí hay una lista de los componentes disponibles:
+## Por Qué Usar Next.js
 
-    Acordeón
-    Insignia
-    Migas de pan
-    Botón
-    grupo de botones
-    Gritar
-    Botón Cerrar
-    FlexVideo
-    Red
-    Icono
-    Etiqueta
-    MediaObject
-    Menú
-    Paginación
-    Progreso
-    ResponsiveNavigation
-    Cambiar
-    Pestañas
-    Miniatura
-    Barra superior
+Esta sección explorará por qué deberías aprender Next.js. También veremos las diferentes aplicaciones que puedes construir con Next.js.
 
-¡Más componentes próximamente!
-Instalar
+### Optimizaciones de Imagen
 
-Instalar biblioteca:
+Next.js proporciona optimizaciones de imagen automáticas con construcciones instantáneas. La optimización de imágenes es una potente función preintegrada en Next.js porque la gestión y optimización de imágenes requiere muchas configuraciones, y la optimización manual de imágenes puede suponer un peaje en tu tiempo productivo.
+### Internacionalización
 
-npm install react-foundation --save
+Otra gran característica añadida a Next.js es la internacionalización. La creación de una aplicación empresarial puede ser fácilmente utilizada y traducida a diferentes idiomas en todo el mundo. Esta característica es una gran incorporación a Next.js y hace que Next.js sea reconocido internacionalmente porque se necesita menos configuración para conseguir la internalización.
+### Análisis de Next.js
 
-Instalar sitios de fundación :
+Next.js proporciona un panel de control analítico que puede configurarse para mostrar datos precisos de los visitantes y perspectivas de la página desde el primer momento. Con esta función, puedes crear rápidamente un panel de control analítico y obtener información valiosa sobre tus visitantes e información de la página sin necesidad de programación o configuración adicional.
 
-npm install fundación-sitios --save
 
-Uso
+# Lo Que Puedes Construir
 
-// Añadir Foundation a index.js 
-import  'foundation-sites/dist/css/foundation.min.css' ;
+En Next.js, no hay límite para el tipo de aplicaciones que puedes desarrollar. Puedes desarrollar diferentes tipos de aplicaciones utilizando Next.js. Además, cualquier aplicación que elijas crear con Next.js seguirá teniendo todas las ventajas y características de Next.js sin necesidad de configuraciones adicionales por tu parte.
 
-// importar componentes 
-import  {  Button ,  Colors  }  from  'react-foundation' ;
+A continuación se muestra la lista de tipos de aplicaciones que puedes crear con Next.js:
 
-// Usar componentes... 
-function  EnviarBotón ( )  { 
-  return  < Color del botón  = { Colores . ÉXITO } > Enviar < / Button > ; }
-
-La documentación está en https://digia.online/react-foundation-docs/ .
-
-Nota: Las versiones más recientes de foundation-sitesno ofrecen soporte inmediato para <Row/>y <Column/>componentes. Si trabaja con una versión más nueva, <Grid/>se <Cell/>deben usar componentes en su lugar.
-
-// Versiones anteriores 
-< Row  className = "display" > 
-  < Columna  pequeña = { 2 }  grande = { 4 } > 4 columnas < / Columna > 
-  < Columna  pequeña = { 4 }  grande = { 4 } > 4 columnas < / Columna > 
-  < Columna  pequeña = { 6 }  grande = { 4} > 4 columnas < / Columna > 
-< / Fila >
-
-// Versiones más nuevas 
-< Grid  className = "display" > 
-  < Celda  pequeña = { 2 }  grande = { 4 } > 4 columnas < / Celda > 
-  < Celda  pequeña = { 4 }  grande = { 4 } > 4  columnas < / Celda >
-   < Celda  pequeña = { 6 }  grande = { 4 }> 4 columnas < / Celda > 
-< /Cuadrícula>
-
+    MVP (Producto Mínimo Viable)
+    Sitios web Jamstack
+    Portales web
+    Páginas web individuales
+    Sitios web estáticos
+    Productos SaaS
+    Sitios web de comercio electrónico y de venta al por menor
+    Paneles de control
+    Aplicaciones web complejas y exigentes
+    Interfaces de usuario interactivas
