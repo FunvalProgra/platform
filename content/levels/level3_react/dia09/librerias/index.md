@@ -1,92 +1,129 @@
 ---
-title: "Librerias"
+title: "CSS en Next.js y Recursos Estaticos"
 date: 2023-03-12T11:50:42-06:00
 draft: false
 showPagination: false
 ---
-# 5 bibliotecas de React Onboarding para usar
-Una de las principales ventajas de utilizar React Native o Reactjs para desarrollar tus aplicaciones web es que tienes acceso a un océano de librerías y plugins.
+# CSS en Next.js
+Existen muchas formas de darle estilo a tu aplicación en Next.js, puedes importar archivos de hojas de estilo directamente gracias a la compatibilidad con los Módulos de CSS. Para ello el archivo debe nombrarse de la siguiente manera: [nombre].module.css.
+Los Módulos de CSS mantienen un ámbito local creando clases únicas automáticamente, por lo que te permite usar los mismos nombres de clases en diferentes archivos sin que tengas que preocuparte por colisiones.
+Por ejemplo, para crear un componente botón reusable, primero creamos componentes/Boton.module.css con el siguiente contenido:
+```js
+.peligro {
+  color: white;
+  background-color: red;
+}
+```
+## componentes/Boton.module.css
+Y un archivo componentes/Boton.js donde importar y usar el módulo CSS antes creado.
+```js
+import estilos from "./Boton.module.css";
 
-Y estas librerías y plugins de React Native/Reactjs no defraudan a la hora de crear un react tour.
+export default function Boton() {
+  return (
+    <button type="button" className={estilos.peligro}>
+      Borrar
+    </button>
+  );
+}
+```
+## componentes/Boton.js
 
-Aquí están las mejores librerías y plugins de react tour que puedes tener en tus manos:
+Nota: La clase peligro es una propiedad del objeto estilos importado.
+Así de fácil es usar los Módulos de CSS en Next.js, recuerda que también tenemos más opciones de estilo a nuestra disposición, tales como Sass, Less o CSS en JavaScript.
+Recursos estáticos
+La carpeta public es utilizada en Next.js para servir todos nuestros recursos estáticos (imágenes, iconos, robots, entre otros). Puedes importar archivos dentro de la carpeta public  usando (/) como URL base.
+Por ejemplo, para acceder a una imagen guardada en public/hero.jpg escribimos un código como el siguiente:
+```js
+export default function Home() {
+  return (
+    <div>
+      <img src="/hero.jpg" />
+    </div>
+  );
+}
+pages/index.js 
+```
+Nota: No cambies el nombre de la carpeta public por ningún otro, es la única que puede servir recursos estáticos.
 
-# - React Joyride
-React Joyride te proporciona los mejores react tours que puedes encontrar en una librería de código abierto.
+# video CCS CON NEXT
 
 
-Con más de 4,3k estrellas en GitHub, React Joyride es un plugin ampliamente utilizado que puede ayudarte a crear tours de UI para nuevos usuarios y también puede ser utilizado para crear elementos in-app para introducir nuevas características a los usuarios existentes.
+# Creando sitios estáticos con Next.js
 
-Desde su primera versión en 2016, se han abierto casi 500 incidencias en GitHub bajo React Joyride, y 481 de ellas están cerradas en este momento; así que es seguro decir que obtendrás el apoyo que necesitas.
+Next.js nos permite crear aplicaciones de React fácilmente con server render y sin configuración. En su versión 3 (actualmente beta) incluyen una nueva característica y es poder crear sitios estáticos.
 
-Configuración
+¿Qué es un sitio estático? Básicamente poder generar archivos .html en disco y que podamos luego llevar a producción fácilmente con Github Pages, Surge, Now, AWS S3, etc. Una ventaja de los sitios estáticos es que al ser un simple archivo en disco entrar a una página es super rápido, a comparación de un sitio dinámico que requiere hacer peticiones a un API o a una BD y luego generar el HTML dinámicamente con los datos obtenidos y a diferencia de una típica SPA no enviamos un HTML vacío, si no que el HTML que tenemos en disco ya tiene el contenido que necesitamos.
+Iniciando el proyecto
 
-        npm i react-joyride
+Como siempre, vamos a iniciar nuestro proyecto y obtener un package.json ya sea que usen npm o yarn.
+```js
+npm init --yes
+# o con yarn
+yarn init --yes
+```
+## Instalando dependencias
 
-Comenzando
+Luego vamos a instalar las dependencias de nuestro proyecto, para eso vamos a correr uno de estos scripts.
+```js
+npm i next@beta react react-dom
+# o con yarn
+yarn add next@beta react react-dom
+```
+
+Estamos usando una versión beta por lo que algunas cosas se pueden romper: si eso ocurre traten con otra versión beta inferior para ver si se arregla. Recuerden, usen las beta en producción bajo su propio riesgo.
+
+### Instalar dependencias
+
+Una vez hecho esto vamos a crear la página de Next.js que vamos a exportar en nuestra aplicación. Para eso vamos a crear un archivo pages/index.js con este código.
+
 ```js 
-import Joyride from 'react-joyride';
-export class App extends React.Component {
-  state = {
-    steps: [
-      {
-        target: '.my-first-step',
-        content: 'This is my awesome feature!',
-      },
-      {
-        target: '.my-other-step',
-        content: 'This another awesome feature!',
-      },
-      ...
-    ]
-  };
+import { Component } from 'react'
+import Head from 'next/head'
 
-  render () {
-    const { steps } = this.state;
-
-    return (
-      <div className="app">
-        <Joyride
-          steps={steps}
-          ...
-        />
-        ...
-      </div>
-    );
-  }
+export default class extends Component {
+	static async getInitialProps({ query }) {
+		// vamos a cambiar el título dinámicamente dependiendo de un dato en la query
+		return { title: query.title || 'home page' }
+	}
+	render() {
+		return (
+			<main>
+				<Head>
+					<title>{this.props.title}</title>
+				</Head>
+				<header>
+					<h1>{this.props.title}</h1>
+				</header>
+				<p>
+					Esta es nuestra página, el contenido es siempre el mismo, pero el título cambia.
+				</p>
+			</main>
+		)
+	}
 }
 ```
 
-# - React Shepherd
+Esa es nuestra página. Como vemos vamos a obtener el title desde el querystring de la URL y vamos a modificar el título de la página tanto en la etiqueta <title /> como en la etiqueta <h1 /> con el valor de este. Por defecto mostramos el título home page si no está definido.
 
-React Shepherd es un wrapper de React Native para Shepherd.js, la popular biblioteca de código abierto para recorridos simples de productos.
+# Iniciar servidor en desarrollo
 
-React Shepherd tiene más de 260 estrellas mientras que el propio Shepherd tiene casi 10K estrellas a partir de enero de 2022. Utilizan Popper.js para renderizar diálogos superpuestos que hacen que los elementos de onboarding de Shepherd sean lo más responsivos posible.
+Vamos ahora a probar que esto funcione en desarrollo, para eso simplemente vamos a definir estos scripts en el package.json.
+```js 
+{
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start"
+	}
+}
+```
+Luego vamos a inicar nuestra aplicación con el siguiente script:
+```js
+npm run dev
+# o con yarn
+yarn dev
+```
+Eso nos va a correr un servidor HTTP en el puerto 3000, si entramos entonces a localhost:3000 nos debe mostrar la pagina.
 
-Las dos mayores ventajas de Shepherd son la atención de los mantenedores y el diseño simple y elegante que tiene.
-
-# Intro.js React
-
-Intro.js es la mayor librería de JavaScript para contenidos de onboarding en la web (21K estrellas y 2,6K forks), y su envoltorio en React, Intro.js React, está ahí para los interesados.
-
-Con Intro.js, puedes crear tanto tours simples de productos como sugerencias dentro de la aplicación / tooltips de Angular fácilmente, lo cual es una gran ventaja sobre otras bibliotecas de la lista. También es bastante personalizable y ligera, por lo que puedes darle la forma que quieras.,
-
-El único inconveniente es, probablemente, el hecho de que Intro.js no es gratuita a menos que la utilices con fines no comerciales. Tienes que comprar una licencia de por vida si vas a utilizar la biblioteca en tu sitio web comercial, aplicación o plugin.
-
-Intro.js React tiene más de 240 estrellas en GitHub y más de 60 problemas (53 cerrados). La instalación de Intro.js en aplicaciones React puede ser algo complicada, pero seguramente funcionará siempre que la configures con cuidado.
-
-Este es el aspecto que tendrán los tours de productos que crees con Intro.js:
-
-# Walktour
-
-Walktour no es la librería más respaldada para las visitas guiadas de React, pero promete mucho.
-
-Con walktour, puedes crear visitas guiadas con pasos que pueden funcionar de otras formas que las de las pantallas de onboarding tradicionales. Además, los desarrolladores han puesto toda la información que necesitas para crear y personalizar tus tours en React en el repositorio, para que puedas instalarlo y empezar de inmediato.
-
-Ha sido la demo de walktour la que me ha llevado a incluirla en esta lista, ya que los desarrolladores han explicado el valor de la librería de una forma sencilla pero efectiva. Aquí está la grabación de la pantalla de la demo:
-
-# - Reactour
-
-Reactour es otra librería popular para crear tours de aplicaciones React. Con 2,8K estrellas en GitHub y más de 40K descargas semanales, ofrece una forma sencilla de pasear a los usuarios por tus sitios web y aplicaciones.
-
-Lo mejor de Reactour es que tiene una gran página de playground que te permite ver cómo se desenvuelven las diferentes combinaciones y variaciones y el código de todo.
+# video de Sitios Estaticos

@@ -71,3 +71,39 @@ Una de las enormes características de Next.js es el pre-renderizado, que hace q
     Generación estática (SG)
 
 La diferencia crucial entre SG y SSR es cómo se obtienen los datos. En el caso de SG, los datos se obtienen en el momento de la construcción y se reutilizan en cada solicitud (lo que hace que sea más rápido porque se puede almacenar en caché), mientras que en SSR, los datos se obtienen en cada solicitud.
+
+# Páginas y Rutas
+
+Una de las particularidades de Next.js es que esta construido alrededor del concepto de páginas.
+Una página es un componente de React exportado desde la carpeta pages.
+Las páginas están asociadas con una ruta basada en el nombre del archivo. Por ejemplo pages/perfil.js resultará en la ruta /perfil.
+```js
+export default function Perfil() {
+  return <div>¡Bienvenido a mi perfil!</div>;
+}
+```
+pages/perfil.js
+Prueba el código anterior por tu cuenta y visita localhost:3000/perfil para ver los resultados.
+Rutas Index
+Los archivos con nombre index dirigen hacia la raíz del directorio que lo contiene.
+•	pages/index.js → /
+•	pages/blog/index.js → /blog
+Rutas Anidadas
+Supongamos que queremos acceder a la siguiente ruta: /blog/post/:id
+Necesitaremos anidar las carpetas de la siguiente manera:
+|- pages
+  |- index.js
+  |- blog
+    |- post
+      |- [id].js # id dinámico para cada post
+Páginas con Rutas Dinámicas
+También podemos utilizar rutas dinámicas si agregamos corchetes al nombre del archivo. Por ejemplo, si creamos un archivo llamado pages/post/[id].js podremos acceder a el en las rutas post/1, post/2, y así sucesivamente.
+import { useRouter } from "next/router";
+
+export default function Post() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  return <p>Post: {id}</p>;
+}
+pages/post/[id].js
