@@ -76,13 +76,20 @@ export default function Posts({ posts }) {
 }
 
 ```
-Como puedes observar, en el código anterior utilizamos el hook useRouter de Next.js para acceder al objeto router, dicho objeto contiene propiedades muy útiles, las partes dinámicas de cada ruta se almacenan en router.query.
+Como puedes observar, en el código anterior utilizamos el hook useRouter de Next.js para acceder al objeto router, dicho objeto contiene propiedades muy útiles, las partes dinámicas de cada ruta se almacenan en `router.query`
 Como se mencionó anteriormente, Next.js utiliza un enfoque basado en páginas para crear rutas. Concretamente, esto significa que en cada proyecto de Next.js existe una pagescarpeta. Dentro de esta carpeta especial, cada archivo y carpeta constituye una nueva ruta.
 En la pagescarpeta, la primera ruta raíz es index.js, que representa la página de inicio en la /URL. También puede nombrar su archivo y crear una ruta estática (es decir, about.jspara la /aboutruta).
-De manera similar, las carpetas también se pueden usar para crear rutas anidadas. Por ejemplo, crear una carpeta con un nombre supporty un archivo dentro faq.jscreará la ruta /support/faq.
+De manera similar, las carpetas también se pueden usar para crear rutas anidadas. Por ejemplo,
+
+
+ crear una carpeta con un nombre supporty un archivo dentro faq.jscreará la ruta /support/faq.
 Aquí hay un diagrama para ilustrar mejor esto:
-Las rutas dinámicas también son compatibles. Al poner corchetes en el nombre de su archivo o carpeta, puede crear una ruta dinámica. Por ejemplo, /blog/[article-id].jsadmitirá múltiples rutas como /blog/1, /blog/nextjs-dynamic-routing, etc.
-Limitaciones del enrutador Next.js
+Las rutas dinámicas también son compatibles. Al poner corchetes en el nombre de su archivo o carpeta, puede crear una ruta dinámica. Por ejemplo, 
+    /blog/[article-id].jsadmitirá 
+múltiples rutas como 
+
+    /blog/1, /blog/nextjs-dynamic-routing, etc.
+### Limitaciones del enrutador Next.js
 Desafortunadamente, este enfoque tiene una limitación importante. Es decir, a pesar de que las rutas anidadas comparten una ruta principal, no puede compartir el estado o el diseño entre ellas.
 Por ejemplo, tome la autenticación. En React, utilizando la biblioteca de enrutador de reacción , puede crear rutas personalizadas. Por ejemplo, podría crear una ruta protegida para verificar si el usuario ha iniciado sesión. Si el usuario no ha iniciado sesión, la ruta lo redirigirá, por ejemplo, a la página de inicio de sesión o registro. Luego, puede asignar esta ruta protegida a cualquier ruta /authenticationen su enrutador. Al hacer esto, las rutas anidadas no tienen que preocuparse por la autenticación, ya que la ruta principal se encargará de ello.
 Desafortunadamente, este escenario no es posible con Next.js. Puede crear un componente de ruta personalizado, pero tendrá que ajustarlo alrededor de cada página protegida individualmente.
