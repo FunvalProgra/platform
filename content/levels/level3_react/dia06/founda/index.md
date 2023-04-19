@@ -50,3 +50,6 @@ A continuación se muestra la lista de tipos de aplicaciones que puedes crear co
     Paneles de control
     Aplicaciones web complejas y exigentes
     Interfaces de usuario interactivas
+
+
+ {{ < youtube  https://m.youtube.com/watch?v=PFIzbQ5Bh0c&pp=ygUScG9ycXVlIHVzYXIgbmV4dGpz > }}
