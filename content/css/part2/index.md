@@ -1,5 +1,5 @@
 ---
-title: "Part2"
+title: "Fundamentos de CSS Parte 2"
 date: 2023-05-01T15:09:30-05:00
 draft: false
 showPagination: false
