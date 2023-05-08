@@ -5,7 +5,7 @@ draft: false
 showPagination: false
 ---
 
-El día de hoy vamos a repasar en el uso de flexbox, es importante comprender este tema antes de que pasemos a aprender sobre `grid`. analiza el siguiente video a detalle o desde donde te quedaste y toma nota de las dudas o preguntas que surgan para que puedas resolverlas durante clase:
+El día de hoy continuaremos aprendiendo sobre flexbox siguiendo el tutorial que comenzamos el día de ayer:
 
 {{< youtube EVBlLkfh2V0 >}}
 
