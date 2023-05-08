@@ -1,5 +1,5 @@
 ---
-title: "Pagina_css_p2"
+title: "Pagina HTML, CSS y JS - parte 2"
 date: 2023-05-07T18:58:33-05:00
 draft: false
 showPagination: false
