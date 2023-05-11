@@ -42,7 +42,7 @@ En este video solo mira los 10 primeros minutos donde se varios de los operadore
 
 {{< youtube _8Z5AeGVIXE >}}
 
-### Condicionales
+<!-- ### Condicionales
 
 Algunas veces, necesitamos ejecutar diferentes acciones basadas en diferentes condiciones.
 
@@ -75,4 +75,4 @@ Por el momento solo es importante la seccion donde se menciona el uso de la cond
 
 <br />
 
-{{< youtube  9h5hyh_wDjo >}}
+{{< youtube  9h5hyh_wDjo >}} -->

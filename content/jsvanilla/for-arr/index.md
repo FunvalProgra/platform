@@ -20,7 +20,7 @@ Una [cola](<https://es.wikipedia.org/wiki/Cola_(inform%C3%A1tica)>) es uno de lo
 - `push` inserta un elemento al final.
 - `shift` obtiene el elemento del principio, avanzando la cola, y así el segundo elemento se vuelve primero.
 
-![](queue.svg)
+{{< figure src="./queue.svg">}}
 
 Los arrays soportan ambas operaciones.
 
@@ -37,7 +37,8 @@ Entonces los elementos nuevos son agregados o tomados siempre desde el "final".
 
 Una pila es usualmente mostrada como un mazo de cartas, donde las nuevas cartas son agregadas al tope o tomadas desde el tope:
 
-![](stack.svg)
+{{< figure src="./stack.svg">}}
+
 
 Para las pilas, la última introducida es la primera en ser recibida, en inglés esto es llamado principio LIFO (Last-In-First-Out, última en entrar primera en salir). Para las colas, tenemos FIFO (First-In-First-Out primera en entrar, primera en salir).
 
