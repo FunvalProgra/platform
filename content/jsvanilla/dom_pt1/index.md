@@ -10,3 +10,7 @@ Durante estos ultimos días del nivel, vamos a enfocarnos en poder manipular los
 En el siguiente video veremos más a detalle este proceso:
 
 {{< youtube RcQVT1smEFg >}}
+
+<br>
+
+{{< youtube OZfgQGvnmYM >}}
