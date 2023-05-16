@@ -107,13 +107,13 @@ Las comillas dobles y simples son comillas “sencillas” (es decir, funcionan 
 
 Los backticks son comillas de “funcionalidad extendida”. Nos permiten incrustar variables y expresiones en una cadena de caracteres encerrándolas en `${...}`, por ejemplo:
 
-```js run
+{{< highlight js "hl_lines=3 5" >}}
 let name = "John";
 // incrustar una variable
-alert( `Hola, *!*${name}*/!*!` ); // Hola, John!
+alert( `Hola, ${name}!` ); // Hola, John!
 // incrustar una expresión
-alert( `el resultado es *!*${1 + 2}*/!*` ); // el resultado es 3
-```
+alert( `el resultado es ${1 + 2}` ); // el resultado es 3
+{{< /highlight >}}
 
 La expresión dentro de `${...}` se evalúa y el resultado pasa a formar parte de la cadena. Podemos poner cualquier cosa ahí dentro: una variable como `name`, una expresión aritmética como `1 + 2`, o algo más complejo.
 

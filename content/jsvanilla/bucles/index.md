@@ -140,14 +140,14 @@ if (i < 3) { alert(i); i++ }
   <span class="dark:text-neutral-300">
 Aquí, la variable "counter" `i` es declarada en el bucle. Esto es llamado una declaración de variable "en línea". Dichas variables son visibles solo dentro del bucle.
 
-```js run
-for (*!*let*/!* i = 0; i < 3; i++) {
+{{< highlight js "hl_lines=1" >}}
+for (let i = 0; i < 3; i++) {
   alert(i); // 0, 1, 2
 }
 alert(i); // error, no existe dicha variable
-```
+{{< /highlight >}}
 En vez de definir una variable, podemos usar una que ya exista:
-```js run
+```js
 let i = 0;
 for (i = 0; i < 3; i++) { // usa una variable existente
   alert(i); // 0, 1, 2
@@ -202,17 +202,17 @@ Pero podemos forzar una salida en cualquier momento usando la directiva especial
 
 Por ejemplo, el bucle debajo le pide al usuario por una serie de números, "rompiéndolo" cuando un número no es ingresado:
 
-```js
+{{< highlight js "hl_lines=5" >}}
 let sum = 0;
 while (true) {
   let value = +prompt("Ingresa un número", '');
-*!*
+
   if (!value) break; // (*)
-*/!*
+
   sum += value;
 }
 alert( 'Suma: ' + sum );
-```
+{{< /highlight >}}
 
 La directiva `break` es activada en la línea `(*)` si el usuario ingresa una línea vacía o cancela la entrada. Detiene inmediatamente el bucle, pasando el control a la primera línea después de el bucle. En este caso, `alert`.
 
@@ -226,13 +226,13 @@ Podemos usarlo si hemos terminado con la iteración actual y nos gustaría mover
 
 El bucle debajo usa `continue` para mostrar solo valores impares:
 
-```js 
+{{< highlight js "hl_lines=3" >}}
 for (let i = 0; i < 10; i++) {
   // si es verdadero, saltar el resto del cuerpo
-  *!*if (i % 2 == 0) continue;*/!*
+  if (i % 2 == 0) continue;
   alert(i); // 1, luego 3, 5, 7, 9
 }
-```
+{{< /highlight >}}
 
 Para los valores pares de `i`, la directiva `continue` deja de ejecutar el cuerpo y pasa el control a la siguiente iteración de `for` (con el siguiente número). Así que el `alert` solo es llamado para valores impares.
 
