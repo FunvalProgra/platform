@@ -87,3 +87,11 @@ en el siguiente video aprenderás la diferencia entre cada uno de estos y como a
 
 {{< youtube Mlzz1xRB0sc >}}
 
+
+## Aprendiendo con Práctica
+
+A lo largo de esta primera semana, te dejaremos unos enlaces de los que puedes aprender a aplicar HTML y CSS dede el portal FreeCodeCamp. Te recomendamos que los realices en orden, ya que cada uno de ellos te enseñará algo nuevo y te ayudará a reforzar lo aprendido en esta semana, comenzando por el segmento de HTML y al finalizarlo, empezar con el de CSS, sin embargo eres libre realizarlos en el orden que desees.
+
+[HTML - Aplicacion de fotos de gatos](https://www.freecodecamp.org/espanol/learn/2022/responsive-web-design/#learn-html-by-building-a-cat-photo-app)
+
+[CSS - Menú de Cafetería](https://www.freecodecamp.org/espanol/learn/2022/responsive-web-design/#learn-basic-css-by-building-a-cafe-menu)
