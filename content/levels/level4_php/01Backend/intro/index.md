@@ -36,9 +36,7 @@ Estos son solo algunos de los roles comunes en el desarrollo de backend. Dependi
 
 ##   
 
-## ¿Que es React Js y como funciona?
-{{< youtube lWQ69WX7-hA >}}
-## Estructura
-{{< youtube xeYtbn9ldp8 >}}
-## ¿Que es JSX?
-{{< youtube mnqvH2ePysE >}}
+## ¿Qué es BACKEND y FRONTEND?
+{{< youtube 50RbVujPPGs >}}
+## Los roles en backend
+{{< youtube ZTsi1e-VJIU >}}

@@ -1,117 +1,252 @@
 ---
-title: "Eventos JS"
+title: "Php Introducion Extensiones"
 date: 2023-03-12T11:46:09-06:00
 draft: false
 showPagination: false
 ---
-# Cómo definir un evento de manera declarativa en React
+# Php Introducion Extensiones
 
-Los eventos en React se definen generalmente de manera declarativa, en el código de la vista o template, producido con JSX en el método render().
+En PHP, las extensiones son módulos adicionales que amplían la funcionalidad del lenguaje y proporcionan acceso a características específicas del sistema o servicios externos. Estas extensiones se pueden cargar dinámicamente en tiempo de ejecución para habilitar funcionalidades adicionales en tus aplicaciones PHP.
 
-Para definirlo tenemos que indicar dos cosas: Primero el tipo de evento que queremos implementar y luego el método que hará las veces de manejador de evento.
-{{% alert theme="info"%}}#### Nota:
-un manejador de evento no es más que la función que se encarga de definir la funcionalidad que tiene que ejecutarse cuando se dispara un evento{{% /alert %}} 
+PHP viene con un conjunto de extensiones incorporadas que proporcionan funcionalidades básicas, como manejo de cadenas, manipulación de archivos, conexión a bases de datos, entre otras. Sin embargo, también existen muchas extensiones adicionales que se pueden instalar y utilizar según tus necesidades específicas.
 
-```js
-render() {
-  return (
-    <p>
-      <button onClick={this.toggleSlider}>Mostrar / Ocultar Slider</button>
-    </p>
-  );
+Aquí hay algunos ejemplos de extensiones populares en PHP:
+
+1. **MySQLi**: Esta extensión proporciona una interfaz mejorada para interactuar con bases de datos MySQL. Es una mejora del antiguo conjunto de funciones MySQL y ofrece características adicionales, como soporte para transacciones y consultas preparadas.
+
+2. **PDO**: La extensión PDO (PHP Data Objects) ofrece una capa de abstracción de base de datos en PHP. Te permite acceder a diferentes bases de datos mediante una interfaz unificada, lo que facilita la migración entre diferentes sistemas de gestión de bases de datos.
+
+3. **GD**: GD (Graphic Library) es una extensión que permite manipular imágenes en PHP. Proporciona funciones para crear, manipular y renderizar imágenes, como redimensionar, recortar, agregar texto y aplicar efectos.
+
+4. **cURL**: La extensión cURL permite realizar solicitudes HTTP y acceder a recursos remotos. Es útil para interactuar con servicios web, realizar llamadas a APIs y transferir datos a través de protocolos como HTTP, FTP, SMTP, entre otros.
+
+5. **JSON**: La extensión JSON proporciona funciones para trabajar con datos en formato JSON. Permite codificar y decodificar datos en JSON, lo que es útil para la comunicación con servicios web que utilizan este formato.
+
+Estos son solo algunos ejemplos, y existen muchas más extensiones disponibles para cubrir una amplia gama de necesidades, como encriptación, generación de PDF, manejo de XML, integración con redes sociales, entre otros.
+
+Puedes consultar la documentación oficial de PHP para obtener más información sobre las extensiones disponibles y cómo instalarlas y utilizarlas en tus proyectos.
+## Sintaxis PHP
+La sintaxis de PHP es bastante sencilla y similar a otros lenguajes de programación. Aquí tienes algunos elementos básicos de la sintaxis de PHP:
+
+1. **Etiquetas de apertura y cierre**: Para iniciar el código PHP, se utiliza la etiqueta `<?php` y para cerrarlo se utiliza la etiqueta `?>`. Dentro de estas etiquetas se escribe el código PHP.
+
+```php
+<?php
+// Código PHP aquí
+?>
+```
+
+2. **Comentarios**: Puedes agregar comentarios en tu código para hacerlo más legible. Los comentarios en PHP se pueden hacer de dos formas: de una sola línea utilizando `//` o en varias líneas usando `/* */`.
+
+```php
+// Esto es un comentario de una sola línea
+
+/*
+Esto es un comentario
+de múltiples líneas
+*/
+```
+
+3. **Variables**: En PHP, las variables se declaran utilizando el símbolo de `$` seguido del nombre de la variable. No es necesario declarar el tipo de dato.
+
+```php
+$nombre = "Juan";
+$edad = 25;
+```
+
+4. **Impresión de texto**: Puedes imprimir texto en pantalla utilizando la función `echo` o `print`. Ambas funciones se utilizan de manera similar.
+
+```php
+echo "Hola, mundo!";
+print "Hola, mundo!";
+```
+
+5. **Concatenación de cadenas**: Para concatenar cadenas de texto, se utiliza el operador `.`.
+
+```php
+$nombre = "Juan";
+$apellido = "Pérez";
+$nombreCompleto = $nombre . " " . $apellido;
+echo $nombreCompleto; // Imprime "Juan Pérez"
+```
+
+6. **Estructuras de control**: PHP proporciona estructuras de control como `if`, `else`, `elseif`, `for`, `while`, `do-while`, `switch`, entre otros, para controlar el flujo de ejecución del programa.
+
+```php
+$edad = 20;
+
+if ($edad >= 18) {
+    echo "Eres mayor de edad";
+} else {
+    echo "Eres menor de edad";
 }
 ```
 
-Como puedes apreciar en el código anterior, el método render devuelve el tempate, escrito con el lenguaje con JSX. Dentro del template tenemos un botón, el cuál tiene definido un evento "click".
-{{% alert theme="info"%}}#### Nota: Es importante darse cuenta que el método asignado a onClick no tiene los paréntesis al final. No estamos queriendo ejecutar una función, sino indicar qué función se debe asociar como manejador de eventos. Por eso no se le colocan los paréntesis. {{% /alert %}}
+7. **Funciones**: Puedes definir y llamar funciones en PHP.
 
-Las declaraciones de eventos en React tienen siempre esa forma: el prefijo "on", seguido del tipo de evento que queremos capturar (onClick, onInput…). Como valor, colocamos una referencia al método del componente encargado de procesar el evento correspondiente. Por tanto, al hacer clic sobre el botón, se ejecutará el método toggleSlider().
+```php
+function saludar($nombre) {
+    echo "Hola, " . $nombre;
+}
 
-Luego tendremos que definir el manejador, como cualquier otro método del componente.
-```js
-toggleSlider() {
-    alert('Has hecho clic');
+saludar("Juan"); // Imprime "Hola, Juan"
+```
+
+Estos son solo algunos ejemplos de la sintaxis básica de PHP. El lenguaje ofrece muchas más características, como arrays, bucles más avanzados, manejo de excepciones, clases y objetos, entre otros. Puedes consultar la documentación oficial de PHP para obtener más información sobre la sintaxis y las características del lenguaje.
+
+## Variables y operadores PHP 
+En PHP, las variables se utilizan para almacenar y manipular datos. Aquí tienes ejemplos de cómo declarar variables y los diferentes tipos de operadores disponibles:
+
+**Variables:**
+En PHP, las variables se declaran utilizando el símbolo de `$` seguido del nombre de la variable. No es necesario especificar el tipo de datos al declarar una variable, ya que PHP es un lenguaje de programación de tipo débil.
+
+```php
+$nombre = "Juan"; // Variable de tipo string
+$edad = 25; // Variable de tipo entero
+$precio = 10.5; // Variable de tipo float
+$esEstudiante = true; // Variable de tipo boolean
+```
+
+**Operadores aritméticos:**
+PHP proporciona operadores aritméticos para realizar operaciones matemáticas básicas.
+
+```php
+$a = 10;
+$b = 5;
+
+$suma = $a + $b; // Suma: 15
+$resta = $a - $b; // Resta: 5
+$producto = $a * $b; // Multiplicación: 50
+$division = $a / $b; // División: 2
+$modulo = $a % $b; // Módulo: 0 (resto de la división)
+$exponente = $a ** $b; // Exponente: 100000
+```
+
+**Operadores de asignación:**
+Los operadores de asignación se utilizan para asignar valores a variables.
+
+```php
+$a = 10;
+$b = 5;
+
+$c = $a; // Asignación: $c tiene el valor de $a (10)
+$a += $b; // Suma y asignación: $a se incrementa en $b (15)
+$a -= $b; // Resta y asignación: $a se decrementa en $b (10)
+$a *= $b; // Multiplicación y asignación: $a se multiplica por $b (50)
+$a /= $b; // División y asignación: $a se divide por $b (2)
+$a %= $b; // Módulo y asignación: $a se asigna al resto de la división por $b (0)
+```
+
+**Operadores de concatenación:**
+En PHP, el operador de concatenación `.` se utiliza para unir cadenas de texto.
+
+```php
+$nombre = "Juan";
+$apellido = "Pérez";
+
+$nombreCompleto = $nombre . " " . $apellido; // Concatenación de cadenas
+```
+
+**Operadores de comparación:**
+Los operadores de comparación se utilizan para comparar valores y devuelven un resultado booleano.
+
+```php
+$a = 10;
+$b = 5;
+
+$igual = $a == $b; // Igualdad: false
+$diferente = $a != $b; // Desigualdad: true
+$mayor = $a > $b; // Mayor que: true
+$menor = $a < $b; // Menor que: false
+$mayorIgual = $a >= $b; // Mayor o igual que: true
+$menorIgual = $a <= $b; // Menor o igual que: false
+```
+
+Estos son solo algunos ejemplos de variables y operadores en PHP. El lenguaje ofrece una amplia gama de operadores y funciones incorporadas que permiten realizar diversas operaciones y manipulaciones de datos. Puedes consultar la documentación
+
+## Condicionales y Ciclos PHP
+En PHP, puedes utilizar estructuras de control como condicionales y ciclos para controlar el flujo de ejecución de tu código. Aquí tienes ejemplos de cómo utilizar condicionales (if-else) y ciclos (for, while, do-while) en PHP:
+
+**Condicionales (if-else):**
+Las estructuras condicionales te permiten ejecutar diferentes bloques de código según una condición.
+
+```php
+$edad = 18;
+
+if ($edad >= 18) {
+    echo "Eres mayor de edad.";
+} else {
+    echo "Eres menor de edad.";
 }
 ```
-## Bindear el contexto para acceder a this
 
-Al implementar un manejador de evento es habitual que queramos acceder a las propiedades o métodos del propio componente. Por ejemplo, en el método toggleSlider() queremos cambiar el estado del componente y por tanto necesitamos manipularlo con this.setState().
+También puedes utilizar la estructura "elseif" para evaluar múltiples condiciones:
 
-Sin embargo aquí nos encontramos con una dificultad que viene del propio lenguaje Javascript no de React específicamente. En las funciones no es posible acceder a this como referencia al objeto sobre el que se invoca el método. Es por ello que necesitamos bindear el contexto.
+```php
+$edad = 25;
 
-Este sería el código real del método toggleSlider(), que simplemente tiene que negar una propiedad boleana del estado del componente.
-```js
-toggleSlider() {
-  this.setState(prevState => {
-    return { showSlider: !prevState.showSlider };
-  });
+if ($edad < 18) {
+    echo "Eres menor de edad.";
+} elseif ($edad >= 18 && $edad < 65) {
+    echo "Eres adulto.";
+} else {
+    echo "Eres mayor de edad.";
 }
 ```
-Como puedes ver, nos basamos en el estado anterior para calcular el nuevo estado. Por todas partes estamos usando "this" con la intención de acceder al propio componente que ha recibido el mensaje toggleSlider(). El problema aquí, como decíamos, es que "this" puede no contener esa referencia.
-{{% alert theme="info"%}}#### Nota: puedes ver más sobre el tratamiento del estado y this.setState en el artículo del estado de componentes en react. {{% /alert %}}
 
-Para solucionarlo existen varios mecanismos en React. El más recomendable es binderar el contexto directamente en el constructor del componente.
+**Ciclo for:**
+El ciclo "for" te permite ejecutar un bloque de código un número específico de veces.
 
-Lo consigo simplemente así:
-```js
-constructor(props) {
-  super(props);
-  this.state = {
-    showSlider: false
-  }
-  this.toggleSlider = this.toggleSlider.bind(this);
+```php
+for ($i = 1; $i <= 5; $i++) {
+    echo $i . " ";
 }
+// Salida: 1 2 3 4 5
 ```
-En este constructor estamos haciendo diversas tareas, la primera es la inicialización del estado, pero lo que nos interesa a nosotros es la parte donde se hace this.toggleSlider = this.toggleSlider.bind(this);
-{{% alert theme="info"%}}#### Nota: Gracias a la llamada a .bind(this) sobre una función o método, le estamos indicando a Javascript qué es lo que queremos que valga "this" dentro del método. Esto es algo que seguramente, si tienes experiencia en Javascript, ya habrás hecho en muchas otras ocasiones.  {{% /alert %}}
-## Otras alternativas de bindear this
 
-También podemos hacer este bindeo de this (como contexto para en handler) a la hora de declarar el evento, en el template. El código nos quedaría más o menos así.
-```js
-<button onClick={this.toggleSlider.bind(this)}>Mostrar / Ocultar Slider</button>
-```
-También podríamos obtener el mismo resultado usando una arrow function, que es capaz de mantener el contexto de this, con un código como este:
-```js
-<button onClick={(e) => this.toggleSlider(e)}>Mostrar / Ocultar Slider</button>
-```
-Aunque estas opciones nos ensucien algo el template, tienen la ventaja de ahorrarnos algo de ceremonia en el constructor del componente. Sin embargo, en términos de rendimiento resultan una solución peor. El problema de estas alternativas es que, cada vez que se renderiza el componente, se le pasa una nueva función como manejador de evento, donde se tiene que bindear el contexto nuevamente. Incluso, si la función se está pasando hacia componentes hijos, forzaría un redibujado adicional del componente hijo, lo que posiblemente nos lleve a una disminución del rendimiento que podrá notarse en aplicaciones grandes.
-## Pasar parámetros a manejadores de eventos
+**Ciclo while:**
+El ciclo "while" se ejecuta mientras una condición sea verdadera.
 
-En los métodos de React asociados como manejadores de eventos podemos pasar parámetros. Puede ser útil cuando quieres personalizar el comportamiento del manejador, mediante el paso de datos que tienes desde el template.
+```php
+$contador = 1;
 
-Sería algo tan sencillo como bindear los otros datos que deseas enviar al método que hace de manejador de eventos. De la siguiente manera:
-```js
-<pre class="language-markup"><code>&lt;button onClick={(e) =&gt; this.toggleSlider(e)}&gt;Mostrar / Ocultar Slider&lt;/button&gt;</code></pre>
-```
-Ahora, dentro de nuestro método showText() podemos recibir el dato de esta forma.
-```js
-showText(item, e) {
-    console.log(e, item);
+while ($contador <= 5) {
+    echo $contador . " ";
+    $contador++;
 }
+// Salida: 1 2 3 4 5
 ```
-Esto nos mostrará dos datos en la consola, el "item" es aquella variable extra que estamos pasando al manejador. Por su parte, el parámetro "e" es el objeto evento de Javascript.
-## Prevenir el comportamiento por defecto de un evento
 
-Algo también muy típico que querrás realizar en un componente al trabajar con eventos es prevenir el comportamiento predeterminado. Por ejemplo, ante un clic en un enlace, podemos evitar que el navegador se vaya a la URL definida en el href del enlace.
+**Ciclo do-while:**
+El ciclo "do-while" se ejecuta al menos una vez y luego se repite mientras una condición sea verdadera.
 
-Para ello en Javascript nativo tendríamos dos opciones. La primera sería devolver "false" (return false) en el código del manejador. Esta alternativa no es válida para React. La segunda opción, que será la que realmente funcione, es invocar al método nativo de Javascript preventDefault(), que pertenece al objeto evento.
+```php
+$contador = 1;
 
-Por ejemplo, podríamos tener un enlace como este:
-```js
-<a onClick={this.clickRealizado} href="http://escuela.it">Haz clic</a>
+do {
+    echo $contador . " ";
+    $contador++;
+} while ($contador <= 5);
+// Salida: 1 2 3 4 5
 ```
-Cuyo manejador de evento sería el siguiente:
-```js
-clickRealizado(e) {
-    e.preventDefault();
-    console.log('clickEnP')
+
+**Ciclo foreach:**
+El ciclo "foreach" se utiliza para iterar sobre elementos de un array o una colección.
+
+```php
+$nombres = ["Juan", "María", "Carlos"];
+
+foreach ($nombres as $nombre) {
+    echo $nombre . " ";
 }
+// Salida: Juan María Carlos
 ```
-Gracias a ``` e.preventDefault()``` al hacer clic sobre el enlace no provocará que el navegador se vaya de la página, hacia la web de EscuelaIT.
-## Conclusión sobre los eventos en React
 
-Hemos conocido lo básico sobre los eventos en React, junto con algunas cosas no tan básicas, pero de necesario conocimiento para poder trabajar con esta librería.
+Estos son solo ejemplos básicos de cómo utilizar condicionales y ciclos en PHP. Puedes combinar estas estructuras de control y utilizar operadores lógicos para construir lógica más compleja en tu código. Además, PHP también ofrece otras estructuras de control, como "switch" para casos múltiples y "break" para romper ciclos, que puedes utilizar según tus necesidades.
 
-Como has podido comprobar, trabajar con eventos no es nada complejo, pero requiere saber las particularidades de la librería React para evitar problemas o situaciones poco deseadas, que a veces resulta difícil de debuguear. 
-# VIDEO DE EVENT HANDLER
-{{< youtube r5dzmx63ORI >}}
+# Sintaxis PHP
+{{< youtube p3KvwG8Yl4U >}}
+# Variables y operadores PHP
+{{< youtube q3_jcSsCLkQ >}}
+# Condicionales y Ciclos PHP
+{{< youtube scUH8K6Gkwk >}}

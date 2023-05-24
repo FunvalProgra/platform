@@ -1,176 +1,170 @@
 ---
-title: "Componentes con estado"
+title: "Funciones y Estructuras de Datos con PHP"
 date: 2023-03-12T11:46:35-06:00
 draft: false
 showPagination: false
 ---
-# Componentes con estado / sin estado
+# Funciones y Estructuras de Datos con PHP
 
-Para comenzar queremos analizar estos dos conceptos en contraposición. Cuando empezamos con React pueden provocar dudas, pero realmente es sencillo. Básicamente, la diferencia entre componentes con o sin estado estriba en que los componentes con estado permiten mantener datos propios a lo largo del tiempo e implementar comportamientos en sus diferentes métodos del ciclo de vida.
-Componentes sin estado
+En PHP, puedes utilizar funciones predefinidas y también crear tus propias funciones para realizar tareas específicas. Además, hay diversas estructuras de datos incorporadas que te permiten organizar y manipular información de manera eficiente. A continuación, te muestro ejemplos de funciones comunes y estructuras de datos en PHP:
 
-Los componentes sin estado no guardan ninguna información y por ello no necesitan de datos locales. Todos los componentes implementados hasta el momento eran stateless, sin estado. Eso no significa que no puedan personalizar su comportamiento, lo que se consigue con la ayuda de las propiedades de los componentes. Estas propiedades que nos pasan se podrán incluso transformar al producir una salida, de modo que sea acorde con las necesidades, pero no se guardará ningún valor y el componente no tendrá un ciclo de vida.
-Nota: El ciclo de vida de los componentes es algo que todavía no hemos abordado. Más adelante hablaremos de él, porque entenderlo es muy importante en React.
-Ejemplo de componente sin estado
+**Funciones:**
+Puedes utilizar funciones predefinidas de PHP y crear tus propias funciones para modularizar tu código y reutilizarlo en diferentes partes de tu programa. Aquí tienes ejemplos:
 
-Para que quede más claro, esto sería una implementación de componente sin estado que recibe un timestamp como propiedad y genera una vista donde ese instante se muestra convertido en una fecha en español.
-```js
-import React from 'react';
+```php
+// Función predefinida: strlen()
+$longitud = strlen("Hola, mundo"); // Devuelve la longitud de una cadena
 
-export default function (props) {
-    var date = new Date(parseInt(props.timestamp, 10));
-    var fecha = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
-    return (
-        <span>{fecha}</span>
-    );
+// Función predefinida: strtolower()
+$cadena = "Hola, mundo";
+$cadenaMinusculas = strtolower($cadena); // Convierte una cadena a minúsculas
+
+// Función personalizada: suma()
+function suma($a, $b) {
+    return $a + $b;
 }
+
+$resultado = suma(5, 3); // Llama a la función personalizada
+
+echo $longitud; // Salida: 11
+echo $cadenaMinusculas; // Salida: hola, mundo
+echo $resultado; // Salida: 8
 ```
-Este componente se podría usar importándolo y luego colocando la etiqueta correspondiente. Me parece interesante mostrar cómo se usaría porque el componente en sí, tal como se ha definido, no tiene nombre. El nombre se lo asignamos a la hora de importarlo.
-Nota: El estilo anterior para la creación del componente se conoce en React como "stateless function component". Es una alternativa a la creación del componente a partir de una clase, que solo podemos usar para los componentes sin estado.
-```js
-import React, { Component } from 'react'
-import TimestampToDate from './utils/TimestampToDate'
 
+**Estructuras de Datos:**
+PHP proporciona diferentes estructuras de datos integradas para organizar y manipular información de manera eficiente. Aquí tienes ejemplos de algunas estructuras de datos comunes:
 
-class App extends Component {
-  render() {
-    return (
-      <TimestampToDate timestamp={1475700297974} />
-    );
-  }
-}
+**Arrays:**
+Los arrays son estructuras de datos que pueden contener múltiples elementos en una sola variable.
+
+```php
+// Array numérico
+$numeros = [1, 2, 3, 4, 5];
+
+// Array asociativo
+$persona = [
+    "nombre" => "Juan",
+    "edad" => 30,
+    "ciudad" => "México"
+];
+
+echo $numeros[0]; // Acceder a un elemento del array numérico (Salida: 1)
+echo $persona["nombre"]; // Acceder a un elemento del array asociativo (Salida: Juan)
 ```
-Otro detalle interesante aquí es la forma como le pasamos un valor numérico a un componente. Dentro del componente la propiedad timestamp se esperaría que fuera un entero y para que así sea tenemos que indicarle el valor sin comillas. Lo metemos entre llaves porque si no le colocas comillas JSX te obliga a que sea una expresión Javascript. Esa expresión se evalúa como un número entero.
 
-Con este ejemplo queremos dejar claro que las propiedades de los componentes se pueden manipular para transformarlas en cualquier otro dato. Pero atención, en los componentes stateless las propiedades debemos tratarlas como valores de solo lectura, para evitar posibles situaciones inesperadas.. Si queremos manipular las propiedades y transformarlas en otra cosa lo más normal es guardemos los datos nuevos generados como variables, o estado si fuera necesario. Incluso, si solo se trata de una transformación sencilla para visualizar en la vista, podrías incluirla como una expresión Javascript embebida entre llaves dentro del JSX, aunque por claridad del código es preferible crear variables locales para generar esos cambios, como en el ejemplo anterior. En todo caso, quédate con que las propiedades deben trabajar como solo lectura.
-Componentes con estado
+**Listas Enlazadas:**
+PHP no tiene una estructura de datos específica llamada "listas enlazadas" incorporada en su biblioteca estándar, pero puedes crear una lista enlazada utilizando clases personalizadas.
 
-Los componentes con estado son aquellos que almacenan datos de manera local al componente. Estos datos pueden variar variar a lo largo del tiempo bajo diversas circunstancias, por ejemplo por la interacción del usuario con el componente. Este tipo de componentes tienen algunas particularidades y posibilidades por encima de los componentes sin estadao que veremos a continuación.
+```php
+class Nodo {
+    public $valor;
+    public $siguiente;
 
-Un ejemplo de componente con estado podría ser un contador. Ese contador puede incrementarse o decrementarse. Incluso podrían pasarnos como propiedad el valor inicial del contador, pero el valor actual de la cuenta lo guardaremos en el estado. Otro ejemplo podría ser un componente que se conecte con un API Rest. A este componente le podemos pasar como propiedad la URL del API y una serie de parámetros para realizar la solicitud al servidor. Una vez que recibamos los datos lo común será almacenarlos como estado del componente, para usarlos como sea necesario.
-
-El componente podrá además reaccionar al cambio de estado, de modo que actualice su vista cuando sea necesario. Eso lo veremos cuando analicemos el ciclo de vida de los componentes.
-Código necesario para implementar componente con estado
-
-Seguro que estarás deseando ver ya un componente con estado. Enseguida nos ponemos con ello, pero quiero que veamos antes el código de "boilerplate" para crear un componente con estado.
-```js
-import React from 'react'
-
-
-export default class Contador extends React.Component {
-  constructor(...args) {
-    super(...args)
-  }
-
-
-  render() {
-    return (
-      <div>Esto aun no tiene estado!</div>
-    )
-  }
-}
-```
-Lo primero decir que este componente todavía no tiene un estado implementado, es solo un código de partida para ver un par de cosas.
-
-Como primer detalle no estamos importando implícitamente la clase Component, para hacer el extends. No es problema porque depende de React. Así que ahora estamos haciendo "extends React.Component", lo que es perfectamente válido. Esto no tiene mucho que ver con el tema que nos ocupa, de los estados, pero así vemos más variantes de codificación.
-
-Más relevante en el código anterior es el constructor. En este boilerplate la verdad es que el constructor no sirve para nada, porque realmente no hemos inicializado nada (como sabes, los constructores resumen las tareas de inicialización de los objetos). En este caso simplemente estamos llamando al constructor de la clase padre, super(), pasándole los mismos argumentos que nos pasaron a nosotros.
-Nota: Eso de "...args" es una desestructuración, algo que nos viene de ES6, que permite en este caso recibir todos los argumentos o parámetros enviados a una función, sin necesidad de indicarlos uno a uno. Puedes obtener más información en el Manual de ES6, artículos del operador Rest y el operador Spread.
-
-Generalmente en los componentes que tienen estado necesitamos inicializarlo, por lo que el sitio más correcto sería el constructor. Si realizamos un constructor tenemos que asegurarnos que se invoque al constructor de la clase padre, que realiza una serie de tareas genéricas para todos los componentes de React. Como esa invocación hay que hacerla explícita al sobreescribir el constructor, nos obliga a escribir la llamada a super(). Enseguida veremos cómo inicializar el estado, pero he querido mostrar ese código, aún sin la inicialización, para comentar este detalle del constructor.
-
-En el boilerplate encuentras también el método render(), que ya sabemos que es el que nos sirve para definir la representación del componente.
-Ejemplo de componente con estado
-
-Ahora veamos ya una implementación de un componente completo con estado. En nuestro ejemplo vamos a crear el típico del contador. El valor actual del contador será nuestro estado y lo tendremos que inicializar en el constructor.
-```js
-import React from 'react'
-
-
-export default class Contador extends React.Component {
-  constructor(...args) {
-    super(...args)
-    this.state = {
-      contador: 0
+    public function __construct($valor) {
+        $this->valor = $valor;
+        $this->siguiente = null;
     }
-  }
-
-
-  render() {
-    return (
-      <div>Cuenta actual: {this.state.contador}</div>
-    )
-  }
 }
+
+$nodo1 = new Nodo(1);
+$nodo2 = new Nodo(2);
+$nodo3 = new Nodo(3);
+
+$nodo1->siguiente = $nodo2;
+$nodo2->siguiente = $nodo3;
+
+echo $nodo1->valor; // Salida: 1
+echo $nodo1->siguiente->valor; // Salida: 2
+echo $nodo1->siguiente->siguiente->valor; // Salida: 3
 ```
-Ahora nuestro constructor ya tiene sentido, porque está realizando la inicialización de la propiedad "state" del componente. Como puedes ver el estado es un objeto, en el que ponemos tantos atributos como sea necesarios guardar como estado.
 
-A la hora de renderizar el componente, por supuesto, podremos usar el estado para mostrar la salida. En este caso puedes ver cómo se vuelca el estado en la vista, con la expresión {this.state.contador}. Algo muy parecido a lo que hacíamos con las propiedades, solo que ahora los datos nos llegan del estado.
+Estos son solo ejemplos básicos de funciones y estructuras de datos en PHP. PHP ofrece una amplia variedad de funciones y estructuras de datos predefinidas, así como la capacidad de crear tus propias funciones y estructuras personalizadas según tus necesidades. Puedes explorar la documentación oficial de PHP para obtener más información sobre las funciones y estructuras de datos disponibles.
 
-Solo nos falta implementar un botón para incrementar ese contador para ello tenemos que entrar en un tema nuevo, que son los eventos. Veamos el siguiente código.
-```js
-import React from 'react'
+# Programacion Orientada a Objetos
 
-export default class Contador extends React.Component {
-  constructor(...args) {
-    super(...args)
-    this.state = {
-      contador: 0
+
+En PHP, puedes utilizar la programación orientada a objetos (POO) para estructurar y organizar tu código de manera más eficiente. La POO se basa en el concepto de objetos, que son instancias de clases, y permite la encapsulación, la herencia y el polimorfismo. A continuación, te muestro un ejemplo básico de cómo utilizar la programación orientada a objetos en PHP:
+
+**Clases y Objetos:**
+Una clase es una plantilla o un plano para crear objetos. Define propiedades y métodos que los objetos de esa clase tendrán. Para crear un objeto, utilizamos el operador `new`. Aquí tienes un ejemplo:
+
+```php
+class Persona {
+    public $nombre;
+    public $edad;
+
+    public function saludar() {
+        echo "Hola, mi nombre es " . $this->nombre;
     }
-  }
-
-  incrementar() {
-    this.setState({
-      contador: this.state.contador + 1
-    })
-  }
-
-  render() {
-    return (
-      <div>
-        <span>Cuenta actual: {this.state.contador}</span> 
-        <button onClick={this.incrementar.bind(this)}>+</button>
-      </div>
-    )
-  }
 }
+
+$persona1 = new Persona();
+$persona1->nombre = "Juan";
+$persona1->edad = 30;
+
+$persona1->saludar(); // Salida: Hola, mi nombre es Juan
 ```
-Ahora tenemos un botón y al hacer clic sobre él se invocará a la función incrementar(). Sin querer entrar en demasiados detalles sobre eventos, pues no es el asunto de este artículo, cabe decir que se pueden definir como si fueran atributos de los elementos o componentes. Como valor le colocamos su manejador de eventos. Además el "bind(this)" lo hacemos para bindear el contexto. Sobre eventos hablaremos más adelante.
 
-Lo que es interesante, para lo que respecta al estado, está en el manejador de evento incrementar(). Este usa el método setState() para modificar el estado. El detalle que no se te puede escapar es que, para manipular el estado no se debe modificar "a pelo" (a mano) la propiedad this.state, sino que tenemos que hacerlo a través de this.setState(). El motivo es que setState(), además de alterar el estado, desencadena toda una serie de acciones implementadas en el core de React, que se encargan de realizar todo el trabajo por debajo para que ese cambio de estado tenga una representación en la vista.
+En este ejemplo, la clase `Persona` tiene dos propiedades: `$nombre` y `$edad`, y un método llamado `saludar()` que muestra un mensaje de saludo.
 
-Dicho de otra manera, en el momento que cambiemos el estado con setState(), se pone en ejecución el motor de React para que se actualice el DOM virtual, se compare con el DOM del navegador y por último se actualicen aquellos elementos que sea necesario (porque realmente hayan cambiado). Si no usamos setState() todas esas operativas no se producirían y los componentes empezarían a funcionar de manera no deseada.
-Asincronía en la manipulación del estado
+**Encapsulación:**
+La encapsulación se refiere a la protección de las propiedades y métodos dentro de una clase para evitar su acceso directo desde fuera de la clase. Puedes utilizar los modificadores de acceso como `public`, `private` y `protected` para controlar la visibilidad de las propiedades y métodos. Aquí tienes un ejemplo:
 
-Hay un detalle extra que no queremos dejar pasar, sobre la asincronía en el manejo del estado por parte de React. Resulta que React, por motivos de rendimiento, puede llegar a acumular varias llamadas a setState, para procesarlas en un mismo instante.
+```php
+class Persona {
+    private $nombre;
+    public $edad;
 
-Lo anterior significa que this.state puede ser actualizado de manera asíncrona. Es decir, this.setState() puede no ejecutarse inmediatamente, sino esperar a que React juzgue oportuno hacer las actualizaciones del estado. Esto podría resultar en una situación complicada de resolver, cuando el cálculo del nuevo valor del estado necesita basarse en el estado que haya anteriormente.
-```js
-incrementar() {
-  this.setState({
-    contador: this.state.contador + 1
-  })
+    public function setNombre($nombre) {
+        $this->nombre = $nombre;
+    }
+
+    public function getNombre() {
+        return $this->nombre;
+    }
 }
+
+$persona1 = new Persona();
+$persona1->setNombre("Juan");
+$persona1->edad = 30;
+
+echo $persona1->getNombre(); // Salida: Juan
 ```
-En el código del método incrementar anterior, nos basamos en el estado actual del contador, para incrementarlo en una unidad. Sin embargo, si no sabemos realmente cuándo se va a ejecutar this.setState. Por ello, podría ocurrir que ese incremento se realice a partir de un valor del estado que no era realmente el válido.
 
-Para resolver esta situación en React se puede usar un mecanismo de manipulación del estado basado en una función. Veamos el código para clarificarlo un poco.
+En este ejemplo, la propiedad `$nombre` está declarada como `private`, lo que significa que solo se puede acceder a ella desde dentro de la clase utilizando los métodos `setNombre()` y `getNombre()`. La propiedad `$edad` está declarada como `public`, lo que permite acceder a ella directamente desde fuera de la clase.
 
-incrementar() {
-  this.setState(prevState => {
-    return { counter: prevState.counter + 1};
-  });
+**Herencia:**
+La herencia te permite crear nuevas clases basadas en una clase existente. La clase derivada hereda las propiedades y métodos de la clase base y puede agregar sus propios métodos o propiedades adicionales. Aquí tienes un ejemplo:
+
+```php
+class Persona {
+    public $nombre;
+
+    public function saludar() {
+        echo "Hola, mi nombre es " . $this->nombre;
+    }
 }
 
-Como puedes ver, en lugar de enviarle un objeto a setState() le estamos enviando una función. Esa función es capaz de recibir como parámetro el estado actual. Entonces, el nuevo estado lo calculo en función del estado actual.
+class Estudiante extends Persona {
+    public $grado;
 
-Si habías probado ejemplos anteriores en los que no habías tenido problemas con el cálculo del estado es normal. Aunque sea asíncrona la actualización del estado es muy rápida, por lo que es fácil no percibir ningún comportamiento anómalo. Simplemente tenlo en cuenta como una buena práctica en React.
-Conclusión
+    public function estudiar() {
+        echo "Soy estudiante de grado " . $this->grado;
+    }
+}
 
-De momento hemos dado bastante información sobre el estado de los componentes, hemos podido distinguir componentes con estado y componentes sin estado, y aunque todavía nos quedan cosas que aprender, hemos podido ver ejemplos para hacernos una idea de cada tipo de componente.
+$estudiante1 = new Estudiante();
+$estudiante1->nombre = "Juan";
+$estudiante1->grado = "10mo";
 
-En futuros artículos tenemos que abordar otros asuntos clave, como la inicialización de propiedades y estado ante diversos estilos de codificación, así como el ciclo de vida de los componentes, que es necesario conocer a fondo para resolver muchas de las necesidades de desarrollo en React. 
+$estudiante1->saludar(); // Salida: Hola, mi nombre es Juan
+$estudiante1->estudiar(); // Salida: Soy estudiante de grado 10mo
+```
 
-## video Componentes
+En este ejemplo, la clase `Estudiante` hereda de la clase `Persona` y agrega su propia propiedad `$grado` y su método `estudiar()
 
-{{< youtube qPu3WBi65PA >}}
+# Funciones y Estructuras de Datos con PHP
+
+{{< youtube BuWgF6ArmzQ >}}
+# Programacion orientada a objetos php
+{{< youtube XMunCmzbH8U >}}
