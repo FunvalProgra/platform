@@ -49,6 +49,30 @@ Asimismo te invitamos a tomar nota de lo que vayas aprendiendo para que puedas r
   </span>
 </div>
 
+## Curso de UDEMY
+
+Para esta preparación, estaremos tomando como base el curso de [Fundamentos de Programación, Algoritmos en java y JavaScript](https://www.udemy.com/course/fundamentos-de-programacion-algoritmos-en-java-y-javascript/) de <mark>UDEMY</mark>. Una vez hayas hecho click en el enlace anterior, te aparecerá una página donde te permitirá añadir este curso a tu cuenta de UDEMY, si no tienes una cuenta, puedes crearla de forma gratuita. Una vez añadiste el curso a tu cuenta, ya puedes acceder a todo el contenido y comenzar a estudiarlo.
+
+## Temas por día
+
+### Día 1
+
+- [Seccion 1 - Bienvenido al curso](https://www.udemy.com/course/fundamentos-de-programacion-algoritmos-en-java-y-javascript/learn/lecture/9234436#overview)
+
+- [Seccion 2 - Conceptos Básicos de Fundamentos de Programación](https://www.udemy.com/course/fundamentos-de-programacion-algoritmos-en-java-y-javascript/learn/lecture/9202800#overview)
+
+- [Sección 3 - Fundamentos de Algoritmia](https://www.udemy.com/course/fundamentos-de-programacion-algoritmos-en-java-y-javascript/learn/lecture/9223658#overview) (En esta secion, avanza lo que el tiempo te permita, ya que mañana puedes seguir estudiando esta sección)
+
+### Día 2
+- [Sección 3 - Fundamentos de Algoritmia](https://www.udemy.com/course/fundamentos-de-programacion-algoritmos-en-java-y-javascript/learn/lecture/9223658#overview)
+
+- [Sección 4 - Operadores y estructuras de Control](https://www.udemy.com/course/fundamentos-de-programacion-algoritmos-en-java-y-javascript/learn/lecture/9234566#overview)
+
+### Día 3
+
+- [Sección 5 - Estructuras Secuencials](https://www.udemy.com/course/fundamentos-de-programacion-algoritmos-en-java-y-javascript/learn/lecture/9234674#overview)
+
+
 ## Acerca de la evaluación
 
 Luego de aprender lo necesario, necesitamos poner a prueba tu conocimiento para evaluar que cuentas con el conocimiento minimo antes de empezar el curso,
