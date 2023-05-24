@@ -1,55 +1,116 @@
 ---
-title: "Introduccion Next.js"
+title: "Introduccion Laravel"
 date: 2023-03-12T11:48:09-06:00
 draft: false
 showPagination: false
 ---
-# NEXT.JS 
-## Framework de JavaScript
+# Laravel
+## Introduccion Laravel
+Laravel es un framework de desarrollo de aplicaciones web PHP de código abierto y altamente popular. Fue creado por Taylor Otwell en 2011 con el objetivo de proporcionar una forma elegante y eficiente de construir aplicaciones web robustas y escalables.
 
-Next.js se ha convertido en el framework de React para usar en producción, y ha quedado claro que con Next.js se pueden crear y desplegar rápidamente aplicaciones a gran escala y listas para usar en producción con Next.js.
+A continuación, te presento una introducción a Laravel y algunos de los conceptos clave asociados a este framework:
 
-Next.js viene con características que garantizan que tu aplicación pase de cero a producción en muy poco tiempo, a la vez que ofrece una curva de aprendizaje fácil, simplicidad y potentes herramientas a tu disposición.
+**Características principales de Laravel:**
+- **Elegante sintaxis:** Laravel utiliza una sintaxis limpia y expresiva que facilita el desarrollo y mejora la legibilidad del código.
+- **Enrutamiento potente:** Proporciona un sistema de enrutamiento flexible y fácil de usar para definir las rutas de la aplicación.
+- **Motor de plantillas:** Incluye un potente motor de plantillas llamado Blade, que facilita la creación de vistas y la gestión de la presentación de la aplicación.
+- **ORM (Object-Relational Mapping):** Laravel utiliza Eloquent ORM, que simplifica la interacción con la base de datos al permitirte trabajar con modelos y relaciones en lugar de escribir consultas SQL directamente.
+- **Migraciones de base de datos:** Proporciona una forma conveniente de controlar los cambios en la estructura de la base de datos mediante migraciones, lo que facilita la colaboración en equipo y la gestión de versiones.
+- **Seguridad integrada:** Laravel incluye características de seguridad como protección contra ataques de Cross-Site Scripting (XSS) y ataques de falsificación de solicitudes entre sitios (CSRF).
+- **Pruebas automatizadas:** Viene con herramientas integradas para realizar pruebas unitarias y de integración de forma sencilla y eficiente.
 
-Next.js amplía la biblioteca React original de Facebook y el paquete create-react-app para proporcionar un framework React extensible, fácil de usar y a prueba de producción.
+**Instalación de Laravel:**
+Para comenzar a utilizar Laravel, primero debes instalarlo en tu entorno de desarrollo. Puedes hacerlo siguiendo los siguientes pasos:
 
-## ¿Qué Es Next.js?
+1. Asegúrate de tener instalado PHP, Composer y Laravel Valet (si estás utilizando macOS) o Laravel Homestead (si estás utilizando otro sistema operativo).
+2. Abre una terminal y ejecuta el siguiente comando para instalar Laravel a través de Composer:
 
-Next.js es un framework de React que te permite construir sitios web y aplicaciones web estáticas supercargadas, amigables con el SEO y extremadamente orientadas al usuario, utilizando el framework de React. Next.js es conocido por la mejor experiencia de los desarrolladores a la hora de construir aplicaciones listas para usar en producción con todas las características que necesitas.
+```shell
+composer global require laravel/installer
+```
 
-Dispone de renderizado híbrido estático y de servidor, compatibilidad con TypeScript, agrupación inteligente, precarga de rutas y mucho más, sin necesidad de configuración adicional.
+3. Una vez que la instalación haya finalizado, puedes crear un nuevo proyecto Laravel ejecutando el siguiente comando:
 
-## Por Qué Usar Next.js
+```shell
+laravel new nombre-proyecto
+```
 
-Esta sección explorará por qué deberías aprender Next.js. También veremos las diferentes aplicaciones que puedes construir con Next.js.
+4. Esto creará una nueva carpeta con el nombre del proyecto en el directorio actual y descargará todas las dependencias de Laravel.
 
-### Optimizaciones de Imagen
+**Primeros pasos con Laravel:**
+Una vez que hayas instalado Laravel, podrás comenzar a construir tu aplicación web. Algunos de los conceptos clave a tener en cuenta son:
 
-Next.js proporciona optimizaciones de imagen automáticas con construcciones instantáneas. La optimización de imágenes es una potente función preintegrada en Next.js porque la gestión y optimización de imágenes requiere muchas configuraciones, y la optimización manual de imágenes puede suponer un peaje en tu tiempo productivo.
-### Internacionalización
+- **Rutas:** Define las rutas de tu aplicación en el archivo `routes/web.php` para asociar URL específicas con controladores o funciones de devolución de llamada.
+- **Controladores:** Los controladores son responsables de procesar las solicitudes y realizar acciones específicas. Puedes crear controladores en la carpeta `app/Http/Controllers`.
+- **Vistas:** Las vistas son las plantillas que se utilizan para mostrar la interfaz de usuario de tu aplicación. Se encuentran en la carpeta `resources/views` y generalmente utilizan el motor de plantillas Blade.
+- **Modelos:** Los modelos representan las tablas de la base de datos y proporcionan métodos para interactuar con los datos. Puedes crear modelos en la carpeta `app
 
-Otra gran característica añadida a Next.js es la internacionalización. La creación de una aplicación empresarial puede ser fácilmente utilizada y traducida a diferentes idiomas en todo el mundo. Esta característica es una gran incorporación a Next.js y hace que Next.js sea reconocido internacionalmente porque se necesita menos configuración para conseguir la internalización.
-### Análisis de Next.js
+# Estrucuta Laravel
+La estructura de un proyecto Laravel sigue una convención bien definida y organizada. A continuación, te mostraré la estructura básica de un proyecto Laravel:
 
-Next.js proporciona un panel de control analítico que puede configurarse para mostrar datos precisos de los visitantes y perspectivas de la página desde el primer momento. Con esta función, puedes crear rápidamente un panel de control analítico y obtener información valiosa sobre tus visitantes e información de la página sin necesidad de programación o configuración adicional.
+```
+- app
+  - Console
+  - Exceptions
+  - Http
+    - Controllers
+    - Middleware
+    - Requests
+  - Models
+  - Providers
 
+- bootstrap
+- config
+- database
+- public
+- resources
+  - js
+  - lang
+  - sass
+  - views
+- routes
+- storage
+- tests
+- vendor
+```
 
-# Lo Que Puedes Construir
+Aquí tienes una descripción de las carpetas principales:
 
-En Next.js, no hay límite para el tipo de aplicaciones que puedes desarrollar. Puedes desarrollar diferentes tipos de aplicaciones utilizando Next.js. Además, cualquier aplicación que elijas crear con Next.js seguirá teniendo todas las ventajas y características de Next.js sin necesidad de configuraciones adicionales por tu parte.
+- **app:** Contiene la lógica de la aplicación, incluyendo controladores, modelos y clases relacionadas.
+  - **Console:** Contiene comandos de consola personalizados que puedes crear.
+  - **Exceptions:** Contiene clases para manejar excepciones personalizadas.
+  - **Http:** Contiene controladores, middlewares y solicitudes HTTP.
+    - **Controllers:** Aquí puedes definir tus controladores que manejan las solicitudes HTTP y realizan acciones.
+    - **Middleware:** Contiene middlewares que procesan las solicitudes HTTP antes o después de ser manejadas por los controladores.
+    - **Requests:** Puedes crear clases de solicitud personalizadas para validar los datos enviados en las solicitudes.
+  - **Models:** Aquí puedes definir tus modelos que representan las tablas de la base de datos y proporcionan métodos para interactuar con los datos.
+  - **Providers:** Contiene clases de proveedores que registran los servicios de la aplicación.
 
-A continuación se muestra la lista de tipos de aplicaciones que puedes crear con Next.js:
+- **bootstrap:** Contiene archivos de inicialización y configuración para arrancar la aplicación.
 
-    MVP (Producto Mínimo Viable)
-    Sitios web Jamstack
-    Portales web
-    Páginas web individuales
-    Sitios web estáticos
-    Productos SaaS
-    Sitios web de comercio electrónico y de venta al por menor
-    Paneles de control
-    Aplicaciones web complejas y exigentes
-    Interfaces de usuario interactivas
+- **config:** Contiene los archivos de configuración de la aplicación, como las conexiones de base de datos, el archivo de rutas, etc.
 
+- **database:** Aquí puedes encontrar las migraciones de base de datos y los archivos de semillas para configurar y poblar la base de datos.
 
- {{< youtube  PFIzbQ5Bh0c >}}
+- **public:** Es la carpeta raíz accesible públicamente. Contiene el archivo `index.php` que actúa como punto de entrada de la aplicación.
+
+- **resources:** Contiene los recursos de la aplicación, como las vistas, los archivos de lenguaje, los archivos de estilo y los archivos JavaScript.
+  - **js:** Puedes colocar tus archivos JavaScript aquí.
+  - **lang:** Contiene archivos de lenguaje para la internacionalización de la aplicación.
+  - **sass:** Aquí puedes almacenar tus archivos Sass para los estilos de la aplicación.
+  - **views:** Contiene las vistas de la aplicación que se renderizan y muestran al usuario.
+
+- **routes:** Aquí puedes definir las rutas de la aplicación, que establecen la relación entre una URL y el controlador o la acción que debe ejecutarse.
+
+- **storage:** Es el directorio de almacenamiento de la aplicación y contiene archivos generados dinámicamente, como archivos de registro, caché, sesiones, etc.
+
+- **tests:** Contiene los archivos de prueba para probar tu aplicación.
+
+- **vendor:** Aquí se encuentran las dependencias de Composer y las bibliotecas de terceros utilizadas en el proyecto.
+
+Esta es solo una descripción básica de la estructura de un proyecto Laravel. A medida que trabajes con Laravel, explorarás más en profundidad cada una de estas carpetas y cómo se utilizan en el desarrollo de tu aplicación.
+
+#  Laravel video
+ {{< youtube  LkSeELpdj4k >}}
+#  Laravel video
+ {{< youtube  P4ehlI6btNQ >}}
