@@ -1,109 +1,174 @@
 ---
-title: "Caracterìsticas de Next.js"
+title: "Migraciones"
 date: 2023-03-12T11:49:44-06:00
 draft: false
 showPagination: false
 ---
-# Características de Next.js
+# Migraciones
+En Laravel, las migraciones son una forma conveniente y controlada de administrar los cambios en la estructura de la base de datos. Las migraciones te permiten crear, modificar o eliminar tablas y columnas de manera fácil y consistente, y también te ayudan a colaborar en equipo y mantener un historial de versiones de tu esquema de base de datos.
 
-A continuación explicaremos las características de Next.js y lo que puedes ganar utilizando Next.js en tu proyecto.
-## Enrutamiento
+A continuación, te mostraré los pasos básicos para trabajar con migraciones en Laravel:
 
-El enrutamiento es una de las características esenciales de Next.js. Next.js utiliza el sistema de enrutamiento basado en archivos de las páginas para estructurar cómo será el enrutamiento de tu aplicación. Cada archivo y carpeta creada dentro de la carpeta pages se convierte automáticamente en ruta en Next.js.
+1. **Crear una migración:** Puedes generar una nueva migración utilizando el comando Artisan `make:migration`. Por ejemplo, para crear una migración para crear una nueva tabla, puedes ejecutar el siguiente comando en tu terminal:
 
-El sistema de enrutamiento de Next.js se divide en 3 tipos diferentes, y a continuación exploraremos cada uno de ellos.
-## Enrutamiento de Índice
+   ```shell
+   php artisan make:migration create_nueva_tabla --create=nombre_tabla
+   ```
 
-La carpeta pages tiene automáticamente index.js, que se convierte en la ruta de la página de inicio /. También puedes definir una página index.js para todas tus rutas en cualquier carpeta. Por ejemplo, puedes definir pages/profiles/index.js, que se asignará automáticamente a la página /profiles.
+   Esto creará un nuevo archivo de migración en el directorio `database/migrations`.
 
-Mira este ejemplo, por ejemplo:
+2. **Definir la estructura de la tabla:** Abre el archivo de migración recién creado y utiliza los métodos de la clase `Schema` para definir la estructura de la tabla. Por ejemplo, puedes utilizar métodos como `create()`, `addColumn()`, `dropColumn()`, etc. para especificar las columnas y las modificaciones de la tabla.
 
-- pages
-  - index.js
-  - profile
-    - index.js
-    - [user].js
+   ```php
+   <?php
 
-La estructura de páginas anterior mapeará las carpetas y archivos a una estructura de URL. Por ejemplo, / para las pages/index.js, /profile/  para las pages/profile/index.js, y /profile/user para las pages/profile/user.js, respectivamente.
-## Rutas Anidadas
+   use Illuminate\Database\Migrations\Migration;
+   use Illuminate\Database\Schema\Blueprint;
+   use Illuminate\Support\Facades\Schema;
 
-Las rutas anidadas se crean dentro de una ruta padre. Para crear una ruta anidada, tienes que crear una ruta/carpeta padre dentro de la carpeta pages y añadir carpetas o archivos dentro para crear una ruta anidada.
+   class CreateNuevaTabla extends Migration
+   {
+       public function up()
+       {
+           Schema::create('nombre_tabla', function (Blueprint $table) {
+               $table->id();
+               $table->string('nombre');
+               $table->integer('edad');
+               $table->timestamps();
+           });
+       }
 
-Echa un vistazo a este ejemplo:
+       public function down()
+       {
+           Schema::dropIfExists('nombre_tabla');
+       }
+   }
+   ```
 
-- pages
-  - index.js
-  - dashboard
-    - index.js
-    - user.js
+   En este ejemplo, se crea una nueva tabla llamada `nombre_tabla` con las columnas `id`, `nombre`, `edad` y las columnas `timestamps` para registrar la fecha y hora de creación y actualización de los registros.
 
-En el script anterior, los archivos user.js e index.js están anidados con la ruta padre del panel de control, lo que significa que sólo se puede acceder a las URLs con la ruta del panel de control.
+3. **Ejecutar las migraciones:** Una vez que hayas definido la migración, puedes ejecutarla para aplicar los cambios en la base de datos. Utiliza el comando Artisan `migrate` para ejecutar todas las migraciones pendientes:
 
-## Rutas Dinámicas
+   ```shell
+   php artisan migrate
+   ```
 
-Se consigue mediante rutas dinámicas. Las rutas dinámicas son siempre indeterminadas. Pueden generarse mediante llamadas a la API o asignar un ID o slug a la URL.
+   Esto ejecutará todas las migraciones que aún no se hayan aplicado.
 
-Para crear una ruta dinámica en Next.js, añade un corchete [id].js alrededor del nombre del archivo o del directorio. Puedes nombrar el archivo o el directorio con cualquier nombre de tu elección, pero debes adjuntar un corchete [] para que sea dinámico.
+4. **Rollback y reset de migraciones:** Si necesitas revertir o deshacer los cambios realizados por una o todas las migraciones, puedes utilizar los comandos `migrate:rollback` y `migrate:reset` respectivamente.
 
-Echa un vistazo a este ejemplo:
+   ```shell
+   php artisan migrate:rollback
+   ```
 
-- pages
-  - dashboard
-    - [user].js
-        - profile
+   Este comando deshará la última migración.
 
-El script anterior hace que el [usuario].js sea dinámico, lo que significa que se debe acceder a la página del perfil con /dashboard/2/profile o /dashboard/johndoe/profile.
+   ```shell
+   php artisan migrate:reset
+   ```
 
-En la documentación oficial, puedes aprender más y los diferentes trucos para crear un sistema de enrutamiento más avanzado en Next.js.
+   Este comando deshará todas las migraciones y eliminará todas las tablas de la base de datos.
 
-## Servir Archivos Estáticos
+Estos son los conceptos básicos para trabajar con migraciones en Laravel. Las migraciones te permiten mantener un control y seguimiento de los cambios en la estructura de la base de datos de tu aplicación, facilitando el trabajo en equipo y la gestión del esquema de la base de datos.
 
-En Next.js, el servicio de archivos estáticos o activos como iconos, fuentes autoalojadas o imágenes se realiza a través de la carpeta public, la única fuente de verdad para los activos estáticos.
+# AppService Provider Laravel
+El archivo `AppServiceProvider` en Laravel es una clase que se encuentra en el directorio `app/Providers` y proporciona un punto de entrada para configurar y registrar enlaces de servicio en la aplicación. Es una de las clases de proveedores incluidas por defecto en Laravel y juega un papel importante en la configuración inicial de la aplicación.
 
-La carpeta public no debe ser renombrada según los documentos de Next.js. Servir activos estáticos a través de la carpeta public es muy sencillo, según la configuración de Next.js.
-Renderización Previa
+El `AppServiceProvider` tiene dos métodos principales que puedes utilizar:
 
-Una de las enormes características de Next.js es el pre-renderizado, que hace que Next.js funcione muy bien y muy rápido. Next.js pre-renderiza cada página generando de antemano el HTML de cada página junto con el JavaScript mínimo que necesitan para ejecutarse a través de un proceso conocido como Hidratación.
+1. **`register()`:** Este método se utiliza para registrar enlaces de servicio y realizar enlaces de dependencia en la aplicación. Puedes utilizarlo para enlazar interfaces con implementaciones concretas de clases.
 
-## Hay dos formas de pre-renderizado en Next.js:
+   ```php
+   public function register()
+   {
+       $this->app->bind(Interface::class, ConcreteClass::class);
+   }
+   ```
 
-    Renderización del lado del servidor (SSR)
-    Generación estática (SG)
+   En este ejemplo, se registra una implementación concreta `ConcreteClass` para la interfaz `Interface`. Esto permite que en otros lugares de la aplicación se inyecte automáticamente la instancia de `ConcreteClass` cuando se solicite una instancia de `Interface`.
 
-La diferencia crucial entre SG y SSR es cómo se obtienen los datos. En el caso de SG, los datos se obtienen en el momento de la construcción y se reutilizan en cada solicitud (lo que hace que sea más rápido porque se puede almacenar en caché), mientras que en SSR, los datos se obtienen en cada solicitud.
+2. **`boot()`:** Este método se ejecuta después de que todos los servicios se hayan registrado y está destinado a la configuración adicional de la aplicación. Puedes utilizarlo para definir rutas, vistas, eventos, enlaces de base de datos, etc.
 
-# Páginas y Rutas
+   ```php
+   public function boot()
+   {
+       Route::middleware('web')
+           ->namespace('App\Http\Controllers')
+           ->group(function () {
+               Route::get('/', 'HomeController@index');
+           });
+   }
+   ```
 
-Una de las particularidades de Next.js es que esta construido alrededor del concepto de páginas.
-Una página es un componente de React exportado desde la carpeta pages.
-Las páginas están asociadas con una ruta basada en el nombre del archivo. Por ejemplo pages/perfil.js resultará en la ruta /perfil.
-```js
-export default function Perfil() {
-  return <div>¡Bienvenido a mi perfil!</div>;
-}
-```
-pages/perfil.js
-Prueba el código anterior por tu cuenta y visita localhost:3000/perfil para ver los resultados.
-Rutas Index
-Los archivos con nombre index dirigen hacia la raíz del directorio que lo contiene.
-•	pages/index.js → /
-•	pages/blog/index.js → /blog
-Rutas Anidadas
-Supongamos que queremos acceder a la siguiente ruta: /blog/post/:id
-Necesitaremos anidar las carpetas de la siguiente manera:
-|- pages
-  |- index.js
-  |- blog
-    |- post
-      |- [id].js # id dinámico para cada post
-Páginas con Rutas Dinámicas
-También podemos utilizar rutas dinámicas si agregamos corchetes al nombre del archivo. Por ejemplo, si creamos un archivo llamado pages/post/[id].js podremos acceder a el en las rutas post/1, post/2, y así sucesivamente.
-import { useRouter } from "next/router";
+   En este ejemplo, se define una ruta para la página de inicio de la aplicación. La función `group()` permite agrupar varias rutas bajo un middleware y un espacio de nombres específicos.
 
-export default function Post() {
-  const router = useRouter();
-  const { id } = router.query;
+El `AppServiceProvider` también es un buen lugar para definir enlaces de base de datos, configuraciones de cache, configuraciones de log, eventos, etc. Puedes personalizar este proveedor según tus necesidades y agregar más lógica en los métodos `register()` y `boot()`.
 
-  return <p>Post: {id}</p>;
-}
-pages/post/[id].js
+Es importante destacar que el `AppServiceProvider` es cargado automáticamente por Laravel durante el inicio de la aplicación, por lo que no es necesario registrar manualmente este proveedor en el archivo `config/app.php`.
+
+Recuerda que, además del `AppServiceProvider`, Laravel también incluye otros proveedores útiles como `RouteServiceProvider`, `EventServiceProvider`, `AuthServiceProvider`, entre otros, que te permiten personalizar y configurar diferentes aspectos de tu aplicación.
+
+# Middleware
+En Laravel, el middleware es una capa de software que se encuentra entre la solicitud entrante y la respuesta enviada por la aplicación. Actúa como un filtro o una tubería a través de la cual pasan las solicitudes antes de ser procesadas por la aplicación. El middleware permite realizar acciones específicas en una solicitud, como autenticación, validación, registro de actividad, etc., antes de que la solicitud llegue a su destino final.
+
+Laravel incluye varios middlewares predefinidos, como el middleware de autenticación, el middleware de verificación CSRF (Cross-Site Request Forgery), el middleware de enrutamiento, entre otros. Además, puedes crear tus propios middlewares personalizados según tus necesidades.
+
+A continuación, te mostraré los pasos básicos para trabajar con middleware en Laravel:
+
+1. **Creación de un middleware:** Puedes generar un nuevo middleware utilizando el comando Artisan `make:middleware`. Por ejemplo, para crear un middleware llamado `MiMiddleware`, ejecuta el siguiente comando en tu terminal:
+
+   ```shell
+   php artisan make:middleware MiMiddleware
+   ```
+
+   Esto creará un nuevo archivo de middleware en el directorio `app/Http/Middleware`.
+
+2. **Definición del middleware:** Abre el archivo de middleware recién creado y, en el método `handle()`, implementa la lógica que deseas ejecutar en cada solicitud que pase a través de este middleware. Puedes realizar acciones como verificar la autenticación del usuario, validar datos, agregar encabezados personalizados, etc.
+
+   ```php
+   <?php
+
+   namespace App\Http\Middleware;
+
+   use Closure;
+
+   class MiMiddleware
+   {
+       public function handle($request, Closure $next)
+       {
+           // Lógica del middleware
+
+           return $next($request);
+       }
+   }
+   ```
+
+   El método `handle()` recibe la solicitud actual y una clausura `$next`, que representa la siguiente capa de middleware o el controlador final. Debes asegurarte de llamar a la clausura `$next` para permitir que la solicitud continúe su flujo normal.
+
+3. **Registro del middleware:** Para que Laravel utilice el middleware, debes registrarlo en la aplicación. Puedes hacerlo en el archivo `app/Http/Kernel.php`. En este archivo, encontrarás un arreglo llamado `$middleware` que contiene la lista de middlewares globales que se aplicarán a todas las solicitudes.
+
+   ```php
+   protected $middleware = [
+       // ...
+       \App\Http\Middleware\MiMiddleware::class,
+   ];
+   ```
+
+   Agrega la referencia al middleware recién creado en este arreglo. Ten en cuenta que la posición en el arreglo determina el orden de ejecución de los middlewares. Si necesitas aplicar el middleware solo a rutas específicas, puedes utilizar el middleware de ruta en lugar del middleware global.
+
+4. **Asignación del middleware a rutas:** Puedes asignar el middleware a rutas específicas en el archivo `routes/web.php` o `routes/api.php`. Puedes hacerlo utilizando los métodos `middleware()` o `group()`.
+
+   ```php
+   Route::get('/ruta', function () {
+       // Lógica de la ruta
+   })->middleware('MiMiddleware');
+   ```
+
+   En este ejemplo, el middleware `MiMiddleware` se aplicará solo a la ruta `/ruta`.
+
+Estos son los pasos básicos para trabajar con middleware en Laravel. El middleware te permite realizar tareas específicas en las solicitudes antes de que lleguen a su destino final, lo
+
+#  Laravel Migraciones
+ {{< youtube  LkSeELpdj4k >}}
+#  Laravel MiMiddleware
+ {{< youtube  P4ehlI6btNQ >}}

@@ -112,5 +112,5 @@ Esta es solo una descripción básica de la estructura de un proyecto Laravel. A
 
 #  Laravel video
  {{< youtube  LkSeELpdj4k >}}
-#  Laravel video
+#  Laravel estrucuta
  {{< youtube  P4ehlI6btNQ >}}
