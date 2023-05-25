@@ -1,1 +1,2 @@
-{{ return time.Format (site.Language.Params.dateFormat | default ":date_long") . }}
+<!-- {{ return time.Format (site.Language.Params.dateFormat | default ":date_long") . }} -->
+{{ return time.Format (site.Language.dateFormat | default ":date_long") . }}
