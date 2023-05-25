@@ -82,22 +82,24 @@ export default function Perfil() {
   return <div>¡Bienvenido a mi perfil!</div>;
 }
 ```
-pages/perfil.js
+*** pages/perfil.js ***
 Prueba el código anterior por tu cuenta y visita localhost:3000/perfil para ver los resultados.
 Rutas Index
 Los archivos con nombre index dirigen hacia la raíz del directorio que lo contiene.
-•	pages/index.js → /
-•	pages/blog/index.js → /blog
+
+            •	pages/index.js → /
+            •	pages/blog/index.js → /blog
 Rutas Anidadas
 Supongamos que queremos acceder a la siguiente ruta: /blog/post/:id
 Necesitaremos anidar las carpetas de la siguiente manera:
-|- pages
-  |- index.js
-  |- blog
-    |- post
-      |- [id].js # id dinámico para cada post
-Páginas con Rutas Dinámicas
+        |- pages
+           |- index.js
+               |- blog
+                  |- post
+                       |- [id].js # id dinámico para cada post
+*** Páginas con Rutas Dinámicas ***
 También podemos utilizar rutas dinámicas si agregamos corchetes al nombre del archivo. Por ejemplo, si creamos un archivo llamado pages/post/[id].js podremos acceder a el en las rutas post/1, post/2, y así sucesivamente.
+``` js
 import { useRouter } from "next/router";
 
 export default function Post() {
@@ -107,3 +109,4 @@ export default function Post() {
   return <p>Post: {id}</p>;
 }
 pages/post/[id].js
+```
