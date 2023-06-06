@@ -7,7 +7,7 @@ showPagination: false
 
 Hoy abordaremos el tema de la estructura Condicional. Continuaremos trabajando en el curso de UDEMY. Recuerda enfocarte en los temas que te indicamos y no en todo el curso, ya que el mismo es muy extenso y no queremos que te satures. Sin embargo, si consideras que comprendes el tema y deseas avanzar, puedes hacerlo.
 
-## Estructura Secuencial
+## Estructura Condicional
 
 Comprende toda la sección 6. Comprende los videos/lecturas del 42 al 64.
 
