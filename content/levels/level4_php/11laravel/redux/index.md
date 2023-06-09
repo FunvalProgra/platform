@@ -5,7 +5,7 @@ draft: false
 showPagination: false
 ---
 
-# CRUD LARAVEL 1
+# CRUD LARAVEL 4
 paso a paso completo para crear un CRUD (Crear, Leer, Actualizar, Eliminar) utilizando Laravel:
 
 Paso 1: Configurar un proyecto Laravel

@@ -4,7 +4,7 @@ date: 2023-03-12T11:51:34-06:00
 draft: false
 showPagination: false
 ---
-# API con Laravel
+# API con Laravel 3
 Crear una API con Laravel es una forma común de desarrollar aplicaciones web que se comunican con otras aplicaciones o servicios a través de endpoints de API. A continuación, se muestra una lección completa sobre cómo crear una API utilizando Laravel:
 
 Paso 1: Configurar un proyecto Laravel

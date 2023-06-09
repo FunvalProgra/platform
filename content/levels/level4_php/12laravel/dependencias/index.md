@@ -5,7 +5,7 @@ draft: false
 showPagination: false
 ---
 
-# MySQL en phpMyAdmin 1
+# MySQL en phpMyAdmin 5
 
 
 lección completa sobre cómo utilizar MySQL en phpMyAdmin, una popular herramienta de administración de bases de datos web:
