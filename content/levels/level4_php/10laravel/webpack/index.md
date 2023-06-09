@@ -69,6 +69,6 @@ Paso 7: Probar la API
 Una vez que hayas configurado y desarrollado tu API, puedes
 
 
- # Video  API con Laravel
+ # Video  API con Laravel 1
 {{< youtube  eRYz62Cx0Wg >}}
  

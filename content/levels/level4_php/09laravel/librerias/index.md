@@ -4,7 +4,7 @@ date: 2023-03-12T11:50:42-06:00
 draft: false
 showPagination: false
 ---
-# NavLinks
+# NavLinks Laravel
 
 En Laravel, los enlaces de navegación, o "NavLinks", se utilizan para generar enlaces HTML de manera conveniente en tus vistas. Estos enlaces se utilizan típicamente para crear la navegación de tu aplicación, permitiendo a los usuarios moverse entre diferentes páginas.
 
