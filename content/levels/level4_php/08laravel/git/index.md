@@ -5,7 +5,7 @@ draft: false
 showPagination: false
 ---
  
-# Laravel middlewares
+# Laravel middlewares 1
 
 En Laravel, los middlewares son componentes clave que permiten agregar capas de lógica entre las solicitudes entrantes y las respuestas salientes de una aplicación. Proporcionan una forma conveniente de filtrar, modificar o manipular las solicitudes HTTP antes de que sean manejadas por los controladores y de procesar las respuestas antes de que sean enviadas de vuelta al cliente.
 
