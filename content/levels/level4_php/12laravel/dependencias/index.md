@@ -1,36 +1,49 @@
 ---
-title: "Dependencias"
+title: "MySQL en phpMyAdmin"
 date: 2023-03-12T11:52:41-06:00
 draft: false
 showPagination: false
 ---
 
-# Dependencias
+# MySQL en phpMyAdmin
 
-## ¿Qué es el array de dependencias en React?
 
-En nuestro post sobre el hook useCallback en React, te hemos mencionado que uno de los pasos más importantes en la ejecución de esta función es colocar un array de dependencias. Este elemento también es fundamental en el uso del hook useEffect en React. Pero, ¿qué es?
+lección completa sobre cómo utilizar MySQL en phpMyAdmin, una popular herramienta de administración de bases de datos web:
 
-Cuando hablamos del array de dependencias en React nos referimos a pasar como segundo parámetro de un hook un array. Es decir, mientras que el primer parámetro de un hook como useEffect o useCallback es una función, el segundo parámetro puede ser un array. Aunque este array puede estar vacío o lleno, su función cambia según su valor. A continuación, te explicamos qué sucede en cada caso.
+Paso 1: Acceder a phpMyAdmin
+- Abre tu navegador web y accede a la URL donde está instalado phpMyAdmin. Por ejemplo, si está instalado localmente, la URL podría ser `http://localhost/phpmyadmin`.
+- Ingresa tu nombre de usuario y contraseña para acceder a phpMyAdmin. Estos credenciales deben ser los mismos que usaste para configurar MySQL.
 
-Se le llama array de dependencias porque el valor contenido dentro del array se conoce como una dependencia. Este nombre se da porque el funcionamiento del hook cambiará dependiendo del valor que contenga este array.
+Paso 2: Seleccionar la base de datos
+- Una vez que hayas accedido a phpMyAdmin, verás una lista de bases de datos en el panel izquierdo. Haz clic en el nombre de la base de datos en la que deseas trabajar. Si aún no tienes una base de datos, puedes crear una nueva siguiendo los pasos mencionados a continuación.
 
-En el hook useEffect, pasar un array vacío como segundo parámetro quiere decir que el efecto contenido en la función solo se ejecutará después del primer render. Por su parte, un array de dependencias en React que contenga un valor se ejecuta cada vez que cambie este valor.
+Paso 3: Crear una base de datos
+- En el panel izquierdo de phpMyAdmin, haz clic en "Nueva" para crear una nueva base de datos.
+- Ingresa un nombre para la nueva base de datos y selecciona el conjunto de caracteres y la clasificación adecuada.
+- Haz clic en "Crear" para crear la base de datos.
 
-En el hook useCallback, un array vacío quiere decir que la función contenida como primer parámetro se ejecutará justo después del primer render. La diferencia aquí es que la función quedará memoizada, es decir, no cambiará su referencia a largo de los consecuentes renders. Entonces, con el array de dependencias en React conseguiremos una función que será siempre la misma durante toda la vida del componente.
+Paso 4: Crear una tabla
+- Una vez seleccionada la base de datos, haz clic en la pestaña "Estructura".
+- En la parte superior, encontrarás un campo para ingresar el nombre de la tabla. Ingresa un nombre para la tabla y especifica el número de columnas que deseas tener.
+- En la sección de columnas, ingresa los nombres de columna, selecciona el tipo de datos adecuado para cada columna y define otras propiedades, como la longitud y si es requerida o no.
+- Haz clic en "Guardar" para crear la tabla.
 
-¿Y qué sucede si ponemos un valor dentro del array de dependencias en useCallback? Pues esta dependencia marcará cuando se va a generar una nueva referencia. Es decir, cada vez que cambie la dependencia, cambiará la referencia.
+Paso 5: Insertar datos en la tabla
+- Después de crear la tabla, ve a la pestaña "Datos".
+- Haz clic en "Insertar" para agregar una nueva fila de datos.
+- Completa los valores para cada columna en la fila de inserción.
+- Haz clic en "Ejecutar" para insertar los datos en la tabla.
 
-Desde KeepCoding queremos comentarte que el array de dependencias en React no es algo sobre lo que haya que pensar demasiado. En realidad, cualquier elemento que manejemos dentro de los hooks useCallback y useEffect, por ejemplo una prop, se vuelve una dependencia. Por ello, hay que buscar de qué depende la función que tenemos dentro del hook, un estado, un dato externo, una función. En muchos de los casos, terminamos poniendo un array vacío.
+Paso 6: Ejecutar consultas SQL
+- phpMyAdmin te permite ejecutar consultas SQL directamente en la base de datos.
+- Ve a la pestaña "SQL" y escribe tu consulta SQL en el campo de texto.
+- Haz clic en "Ejecutar" para ejecutar la consulta y ver los resultados.
 
-## ¿Cómo saber si estamos usando el array de dependencias en React correctamente?
+Paso 7: Administrar la base de datos
+- phpMyAdmin proporciona una variedad de funciones para administrar la base de datos, como crear y eliminar tablas, agregar y eliminar columnas, realizar copias de seguridad, importar y exportar datos, entre otros.
+- Explora las diferentes opciones y características disponibles en phpMyAdmin para administrar eficientemente tu base de datos.
 
-Debido a los distintos modos en que podemos usar el array de dependencias en React, podemos tener dudas sobre su uso adecuado. Lo bueno es que con análisis automáticos como ESLint podemos obtener un resultado. Esta extensión nos avisará cuando no tengamos bien puesto este elemento.
+Recuerda que phpMyAdmin es una herramienta poderosa y debes tener cuidado al realizar cambios en tu base de datos. Asegúrate de entender las consecuencias de tus acciones antes de ejecutar consultas o modificar estructuras de tablas.
 
-Por ejemplo, cuando un hook useCallback no tiene un array de dependencias, veremos el siguiente mensaje:
-
-React Hook useCallback does nothing when called with only one argument. Did you forget to pass an array of dependencies?
-
-Este mensaje sale porque no tiene mucho sentido usar el useCallback sin un array de dependencias. ¿Por qué? Pues porque si no se lo ponemos, al igual que si no lo ponemos en useEffect, las funciones se ejecutarán siempre después de cada render. Por ello, utilizar useCallback para que se cree una nueva referencia en cada render contradice el mismo propósito del hook.
-
-En useCallback es bueno mantener las dependencias al mínimo. Normalmente, estamos utilizando este hook porque queremos reducir el número de referencias que se producen de una misma función. Entonces, para mejorar su performance deberemos mantener pocas dependencias. No necesariamente tiene que ser un array vacío, pero deberíamos asegurarnos de tener pocas variables que cambien poco. 
+ # mysql en Laravel
+{{< youtube  XwtgZtTTO8A >}}

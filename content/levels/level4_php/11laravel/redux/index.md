@@ -1,57 +1,72 @@
 ---
-title: "Rutas API"
+title: "CRUD"
 date: 2023-03-12T11:52:06-06:00
 draft: false
 showPagination: false
 ---
 
-# Rutas API
-Next.js provee una solución para construir APIs fácilmente en un entorno Serverless (Sin servidor), por lo que no tendremos que preocuparnos de pagar alojamiento de servidores para el back-end de nuestra aplicación.
-Todos los archivos dentro de la carpeta pages/api serán tratados como endpoints de nuestra API en lugar de páginas.
-Por ejemplo, si creamos un archivo pages/api/hola.js podremos acceder al mismo en la ruta: /api/hola y nos devolverá como respuesta un objeto json.
-``` js
-export default function manejador(req, res) {
-  res.status(200).json({ texto: "Hola" });
-}
-pages/api/hola.js
+# CRUD LARAVEL
+paso a paso completo para crear un CRUD (Crear, Leer, Actualizar, Eliminar) utilizando Laravel:
+
+Paso 1: Configurar un proyecto Laravel
+Comienza por configurar un nuevo proyecto Laravel utilizando el comando `composer create-project`. Abre una terminal y ejecuta el siguiente comando:
+
 ```
-Como puedes observar, para que este archivo funcione correctamente como API endpoint es necesario exportar una función manejador (handler) con los parámetros req y res.
-Si queremos tener acceso a los diferentes métodos HTTP en nuestro manejador podemos usar req.method dentro del mismo, por ejemplo:
-``` js
-export default function manejador(req, res) {
-  switch (req.method) {
-    case "GET":
-      // Nuestra lógica de código para el método GET...
-      break;
-    case "PATCH":
-      // Nuestra lógica de código para el método PATCH...
-      break;
-    case "DELETE":
-      // Nuestra lógica de código para el método DELETE...
-      break;
-    default:
-      res.status(405).json({
-        mensaje: `El método HTTP ${req.method} no esta disponible en esta ruta`,
-      });
-      break;
-  }
-}
+composer create-project --prefer-dist laravel/laravel nombre-proyecto
 ```
-Si ya estás familiarizado con Express.js probablemente encuentres muchas similitudes en cuanto a sintaxis.
 
-## Blog Oficial de Next 
-link : https://nextjs.org/docs/api-routes/introduction
+Esto creará un nuevo proyecto Laravel en un directorio llamado "nombre-proyecto".
+
+Paso 2: Configurar la base de datos
+Accede al archivo `.env` en la raíz de tu proyecto y configura la conexión a la base de datos. Asegúrate de tener una base de datos creada y configurada correctamente en tu entorno de desarrollo.
+
+Paso 3: Crear una migración y modelo
+Utiliza las migraciones de Laravel para crear la estructura de la base de datos. Ejecuta el siguiente comando en la terminal:
+
+```
+php artisan make:migration create_nombre_tabla_table --create=nombre_tabla
+```
+
+Esto creará un archivo de migración en el directorio `database/migrations`. Abre el archivo de migración y define los campos de la tabla.
+
+Una vez que hayas creado la migración, ejecuta el siguiente comando para migrar la tabla a la base de datos:
+
+```
+php artisan migrate
+```
+
+Después de crear la migración, crea un modelo correspondiente utilizando el comando `make:model`:
+
+```
+php artisan make:model NombreModelo
+```
+
+Esto generará un archivo de modelo en el directorio `app/Models`.
+
+Paso 4: Crear rutas y controladores
+Define las rutas y los controladores para tu CRUD. Abre el archivo `routes/web.php` y define las rutas del CRUD. Puedes utilizar los métodos `Route::get()`, `Route::post()`, `Route::put()`, `Route::delete()`, entre otros, para definir las diferentes rutas y los controladores que manejarán esas rutas.
+
+Crea un controlador utilizando el comando `make:controller`:
+
+```
+php artisan make:controller NombreControlador --resource
+```
+
+Esto generará un archivo de controlador en el directorio `app/Http/Controllers` con los métodos CRUD predefinidos.
+
+Paso 5: Implementar la lógica del CRUD
+En el controlador, implementa la lógica para cada uno de los métodos CRUD. Por ejemplo, en el método `index()`, puedes obtener todos los registros de la base de datos utilizando el modelo correspondiente y devolverlos a la vista. En el método `store()`, puedes crear un nuevo registro en la base de datos utilizando los datos recibidos del formulario.
+
+Utiliza los métodos proporcionados por Laravel en el controlador y el modelo para realizar operaciones de base de datos, como `all()`, `find()`, `create()`, `update()`, `delete()`, etc.
+
+Paso 6: Crear vistas
+Crea las vistas correspondientes para tu CRUD en el directorio `resources/views`. Puedes crear una vista para mostrar todos los registros, una vista para mostrar un formulario de creación, una vista para mostrar un formulario de edición, y así sucesivamente.
+
+Dentro de las vistas, utiliza la sintaxis de Blade de Laravel para mostrar los datos, crear formularios, etc.
+
+Paso 7: Asociar rutas a controladores
+Asocia las rutas definidas en el paso 4 a los métodos del controlador correspondiente. Ab
 
 
-# RUD de comentarios para un blog
-
-Rutas:
-
-    Crear comentario: POST /api/comment
-    Actualizar comentario: PATCH /api/comment/:id
-    Eliminar comentario: DELETE /api/comment/:id
-    Obtener un comentario: GET /api/comment/:id
-    Obtener todos los comentarios: GET /api/comment/
-
-
-# video Api con Next. JS
+ # Video Crud con Laravel
+{{< youtube  TA9U517ISOo >}}
