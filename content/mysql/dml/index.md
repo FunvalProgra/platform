@@ -4,94 +4,179 @@ date: 2023-01-17T18:05:35-05:00
 draft: false
 showPagination: false
 ---
+# Leccion DML MYSQL
 
+lección completa sobre el lenguaje de manipulación de datos (DML) en MySQL. El DML se utiliza para realizar operaciones de inserción, actualización, eliminación y consulta en una base de datos. Aquí tienes una descripción general de las principales declaraciones DML en MySQL:
 
-## Organizar HTML
+1. **INSERT**: Se utiliza para insertar datos en una tabla.
 
-Durante el proceso de inducción aprendiste las bases de HTML, hoy vamos a repasar algunas cosas de este lenguaje.
+   Sintaxis básica:
+   ```sql
+   INSERT INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...);
+   ```
 
-### Anatomía HTML
+   Ejemplo:
+   ```sql
+   INSERT INTO clientes (nombre, apellido, edad) VALUES ('John', 'Doe', 30);
+   ```
 
-Anatomía HTML
+2. **UPDATE**: Se utiliza para modificar datos existentes en una tabla.
 
-Los elementos HTML que siempre encontrarás luego de `<!DOCTYPE html>` son:
+   Sintaxis básica:
+   ```sql
+   UPDATE nombre_tabla SET columna1 = valor1, columna2 = valor2, ... WHERE condición;
+   ```
 
-- `<html></html>`: El elemento `<html>` envuelve todo el contenido de la página. A veces se le conoce como el elemento raíz.
-- `<head></head>`: Es la cabecera de la página y no la verá el cliente. Aquí pondrás información e instrucciones de tu página que sólo deberá interpretar el navegador.
-- `<meta charset="utf-8">`: las etiquetas meta sirven para dar diferentes instrucciones al navegador, esta configuración en concreto le dice al navegador que tu página usará la configuración de caracteres UTF-8 que incluye la mayoría de caracteres de todos los lenguajes humanos escritos. Esta etiqueta va dentro de la etiqueta `<head>`.
-- `<title></title>`: Aquí se establece el título de la página, este aparecerá en la pestaña del navegador. También se utiliza para describir la página. Esta etiqueta va dentro de la etiqueta `<head>`.
-- `<body></body>`: El elemento `<body>` contiene todo el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, vídeos, juegos, pistas de audio reproducibles o cualquier otra cosa.
+   Ejemplo:
+   ```sql
+   UPDATE productos SET precio = 100 WHERE id = 1;
+   ```
 
-### index.html
+3. **DELETE**: Se utiliza para eliminar filas de una tabla.
 
-Cuando trabajamos con archivos HTML debemos comenzar teniendo en cuenta el nombre de nuestro archivo. como convención, cuando se crea un sitio web, el archivo principal se llama **index.html** . Esto es porque los navegadores por defecto, al ingresar en una dirección web, buscan el archivo HTML que tenga este nombre, y será la primera página que se visita.
+   Sintaxis básica:
+   ```sql
+   DELETE FROM nombre_tabla WHERE condición;
+   ```
 
-![index image](index.png)
+   Ejemplo:
+   ```sql
+   DELETE FROM usuarios WHERE id = 1;
+   ```
 
-Los demás archivos HTML pueden tener otro nombre según sea necesario.
+4. **SELECT**: Se utiliza para consultar datos de una o varias tablas.
 
-![archivos](archivos.png)
+   Sintaxis básica:
+   ```sql
+   SELECT columnas FROM nombre_tabla WHERE condición;
+   ```
 
-Asimismo, si tenemos archivos HTML dentro de una carpeta, debemos ponerle de nombre index.html al archivo HTML principal de esa carpeta.
+   Ejemplo:
+   ```sql
+   SELECT * FROM clientes WHERE edad >= 18;
+   ```
 
-![carpetas](carpeta.png)
+5. **SELECT ... ORDER BY**: Se utiliza para ordenar los resultados de una consulta en función de una o más columnas.
 
-### Indentación
+   Sintaxis básica:
+   ```sql
+   SELECT columnas FROM nombre_tabla ORDER BY columna ASC/DESC;
+   ```
 
-Cuando tenemos nuestros archivos HTML, habrás notado que algunos elementos están más a la derecha que otros:
+   Ejemplo:
+   ```sql
+   SELECT * FROM registros ORDER BY fecha DESC;
+   ```
 
-![indentación](indentacion.png)
+Estas son las declaraciones DML más utilizadas en MySQL. Recuerda que hay muchas más opciones y cláusulas disponibles en el lenguaje SQL para personalizar y ajustar tus consultas según tus necesidades.
 
-En este ejemplo, los elementos `<meta>` y `<title>` se encuentran indentados. Es decir, están separados del margen izquierdo por una tabulación haciendo la lectura más sencilla. Con esto entendemos que los elementos `<meta>` y `<title>` son elementos "hijo" del elemento `<head>`.
+# JOIN MYSQL
+ lección completa sobre las diferentes formas de realizar joins en MySQL. El join es una operación que combina filas de dos o más tablas en función de una columna relacionada entre ellas. Aquí tienes una descripción de los tipos de join más comunes en MySQL:
 
-Esta estructura ayuda a la legibilidad del código y es de uso común en los lenguajes de programación. Te recomendamos seguir esta buena práctica a fin de que tu código sea legible y evitar que se convierta en un caos.
+1. **INNER JOIN**: Devuelve solo las filas que tienen coincidencias en ambas tablas.
 
+   Sintaxis básica:
+   ```sql
+   SELECT columnas FROM tabla1 INNER JOIN tabla2 ON tabla1.columna = tabla2.columna;
+   ```
 
-## CSS3: Box Model
+   Ejemplo:
+   ```sql
+   SELECT pedidos.numero, clientes.nombre FROM pedidos INNER JOIN clientes ON pedidos.cliente_id = clientes.id;
+   ```
 
-Ya que entendemos las cosas básicas de HTML y CSS debemos tener presente lo sigiuente: **Cada elemento en el diseño web es una caja rectangular**. Este punto es importante para comprender como trabajamos con CSS y lograr el diseño que queremos lgrar. Si bien es cierto podemos posicionar los elementos y darles estilos con CSS, es importante que entendamos como funciona esa caja en sí.
+2. **LEFT JOIN**: Devuelve todas las filas de la tabla izquierda y las coincidencias de la tabla derecha. Si no hay coincidencias, se devuelve NULL en las columnas de la tabla derecha.
 
-El Box model (modelo de caja) explica el tamaño de los elementos en función de algunas propiedades de CSS.
+   Sintaxis básica:
+   ```sql
+   SELECT columnas FROM tabla1 LEFT JOIN tabla2 ON tabla1.columna = tabla2.columna;
+   ```
 
-Desde el interior hacia el exterior, tenemos:
+   Ejemplo:
+   ```sql
+   SELECT clientes.nombre, pedidos.numero FROM clientes LEFT JOIN pedidos ON clientes.id = pedidos.cliente_id;
+   ```
 
-- Content (contenido)
-- padding (relleno)
-- border (borde o frontera)
-- margin (margen)
+3. **RIGHT JOIN**: Devuelve todas las filas de la tabla derecha y las coincidencias de la tabla izquierda. Si no hay coincidencias, se devuelve NULL en las columnas de la tabla izquierda.
 
-La mejor manera de visualizar el modelo de caja es abrir el navegador DevTools y comprobar cómo se muestra:
+   Sintaxis básica:
+   ```sql
+   SELECT columnas FROM tabla1 RIGHT JOIN tabla2 ON tabla1.columna = tabla2.columna;
+   ```
 
-![box model](boxmodel.png)
+   Ejemplo:
+   ```sql
+   SELECT clientes.nombre, pedidos.numero FROM clientes RIGHT JOIN pedidos ON clientes.id = pedidos.cliente_id;
+   ```
 
-Aquí puedes ver cómo Firefox me dice las propiedades de un elemento `span` que destaqué. Hice clic con el botón derecho en él, presioné Inspeccionar elemento y fui al panel Diseño de DevTools.
+4. **FULL JOIN**: Devuelve todas las filas de ambas tablas, incluidas las coincidencias y las no coincidencias. Si no hay coincidencias, se devuelve NULL en las columnas correspondientes.
 
-Mira, el espacio azul claro es el área de `content`. Rodeándolo está el `padding`, luego el `border` y finalmente el `margin`. De forma predeterminada, si estableces un ancho (o alto) en el elemento, se aplicará al área de `content` . Todos los cálculos de padding, border y margin se realizan fuera del valor, por lo que debes tener esto en cuenta cuando realices el cálculo. Se puede cambiar este comportamiento utilizando Box-sizing (puedes buscar más información de esta propiedad [aqui](https://developer.mozilla.org/es/docs/Web/CSS/box-sizing)).
+   Nota: MySQL no admite la sintaxis de FULL JOIN de forma nativa, pero se puede emular mediante UNION de LEFT JOIN y RIGHT JOIN.
 
-Entender este punto, te puede ayudar a realizar diseño con CSS de manera más sencilla, por lo que mira el siguiente video y toma nota entre las diferencias entre cada una de las partes del box model:
+   Sintaxis básica:
+   ```sql
+   SELECT columnas FROM tabla1 LEFT JOIN tabla2 ON tabla1.columna = tabla2.columna
+   UNION
+   SELECT columnas FROM tabla1 RIGHT JOIN tabla2 ON tabla1.columna = tabla2.columna;
+   ```
 
-{{< youtube c3Ok7uIKwU8 >}}
+   Ejemplo:
+   ```sql
+   SELECT clientes.nombre, pedidos.numero FROM clientes LEFT JOIN pedidos ON clientes.id = pedidos.cliente_id
+   UNION
+   SELECT clientes.nombre, pedidos.numero FROM clientes RIGHT JOIN pedidos ON clientes.id = pedidos.cliente_id;
+   ```
+# Count, sum, Group by y sort by
+Estos son los tipos de joins más utilizados en MySQL. Recuerda que el join te permite combinar tablas en función de una relación específica, lo que te permite realizar consultas más complejas y obtener resultados más significativos.
 
-### Display
+¡Por supuesto! Aquí tienes una lección completa sobre las funciones de agregación COUNT, SUM, el uso de GROUP BY y ORDER BY en MySQL:
 
-Ahora que entiendes un poco mejor lo que es el box model, es importante que sepas que las cajas en CSS pueden comportarse de manera distinta de acuerdo a una propiedad conocida como `display`. Esta propiedad nos indica la forma en la que el elemento será representado en el navegador y usar alguno de estos display, alterará considerablemente el comportamiento del navegador con el elemento y sus hijos.
+1. **COUNT**: Esta función de agregación cuenta el número de filas que cumplen una condición específica.
 
-En esta sección analizaremos los más importantes no cubiertos en otra parte:
+   Sintaxis básica:
+   ```sql
+   SELECT COUNT(columna) FROM tabla WHERE condición;
+   ```
 
-- block
-- inline
-- inline-block
-- none
+   Ejemplo:
+   ```sql
+   SELECT COUNT(id) FROM clientes WHERE estado = 'activo';
+   ```
 
-en el siguiente video aprenderás la diferencia entre cada uno de estos y como afectan al modelo de caja:
+2. **SUM**: Esta función de agregación calcula la suma de los valores de una columna específica.
 
-{{< youtube Mlzz1xRB0sc >}}
+   Sintaxis básica:
+   ```sql
+   SELECT SUM(columna) FROM tabla WHERE condición;
+   ```
 
+   Ejemplo:
+   ```sql
+   SELECT SUM(total) FROM ventas WHERE fecha = '2023-06-13';
+   ```
 
-## Aprendiendo con Práctica
+3. **GROUP BY**: Esta cláusula se utiliza para agrupar filas en función de una o más columnas y aplicar funciones de agregación a cada grupo.
 
-A lo largo de esta primera semana, te dejaremos unos enlaces de los que puedes aprender a aplicar HTML y CSS dede el portal FreeCodeCamp. Te recomendamos que los realices en orden, ya que cada uno de ellos te enseñará algo nuevo y te ayudará a reforzar lo aprendido en esta semana, comenzando por el segmento de HTML y al finalizarlo, empezar con el de CSS, sin embargo eres libre realizarlos en el orden que desees.
+   Sintaxis básica:
+   ```sql
+   SELECT columna1, columna2, ..., función_agregación(columna) FROM tabla GROUP BY columna1, columna2, ...;
+   ```
 
-[HTML - Aplicacion de fotos de gatos](https://www.freecodecamp.org/espanol/learn/2022/responsive-web-design/#learn-html-by-building-a-cat-photo-app)
+   Ejemplo:
+   ```sql
+   SELECT categoría, COUNT(*) FROM productos GROUP BY categoría;
+   ```
 
-[CSS - Menú de Cafetería](https://www.freecodecamp.org/espanol/learn/2022/responsive-web-design/#learn-basic-css-by-building-a-cafe-menu)
+4. **ORDER BY**: Esta cláusula se utiliza para ordenar los resultados de una consulta en función de una o más columnas, ya sea en orden ascendente (ASC) o descendente (DESC).
+
+   Sintaxis básica:
+   ```sql
+   SELECT columnas FROM tabla ORDER BY columna1 ASC/DESC, columna2 ASC/DESC, ...;
+   ```
+
+   Ejemplo:
+   ```sql
+   SELECT nombre, edad FROM usuarios ORDER BY edad DESC;
+   ```
+
+Estas funciones y cláusulas son muy útiles para realizar operaciones de agregación, agrupación y ordenación en MySQL. Puedes combinarlas con otras declaraciones DML para obtener resultados más precisos y personalizados en tus consultas.
