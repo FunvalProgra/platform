@@ -7,5 +7,5 @@ showPagination: false
 
 <ol>
     <li>Confeccionar una clase que permita ingresar tres valores por teclado. Luego mostrar el mayor y el menor</li>
-    <li>Confeccionar una clase que permita ingresar cinco números por teclado. Luego mostrar el mayor y el menor incluyendo números negativos</li>
+    <li>Crear una clase donde se ingrese el nombre de la persona y su edad, imprimirlo al final y saludar</li>
 </ol>
