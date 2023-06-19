@@ -29,7 +29,7 @@ y ahora la variable mc.i vale 21.
 Luego, en Java, cuando se instancia un objeto, siempre se hace una llamada directa al constructor como argumento del operador new. Este operador se encarga de que el sistema proporcione memoria para contener al objeto que se va a crear.
 
 En el siguiente ejemplo, se ilustran algunos de los conceptos sobre constructores que se han planteado en esta sección.
-
+``` java
     class MiClase {
         int varInstancia;
         
@@ -62,5 +62,5 @@ En el siguiente ejemplo, se ilustran algunos de los conceptos sobre constructore
             objeto.verVarInstancia();
             }
         }
-
+```
 {{< youtube pDYXaXt7fkE >}}

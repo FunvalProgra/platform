@@ -33,7 +33,7 @@ Por lo general, el seudocódigo describe sólo las instrucciones que representan
 DEITEL, PAUL J. Y HARVEY M. DEITE, (2008) Java como programar. Recuperardo el 13 de junio de 2023
 
 Este es un ejemplo de pseudocódigo en java:
-
+``` java
     // Declarar variables
     Entero numero1
     Entero numero2
@@ -52,7 +52,7 @@ Este es un ejemplo de pseudocódigo en java:
 
     // Mostrar el resultado
     Escribir "La suma es: " + suma
-
+```
 Este pseudocódigo describe el proceso paso a paso para realizar la suma de dos números en Java. Ten en cuenta que el pseudocódigo no es un lenguaje de programación real, sino una representación simplificada y no ejecutable del algoritmo. Para implementar este pseudocódigo en un programa Java real, tendrías que convertirlo en código Java válido, utilizando la sintaxis correcta del lenguaje.
 
 {{< youtube Lub5qOmY4JQ >}}

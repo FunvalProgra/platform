@@ -17,7 +17,7 @@ El diagrama de actividad de UML para la instrucción do...while. Este diagrama h
 
 No es necesario utilizar llaves en la estructura de repetición do...while si sólo hay una instrucción en el cuerpo. Sin embargo, la mayoría de los programadores incluyen las llaves para evitar la confusión entre las instrucciones while y do...while. Por ejemplo:
 while ( condición )
-
+``` java
         2 // La instrucción de repetición do...while.
         3 
         4 public class PruebaDoWhile 
@@ -35,21 +35,21 @@ while ( condición )
         16 System.out.println(); // imprime una nueva línea
         17 } // fin de main
         18 } // fin de la clase PruebaDoWhile
-
+```
 {{< figure src="./dowhile.png">}}
 
 generalmente es la primera línea de una instrucción while. Una instrucción do...while sin llaves, alrededor de un cuerpo con una sola instrucción, aparece así:.
-
+``` java
         do
                 instrucción
             while ( condición );
-
+```
 o cual puede ser confuso. Un lector podría malinterpretar la última línea [while( condición );], como una instrucción while que contiene una instrucción vacía (el punto y coma por sí solo). Por ende, la instrucción do...
 while con una instrucción en su cuerpo se escribe generalmente así:
-
+``` java
     do
     {
     Instrucción
     } while ( condición );
-
+```
 DEITEL, PAUL J. Y HARVEY M. DEITE, (2008) Java como programar. Recuperardo el 13 de junio de 2023

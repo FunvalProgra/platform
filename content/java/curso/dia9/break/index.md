@@ -13,7 +13,7 @@ En el contexto de programación, el break es una intrucción que utilizamos para
 Cuando se encuentra una declaración "break", el programa sale inmediatamente del bucle o de la estructura de control en la que se encuentra y continúa con la siguiente instrucción después del bucle o estructura.
 
 En el siguiente ejemplo podemos ver el funcionamiento de este:
-
+``` java
         public class EjemploBreak {
             public static void main(String[] args) {
                 int[] numeros = {1, 2, 3, 4, 5};
@@ -27,7 +27,7 @@ En el siguiente ejemplo podemos ver el funcionamiento de este:
                 }
             }
         }
-
+```
 En este ejemplo, se declara un arreglo de números y se itera sobre ellos utilizando un bucle "for-each". En cada iteración, se imprime el número actual. Sin embargo, si el número es igual a 3, se encuentra la declaración "break" y el bucle se interrumpe, saliendo del bucle antes de que todos los números sean impresos. 
 
 {{< youtube C1W9nfdYlnI >}}
