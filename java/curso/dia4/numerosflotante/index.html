@@ -6,36 +6,36 @@ requieren el doble de memoria que las variables float y proporcionan 15 dígitos
 ejemplo, cuando hablamos de una temperatura corporal “normal” de 36.8, no necesitamos una precisión con un
 número extenso de dígitos. Cuando leemos la temperatura en un termómetro como 36.8, en realidad podría ser
 36.7999473210643. Si consideramos a este número simplemente como 36.8, está bien para la mayoría de las aplicaciones en las que se trabaja con las temperaturas corporales. Debido a la naturaleza imprecisa de los números de punto flotante, se prefi ere el tipo double al tipo float ya que las variables double pueden representar números de punto flotante con más precisión. Por esta razón, utilizaremos el tipo double a lo largo de este libro.</p><p>Los números de punto fl otante también surgen como resultado de la división. En la aritmética convencional,
-cuando dividimos 10 entre 3 el resultado es 3.3333333…, y la secuencia de números 3 se repite en forma indefinida. La computadora asigna sólo una cantidad fi ja de espacio para almacenar un valor de este tipo, por lo que, sin duda, el valor de punto fl otante almacenado sólo puede ser una aproximación.</p><pre><code>2 // La clase Cuenta con un constructor para
-3 // inicializar la variable de instancia saldo.
-4 
-5 public class Cuenta
-6 {
-7 private double saldo; // variable de instancia que almacena el saldo
-8 
-9 // constructor
-10 public Cuenta( double saldoInicial )
-11 {
-12 // valida que saldoInicial sea mayor que 0.0; 
-13 // si no lo es, saldo se inicializa con el valor predeterminado 0.0
-14 if ( saldoInicial &gt; 0.0 )
-15 saldo = saldoInicial; 
-16 } // fin del constructor de Cuenta
-17
-18 // abona (suma) un monto a la cuenta
-19 public void abonar( double monto )
-20 {
-21 saldo = saldo + monto; // suma el monto al saldo 
-22 } // fin del método abonar
-23 
-24 // devuelve el saldo de la cuenta
-25 public double obtenerSaldo()
-26 {
-27 return saldo; // proporciona el valor de saldo al método que hizo la llamada
-28 } // fin del método obtenerSaldo
-29 
-30 } // fin de la clase Cuenta
-</code></pre><p>La clase Cuenta contiene un constructor y dos métodos. Debido a que es común que alguien abra una cuenta
+cuando dividimos 10 entre 3 el resultado es 3.3333333…, y la secuencia de números 3 se repite en forma indefinida. La computadora asigna sólo una cantidad fi ja de espacio para almacenar un valor de este tipo, por lo que, sin duda, el valor de punto fl otante almacenado sólo puede ser una aproximación.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>    <span class=mi>2</span> <span class=c1>// La clase Cuenta con un constructor para
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>3</span> <span class=c1>// inicializar la variable de instancia saldo.
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>4</span> 
+</span></span><span class=line><span class=cl>    <span class=mi>5</span> <span class=kd>public</span> <span class=kd>class</span> <span class=nc>Cuenta</span>
+</span></span><span class=line><span class=cl>    <span class=mi>6</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=mi>7</span> <span class=kd>private</span> <span class=kt>double</span> <span class=n>saldo</span><span class=o>;</span> <span class=c1>// variable de instancia que almacena el saldo
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>8</span> 
+</span></span><span class=line><span class=cl>    <span class=mi>9</span> <span class=c1>// constructor
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>10</span> <span class=kd>public</span> <span class=nf>Cuenta</span><span class=o>(</span> <span class=kt>double</span> <span class=n>saldoInicial</span> <span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=mi>11</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=mi>12</span> <span class=c1>// valida que saldoInicial sea mayor que 0.0; 
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>13</span> <span class=c1>// si no lo es, saldo se inicializa con el valor predeterminado 0.0
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>14</span> <span class=k>if</span> <span class=o>(</span> <span class=n>saldoInicial</span> <span class=o>&gt;</span> <span class=mf>0.0</span> <span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=mi>15</span> <span class=n>saldo</span> <span class=o>=</span> <span class=n>saldoInicial</span><span class=o>;</span> 
+</span></span><span class=line><span class=cl>    <span class=mi>16</span> <span class=o>}</span> <span class=c1>// fin del constructor de Cuenta
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>17</span>
+</span></span><span class=line><span class=cl>    <span class=mi>18</span> <span class=c1>// abona (suma) un monto a la cuenta
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>19</span> <span class=kd>public</span> <span class=kt>void</span> <span class=nf>abonar</span><span class=o>(</span> <span class=kt>double</span> <span class=n>monto</span> <span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=mi>20</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=mi>21</span> <span class=n>saldo</span> <span class=o>=</span> <span class=n>saldo</span> <span class=o>+</span> <span class=n>monto</span><span class=o>;</span> <span class=c1>// suma el monto al saldo 
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>22</span> <span class=o>}</span> <span class=c1>// fin del método abonar
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>23</span> 
+</span></span><span class=line><span class=cl>    <span class=mi>24</span> <span class=c1>// devuelve el saldo de la cuenta
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>25</span> <span class=kd>public</span> <span class=kt>double</span> <span class=nf>obtenerSaldo</span><span class=o>()</span>
+</span></span><span class=line><span class=cl>    <span class=mi>26</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=mi>27</span> <span class=k>return</span> <span class=n>saldo</span><span class=o>;</span> <span class=c1>// proporciona el valor de saldo al método que hizo la llamada
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>28</span> <span class=o>}</span> <span class=c1>// fin del método obtenerSaldo
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=mi>29</span> 
+</span></span><span class=line><span class=cl>    <span class=mi>30</span> <span class=o>}</span> <span class=c1>// fin de la clase Cuenta
+</span></span></span></code></pre></div><p>La clase Cuenta contiene un constructor y dos métodos. Debido a que es común que alguien abra una cuenta
 para depositar dinero de inmediato, el constructor (líneas 10 a la 16) recibe un parámetro llamado saldoInicial
 de tipo double, el cual representa el saldo inicial de la cuenta. Las líneas 14 y 15 aseguran que saldoInicial sea mayor que 0.0. De ser así, el valor de saldoInicial se asigna a la variable de instancia saldo. En caso contrario, saldo permanece en 0.0, su valor inicial predeterminado.</p><p>El método abonar (líneas 19 a la 22) no devuelve datos cuando completa su tarea, por lo que su tipo de valor
 de retorno es void. El método recibe un parámetro llamado monto: un valor double que se sumará al saldo. La

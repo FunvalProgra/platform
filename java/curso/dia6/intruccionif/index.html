@@ -30,23 +30,23 @@ ejemplo, la instrucción en seudocódigo:</p><pre><code>    Si la califi cación
         Imprimir “Reprobado
 </code></pre><p>imprime “Aprobado” si la califi cación del estudiante es mayor o igual a 60, y, “Reprobado” si la califi cación del
 estudiante es menor a 60. En cualquier caso, después de que ocurre la impresión se “ejecuta”, según la secuencia,
-la siguiente instrucción en seudocódigo.</p><p>La instrucción anterior if&mldr;else en seudocódigo puede escribirse en Java como:</p><pre><code>    if ( calificacion &gt;= 60 )
-        System.out.println( &quot;Aprobado&quot; );
-    else
-        System.out.println( &quot;Reprobado&quot; );
-</code></pre><p>Observe que el cuerpo de la instrucción else también tiene sangría. Cualquiera que sea la convención de sangría
-que usted elija, debe aplicarla consistentemente en todos sus programas. Es difícil leer programas que no obedecen las convenciones de espaciado uniformes.</p><p>Otro ejemplo que tenemos de if else es:</p><pre><code>    public class IfElseExample {
-        public static void main(String[] args) {
-            int edad = 18;
-
-            if (edad &gt;= 18) {
-                System.out.println(&quot;Eres mayor de edad&quot;);
-            } else {
-                System.out.println(&quot;Eres menor de edad&quot;);
-            }
-        }
-    }
-</code></pre><p>En este ejemplo, utilizamos la estructura if-else para determinar si una persona es mayor o menor de edad según su edad.</p><p>La variable edad se inicializa con el valor 18.
+la siguiente instrucción en seudocódigo.</p><p>La instrucción anterior if&mldr;else en seudocódigo puede escribirse en Java como:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(</span> <span class=n>calificacion</span> <span class=o>&gt;=</span> <span class=mi>60</span> <span class=o>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span> <span class=s>&#34;Aprobado&#34;</span> <span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span> <span class=s>&#34;Reprobado&#34;</span> <span class=o>);</span>
+</span></span></code></pre></div><p>Observe que el cuerpo de la instrucción else también tiene sangría. Cualquiera que sea la convención de sangría
+que usted elija, debe aplicarla consistentemente en todos sus programas. Es difícil leer programas que no obedecen las convenciones de espaciado uniformes.</p><p>Otro ejemplo que tenemos de if else es:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>        <span class=kd>public</span> <span class=kd>class</span> <span class=nc>IfElseExample</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>args</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=kt>int</span> <span class=n>edad</span> <span class=o>=</span> <span class=mi>18</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=o>(</span><span class=n>edad</span> <span class=o>&gt;=</span> <span class=mi>18</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;Eres mayor de edad&#34;</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span> <span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;Eres menor de edad&#34;</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span></code></pre></div><p>En este ejemplo, utilizamos la estructura if-else para determinar si una persona es mayor o menor de edad según su edad.</p><p>La variable edad se inicializa con el valor 18.
 La condición edad >= 18 se evalúa, lo cual verifica si la edad es igual o mayor que 18. Si esta condición es verdadera, se ejecuta el bloque de código dentro del if.
 En este caso, como la condición es verdadera (la edad es igual a 18), se muestra el mensaje &ldquo;Eres mayor de edad&rdquo; en la consola.
 Si la condición es falsa, se ejecuta el bloque de código dentro del else. En este caso, si la edad fuera menor a 18, se mostraría el mensaje &ldquo;Eres menor de edad&rdquo;.
