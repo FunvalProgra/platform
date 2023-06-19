@@ -20,7 +20,7 @@ número extenso de dígitos. Cuando leemos la temperatura en un termómetro como
 
 Los números de punto fl otante también surgen como resultado de la división. En la aritmética convencional, 
 cuando dividimos 10 entre 3 el resultado es 3.3333333…, y la secuencia de números 3 se repite en forma indefinida. La computadora asigna sólo una cantidad fi ja de espacio para almacenar un valor de este tipo, por lo que, sin duda, el valor de punto fl otante almacenado sólo puede ser una aproximación.
-
+``` java
     2 // La clase Cuenta con un constructor para
     3 // inicializar la variable de instancia saldo.
     4 
@@ -50,7 +50,7 @@ cuando dividimos 10 entre 3 el resultado es 3.3333333…, y la secuencia de núm
     28 } // fin del método obtenerSaldo
     29 
     30 } // fin de la clase Cuenta
-
+```
 La clase Cuenta contiene un constructor y dos métodos. Debido a que es común que alguien abra una cuenta 
 para depositar dinero de inmediato, el constructor (líneas 10 a la 16) recibe un parámetro llamado saldoInicial
 de tipo double, el cual representa el saldo inicial de la cuenta. Las líneas 14 y 15 aseguran que saldoInicial sea mayor que 0.0. De ser así, el valor de saldoInicial se asigna a la variable de instancia saldo. En caso contrario, saldo permanece en 0.0, su valor inicial predeterminado.

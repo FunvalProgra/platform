@@ -11,7 +11,7 @@ En los días anteriores  sobre la instrucción if de selección simple y la inst
 
 La versión de la clase que presentamos ahora no sólo calcula el promedio de un conjunto de califi caciones numéricas introducidas por el usuario, sino que utiliza una instrucción switch para determinar si cada califi cación es el equivalente de A, B, C, D o F, y para incrementar el contador de la calificación apropiada. La clase también imprime en pantalla un resumen del número de estudiantes que 
 recibieron cada califi cación. La entrada y la salida de ejemplo de la aplicación PruebaLibroCalificaciones, que utiliza la clase LibroCalificaciones para procesar un conjunto de calificaciones
-
+``` java
         2 // La clase LibroCalificaciones usa la instrucción switch para contar las calificaciones
             A, B, C, D y F.
         3 import java.util.Scanner; // el programa usa la clase Scanner
@@ -137,7 +137,7 @@ recibieron cada califi cación. La entrada y la salida de ejemplo de la aplicaci
         121 System.out.println( "No se introdujeron calificaciones" );
         122 } // fin del método mostrarReporteCalif
         123 } // fin de la clase LibroCalificaciones
-
+```
 Al igual que las versiones anteriores de la clase, LibroCalificaciones declara la variable de instancia nombreDelCurso (línea 7) y contiene los métodos establecerNombreDelCurso (líneas 24 a 27), obtenerNombreDelCurso (líneas 30 a 33) y mostrarMensaje (líneas 36 a 41), que establecen el nombre del curso, lo almacenan y muestran un mensaje de bienvenida al usuario, respectivamente. La clase también contiene un 
 constructor (líneas 18 a 21) que inicializa el nombre del curso.
 

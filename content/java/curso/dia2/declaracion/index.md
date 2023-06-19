@@ -10,7 +10,7 @@ showPagination: false
 Una declaración de clase especifica un nuevo tipo de referencia con nombre.
 Hay dos tipos de declaraciones de clase: declaraciones de clase normal y enumeración
 declaraciones.
-
+``` java
         Declaración de clase:
             Declaración de clase normalNormalClassDeclaration
             EnumDeclaration
@@ -18,7 +18,7 @@ declaraciones.
         Declaración de clase normal:
             {ClassModifier} Identificador de clase [TypeParameters]
                 [Superclase] [Superinterfaces] ClassBody
-
+```
 Las reglas de esta sección se aplican a todas las declaraciones de clase, incluidas las declaraciones de enumeración. Sin embargo, se aplican reglas especiales a las declaraciones de enumeración con respecto a los modificadores de clase, clases internas y superclases.
 
 El identificador en una declaración de clase especifica el nombre de la clase.
@@ -44,7 +44,7 @@ Cualquier otra clase puede crear instancias de la clase.
 
 Como ejemplo, vamos a definir una clase Persona.
 Clase Persona en Java:
-
+``` java
     public class Persona {
 
         private String nombre;
@@ -66,7 +66,7 @@ Clase Persona en Java:
             return edad;
         }
     }
-
+```
 La clase Persona es pública y tiene dos atributos, nombre y edad, y cuatro métodos.
 Los métodos que aparecen en esta clase se conocen como métodos de acceso ó setters/getters.
 Son métodos que solo sirven para asignar y obtener los valores de los atributos individualmente.

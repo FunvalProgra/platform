@@ -4,7 +4,7 @@ date: 2023-05-16T14:16:48-05:00
 draft: false
 showPagination: false
 ---
-
+``` java
     2 // Crea y manipula un objeto LibroCalificaciones.
     3 import java.util.Scanner; // el programa usa la clase Scanner
     4 
@@ -35,7 +35,7 @@ showPagination: false
     28 } // fin de main
     29 
     30 } // fin de la clase PruebaLibroCalificaciones
-
+```
 Los tipos de datos en Java se dividen en dos categorías: tipos primitivos y tipos por referencia (algunas veces conocidos como tipos no primitivos). Los tipos primitivos son boolean, byte, char, short, int, long, 
 float y double. Todos los tipos no primitivos son tipos por referencia, por lo cual las clases, que especifi can los tipos de objetos, son tipos por referencia.
 

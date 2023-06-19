@@ -63,17 +63,17 @@ estudiante es menor a 60. En cualquier caso, después de que ocurre la impresió
 la siguiente instrucción en seudocódigo.
 
 La instrucción anterior if...else en seudocódigo puede escribirse en Java como:
-
+``` java
         if ( calificacion >= 60 )
             System.out.println( "Aprobado" );
         else
             System.out.println( "Reprobado" );
-
+```
 Observe que el cuerpo de la instrucción else también tiene sangría. Cualquiera que sea la convención de sangría 
 que usted elija, debe aplicarla consistentemente en todos sus programas. Es difícil leer programas que no obedecen las convenciones de espaciado uniformes.
 
 Otro ejemplo que tenemos de if else es:
-
+``` java
         public class IfElseExample {
             public static void main(String[] args) {
                 int edad = 18;
@@ -85,7 +85,7 @@ Otro ejemplo que tenemos de if else es:
                 }
             }
         }
-
+```
 En este ejemplo, utilizamos la estructura if-else para determinar si una persona es mayor o menor de edad según su edad.
 
 La variable edad se inicializa con el valor 18.
