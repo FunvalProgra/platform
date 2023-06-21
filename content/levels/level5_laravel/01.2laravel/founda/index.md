@@ -1,5 +1,5 @@
 ---
-title: "Introduccion Laravel"
+title: "Laravel Migraciones"
 date: 2023-03-12T11:48:09-06:00
 draft: false
 showPagination: false
@@ -109,6 +109,27 @@ Aquí tienes una descripción de las carpetas principales:
 - **vendor:** Aquí se encuentran las dependencias de Composer y las bibliotecas de terceros utilizadas en el proyecto.
 
 Esta es solo una descripción básica de la estructura de un proyecto Laravel. A medida que trabajes con Laravel, explorarás más en profundidad cada una de estas carpetas y cómo se utilizan en el desarrollo de tu aplicación.
+# migraciones
+
+Las migraciones avanzadas en Laravel son una funcionalidad poderosa que permite a los desarrolladores realizar cambios estructurales en la base de datos de una aplicación de manera controlada y reproducible. Laravel utiliza migraciones para crear, modificar o eliminar tablas y columnas en la base de datos, lo que facilita la administración de los cambios en el esquema de la base de datos a medida que evoluciona la aplicación.
+
+Aquí hay algunas técnicas y características avanzadas relacionadas con las migraciones en Laravel:
+
+1. Creación de migraciones: Puedes crear una nueva migración utilizando el comando `make:migration` de Artisan, que generará un archivo de migración en el directorio `database/migrations`. Puedes definir los cambios que deseas realizar en el método `up` de la migración.
+
+2. Modificación de tablas: Laravel proporciona una variedad de métodos para modificar tablas existentes en las migraciones. Por ejemplo, puedes usar el método `addColumn` para agregar una nueva columna, `renameColumn` para cambiar el nombre de una columna y `dropColumn` para eliminar una columna.
+
+3. Modificación de columnas: Además de agregar y eliminar columnas, puedes modificar las columnas existentes utilizando métodos como `change`, `unsigned`, `nullable`, `default`, `charset`, `collation`, entre otros. Estos métodos te permiten ajustar las propiedades de las columnas existentes según tus necesidades.
+
+4. Ejecución de consultas personalizadas: Si necesitas realizar cambios más complejos en la base de datos que no se pueden lograr con los métodos proporcionados por defecto, Laravel te permite ejecutar consultas SQL personalizadas en las migraciones utilizando el método `DB::statement`.
+
+5. Rollbacks: Laravel también admite la reversión de migraciones utilizando el comando `migrate:rollback`. Esto deshará el último lote de migraciones, lo que significa que los cambios realizados en la base de datos se revertirán.
+
+6. Migraciones en varios entornos: Puedes definir migraciones específicas de entorno utilizando directorios adicionales en el directorio `database/migrations`. Por ejemplo, puedes tener un directorio `database/migrations/testing` para migraciones específicas de pruebas.
+
+7. Seeders: Además de las migraciones, Laravel también proporciona los seeders, que te permiten poblar la base de datos con datos de prueba o datos iniciales. Puedes utilizar el comando `make:seeder` para generar un nuevo seeder y el comando `db:seed` para ejecutar los seeders.
+
+Estas son solo algunas de las características avanzadas relacionadas con las migraciones en Laravel. Las migraciones proporcionan una forma estructurada y versionada de gestionar los cambios en la base de datos de tu aplicación, lo que facilita el desarrollo y la colaboración en equipo.
 
 #  Laravel video
  {{< youtube  LkSeELpdj4k >}}
