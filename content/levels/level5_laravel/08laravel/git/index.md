@@ -5,84 +5,91 @@ draft: false
 showPagination: false
 ---
  
-# Http Request / Navegaciones
+# Registros con Livewire y Validaciones en Tiempo Real en Laravel
 
-En Laravel, las solicitudes HTTP se manejan a través de la clase `Illuminate\Http\Request`. Esta clase encapsula la información de la solicitud entrante, como los datos enviados, las cabeceras, los parámetros de la URL y más. Te permite acceder a estos datos y realizar validaciones, procesamiento y acciones basadas en la solicitud recibida.
+Introducción:
+En Laravel, Livewire ofrece la capacidad de realizar registros en tiempo real y validaciones de formularios sin tener que recargar la página. En esta lección, exploraremos cómo utilizar Livewire para realizar registros de datos y realizar validaciones en tiempo real para proporcionar una mejor experiencia de usuario.
 
-Aquí hay algunos conceptos y ejemplos relacionados con las solicitudes HTTP y las navegaciones en Laravel:
+1. Realizar registros con Livewire:
+- Paso 1: Asegúrate de tener Livewire correctamente configurado en tu proyecto Laravel siguiendo los pasos de la lección anterior.
 
-1. Obtener información de una solicitud:
-   Puedes acceder a los datos de una solicitud utilizando métodos proporcionados por la clase `Request`. Por ejemplo, para obtener el valor de un parámetro de la URL, puedes usar el método `input` o `get`:
+- Paso 2: Crea un componente Livewire utilizando el comando `make:livewire` de Artisan. Por ejemplo:
+```bash
+php artisan make:livewire CreatePost
+```
+Esto generará un nuevo archivo de componente Livewire en el directorio `app/Http/Livewire`.
 
-   ```php
-   use Illuminate\Http\Request;
-   
-   Route::get('/users/{id}', function (Request $request, $id) {
-       $name = $request->input('name');
-       // o
-       $name = $request->get('name');
-   
-       // ...
-   });
-   ```
+- Paso 3: Abre el archivo del componente Livewire y agrega los campos necesarios para el registro en una propiedad pública. Por ejemplo:
+```php
+public $titulo;
+public $contenido;
+```
 
-   En este ejemplo, estamos obteniendo el valor del parámetro `name` de la URL.
+- Paso 4: En el método `render()` del componente, define la vista correspondiente al formulario de registro. Por ejemplo:
+```php
+public function render()
+{
+    return view('livewire.create-post');
+}
+```
+Crea la vista `create-post.blade.php` en la ubicación adecuada y define el formulario de registro con los campos correspondientes.
 
-2. Validar datos de la solicitud:
-   Laravel proporciona facilidades para validar los datos de la solicitud utilizando reglas de validación. Puedes usar el método `validate` de la clase `Request` para validar los datos de entrada y generar respuestas de error automáticamente:
+- Paso 5: Dentro del componente Livewire, define un método para manejar la acción de envío del formulario. Por ejemplo:
+```php
+public function store()
+{
+    // Lógica para almacenar los datos recibidos en el formulario
+}
+```
+En este método, puedes agregar la lógica necesaria para almacenar los datos recibidos en el formulario en tu base de datos u otro sistema de almacenamiento.
 
-   ```php
-   use Illuminate\Http\Request;
-   
-   Route::post('/users', function (Request $request) {
-       $request->validate([
-           'name' => 'required',
-           'email' => 'required|email',
-           // ...
-       ]);
-   
-       // ...
-   });
-   ```
+- Paso 6: Dentro de la vista del formulario, utiliza la directiva `wire:submit` para enviar la acción del formulario al método `store()` del componente. Por ejemplo:
+```html
+<form wire:submit.prevent="store">
+    <!-- Campos del formulario -->
+    <button type="submit">Enviar</button>
+</form>
+```
+Esto enviará la acción del formulario al método `store()` del componente Livewire cuando se envíe el formulario.
 
-   Aquí estamos validando que los campos `name` y `email` estén presentes y tengan un formato de correo electrónico válido.
+2. Validaciones en tiempo real:
+- Paso 1: Dentro del método `store()` del componente Livewire, puedes agregar las validaciones necesarias utilizando las reglas de validación de Laravel. Por ejemplo:
+```php
+public function store()
+{
+    $this->validate([
+        'titulo' => 'required|max:255',
+        'contenido' => 'required',
+    ]);
 
-3. Redireccionamiento:
-   En Laravel, puedes redirigir al usuario a diferentes rutas o URLs utilizando el método `redirect` de la clase `Redirector`. Por ejemplo:
+    // Lógica para almacenar los datos recibidos en el formulario
+}
+```
+Aquí, se aplican las reglas de validación necesarias para los campos del formulario.
 
-   ```php
-   use Illuminate\Http\Request;
-   
-   Route::post('/users', function (Request $request) {
-       // Validar los datos...
-   
-       // Redirigir al usuario a una ruta
-       return redirect('/dashboard');
-   
-       // o redirigir a una URL externa
-       return redirect('https://example.com');
-   });
-   ```
+- Paso 2: Para mostrar los mensajes de error en tiempo real, puedes utilizar la directiva `@error` en la vista del formulario. Por ejemplo:
+```html
+<input type="text" wire:model="titulo">
+@error('titulo') <span class="error">{{ $message }}</span> @enderror
 
-   Aquí estamos redirigiendo al usuario a la ruta `/dashboard` después de validar los datos.
+<textarea wire:model="contenido"></textarea>
+@error('contenido') <span class="error">{{ $message }}</span> @enderror
+```
+Esto mostrará los mensajes de error correspondientes junto a los campos del formulario cuando ocurran errores de validación.
 
-4. Respuestas JSON:
-   Si necesitas devolver una respuesta en formato JSON, puedes utilizar el método `json` de la clase `Response`. Por ejemplo:
+- Paso 3: Puedes utilizar el modificador `.lazy` al vincular los campos del formulario con las propiedades del componente Livewire para retrasar la
 
-   ```php
-   use Illuminate\Http\Request;
-   
-   Route::get('/users', function (Request $request) {
-       $users = User::all();
-       return response()->json($users);
-   });
-   ```
+ actualización en tiempo real hasta que se realice una acción específica, como hacer clic en el botón de enviar. Por ejemplo:
+```html
+<input type="text" wire:model.lazy="titulo">
+<textarea wire:model.lazy="contenido"></textarea>
+```
+Esto evita que se realicen validaciones en tiempo real hasta que el usuario intente enviar el formulario.
 
-   En este caso, estamos devolviendo todos los usuarios en formato JSON como respuesta a la solicitud GET.
+Conclusión:
+Utilizando Livewire en Laravel, puedes realizar registros en tiempo real y realizar validaciones de formularios sin tener que recargar la página. Al crear componentes Livewire, definir propiedades para los campos del formulario, aplicar validaciones y utilizar directivas de Livewire en las vistas, puedes proporcionar una experiencia de usuario fluida y mejorar la eficiencia en el manejo de registros y validaciones en tu aplicación Laravel.
 
-Estos son solo algunos ejemplos de cómo trabajar con solicitudes HTTP y navegaciones en Laravel. El framework proporciona una amplia variedad de herramientas y métodos para manejar las solicitudes entrantes y realizar acciones basadas en ellas.
-
-#  Enlazando páginas laravel
+#  Registros con Livewire 
 {{< youtube  VVY5RVdpFco >}}
-#  Laravel MiMiddleware
+# Validaciones en Tiempo Real en Laravel
  {{< youtube  P4ehlI6btNQ >}}

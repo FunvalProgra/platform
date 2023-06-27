@@ -4,31 +4,86 @@ date: 2023-03-12T11:51:34-06:00
 draft: false
 showPagination: false
 ---
-# Componentes de Blade
+# Tablas con Registros 
 
-En Laravel, Blade es el motor de plantillas incorporado que te permite escribir código HTML de una manera más expresiva y dinámica. Blade ofrece una serie de componentes y directivas que facilitan la creación de vistas reutilizables y dinámicas. A continuación, se muestran algunos de los componentes clave de Blade en Laravel:
+Introducción:
+En Laravel, trabajar con tablas y registros de base de datos es fundamental para el desarrollo de aplicaciones web. En esta lección, exploraremos cómo crear tablas, realizar consultas y manipular registros en Laravel utilizando el ORM Eloquent.
 
-1. Directivas de control de flujo:
-   Blade proporciona directivas para controlar el flujo de ejecución en las vistas, como `@if`, `@else`, `@elseif`, `@unless`, `@foreach`, `@for` y `@while`. Estas directivas te permiten realizar evaluaciones condicionales y repetir bloques de código según ciertas condiciones.
+1. Crear tablas en Laravel:
+- Paso 1: Asegúrate de tener Laravel instalado correctamente en tu proyecto.
 
-2. Herencia de plantillas:
-   Blade admite la herencia de plantillas, lo que significa que puedes definir una plantilla principal con áreas que pueden ser sobrescritas por plantillas hijas. Puedes usar la directiva `@extends` para heredar una plantilla y la directiva `@section` para definir las áreas que pueden ser remplazadas en las plantillas hijas.
+- Paso 2: Para crear una tabla en Laravel, puedes utilizar migraciones. Las migraciones permiten definir la estructura de la tabla y se encargan de crear y modificar la base de datos de manera controlada. Puedes crear una migración utilizando el comando `make:migration` de Artisan. Por ejemplo:
+```bash
+php artisan make:migration create_nombre_de_la_tabla_table
+```
+Esto generará un nuevo archivo de migración en el directorio `database/migrations`.
 
-3. Inclusiones parciales:
-   Puedes incluir contenido de otras vistas utilizando la directiva `@include`. Esto te permite reutilizar fragmentos de código en múltiples vistas. Puedes pasar variables a las vistas parciales utilizando el segundo argumento de la directiva `@include`.
+- Paso 3: Abre el archivo de migración recién creado y utiliza los métodos proporcionados por Laravel para definir la estructura de la tabla, como `create`, `table`, `string`, `integer`, etc. Por ejemplo:
+```php
+public function up()
+{
+    Schema::create('nombre_de_la_tabla', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre_columna');
+        $table->timestamps();
+    });
+}
+```
+Aquí, se define una tabla con una columna de ID, una columna de nombre y columnas de timestamps para el registro de la creación y actualización de los registros.
 
-4. Componentes:
-   Los componentes son una forma poderosa de encapsular una porción de código HTML y su lógica asociada en un componente reutilizable. Los componentes de Blade se definen con la directiva `@component` y se utilizan en las vistas con la directiva `@component` o `@livewire`. Los componentes pueden aceptar parámetros y tener métodos para controlar su comportamiento.
+- Paso 4: Ejecuta la migración para crear la tabla en la base de datos utilizando el comando `migrate` de Artisan. Por ejemplo:
+```bash
+php artisan migrate
+```
+Esto creará la tabla definida en la migración en tu base de datos.
 
-5. Slots:
-   Los slots son áreas variables en un componente que pueden ser remplazadas por contenido personalizado cuando se utiliza el componente. Puedes definir slots en un componente utilizando la directiva `@slot`, y luego reemplazar esos slots al usar el componente en una vista utilizando la directiva `@slot` o `@slot` con un nombre específico.
+2. Realizar consultas y manipular registros en Laravel:
+- Paso 1: Para realizar consultas y manipular registros en Laravel, puedes utilizar el ORM Eloquent, que proporciona una interfaz fácil de usar para interactuar con la base de datos.
 
-6. Directivas personalizadas:
-   Blade te permite definir tus propias directivas personalizadas para encapsular funcionalidades específicas en tus vistas. Puedes crear directivas personalizadas utilizando el método `directive` del objeto `Blade` en tu archivo de rutas o en un proveedor de servicios.
+- Paso 2: Crea un modelo para la tabla utilizando el comando `make:model` de Artisan. Por ejemplo:
+```bash
+php artisan make:model NombreDelModelo
+```
+Esto generará un nuevo archivo de modelo en el directorio `app/Models`.
 
-Estos son solo algunos de los componentes y características principales de Blade en Laravel. Blade ofrece una gran flexibilidad y potencia para la construcción de vistas dinámicas y reutilizables en tus aplicaciones Laravel. Puedes consultar la documentación oficial de Laravel para obtener más información sobre el uso y las características avanzadas de Blade.
+- Paso 3: Abre el archivo del modelo creado y asegúrate de que la propiedad `$table` coincida con el nombre de la tabla que has creado. Por ejemplo:
+```php
+class NombreDelModelo extends Model
+{
+    protected $table = 'nombre_de_la_tabla';
 
-##  Server Side Render vs. Static Site Generation 
- Link de Blog :  https://leonidasesteban.com/blog/ssg
+    // Otros métodos y relaciones del modelo
+}
+```
 
- ## Video  SSG vs SSR
+- Paso 4: Utiliza los métodos proporcionados por Eloquent para realizar consultas y manipular registros. Algunos ejemplos comunes son:
+```php
+// Obtener todos los registros de la tabla
+$registros = NombreDelModelo::all();
+
+// Obtener un registro por su ID
+$registro = NombreDelModelo::find($id);
+
+// Crear un nuevo registro
+$registro = new NombreDelModelo;
+$registro->nombre_columna = 'Valor';
+$registro->save();
+
+// Actualizar un registro
+$registro = NombreDelModelo::find($id);
+$registro->nombre_columna = 'Nuevo valor';
+$registro->save();
+
+// Eliminar un registro
+$registro = NombreDelModelo::find($id);
+$registro->delete();
+```
+
+Estos son solo ejemplos bás
+
+icos, pero Eloquent proporciona una amplia gama de métodos para realizar consultas más avanzadas y realizar operaciones CRUD en la base de datos.
+
+Conclusión:
+En Laravel, puedes crear tablas utilizando migraciones y manipular los registros de la base de datos utilizando el ORM Eloquent. Utilizando Eloquent, puedes realizar consultas y realizar operaciones CRUD de manera sencilla y eficiente. Esto simplifica el trabajo con tablas y registros en tu aplicación Laravel y te permite interactuar con la base de datos de manera segura y conveniente.
+
+ ## 

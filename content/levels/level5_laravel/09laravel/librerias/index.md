@@ -4,33 +4,73 @@ date: 2023-03-12T11:50:42-06:00
 draft: false
 showPagination: false
 ---
-# Route Con Get Laravel
-En Laravel, puedes definir rutas GET utilizando el método `get` del objeto `Route`. Las rutas GET se utilizan para manejar las solicitudes HTTP GET que llegan a tu aplicación. Puedes especificar una URL y una acción que se ejecutará cuando se acceda a esa URL.
 
-Aquí tienes un ejemplo básico de cómo definir una ruta GET en Laravel:
+# Modelos y Migraciones en Laravel y la definición de propiedades en los modelos.
 
-```php
-use Illuminate\Support\Facades\Route;
+Introducción:
+En Laravel, los modelos y las migraciones son componentes fundamentales para trabajar con bases de datos. Los modelos representan las entidades de tu aplicación y las migraciones se utilizan para definir y modificar la estructura de la base de datos. En esta lección, exploraremos cómo crear modelos y migraciones en Laravel, así como cómo definir propiedades en los modelos para interactuar con la base de datos.
 
-Route::get('/users', function () {
-    // Lógica para manejar la solicitud GET a /users
+1. Crear modelos y migraciones en Laravel:
+- Paso 1: Asegúrate de tener Laravel instalado correctamente en tu proyecto.
 
-    // Devolver una vista o una respuesta
-    return view('users.index');
-});
+- Paso 2: Para crear un modelo y su migración asociada, puedes utilizar el comando `make:model` de Artisan. Por ejemplo:
+```bash
+php artisan make:model NombreDelModelo -m
 ```
+Esto generará un nuevo archivo de modelo en el directorio `app/Models` y una migración en el directorio `database/migrations`.
 
-En este ejemplo, estamos definiendo una ruta GET en la URL `/users`. Cuando se acceda a esta URL, se ejecutará la función anónima pasada como segundo argumento de `get()`. Dentro de esta función, puedes realizar cualquier lógica necesaria, como interactuar con modelos, obtener datos de la base de datos o ejecutar servicios. Finalmente, puedes devolver una vista o una respuesta al usuario.
-
-También puedes utilizar un controlador para manejar la acción de la ruta en lugar de una función anónima. Esto ayuda a mantener tu código más estructurado y permite una mejor separación de la lógica de la ruta y la lógica de la aplicación. Aquí tienes un ejemplo:
-
+- Paso 3: Abre el archivo de migración recién creado y define la estructura de la tabla de la base de datos utilizando los métodos proporcionados por Laravel, como `create`, `table`, `string`, `integer`, etc. Por ejemplo:
 ```php
-use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
-
-Route::get('/users', [UserController::class, 'index']);
+public function up()
+{
+    Schema::create('nombre_de_la_tabla', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre_columna');
+        $table->timestamps();
+    });
+}
 ```
+Aquí, se define una tabla con una columna de ID, una columna de nombre y columnas de timestamps para el registro de la creación y actualización de los registros.
 
-En este caso, estamos usando el controlador `UserController` y el método `index()` para manejar la solicitud GET a `/users`. El controlador y el método se pasan como un array, donde el primer elemento es la clase del controlador y el segundo elemento es el nombre del método.
+- Paso 4: Ejecuta la migración para crear la tabla en la base de datos utilizando el comando `migrate` de Artisan. Por ejemplo:
+```bash
+php artisan migrate
+```
+Esto creará la tabla definida en la migración en tu base de datos.
 
-Puedes definir tantas rutas GET como necesites en tu aplicación Laravel, y cada una puede tener su propia lógica y acción específicas. Esto te permite crear una API RESTful o construir diferentes vistas y páginas para tu aplicación web.
+2. Definición de propiedades en los modelos:
+- Paso 1: Abre el archivo del modelo creado previamente en el directorio `app/Models`. Dentro de la clase del modelo, puedes definir las propiedades que representarán las columnas de la tabla de la base de datos. Por ejemplo:
+```php
+class NombreDelModelo extends Model
+{
+    protected $table = 'nombre_de_la_tabla';
+
+    protected $fillable = ['nombre_columna'];
+
+    // Otros métodos y relaciones del modelo
+}
+```
+Aquí, `$table` indica el nombre de la tabla asociada al modelo y `$fillable` especifica las columnas que se pueden asignar masivamente.
+
+- Paso 2: Utiliza las propiedades definidas en los modelos para interactuar con la base de datos. Por ejemplo:
+```php
+// Crear un nuevo registro
+$registro = NombreDelModelo::create(['nombre_columna' => 'Valor']);
+
+// Obtener todos los registros
+$registros = NombreDelModelo::all();
+
+// Obtener un registro por su ID
+$registro = NombreDelModelo::find($id);
+
+// Actualizar un registro
+$registro->nombre_columna = 'Nuevo valor';
+$registro->save();
+
+// Eliminar un registro
+$registro->delete();
+```
+Aquí, se muestran ejemplos básicos de cómo crear, obtener, actualizar y eliminar registros utilizando el modelo.
+
+Conclusión:
+En Laravel, los modelos y las migraciones son componentes clave para trabajar con bases de datos. Al crear modelos y migraciones, puedes definir la estructura de la base de datos y utilizar propiedades en los modelos para interactuar con los registros de la tabla correspondiente. Esto facilita la manipulación de los datos de la base de datos y ofrece una capa de abstracción para trabajar con las entidades de tu aplicación de manera eficiente y segura.
