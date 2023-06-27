@@ -1,58 +1,38 @@
 ---
-title: "Norder Radius, width, box shadow"
+title: "Ficheros / Roles EC2"
 date: 2023-03-12T11:47:29-06:00
 draft: false
 showPagination: false
 ---
-# Norder Radius, width, box shadow
-En Tailwind CSS, puedes aplicar estilos de radio de borde (border radius), ancho (width) y sombra de caja (box shadow) utilizando clases de utilidad. Permíteme explicarte cómo puedes trabajar con estos estilos en Tailwind CSS:
+# Ficheros / Roles EC2
+Lección sobre Ficheros y Roles de EC2
 
-## 1. Radio de borde (Border Radius):
-Para establecer el radio de borde de un elemento en Tailwind CSS, puedes utilizar las clases de utilidad relacionadas con el radio de borde. Algunas clases comunes que puedes utilizar son:
+Introducción:
+En el contexto de Amazon Elastic Compute Cloud (EC2), los ficheros y los roles desempeñan un papel importante en el almacenamiento y la gestión de los recursos de las instancias de EC2. En esta lección, exploraremos los conceptos fundamentales y las características de los ficheros y los roles de EC2, así como los casos de uso comunes para cada uno de ellos.
 
-- `rounded`: Establece un radio de borde suave en el elemento.
-- `rounded-sm`: Establece un radio de borde más pequeño y suave.
-- `rounded-lg`: Establece un radio de borde más grande y suave.
-- `rounded-full`: Establece un radio de borde circular.
+1. Ficheros en EC2:
+- Ficheros de usuario: Son los ficheros específicos de una instancia de EC2, como documentos, imágenes, archivos de configuración, etc. Estos ficheros pueden ser almacenados en volúmenes de almacenamiento en bloque (EBS) o en el almacenamiento temporal de la instancia.
+- Ficheros de sistema: Son los ficheros del sistema operativo y las aplicaciones instaladas en la instancia de EC2. Estos ficheros son administrados por el sistema operativo y pueden incluir archivos del sistema, bibliotecas, ejecutables, etc.
 
-Por ejemplo, si deseas aplicar un radio de borde suave a un elemento, puedes agregar la clase `rounded` a ese elemento:
+2. Almacenamiento de ficheros en EC2:
+- Volúmenes de almacenamiento en bloque (EBS): Proporcionan almacenamiento persistente y de alta disponibilidad para las instancias de EC2. Los volúmenes de EBS pueden ser adjuntados a una instancia y formateados con un sistema de archivos para almacenar ficheros de usuario y de sistema.
+- Almacenamiento temporal de instancia: Cada instancia de EC2 tiene almacenamiento temporal conocido como "instancia store". Este almacenamiento es más efímero y no persiste más allá del ciclo de vida de la instancia. Los ficheros almacenados aquí son adecuados para datos temporales o caché.
 
-```html
-<div class="rounded">
-  Este es un ejemplo de elemento con radio de borde suave.
-</div>
-```
+3. Roles de EC2:
+- Roles de IAM (Identity and Access Management): Los roles de IAM son entidades de seguridad que se pueden asociar a las instancias de EC2. Estos roles permiten que las instancias accedan a otros servicios de AWS, como S3 o DynamoDB, sin necesidad de proporcionar credenciales directamente en la instancia.
+- Políticas de IAM: Los roles de EC2 están asociados a políticas de IAM, que definen los permisos y las acciones que la instancia puede realizar en los servicios de AWS. Estas políticas controlan el acceso y la gestión de los recursos en nombre de la instancia.
 
-Tailwind CSS también te permite establecer radios de borde específicos para cada esquina del elemento utilizando clases adicionales, como `rounded-tl` (borde superior izquierdo), `rounded-br` (borde inferior derecho), etc.
+4. Casos de uso comunes:
+- Almacenamiento de archivos estáticos: Los ficheros de usuario pueden ser almacenados en volúmenes de EBS o en servicios de almacenamiento en la nube, como Amazon S3, para proporcionar un almacenamiento escalable y duradero para archivos estáticos.
+- Configuración y personalización de la instancia: Los ficheros de sistema pueden ser utilizados para configurar el sistema operativo y las aplicaciones instaladas en la instancia de EC2, permitiendo personalizar y adaptar la instancia según las necesidades.
+- Acceso seguro a servicios de AWS: Los roles de EC2 permiten que las instancias accedan a servicios de AWS sin necesidad de compartir credenciales directamente, lo que mejora la seguridad y facilita la administración de permisos.
 
-## 2. Ancho (Width):
-Para establecer el ancho de un elemento en Tailwind CSS, puedes utilizar las clases de utilidad relacionadas con el ancho. Algunas clases comunes que puedes utilizar son:
+Conclusión:
+Los ficheros y los roles de EC2 son elementos esenciales en la gestión y configuración de las instancias de EC2. El almacenamiento de ficheros, ya sea en volúmenes de EBS o en almacenamiento temporal, permite gestionar los datos de usuario y de sistema
 
-- `w-{size}`: Establece un ancho específico para el elemento. Por ejemplo, `w-64` establecerá un ancho de 64 píxeles.
-- `max-w-{size}`: Establece un ancho máximo para el elemento. Por ejemplo, `max-w-sm` establecerá un ancho máximo de 640 píxeles en dispositivos pequeños.
+ de forma eficiente. Los roles de EC2 facilitan el acceso seguro a otros servicios de AWS sin la necesidad de compartir credenciales directamente en la instancia. Al comprender estos conceptos, se puede utilizar EC2 de manera eficaz para almacenar y gestionar ficheros, y para proporcionar acceso seguro a otros servicios de AWS.
 
-Puedes combinar estas clases con los puntos de quiebre (breakpoints) para establecer diferentes anchos en diferentes tamaños de pantalla. Por ejemplo, `md:w-1/2` establecerá un ancho del 50% en dispositivos de pantalla mediana.
-
-## 3. Sombra de caja (Box Shadow):
-Para aplicar una sombra de caja a un elemento en Tailwind CSS, puedes utilizar las clases de utilidad relacionadas con las sombras de caja. Algunas clases comunes que puedes utilizar son:
-
-- `shadow-sm`: Establece una sombra de caja pequeña.
-- `shadow`: Establece una sombra de caja suave y moderada.
-- `shadow-lg`: Establece una sombra de caja grande y prominente.
-
-Por ejemplo, si deseas aplicar una sombra de caja suave a un elemento, puedes agregar la clase `shadow` a ese elemento:
-
-```html
-<div class="shadow">
-  Este es un ejemplo de elemento con sombra de caja suave.
-</div>
-```
-
-Tailwind CSS también ofrece opciones avanzadas para personalizar las sombras de caja, como `shadow-offset`, `shadow-color`, `shadow-opacity`, etc. Puedes consultar la documentación oficial de Tailwind CSS para obtener más detalles sobre las clases de utilidad de sombras de caja y sus opciones de personalización.
-
-En resumen, en Tailwind CSS, puedes aplicar estilos de radio de borde, ancho y sombra de caja utilizando las clases de utilidad relacionadas. Estas clases
-
-# Consultas base de Datos php video
+# Ficheros 
 {{< youtube i1x8z5K3xpE >}}
-# Get y Post en PHP video
+# Roles EC2
 {{< youtube oP8AUuV-6PM >}}

@@ -1,5 +1,5 @@
 ---
-title: "Http Request / Navegaciones"
+title: "Registros Con Livewire / Validaciones Tiempo Real"
 date: 2023-03-12T11:50:06-06:00
 draft: false
 showPagination: false

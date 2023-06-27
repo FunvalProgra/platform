@@ -1,5 +1,5 @@
 ---
-title: "Route Con Get Laravel  "
+title: "Model y Migraciones / Modelos con Propiedades"
 date: 2023-03-12T11:50:42-06:00
 draft: false
 showPagination: false
