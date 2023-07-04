@@ -105,6 +105,96 @@ En resumen, List es una interfaz que define una colección ordenada de elementos
 
 {{< youtube 8NkHXYVpciI >}}
 
+# ArrayList
+
+En Java, ArrayList es una clase que proporciona una implementación dinámica de un arreglo. A diferencia de los arreglos regulares, que tienen un tamaño fijo, los ArrayList pueden cambiar su tamaño dinámicamente según sea necesario. Esto los convierte en una estructura de datos muy versátil y ampliamente utilizada en programación.
+
+## Declaración e importación de ArrayList
+
+Para utilizar ArrayList, primero debemos importar la clase:
+``` java
+import java.util.ArrayList;
+```
+
+Luego, podemos declarar un ArrayList de la siguiente manera:
+``` java
+ArrayList<TipoDeDato> nombreArrayList = new ArrayList<>();
+```
+
+Reemplaza TipoDeDato con el tipo de elementos que deseas almacenar en el ArrayList, como Integer, String, Double, etc.
+
+## Añadir elementos a un ArrayList
+Para agregar elementos a un ArrayList, utilizamos el método add():
+``` java
+nombreArrayList.add(elemento);
+```
+
+Donde elemento es el valor que deseas agregar al ArrayList.
+
+## Acceder a elementos del ArrayList
+Podemos acceder a los elementos del ArrayList utilizando el método get() y proporcionando el índice del elemento que queremos obtener:
+``` java
+TipoDeDato elemento = nombreArrayList.get(indice);
+```
+
+Donde TipoDeDato es el tipo de elementos que contiene el ArrayList y indice es el índice del elemento que queremos obtener.
+
+## Modificar elementos del ArrayList
+Para modificar un elemento existente en el ArrayList, utilizamos el método set() y proporcionamos el índice del elemento que deseamos modificar y el nuevo valor:
+``` java
+nombreArrayList.set(indice, nuevoValor);
+```
+Donde indice es el índice del elemento que queremos modificar y nuevoValor es el valor que queremos asignarle al elemento.
+
+## Eliminar elementos del ArrayList
+Para eliminar elementos de un ArrayList, podemos utilizar el método remove() y proporcionar el índice del elemento que deseamos eliminar:
+``` java
+nombreArrayList.remove(indice);
+```
+
+También podemos eliminar un elemento proporcionando directamente el valor que queremos eliminar:
+``` java
+nombreArrayList.remove(elemento);
+```
+
+## Tamaño del ArrayList
+Podemos obtener el tamaño actual del ArrayList utilizando el método size():
+``` java
+int tamaño = nombreArrayList.size();
+```
+
+## Recorrer un ArrayList
+Podemos recorrer los elementos de un ArrayList utilizando un bucle for o un bucle foreach:
+``` java
+// Usando for
+for (int i = 0; i < nombreArrayList.size(); i++) {
+    TipoDeDato elemento = nombreArrayList.get(i);
+    // Hacer algo con el elemento
+}
+
+// Usando foreach
+for (TipoDeDato elemento : nombreArrayList) {
+    // Hacer algo con el elemento
+}
+```
+
+## ArrayList de objetos personalizados
+También podemos crear un ArrayList que contenga objetos de una clase personalizada que hayamos definido. Por ejemplo, si tenemos una clase Persona con atributos como nombre, edad y género, podemos crear un ArrayList de Persona de la siguiente manera:
+``` java
+ArrayList<Persona> listaPersonas = new ArrayList<>();
+```
+
+Luego podemos crear objetos Persona y agregarlos al ArrayList:
+``` java
+Persona persona1 = new Persona("Juan", 30, "Masculino");
+Persona persona2 = new Persona("María", 25, "Femenino");
+
+listaPersonas.add(persona1);
+listaPersonas.add(persona2);
+```
+
+El ArrayList es una estructura de datos muy útil en Java que nos permite almacenar y manipular elementos de manera dinámica. Puede adaptarse a diferentes tipos de datos y ofrece una amplia gama de métodos para agregar, acceder, modificar y eliminar elementos. Conocer y comprender cómo utilizar ArrayList es fundamental para desarrollar aplicaciones robustas y eficientes en Java.
+
 ## Ejercicios para practicar 
 
 1.- Suma de elementos en un Array
