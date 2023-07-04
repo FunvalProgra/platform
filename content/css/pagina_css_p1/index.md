@@ -7,4 +7,6 @@ showPagination: false
 
 Entre el día de hoy y mañana vamos a ver como crear una página web con HTML, CSS y JS. Siguiendo el tutorial, vas a crear una página web desde cero y subirás tu resultado el día de mañana en la entrega de la tarea de la práctica calificada del día viernes.
 
-{{< youtube ivyIqmczxHU >}}
+Ten en cuenta que en esta práctica se te calificará por el avance que tengas, independiente si lograste terminar el tutorial por completo.
+
+{{< youtube c4UK4nJzi28 >}}
