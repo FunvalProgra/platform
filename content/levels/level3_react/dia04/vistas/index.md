@@ -4,6 +4,23 @@ date: 2023-03-12T11:46:35-06:00
 draft: false
 showPagination: false
 ---
+
+
+<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
+    <span>{{< icon "circle-info" >}}</span>
+    <b>Actualización</b>
+  </div>
+  <span > <!-- class="dark:text-neutral-300" -->
+
+En esta sección se detalla como crear componentes de estado basandonos en el uso de Clases, sin embargo en versiones mas recientes de react se usan las funciones para crear componentes de estado. Por ello, te recomendamos leer la documentación oficial de React que encontrarás a continuación y el video que te dejamos en la parte inferior.
+
+[https://react.dev/learn/state-a-components-memory](https://react.dev/learn/state-a-components-memory)
+  </span>
+</div>
+
+<br>
+
 # Componentes con estado / sin estado
 
 Para comenzar queremos analizar estos dos conceptos en contraposición. Cuando empezamos con React pueden provocar dudas, pero realmente es sencillo. Básicamente, la diferencia entre componentes con o sin estado estriba en que los componentes con estado permiten mantener datos propios a lo largo del tiempo e implementar comportamientos en sus diferentes métodos del ciclo de vida.
@@ -173,4 +190,4 @@ En futuros artículos tenemos que abordar otros asuntos clave, como la inicializ
 
 ## video Componentes
 
-{{< youtube qPu3WBi65PA >}}
+{{< youtube LmldFbeSTFc >}}
