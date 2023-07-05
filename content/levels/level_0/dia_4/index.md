@@ -6,6 +6,17 @@ draft: false
 
 ## Día 4 : JavaScript
 
+<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
+    <span>{{< icon "circle-info" >}}</span>
+    <b>Importancia de los temas que aprenderás</b>
+  </div>
+  <span class="dark:text-neutral-300">
+
+  Si bien es cierto que estos temas te ayudarán a prepararte para el exámen de admisión, esperamos que puedas analizarlo y prácticar de la mano con los tutoriales que hemos añadido. Al ingresar al programa, esta información será de gran ayuda para empezar tu camino como programador, recuerda que esperamos que llegues a entender de forma básica los temas que aprenderás y al iniciar el curso, podremos profundizar en ellos. También, tendremos en cuenta que leiste estos temas y partiremos de ahí para avanzar en el curso.
+  </span>
+</div>
+
 ### Introducción a JavaScript
 JavaScript es actualmente el lenguaje de programación más utilizado dentro del desarrollo web, su popularidad ha crecido a lo largo de los años hasta posicionarlo como uno de los lenguajes mas queridos, en el siguiente video aprenderás un poco más de sus origenes y su utilidad.
 
