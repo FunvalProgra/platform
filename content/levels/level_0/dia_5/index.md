@@ -7,6 +7,17 @@ draft: false
 
 ## Día 5 : Tipos de Datos y Operadores
 
+<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
+    <span>{{< icon "circle-info" >}}</span>
+    <b>Importancia de los temas que aprenderás</b>
+  </div>
+  <span class="dark:text-neutral-300">
+
+  Si bien es cierto que estos temas te ayudarán a prepararte para el exámen de admisión, esperamos que puedas analizarlo y prácticar de la mano con los tutoriales que hemos añadido. Al ingresar al programa, esta información será de gran ayuda para empezar tu camino como programador, recuerda que esperamos que llegues a entender de forma básica los temas que aprenderás y al iniciar el curso, podremos profundizar en ellos. También, tendremos en cuenta que leiste estos temas y partiremos de ahí para avanzar en el curso.
+  </span>
+</div>
+
 En JavaScript trabajamos con distintos valores, cada valor pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.
 En JavaScript hay ocho tipos de datos básicos. En esta sección aprenderemos sobre algunos de ellos. 
 
@@ -41,38 +52,3 @@ Hasta este punto, hemos visto los tipos de datos más básicos dentro del lengua
 En este video solo mira los 10 primeros minutos donde se varios de los operadores que usarás al trabajar con JavaScript y los necesarios para el examen.  La información que viene despues no se incluirá en el examen pero podría serte util dentro del curso.
 
 {{< youtube _8Z5AeGVIXE >}}
-
-<!-- ### Condicionales
-
-Algunas veces, necesitamos ejecutar diferentes acciones basadas en diferentes condiciones.
-
-Para esto podemos usar la sentencia `if(...)` la cual evalúa la condicion entre los paréntesis, y si el resultado es `true` ejecuta un bloque de código.
-
-Por ejemplo:
-
-```js
-if (year == 2015) alert( '¡Estás en lo cierto!' );
-```
-
-Aquí la condición es de igualdad (`year == 2015`), en caso sea `true` se ejecutará la alerta, pero podría ser más compleja.
-
-Si quisiéramos ejecutar más de una sentencia, debemos encerrar nuestro bloque de código entre llaves:
-
-```js
-if (year == 2015) {
-  alert( "¡Es Correcto!" );
-  alert( "¡Eres muy inteligente!" );
-}
-```
-
-Se recomienda siempre encerrar nuestro bloque de código en llaves `{}` siempre que se utilice la sentencia `if`, inclusive si solo se va a ejecutar una sola sentencia en este caso. Hacer eso mejora la legibilidad.
-
-Para aprender más de este concepto, mira el siguiente video: 
-
-{{< alert >}}
-Por el momento solo es importante la seccion donde se menciona el uso de la condicional `if` y `else` (hasta el minuto 10). **La sección sobre la condición `switch` no es necesaria por el momento**.
-{{< /alert >}}
-
-<br />
-
-{{< youtube  9h5hyh_wDjo >}} -->
