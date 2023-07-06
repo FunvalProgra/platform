@@ -12,7 +12,7 @@ Crea una aplicación de lista de tareas donde los usuarios puedan agregar nuevas
 
 ## Instrucciones:
 
-1. Configura un nuevo proyecto de React utilizando la herramienta de tu elección (Create React App, Parcel, etc.).
+1. Configura un nuevo proyecto de React utilizando vite (npm create vite@latest).
 
 2. Crea un nuevo componente llamado `TodoApp` que será el componente principal de la aplicación.
 
