@@ -70,3 +70,10 @@ Existe una confusión común entre SQL y MySQL debido a la similitud en los nomb
 - Además del lenguaje SQL estándar, MySQL también admite características específicas, como almacenamiento de procedimientos almacenados, disparadores (triggers), vistas, funciones personalizadas y replicación, entre otros.
 
 En resumen, SQL es el lenguaje de programación utilizado para administrar y manipular bases de datos relacionales, mientras que MySQL es un sistema de gestión de bases de datos relacional específico que implementa SQL y proporciona su propia implementación y características adicionales. MySQL es uno de los RDBMS más populares y ampliamente utilizados que utiliza el lenguaje SQL como su lenguaje de consulta.
+
+
+### Curso de SQL
+
+Del siguiente video, solo mira desde el minuto 1:27 hasta el minuto 20:23.
+
+{{< youtube uUdKAYl-F7g >}}
