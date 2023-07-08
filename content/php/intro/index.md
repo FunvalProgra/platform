@@ -41,6 +41,29 @@ Estos son solo algunos ejemplos, y existen muchas más extensiones disponibles p
 
 Puedes consultar la documentación oficial de PHP para obtener más información sobre las extensiones disponibles y cómo instalarlas y utilizarlas en tus proyectos.
 
+## Sintaxis PHP
+
+Repasemos un poco la sintaxis. Es bastante sencilla y similar a otros lenguajes de programación. Aquí tienes algunos elementos básicos de la sintaxis de PHP:
+
+1. **Etiquetas de apertura y cierre**: Para iniciar el código PHP, se utiliza la etiqueta `<?php` y para cerrarlo se utiliza la etiqueta `?>`. Dentro de estas etiquetas se escribe el código PHP.
+
+```php
+<?php
+// Código PHP aquí
+?>
+```
+
+2. **Comentarios**: Puedes agregar comentarios en tu código para hacerlo más legible. Los comentarios en PHP se pueden hacer de dos formas: de una sola línea utilizando `//` o en varias líneas usando `/* */`.
+
+```php
+// Esto es un comentario de una sola línea
+
+/*
+Esto es un comentario
+de múltiples líneas
+*/
+```
+
 # Introducción a PHP
 
 {{< youtube CqryM3a2nrA >}}
@@ -48,6 +71,5 @@ Puedes consultar la documentación oficial de PHP para obtener más información
 # Sintaxis PHP
 
 {{< youtube p3KvwG8Yl4U >}}
-
 
 <footer>Página de la que trajimos parte del contenido: <a href="https://desarrolloweb.com/articulos/303.php" target="_blank">https://desarrolloweb.com/articulos/303.php</a></footer>
