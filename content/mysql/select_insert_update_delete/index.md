@@ -226,3 +226,9 @@ Estas son algunas diferencias que te podría interesar conocer:
 
 - **TRUNCATE**: Dado que TRUNCATE no registra las eliminaciones individuales en el registro de transacciones, no se puede deshacer o revertir una operación de TRUNCATE. Una vez que se realiza un TRUNCATE, los datos se eliminan de forma permanente.
 - **DELETE**: Al utilizar el comando DELETE, las eliminaciones se registran en el registro de transacciones y se pueden deshacer o revertir mediante un rollback si es necesario.
+
+## Video de refuerzo
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/uUdKAYl-F7g?start=3022&end=3560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
