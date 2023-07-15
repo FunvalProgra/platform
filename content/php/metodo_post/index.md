@@ -59,3 +59,5 @@ Este es solo un ejemplo básico para ilustrar el uso del método POST en PHP. Re
 ## Conclusiones:
 
 El método ``POST`` en PHP es una herramienta esencial para el envío seguro de datos en aplicaciones web. Al utilizar este método, se protege la privacidad y la integridad de la información transmitida, evitando que los datos sean visibles en la URL o en los registros del servidor. Al implementar técnicas adecuadas de validación y manipulación de datos, se garantiza la seguridad de la aplicación y se previenen posibles vulnerabilidades. Sin embargo, es importante tener en cuenta que ninguna solución es infalible, por lo que se deben aplicar medidas de seguridad adicionales para proteger completamente la aplicación.
+
+{{< youtube  ZKJESVm5otA >}}
