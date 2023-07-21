@@ -1,5 +1,5 @@
 ---
-title: "Segunda_parte"
+title: "Estructura de datos en PHP - array - (segunda parte)"
 date: 2023-07-18T20:29:32-05:00
 draft: false
 showPagination: false
