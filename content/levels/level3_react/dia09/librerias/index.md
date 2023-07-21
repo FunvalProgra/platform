@@ -48,6 +48,7 @@ Nota: No cambies el nombre de la carpeta public por ningún otro, es la única q
 
 # video CCS CON NEXT
 
+{{< youtube D_jjPCGofZ0 >}}
 
 # Creando sitios estáticos con Next.js
 
