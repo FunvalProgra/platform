@@ -9,14 +9,17 @@ showPagination: false
 Next.js provee una solución para construir APIs fácilmente en un entorno Serverless (Sin servidor), por lo que no tendremos que preocuparnos de pagar alojamiento de servidores para el back-end de nuestra aplicación.
 Todos los archivos dentro de la carpeta pages/api serán tratados como endpoints de nuestra API en lugar de páginas.
 Por ejemplo, si creamos un archivo pages/api/hola.js podremos acceder al mismo en la ruta: /api/hola y nos devolverá como respuesta un objeto json.
+
 ``` js
 export default function manejador(req, res) {
   res.status(200).json({ texto: "Hola" });
 }
 pages/api/hola.js
 ```
+
 Como puedes observar, para que este archivo funcione correctamente como API endpoint es necesario exportar una función manejador (handler) con los parámetros req y res.
 Si queremos tener acceso a los diferentes métodos HTTP en nuestro manejador podemos usar req.method dentro del mismo, por ejemplo:
+
 ``` js
 export default function manejador(req, res) {
   switch (req.method) {
@@ -55,3 +58,5 @@ Rutas:
 
 
 # video Api con Next. JS
+
+{{< youtube k3Cxo1hHqBE >}}
