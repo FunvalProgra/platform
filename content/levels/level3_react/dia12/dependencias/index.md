@@ -34,3 +34,5 @@ React Hook useCallback does nothing when called with only one argument. Did you 
 Este mensaje sale porque no tiene mucho sentido usar el useCallback sin un array de dependencias. ¿Por qué? Pues porque si no se lo ponemos, al igual que si no lo ponemos en useEffect, las funciones se ejecutarán siempre después de cada render. Por ello, utilizar useCallback para que se cree una nueva referencia en cada render contradice el mismo propósito del hook.
 
 En useCallback es bueno mantener las dependencias al mínimo. Normalmente, estamos utilizando este hook porque queremos reducir el número de referencias que se producen de una misma función. Entonces, para mejorar su performance deberemos mantener pocas dependencias. No necesariamente tiene que ser un array vacío, pero deberíamos asegurarnos de tener pocas variables que cambien poco. 
+
+{{< youtube 8m6v98orJFk >}}
