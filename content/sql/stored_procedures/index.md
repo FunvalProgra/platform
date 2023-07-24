@@ -97,3 +97,5 @@ Esta llamada ejecutará el Stored Procedure, insertando un nuevo registro en la 
 - VALUES: Especifica los valores que se insertarán en las columnas name, age y department.
 
 Recuerda que los Stored Procedures son una herramienta poderosa en las bases de datos, ya que permiten encapsular lógica de negocio compleja y reutilizable, mejorando la eficiencia y la seguridad de las operaciones con datos.
+
+{{< youtube w_AtIrIWhKQ >}}
