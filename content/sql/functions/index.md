@@ -65,6 +65,32 @@ En PHPMyAdmin, al crear funciones almacenadas, procedimientos almacenados o dese
 Para cambiar el delimitador en PHPMyAdmin, utiliza la sentencia DELIMITER seguida del delimitador deseado (por ejemplo, `$$`, `//`, `||`, etc.). Luego, escribes el bloque de código de la función, procedimiento o desencadenador y finalmente, cierras con el delimitador especificado.
 {{</ alert >}}
 
+## Ejemplo
+
+En este caso, crearemos una función llamada calcular_promedio.
+
+```sql
+DELIMITER //
+
+CREATE FUNCTION calcular_promedio(num1 INT, num2 INT)
+RETURNS DECIMAL(10, 2)
+BEGIN
+  DECLARE promedio DECIMAL(10, 2);
+  SET promedio = (num1 + num2) / 2;
+  RETURN promedio;
+END //
+
+DELIMITER ;
+```
+
+En este ejemplo, hemos creado una función llamada calcular_promedio que acepta dos parámetros de tipo INT (números enteros) y devuelve un valor de tipo DECIMAL(10, 2) (número decimal con dos decimales). La lógica de la función calcula el promedio de los dos números y lo devuelve como resultado.
+
+Podemos llamar a esta función de la siguiente manera:
+
+```sql
+SELECT calcular_promedio(10, 5);
+```
+
 ## Ventajas de Utilizar Funciones en SQL
 
 - **Reusabilidad**: Las funciones permiten encapsular lógica de negocio compleja en unidades reutilizables, lo que facilita el mantenimiento y evita la repetición de código.
