@@ -53,30 +53,6 @@ while (i) { // cuando i sea 0, la condición se volverá falsa y el bucle se det
   i--;
 }
 ```
-### El bucle "do..while"
-
-La comprobación de la condición puede ser movida *debajo* del cuerpo del bucle usando la sintaxis `do..while`:
-
-```js
-do {
-  // cuerpo del bucle
-} while (condition);
-```
-
-El bucle primero ejecuta el cuerpo, luego comprueba la condición, y, mientras sea un valor verdadero, la ejecuta una y otra vez.
-
-Por ejemplo:
-
-```js run
-let i = 0;
-do {
-  alert( i );
-  i++;
-} while (i < 3);
-```
-
-Esta sintaxis solo debe ser usada cuando quieres que el cuerpo del bucle sea ejecutado **al menos una vez** sin importar que la condición sea verdadera. Usualmente, se prefiere la otra forma: `while(…) {…}`.
-
 ### El bucle "for"
 
 El bucle `for` es más complejo, pero también el más usado.
@@ -157,108 +133,17 @@ alert(i); // 3, visible, porque fue declarada fuera del bucle
   </span>
 </div>
 
+## Recursos Externos
 
-#### Omitiendo partes
+Para seguir aprendiendo sobre los bucles y como funcionan, puedes visitar los siguientes enlaces:
 
-Cualquier parte de `for` puede ser omitida.
+### Recursos de aprendejavascript.dev
 
-Por ejemplo, podemos quitar `comienzo` si no necesitamos realizar nada al inicio del bucle.
+- [Bucles con while](https://www.aprendejavascript.dev/clase/estructuras-de-control/bucles-con-while)
+- [Bucles con do while](https://www.aprendejavascript.dev/clase/estructuras-de-control/bucles-con-do-while)
+- [Expresiones y declaraciones](https://www.aprendejavascript.dev/clase/estructuras-de-control/expresiones-y-declaraciones)
+- [Bucles con for](https://www.aprendejavascript.dev/clase/estructuras-de-control/bucles-con-for)
 
-Como aquí:
+Asímismo continúa con las lecciones de freecodecamp:
 
-```js run
-let i = 0; // Ya tenemos i declarada y asignada
-for (; i < 3; i++) { // no hay necesidad de "comenzar"
-  alert( i ); // 0, 1, 2
-}
-```
-
-También podemos eliminar la parte `paso`:
-
-```js run
-let i = 0;
-for (; i < 3;) {
-  alert( i++ );
-}
-```
-
-Esto hace al bucle idéntico a `while (i < 3)`.
-
-En realidad podemos eliminar todo, creando un bucle infinito:
-
-```js
-for (;;) {
-  // se repite sin limites
-}
-```
-
-Por favor, nota que los dos punto y coma `;` del `for` deben estar presentes. De otra manera, habría un error de sintaxis.
-
-### Rompiendo el bucle
-
-Normalmente, se sale de un bucle cuando la condición se vuelve falsa.
-
-Pero podemos forzar una salida en cualquier momento usando la directiva especial `break`.
-
-Por ejemplo, el bucle debajo le pide al usuario por una serie de números, "rompiéndolo" cuando un número no es ingresado:
-
-{{< highlight js "hl_lines=5" >}}
-let sum = 0;
-while (true) {
-  let value = +prompt("Ingresa un número", '');
-
-  if (!value) break; // (*)
-
-  sum += value;
-}
-alert( 'Suma: ' + sum );
-{{< /highlight >}}
-
-La directiva `break` es activada en la línea `(*)` si el usuario ingresa una línea vacía o cancela la entrada. Detiene inmediatamente el bucle, pasando el control a la primera línea después de el bucle. En este caso, `alert`.
-
-La combinación "bucle infinito + `break` según sea necesario" es ideal en situaciones donde la condición del bucle debe ser comprobada no al inicio o al final de el bucle, sino a la mitad o incluso en varias partes del cuerpo. 
-
-### Continuar a la siguiente iteración
-
-La directiva `continue` es una "versión más ligera" de `break`. No detiene el bucle completo. En su lugar, detiene la iteración actual y fuerza al bucle a comenzar una nueva (si la condición lo permite).
-
-Podemos usarlo si hemos terminado con la iteración actual y nos gustaría movernos a la siguiente.
-
-El bucle debajo usa `continue` para mostrar solo valores impares:
-
-{{< highlight js "hl_lines=3" >}}
-for (let i = 0; i < 10; i++) {
-  // si es verdadero, saltar el resto del cuerpo
-  if (i % 2 == 0) continue;
-  alert(i); // 1, luego 3, 5, 7, 9
-}
-{{< /highlight >}}
-
-Para los valores pares de `i`, la directiva `continue` deja de ejecutar el cuerpo y pasa el control a la siguiente iteración de `for` (con el siguiente número). Así que el `alert` solo es llamado para valores impares.
-
-<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
-  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
-    <span>{{< icon "circle-info" >}}</span>
-    <b>La directiva `continue` ayuda a disminuir la anidación</b>
-  </div>
-  <span class="dark:text-neutral-300">
-Un bucle que muestra valores impares podría verse así:
-
-```js
-for (let i = 0; i < 10; i++) {
-  if (i % 2) {
-    alert( i );
-  }
-}
-```
-Desde un punto de vista técnico, esto es idéntico al ejemplo de arriba. Claro, podemos simplemente envolver el código en un bloque `if` en vez de usar `continue`.
-
-Pero como efecto secundario, esto crearía un nivel más de anidación (la llamada a `alert` dentro de las llaves). Si el código dentro de `if` posee varias líneas, eso podría reducir la legibilidad en general.
-  </span>
-</div>
-
-### Más sobre bucles
-
-En el siguiente video vamos a ver algunos ejemplos de como aplicar los bucles que hemos mencionado:
-
-{{< youtube 5ct-3tDiRUY >}}
+[Javascript - FreeCodeCamp](https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/#basic-javascript)
