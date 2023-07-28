@@ -1,6 +1,6 @@
 ---
 title: "GIT INICIO RAPIDO"
-date: 2023-07-28T18:32:03-05:00
+date: 2023-07-27T18:32:03-05:00
 draft: false
 showPagination: false
 ---
