@@ -139,14 +139,14 @@ En los siguientes tutoriales aprenderás más sobre como puedes usar esta estruc
 
 ### AprendeJavascript.dev
 
-[Tu primera funcion](https://www.aprendejavascript.dev/clase/funciones/tu-primera-funcion)
-[Parametros](https://www.aprendejavascript.dev/clase/funciones/parametros)
-[Function Expression](https://www.aprendejavascript.dev/clase/funciones/function-expression)
+- [Tu primera funcion](https://www.aprendejavascript.dev/clase/funciones/tu-primera-funcion)
+- [Parametros](https://www.aprendejavascript.dev/clase/funciones/parametros)
+- [Function Expression](https://www.aprendejavascript.dev/clase/funciones/function-expression)
 
 ### 30 días de Javascript
 
 [Funciones](https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/Spanish/dia_07_Funciones/dia_07_funciones.md)
 
-## Javascript.info
+### Javascript.info
 
 [Funciones](https://es.javascript.info/function-basics)
