@@ -194,3 +194,19 @@ alert( arr[1].name ); // John
 // obtener la función del índice 3 y ejecutarla
 arr[3](); // hello
 ```
+
+## Recursos en video
+
+{{< youtube 5DaZXXbHI_U >}}
+
+<br>
+
+{{< youtube qqR1enOceVg >}}
+
+<br>
+
+{{< youtube o3c8cW73weQ >}}
+
+<br>
+
+{{< youtube 4xig5UPRC00 >}}
