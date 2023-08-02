@@ -19,6 +19,9 @@ draft: false
 
 Hoy continuaremos aprendiendo las bases de la programación con el curso de platzi, te recomendamos ver **desde la lección 12 hasta la lección 15**.
 
+[Programación básica - Platzi](https://platzi.com/cursos/programacion-basica/)
+
+
 ## FreeCodeCamp
 
 Puedes continuar este curso incluso luego de terminar estos primeros dias de capacitación:
