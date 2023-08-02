@@ -1,35 +1,53 @@
 ---
 title: "Día 2"
-date: 2022-12-15T17:39:29-05:00
-draft: false
+date: 2022-12-16T10:28:24-05:00 
+draft: true
 ---
-{{< lead >}}
-Temas de la semana 📖
-{{< /lead >}}
 
-## Día 2 : JavaScript
+## Día 2 : Introducción a HTML y CSS
 
-### Introducción a JavaScript
-JavaScript es actualmente el lenguaje de programación más utilizado dentro del desarrollo web, su popularidad ha crecido a lo largo de los años hasta posicionarlo como uno de los lenguajes mas queridos, en el siguiente video aprenderás un poco más de sus origenes y su utilidad.
+Al comenzar tu camino como Web Developer (Desarrollador Web) vas a tener que aprender varias tecnologías. vamos a empezar por la base de la web. 
 
+<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
+    <span>{{< icon "circle-info" >}}</span>
+    <b>Importancia de los temas que aprenderás</b>
+  </div>
+  <span class="dark:text-neutral-300">
 
-{{< youtube 2SetvwBV-SU >}}
+  Si bien es cierto que estos temas te ayudarán a prepararte para el exámen de admisión, esperamos que puedas analizarlo y prácticar de la mano con los tutoriales que hemos añadido. Al ingresar al programa, esta información será de gran ayuda para empezar tu camino como programador, recuerda que esperamos que llegues a entender de forma básica los temas que aprenderás y al iniciar el curso, podremos profundizar en ellos. También, tendremos en cuenta que leiste estos temas y partiremos de ahí para avanzar en el curso.
+  </span>
+</div>
 
+### HTML
 
-### Gramática y Caracteristicas del lenguaje
+HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, generalmente se utilizan otras tecnologías para describir la apariencia/presentación de una página web (CSS) o la funcionalidad/comportamiento (JavaScript).
 
-Todo lenguaje de programación cuenta con una forma de escribir en particular, aunque muchos de los lenguajes de programación guardan similitudes, también tienen diferencias que es importante que conozcamos. Así como `HTML` tiene una forma especial de escribir, JavaScript tambien cuenta con una sintáxis especial y una serie de reglas que aprenderemos antes que empecemos a escribir código de manera apresurada.
+"Hipertexto" hace referencia a los enlaces que conectan páginas web entre sí, ya sea dentro de un único sitio web o entre sitios web. Los enlaces son un aspecto fundamental de la Web. Al subir contenido a Internet y vincularlo a las páginas creadas por otras personas, te conviertes en un participante activo en la «World Wide Web» (Red Informática Mundial).
 
-{{< youtube C5FXZ2ki13k >}}
+HTML ha ido evolucionando a través del tiempo y hoy nos encontramos en la versión 5 (HTML5). Este lenguaje se basa en una estructura de etiquetas, las cuales tienen la siguiente forma:
 
-### Variables dentro de JavaScript: Var vs Let
+<!-- Cambiar imagen, el ejemplo es errado -->
 
-Teniendo ya una noción mas clara de lo que es Javascript, hablemos de la unidad de almacenamiento mas comun en este lenguaje, las **variables**.
+{{< figure src="./html.png">}}
 
-{{< youtube tmRa0_EvMoc >}}
+Es más facil aprender esto haciendo, así que dejemos por un momento la teoría.
 
-### Constantes y otros tipos de datos
+[Khan Academy : HTML](https://es.khanacademy.org/computing/computer-programming/html-css/intro-to-html/v/making-webpages-intro)
 
-En JavaScript tambien existe un tipo de dato similar a las variables llamado **constante**, en el siguiente video aprenderás de este dato y haremos un primer vistazo a otros tipos de dato más complejos. Respecto a estos ultimos, es importante que conozcas de su existencia, sin embargo para esta parte del proceso no es necesario que aprendas a manejarlos, pero si que entiendas a nivel teorico sus funciones basicas.
+Ingresa al enlace de arriba e intenta completar las lecciónes antes de pasar al siguiente tutorial.
 
-{{< youtube PIHZRj99nHU >}}
+<!-- ### Instalación de VS code
+
+Antes de continuar con el siguiente apartado, es importante que puedas instalar un programa en tu pc para que escribir código sea mas facil, este es **VS code**, sigue las instrucciones de este video para que lo instales 😄
+
+{{< youtube lhndxjnUEgY >}} -->
+
+### Más etiquetas de HTML
+
+Una vez que realizaste el tutorial de Khan academy, te recomiendo seguir con el tutorial que verás a continuación. Toma nota de los conceptos que consideres más importantes, no es necesario que mires todo el video pero si por lo menos la mitad de este tutorial donde se explican los conceptos básicos dentro de este lenguaje. La seccion donde se explica los `formularios` (minuto 35:27 hasta 51:34) puedes saltarla ya que no se incluirá en la evaluación. Si ya viste como crear listas en el tutorial de Khan academy, puedes saltarte el resto del video, sino continua hasta aprender de las listas y con eso puedes concluir.
+
+{{< youtube "MJkdaVFHrto" >}}
+
+HTML es la base de las páginas web, tener una idea de lo que representa y como usarlo de manera básica, te ayudará a que en un futuro puedas construir páginas web modernas y prácticas.
+

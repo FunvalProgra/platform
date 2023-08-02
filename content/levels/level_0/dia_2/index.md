@@ -1,12 +1,12 @@
 ---
 title: "Día 2"
-date: 2022-12-16T10:28:24-05:00 
+date: 2022-12-15T17:39:29-05:01
 draft: false
 ---
 
-## Día 2 : Introducción a HTML y CSS
+## Día 3 : Más estilos CSS
 
-Al comenzar tu camino como Web Developer (Desarrollador Web) vas a tener que aprender varias tecnologías. vamos a empezar por la base de la web. 
+Hoy profundizaremos en los estilos de CSS. El siguiente video creado por el canal de youtube **Hola Mundo** explican de manera clara más estilos que debes tener en cuenta al momento de desarrollar para la web. Antes de ello, te menciono 3 formas comunes de escribir estilos CSS: inline, internal y external.
 
 <div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
@@ -19,35 +19,43 @@ Al comenzar tu camino como Web Developer (Desarrollador Web) vas a tener que apr
   </span>
 </div>
 
-### HTML
+### Inline
+Son los estilos CSS que se indican dentro del atributo `style` de la etiqueta HTML
 
-HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, generalmente se utilizan otras tecnologías para describir la apariencia/presentación de una página web (CSS) o la funcionalidad/comportamiento (JavaScript).
+```html
+<p style="color: red;">Hola mundo</p>
+```
 
-"Hipertexto" hace referencia a los enlaces que conectan páginas web entre sí, ya sea dentro de un único sitio web o entre sitios web. Los enlaces son un aspecto fundamental de la Web. Al subir contenido a Internet y vincularlo a las páginas creadas por otras personas, te conviertes en un participante activo en la «World Wide Web» (Red Informática Mundial).
+### Internal
+Son los estilos CSS que se colocan dentro de la etiqueta `<style>` ubicada dentro del head de la estructura HTML.
 
-HTML ha ido evolucionando a través del tiempo y hoy nos encontramos en la versión 5 (HTML5). Este lenguaje se basa en una estructura de etiquetas, las cuales tienen la siguiente forma:
+```html
+<head>
+  ...
+  <style>
+    p {
+      color: red;
+    }
+  </style>
+  ...
+</head>
+```
 
-<!-- Cambiar imagen, el ejemplo es errado -->
+### External
+La forma de escribir estos estilos es similar a **Internal** con la diferencia que se escriben dentro de un archivo `.css` aparte, el cual se une al archivo HTML por medio de la etiqueta `<link>`, de esta forma, los estilos serán aplicados aunque sean dos archivos distintos.
 
-{{< figure src="./html.png">}}
+```html
+<link rel="stylesheet" href="style.css"> 
+<!-- Dentro  del atributo `href` indicamos 
+la ruta del archivo CSS--> 
+```
 
-Es más facil aprender esto haciendo, así que dejemos por un momento la teoría.
+Al igual que ayer, te recomiendo darte una vuelta por el tutorial de Khan Academy donde darás unos primeros pasos con CSS, luego revisa el video tutorial a continuación.
 
-[Khan Academy : HTML](https://es.khanacademy.org/computing/computer-programming/html-css/intro-to-html/v/making-webpages-intro)
+[Khan Academy - CSS](https://es.khanacademy.org/computing/computer-programming/html-css/intro-to-css/pt/css-basics)
 
-Ingresa al enlace de arriba e intenta completar las lecciónes antes de pasar al siguiente tutorial.
+### CSS con Hola Mundo
 
-<!-- ### Instalación de VS code
+En este tutorial, Puedes aprender desde el inicio hasta la seccion en la que aprendes de `background`(minuto 56:10). En caso sientas que puedes ir un poco más alla, puedes ir a la seccion siguiente donde se habla de `box model` (termina en 1:04:55) pero esta ultima no se incluirá dentro del examen.
 
-Antes de continuar con el siguiente apartado, es importante que puedas instalar un programa en tu pc para que escribir código sea mas facil, este es **VS code**, sigue las instrucciones de este video para que lo instales 😄
-
-{{< youtube lhndxjnUEgY >}} -->
-
-### Más etiquetas de HTML
-
-Una vez que realizaste el tutorial de Khan academy, te recomiendo seguir con el tutorial que verás a continuación. Toma nota de los conceptos que consideres más importantes, no es necesario que mires todo el video pero si por lo menos la mitad de este tutorial donde se explican los conceptos básicos dentro de este lenguaje. La seccion donde se explica los `formularios` (minuto 35:27 hasta 51:34) puedes saltarla ya que no se incluirá en la evaluación. Si ya viste como crear listas en el tutorial de Khan academy, puedes saltarte el resto del video, sino continua hasta aprender de las listas y con eso puedes concluir.
-
-{{< youtube "MJkdaVFHrto" >}}
-
-HTML es la base de las páginas web, tener una idea de lo que representa y como usarlo de manera básica, te ayudará a que en un futuro puedas construir páginas web modernas y prácticas.
-
+{{< youtube wZniZEbPAzk >}}
