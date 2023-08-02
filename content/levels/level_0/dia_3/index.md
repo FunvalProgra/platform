@@ -37,6 +37,8 @@ especificamente vamos a revisar el curso de JavaScript que ofrece, el cual puede
 
 - [FreeCodeCamp - JavaScript](https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/).
 
+En la parte superior tienes un icono de planeta donde puedes cambiar el idioma a español 😁.
+
 Por ahora te recomendamos empezar con la seccion de JavaScript Básico:
 
 ![image](./js-basico.png)
