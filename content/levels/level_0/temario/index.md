@@ -23,12 +23,13 @@ diseño(estilos) respectivamente.
 Este proceso está estructurado para funcionar de la siguiente forma:
 
 - 5 días de aprendizaje
-- 3 horas de estudio en cada día aprox. (15 horas en total)
+- 3 horas de estudio en cada día aprox. de material (15 horas en total)
+- 1 hora de estudio por zoom (5 horas en total)
 -  un día de evaluación
 
 ## Acerca del material
 
-Durante cada día de estudio, tendrás material para que puedas aprender las bases de estos lenguajes, si bien es cierto que tendrás 3 horas cada día, puedes dedicar mas tiempo
+Durante cada día de estudio, tendrás material para que puedas aprender las bases de estos lenguajes, si bien es cierto que tendrás 4 horas cada día (3 de lectura/estudio y 1 por zoom), puedes dedicar mas tiempo
 en caso consideres necesario profundizar o practicar sobre un tema en particular.
 
 El material disponible, en su mayoría es de recursos externos (páginas web, videos, blogs, etc.). La progrmación en la actualidad
