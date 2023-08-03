@@ -7,7 +7,7 @@ showPagination: false
 
 Hoy terminaremos de ver el tutorial de funciones que empezamos a ver ayer. Toma nota de lo que aprendes y pon a prueba el código que se enseña.
 
-{{< youtube H6U1Pm7x60E >}}
+<!-- {{< youtube H6U1Pm7x60E >}} -->
 
 
 Encontrarás más información sobre las funciones aquí:
