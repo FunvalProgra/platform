@@ -9,11 +9,15 @@ Hoy aprenderemos sobre las funciones flecha. Este concepto no es tan sencillo de
 
 Sigue los videos a continuación y recuerda practicar el código que ves en los videos, la mejor forma de aprender es mediante la práctica. Toma nota de las dudas que tengas para que las resuelvas durante la clase.
 
-{{< youtube WuCw9agV3Rc >}}
+{{< youtube Zaw29SwR8L8 >}}
 
 <br>
 <!-- 
 {{< youtube XYfJH1d1mqM >}} -->
 
 
-{{< youtube Zaw29SwR8L8 >}}
+- [30 dias de JavaScript - Funciones Flecha](https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/Spanish/dia_07_Funciones/dia_07_funciones.md#funci%C3%B3n-flecha)
+
+En freeCodeCamp tambien hay un pequeño apartado sin embargo no es tan amplio en este tema, de igual forma te dejo el enlace aqui (de 2 a 4 lecciones empezando desde la te dirige el enlace):
+
+- [freeCodeCamp - Arrow Functions](https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/es6/use-arrow-functions-to-write-concise-anonymous-functions)
