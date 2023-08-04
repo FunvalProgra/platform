@@ -82,7 +82,7 @@ return (
 ```
 ## Renderizado de listas 
 Dependerás de funcionalidades de JavaScript como los bucles for y la función map() de los arreglos para renderizar listas de componentes.
-
+sda
 Por ejemplo, digamos que tienes un arreglo de productos:
 ```js
 const products = [
