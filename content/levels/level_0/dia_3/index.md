@@ -1,12 +1,10 @@
 ---
 title: "Día 3"
-date: 2022-12-16T11:18:26-05:00 
+date: 2022-12-16T11:18:32-05:02
 draft: false
 ---
 
-## Día 3 : Más estilos CSS
-
-Hoy profundizaremos en los estilos de CSS. El siguiente video creado por el canal de youtube **Hola Mundo** explican de manera clara más estilos que debes tener en cuenta al momento de desarrollar para la web. Antes de ello, te menciono 3 formas comunes de escribir estilos CSS: inline, internal y external.
+## Día 3 : JavaScript
 
 <div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
@@ -19,39 +17,30 @@ Hoy profundizaremos en los estilos de CSS. El siguiente video creado por el cana
   </span>
 </div>
 
-### Inline
-Son los estilos CSS que se indican dentro del atributo `style` de la etiqueta HTML
+## JavaScript en Platzi
 
-```html
-<p style="color: red;">Hola mundo</p>
-```
+Para estos dias, vamos a revisar el curso de Programación básica que ofrece platzi de manera gratuita:
 
-### Internal
-Son los estilos CSS que se colocan dentro de la etiqueta `<style>` ubicada dentro del head de la estructura HTML.
+[Programación básica - Platzi](https://platzi.com/cursos/programacion-basica/)
 
-```html
-<head>
-  ...
-  <style>
-    p {
-      color: red;
-    }
-  </style>
-  ...
-</head>
-```
+Puedes loguearte si ya tienes cuenta o registrarte en cualquiera de estos dos apartados:
 
-### External
-La forma de escribir estos estilos es similar a **Internal** con la diferencia que se escriben dentro de un archivo `.css` aparte, el cual se une al archivo HTML por medio de la etiqueta `<link>`, de esta forma, los estilos serán aplicados aunque sean dos archivos distintos.
+![platzi-login.png](./js-platzi.png)
 
-```html
-<link rel="stylesheet" href="style.css"> 
-<!-- Dentro  del atributo `href` indicamos 
-la ruta del archivo CSS--> 
-```
+<mark>Recuerda</mark> que debes ver almenos las **8 primeras clases** antes del zoom de hoy 😊.
 
-### CSS con Hola Mundo
+## FreeCodeCamp - Recurso Adicional
 
-En este tutorial, Puedes aprender desde el inicio hasta la seccion en la que aprendes de `background`(minuto 56:10). En caso sientas que puedes ir un poco más alla, puedes ir a la seccion siguiente donde se habla de `box model` (termina en 1:04:55) pero esta ultima no se incluirá dentro del examen.
+Siempre lo mejor es aprender haciendo, por eso te invitamos a que te registres en [FreeCodeCamp](https://www.freecodecamp.org/), una plataforma que te permitirá aprender de manera interactiva y guiada, además de que te permitirá obtener certificaciones que te ayudarán a demostrar tus conocimientos.
 
-{{< youtube wZniZEbPAzk >}}
+especificamente vamos a revisar el curso de JavaScript que ofrece, el cual puedes encontrar en el siguiente enlace:
+
+- [FreeCodeCamp - JavaScript](https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/).
+
+En la parte superior tienes un icono de planeta donde puedes cambiar el idioma a español 😁.
+
+Por ahora te recomendamos empezar con la seccion de JavaScript Básico:
+
+![image](./js-basico.png)
+
+Este curso va paso a paso a entender los conceptos de JavaScript, así que puedes ir a tu propio ritmo.
