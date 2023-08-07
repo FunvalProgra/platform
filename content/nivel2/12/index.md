@@ -1,5 +1,5 @@
 ---
-title: "GIT INICIO RAPIDO"
+title: "GitFlow"
 date: 2023-07-27T18:32:03-05:00
 draft: false
 showPagination: false
