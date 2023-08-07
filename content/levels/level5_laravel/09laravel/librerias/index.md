@@ -1,129 +1,76 @@
 ---
-title: "CSS en Next.js y Recursos Estaticos"
+title: "Model y Migraciones / Modelos con Propiedades"
 date: 2023-03-12T11:50:42-06:00
 draft: false
 showPagination: false
 ---
-# CSS en Next.js
-Existen muchas formas de darle estilo a tu aplicación en Next.js, puedes importar archivos de hojas de estilo directamente gracias a la compatibilidad con los Módulos de CSS. Para ello el archivo debe nombrarse de la siguiente manera: [nombre].module.css.
-Los Módulos de CSS mantienen un ámbito local creando clases únicas automáticamente, por lo que te permite usar los mismos nombres de clases en diferentes archivos sin que tengas que preocuparte por colisiones.
-Por ejemplo, para crear un componente botón reusable, primero creamos componentes/Boton.module.css con el siguiente contenido:
-```js
-.peligro {
-  color: white;
-  background-color: red;
-}
+
+# Modelos y Migraciones en Laravel y la definición de propiedades en los modelos.
+
+Introducción:
+En Laravel, los modelos y las migraciones son componentes fundamentales para trabajar con bases de datos. Los modelos representan las entidades de tu aplicación y las migraciones se utilizan para definir y modificar la estructura de la base de datos. En esta lección, exploraremos cómo crear modelos y migraciones en Laravel, así como cómo definir propiedades en los modelos para interactuar con la base de datos.
+
+1. Crear modelos y migraciones en Laravel:
+- Paso 1: Asegúrate de tener Laravel instalado correctamente en tu proyecto.
+
+- Paso 2: Para crear un modelo y su migración asociada, puedes utilizar el comando `make:model` de Artisan. Por ejemplo:
+```bash
+php artisan make:model NombreDelModelo -m
 ```
-## componentes/Boton.module.css
-Y un archivo componentes/Boton.js donde importar y usar el módulo CSS antes creado.
-```js
-import estilos from "./Boton.module.css";
+Esto generará un nuevo archivo de modelo en el directorio `app/Models` y una migración en el directorio `database/migrations`.
 
-export default function Boton() {
-  return (
-    <button type="button" className={estilos.peligro}>
-      Borrar
-    </button>
-  );
-}
-```
-## componentes/Boton.js
-
-Nota: La clase peligro es una propiedad del objeto estilos importado.
-Así de fácil es usar los Módulos de CSS en Next.js, recuerda que también tenemos más opciones de estilo a nuestra disposición, tales como Sass, Less o CSS en JavaScript.
-Recursos estáticos
-La carpeta public es utilizada en Next.js para servir todos nuestros recursos estáticos (imágenes, iconos, robots, entre otros). Puedes importar archivos dentro de la carpeta public  usando (/) como URL base.
-Por ejemplo, para acceder a una imagen guardada en public/hero.jpg escribimos un código como el siguiente:
-```js
-export default function Home() {
-  return (
-    <div>
-      <img src="/hero.jpg" />
-    </div>
-  );
-}
-pages/index.js 
-```
-Nota: No cambies el nombre de la carpeta public por ningún otro, es la única que puede servir recursos estáticos.
-
-# video CCS CON NEXT
-
-
-# Creando sitios estáticos con Next.js
-
-Next.js nos permite crear aplicaciones de React fácilmente con server render y sin configuración. En su versión 3 (actualmente beta) incluyen una nueva característica y es poder crear sitios estáticos.
-
-¿Qué es un sitio estático? Básicamente poder generar archivos .html en disco y que podamos luego llevar a producción fácilmente con Github Pages, Surge, Now, AWS S3, etc. Una ventaja de los sitios estáticos es que al ser un simple archivo en disco entrar a una página es super rápido, a comparación de un sitio dinámico que requiere hacer peticiones a un API o a una BD y luego generar el HTML dinámicamente con los datos obtenidos y a diferencia de una típica SPA no enviamos un HTML vacío, si no que el HTML que tenemos en disco ya tiene el contenido que necesitamos.
-Iniciando el proyecto
-
-Como siempre, vamos a iniciar nuestro proyecto y obtener un package.json ya sea que usen npm o yarn.
-```js
-npm init --yes
-# o con yarn
-yarn init --yes
-```
-## Instalando dependencias
-
-Luego vamos a instalar las dependencias de nuestro proyecto, para eso vamos a correr uno de estos scripts.
-```js
-npm i next@beta react react-dom
-# o con yarn
-yarn add next@beta react react-dom
-```
-
-Estamos usando una versión beta por lo que algunas cosas se pueden romper: si eso ocurre traten con otra versión beta inferior para ver si se arregla. Recuerden, usen las beta en producción bajo su propio riesgo.
-
-### Instalar dependencias
-
-Una vez hecho esto vamos a crear la página de Next.js que vamos a exportar en nuestra aplicación. Para eso vamos a crear un archivo pages/index.js con este código.
-
-```js 
-import { Component } from 'react'
-import Head from 'next/head'
-
-export default class extends Component {
-	static async getInitialProps({ query }) {
-		// vamos a cambiar el título dinámicamente dependiendo de un dato en la query
-		return { title: query.title || 'home page' }
-	}
-	render() {
-		return (
-			<main>
-				<Head>
-					<title>{this.props.title}</title>
-				</Head>
-				<header>
-					<h1>{this.props.title}</h1>
-				</header>
-				<p>
-					Esta es nuestra página, el contenido es siempre el mismo, pero el título cambia.
-				</p>
-			</main>
-		)
-	}
-}
-```
-
-Esa es nuestra página. Como vemos vamos a obtener el title desde el querystring de la URL y vamos a modificar el título de la página tanto en la etiqueta <title /> como en la etiqueta <h1 /> con el valor de este. Por defecto mostramos el título home page si no está definido.
-
-# Iniciar servidor en desarrollo
-
-Vamos ahora a probar que esto funcione en desarrollo, para eso simplemente vamos a definir estos scripts en el package.json.
-```js 
+- Paso 3: Abre el archivo de migración recién creado y define la estructura de la tabla de la base de datos utilizando los métodos proporcionados por Laravel, como `create`, `table`, `string`, `integer`, etc. Por ejemplo:
+```php
+public function up()
 {
-	"scripts": {
-		"dev": "next",
-		"build": "next build",
-		"start": "next start"
-	}
+    Schema::create('nombre_de_la_tabla', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre_columna');
+        $table->timestamps();
+    });
 }
 ```
-Luego vamos a inicar nuestra aplicación con el siguiente script:
-```js
-npm run dev
-# o con yarn
-yarn dev
-```
-Eso nos va a correr un servidor HTTP en el puerto 3000, si entramos entonces a localhost:3000 nos debe mostrar la pagina.
+Aquí, se define una tabla con una columna de ID, una columna de nombre y columnas de timestamps para el registro de la creación y actualización de los registros.
 
-# video de Sitios Estaticos
+- Paso 4: Ejecuta la migración para crear la tabla en la base de datos utilizando el comando `migrate` de Artisan. Por ejemplo:
+```bash
+php artisan migrate
+```
+Esto creará la tabla definida en la migración en tu base de datos.
+
+2. Definición de propiedades en los modelos:
+- Paso 1: Abre el archivo del modelo creado previamente en el directorio `app/Models`. Dentro de la clase del modelo, puedes definir las propiedades que representarán las columnas de la tabla de la base de datos. Por ejemplo:
+```php
+class NombreDelModelo extends Model
+{
+    protected $table = 'nombre_de_la_tabla';
+
+    protected $fillable = ['nombre_columna'];
+
+    // Otros métodos y relaciones del modelo
+}
+```
+Aquí, `$table` indica el nombre de la tabla asociada al modelo y `$fillable` especifica las columnas que se pueden asignar masivamente.
+
+- Paso 2: Utiliza las propiedades definidas en los modelos para interactuar con la base de datos. Por ejemplo:
+```php
+// Crear un nuevo registro
+$registro = NombreDelModelo::create(['nombre_columna' => 'Valor']);
+
+// Obtener todos los registros
+$registros = NombreDelModelo::all();
+
+// Obtener un registro por su ID
+$registro = NombreDelModelo::find($id);
+
+// Actualizar un registro
+$registro->nombre_columna = 'Nuevo valor';
+$registro->save();
+
+// Eliminar un registro
+$registro->delete();
+```
+Aquí, se muestran ejemplos básicos de cómo crear, obtener, actualizar y eliminar registros utilizando el modelo.
+
+Conclusión:
+En Laravel, los modelos y las migraciones son componentes clave para trabajar con bases de datos. Al crear modelos y migraciones, puedes definir la estructura de la base de datos y utilizar propiedades en los modelos para interactuar con los registros de la tabla correspondiente. Esto facilita la manipulación de los datos de la base de datos y ofrece una capa de abstracción para trabajar con las entidades de tu aplicación de manera eficiente y segura.
