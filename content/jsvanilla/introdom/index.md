@@ -1,5 +1,5 @@
 ---
-title: "Introducción al DOMimage.png"
+title: "Introducción al DOM"
 date: 2023-05-11T12:07:10-05:00
 draft: false
 showPagination: false
