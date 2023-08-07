@@ -1,11 +1,9 @@
 ---
-title: "GIT INICIO RAPIDO"
+title: "Introducción a las API REST y JSON"
 date: 2023-07-27T18:32:03-05:00
 draft: false
 showPagination: false
 ---
-Introducción a las API REST y JSON
-
 Las API REST (Representational State Transfer) y JSON (JavaScript Object Notation) son dos conceptos fundamentales en el desarrollo de aplicaciones web y servicios en línea. A continuación, te presento una breve introducción a ambos:
 
 ## API REST (Representational State Transfer)
