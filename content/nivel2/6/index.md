@@ -18,6 +18,12 @@ El objetivo de este día es aprender sobre los React Hooks `useEffect`, que son 
    - Limpieza de efectos con `useEffect`.
    - Ejemplos prácticos de uso del hook `useEffect`.
 
+## Recursos
+
+- [useEffect](https://es.react.dev/reference/react/useEffect)
+
+{{< youtube TBxpAhpQqYk >}}
+
 ## Actividades prácticas:
 
 1. **Utilizar el hook `useState`:**
@@ -48,3 +54,4 @@ El objetivo de este día es aprender sobre los React Hooks `useEffect`, que son 
 En el día 6, hemos aprendido sobre los React Hooks `useState` y `useEffect`, que son herramientas esenciales para agregar funcionalidad y manejar el ciclo de vida de componentes en React. Hemos utilizado el hook `useState` para agregar y manejar el estado en componentes funcionales, y el hook `useEffect` para manejar los efectos secundarios y el ciclo de vida del componente.
 
 Recuerda que los React Hooks son una forma moderna y poderosa de trabajar con componentes funcionales en React, permitiéndonos gestionar el estado y los efectos de manera más simple y legible. Continúa practicando y experimentando con `useState` y `useEffect` para mejorar tus habilidades en React y seguir construyendo componentes más sofisticados y eficientes. ¡Sigue adelante y sigue construyendo con React Hooks!
+
