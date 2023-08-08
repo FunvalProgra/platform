@@ -18,6 +18,12 @@ El objetivo de este día es aprender sobre los React Hooks `useEffect`, que son 
    - Limpieza de efectos con `useEffect`.
    - Ejemplos prácticos de uso del hook `useEffect`.
 
+## Recursos
+
+- [useEffect](https://es.react.dev/reference/react/useEffect)
+
+{{< youtube TBxpAhpQqYk >}}
+
 ## Actividades prácticas:
 
 1. **Utilizar el hook `useState`:**
