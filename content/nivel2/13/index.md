@@ -6,6 +6,7 @@ showPagination: false
 ---
 # Resolver conflictos
 Resolver conflictos es una parte importante del trabajo con Git, especialmente cuando se trabaja en colaboración con otros desarrolladores en un mismo proyecto. Los conflictos ocurren cuando dos o más personas hacen cambios en el mismo archivo o en líneas cercanas dentro de un archivo y esos cambios no pueden fusionarse automáticamente.
+
 ![git](3-way-merge.webp)
 
 
