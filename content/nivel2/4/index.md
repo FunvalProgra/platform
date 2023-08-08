@@ -296,3 +296,9 @@ En el día 4, hemos aprendido sobre la comunicación entre componentes en React 
 Recuerda que la comunicación entre componentes es un aspecto fundamental de React y es esencial entender cómo compartir datos de manera eficiente y mantener un flujo de datos unidireccional para construir aplicaciones sólidas y mantenibles. ¡Sigue practicando y experimentando con React para mejorar tus habilidades como desarrollador!
 
 *¡Desafío! Intenta mejorar la aplicación del contador agregando nuevas funcionalidades y estilos personalizados para hacerla más atractiva y práctica.*
+
+## Recursos:
+
+{{< youtube TgK_uSNNibE >}}
+
+https://es.react.dev/reference/react-dom/components/common#common-props

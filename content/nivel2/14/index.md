@@ -1,5 +1,5 @@
 ---
-title: "GIT INICIO RAPIDO"
+title: "FORK"
 date: 2023-07-28T18:32:03-05:00
 draft: false
 showPagination: false
@@ -46,5 +46,9 @@ En Git, el comando `fork` se refiere a la acción de crear una copia independien
 8. **Contribuir mediante pull requests**: Cuando hayas realizado cambios significativos en tu repositorio fork y desees contribuir con esos cambios al repositorio original, puedes hacerlo mediante un "pull request" (solicitud de extracción) en la plataforma de alojamiento. Esto permitirá que los propietarios del repositorio original revisen tus cambios y, si todo está en orden, los fusionen en su repositorio principal.
 
 Recuerda que hacer un fork es una excelente forma de colaborar en proyectos de código abierto o trabajar en equipo sin afectar el repositorio original. Asegúrate de seguir las directrices del proyecto y contribuir de manera positiva a la comunidad.
+
+## Recursos
+
+https://desarrolloweb.com/articulos/fork-git
 
 {{< youtube zU_G0CjEUPY >}}

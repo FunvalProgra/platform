@@ -105,6 +105,8 @@ El versionado de la API es importante para garantizar la compatibilidad y evitar
 
 Estas son las partes fundamentales de una API REST. La adopción de estas prácticas y convenciones facilita la construcción de una API coherente, bien documentada y fácil de consumir por parte de los desarrolladores y aplicaciones clientes.
 
-mas detalles
+## Recursos
 
 {{< youtube u2Ms34GE14U >}}
+
+https://www.ibm.com/es-es/topics/rest-apis

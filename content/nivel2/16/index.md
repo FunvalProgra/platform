@@ -49,3 +49,9 @@ El objetivo de este día es mostrar la lista de pokemons obtenida desde la Poke 
 
 ## Resumen del día:
 Hemos trabajado en mostrar la lista de pokemons obtenida desde la Poke API. Hemos utilizado React Hooks para almacenar la lista en el estado de la aplicación y hemos creado componentes para mostrar los nombres y números de los pokemons en la interfaz de usuario. Además, hemos implementado la funcionalidad de ver los detalles de un pokemon específico al hacer clic en su enlace. ¡La aplicación ahora muestra una lista completa de pokemons y permite a los usuarios ver detalles adicionales de cada uno de ellos! En el sgt dia, continuaremos mejorando la aplicación agregando funciones de búsqueda y filtrado de pokemons.
+
+## Recursos
+
+https://pokeapi.co/
+
+{{< youtube BVQrG-Bp-94 >}}

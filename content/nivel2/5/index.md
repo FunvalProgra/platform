@@ -227,3 +227,8 @@ Con este ejemplo, hemos demostrado la importancia de las keys en React al manten
 En el día 5, hemos aprendido cómo manejar listas de elementos en React y la importancia de utilizar keys para mejorar la eficiencia de las operaciones de actualización en el DOM. Hemos creado una lista de tareas y hemos utilizado el método `map()` para generar dinámicamente los elementos de la lista. También hemos implementado funcionalidades adicionales, como la eliminación de tareas y posibles desafíos opcionales para repasar y ampliar nuestros conocimientos.
 
 Recuerda que el manejo adecuado de listas y el uso correcto de keys son aspectos fundamentales en el desarrollo de aplicaciones en React. Continúa practicando y experimentando con estos conceptos para mejorar tus habilidades y construir aplicaciones más robustas y eficientes. ¡Sigue adelante y buen trabajo!
+
+## Recursos
+
+{{< youtube I7rJX8NFFZQ >}}
+https://es.react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key
