@@ -17,6 +17,12 @@ En este recurso, veras un uso de ciertos metodos(funciones) que existen dentro d
 
 {{< youtube bkgXlQp5hbI >}}
 
+<br>
+
+{{< youtube qqR1enOceVg >}}
+
+- [Funciones de Arrays](https://lenguajejs.com/javascript/arrays/array-functions/)
+
 
 ## Curso de funciones - FreeCodeCamp
 
