@@ -1,5 +1,5 @@
 ---
-title: "GIT INICIO RAPIDO"
+title: "Resolver conflictos"
 date: 2023-07-27T18:32:03-05:00
 draft: false
 showPagination: false
@@ -50,3 +50,9 @@ Resolver conflictos es una parte importante del trabajo con Git, especialmente c
     `git push origin <nombre-de-tu-rama>`
 
 Recuerda que resolver conflictos puede ser un proceso delicado, y es importante comunicarse con los otros colaboradores para garantizar una integración adecuada de los cambios. Es recomendable revisar los cambios de los demás antes de hacer tus propias modificaciones y actualizar regularmente tu rama para mantenerla al día con la rama principal o remota.
+
+## Recursos
+
+{{< youtube 2sMqAFdXcX0 >}}
+
+https://www.atlassian.com/es/git/tutorials/using-branches/merge-conflicts

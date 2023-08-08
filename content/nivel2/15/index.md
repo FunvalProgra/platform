@@ -51,3 +51,13 @@ El objetivo de este día es familiarizarse con la Poke API, una API que proporci
 
 ## Resumen del día:
 En este día, hemos introducido la Poke API y nos hemos familiarizado con los datos que proporciona. Hemos configurado el proyecto de React utilizando Create React App y hemos instalado las dependencias necesarias, incluido Axios para hacer peticiones HTTP a la Poke API. Hemos hecho una petición de prueba para asegurarnos de que podemos obtener datos de la API. ¡Estamos listos para comenzar a trabajar en la aplicación para mostrar la lista de pokemons y sus detalles!
+
+## Recursos
+
+https://pokeapi.co/
+
+https://axios-http.com/es/docs/intro
+
+https://axios-http.com/es/docs/example
+
+{{< youtube ca2NQDDJ7EU >}}

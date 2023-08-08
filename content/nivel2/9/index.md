@@ -226,3 +226,9 @@ En este ejemplo, hemos creado una aplicación de lista de tareas con React. Util
 En el día 9, hemos aprendido sobre el manejo de formularios en React y cómo capturar datos ingresados por el usuario. Hemos trabajado con eventos `onChange` y `onSubmit`, controlado los campos de formulario y validado los datos antes del envío. También hemos explorado desafíos adicionales relacionados con el envío de datos, el formulario de registro y el manejo de formularios con React Hooks.
 
 Recuerda que el manejo de formularios es una parte esencial de muchas aplicaciones web, y React proporciona herramientas y eventos para facilitar el proceso de capturar y validar datos del usuario. Continúa practicando y experimentando con formularios en tus proyectos de React. ¡Sigue adelante y sigue construyendo con formularios en React!
+
+## Recursos
+
+https://es.react.dev/reference/react-dom/components/input
+
+{{< youtube laxAixkZ0bA >}}

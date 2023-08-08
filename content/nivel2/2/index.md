@@ -103,3 +103,9 @@ return (
   <ul>{listItems}</ul>
 );
 ```
+
+## Recursos
+
+{{< youtube FOr6cIyCoBg >}}
+
+https://es.react.dev/learn/rendering-lists

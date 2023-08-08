@@ -50,3 +50,11 @@ El objetivo de este día es agregar funciones de búsqueda y filtrado a la aplic
 
 ## Resumen del día:
 En el día 3, hemos agregado funciones de búsqueda y filtrado a la aplicación de lista de pokemons. Los usuarios ahora pueden buscar pokemons por nombre y filtrarlos por tipo, habilidades u otros criterios. Hemos mejorado la apariencia de la aplicación con estilos CSS y hemos añadido interacciones y animaciones para mejorar la experiencia del usuario. Además, hemos explorado desafíos opcionales para seguir expandiendo la funcionalidad de la aplicación. ¡La aplicación ahora está completa y lista para que los usuarios disfruten explorando el mundo de los pokemons! Con estos tres días de desarrollo, has aprendido a trabajar con la Poke API, manejar estado con React Hooks, y mejorar la experiencia de usuario mediante la búsqueda, filtrado y estilización de la aplicación. ¡Felicidades por completar este proyecto!
+
+## Recursos
+
+https://keepcoding.io/blog/crear-un-filtro-de-busqueda-en-react/
+
+{{< youtube BVQrG-Bp-94 >}}
+
+{{< youtube CF_lbDaSo48 >}}

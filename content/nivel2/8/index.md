@@ -203,3 +203,9 @@ Con este ejemplo, has implementado enrutamiento con parámetros en React Router.
 En el día 8, hemos aprendido sobre React Router y cómo utilizarlo para gestionar la navegación y enrutamiento en una aplicación de React. Hemos configurado React Router, creado rutas, enlaces y hemos aprendido sobre el enrutamiento con parámetros. También hemos explorado desafíos adicionales relacionados con el enrutamiento anidado y las redirecciones.
 
 Recuerda que React Router es una herramienta esencial para crear aplicaciones de una sola página (SPA) en React y facilita la navegación entre diferentes vistas. Continúa practicando y experimentando con React Router para mejorar tus habilidades en el enrutamiento y la navegación en tus aplicaciones de React. ¡Sigue adelante y sigue construyendo con React Router!
+
+## Recursos
+
+{{< youtube iPNt12IdbCU >}}
+
+https://reactrouter.com/en/main/start/tutorial

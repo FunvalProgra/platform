@@ -55,3 +55,8 @@ En el día 6, hemos aprendido sobre los React Hooks `useState` y `useEffect`, qu
 
 Recuerda que los React Hooks son una forma moderna y poderosa de trabajar con componentes funcionales en React, permitiéndonos gestionar el estado y los efectos de manera más simple y legible. Continúa practicando y experimentando con `useState` y `useEffect` para mejorar tus habilidades en React y seguir construyendo componentes más sofisticados y eficientes. ¡Sigue adelante y sigue construyendo con React Hooks!
 
+## Recursos
+
+{{< youtube TBxpAhpQqYk >}}
+
+https://es.react.dev/reference/react/useEffect

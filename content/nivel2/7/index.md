@@ -139,3 +139,12 @@ Con este ejemplo, hemos migrado con éxito el componente de clase `CounterClass`
 En el día 7, hemos aprendido sobre el ciclo de vida de los componentes en React y cómo utilizar los métodos del ciclo de vida para agregar funcionalidades en diferentes etapas del ciclo. Hemos trabajado con componentes de clase y hemos migrado hacia componentes funcionales utilizando React Hooks como `useEffect`. También hemos explorado desafíos adicionales relacionados con el ciclo de vida y la optimización del rendimiento en React.
 
 Recuerda que comprender el ciclo de vida de los componentes es esencial para trabajar con React de manera efectiva y optimizar el rendimiento de tus aplicaciones. Continúa practicando y experimentando con los diferentes métodos y técnicas de ciclo de vida en tus proyectos de React. ¡Sigue adelante y sigue construyendo con React!
+
+## Recursos
+
+{{< youtube 9pLDT6maok0 >}}
+
+https://legacy.reactjs.org/docs/state-and-lifecycle.html
+
+https://es.legacy.reactjs.org/docs/hooks-overview.html
+
