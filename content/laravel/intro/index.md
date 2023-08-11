@@ -45,6 +45,12 @@ La arquitectura Modelo-Vista-Controlador (MVC) es un patrón de diseño ampliame
 
 La arquitectura MVC proporciona una estructura organizada para el desarrollo de aplicaciones web, lo que facilita la colaboración entre equipos y el mantenimiento a largo plazo.
 
+## 4. Migraciones y Semillas
+
+Laravel ofrece un sistema de migraciones que permite a los desarrolladores definir y modificar la estructura de la base de datos utilizando código en lugar de SQL. Las semillas permiten poblar la base de datos con datos de prueba, lo que resulta útil para el desarrollo y las pruebas.
+
+Laravel ha demostrado ser una opción sólida para el desarrollo web moderno debido a su sintaxis elegante, su conjunto integral de características y su sólida arquitectura. Los desarrolladores encuentran en Laravel una plataforma que les permite crear aplicaciones web escalables y de alto rendimiento de manera eficiente. Con su comunidad activa y su enfoque en la programación ágil, Laravel continúa siendo una elección popular en el panorama del desarrollo web.
+
 ## Video de refuerzo
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
