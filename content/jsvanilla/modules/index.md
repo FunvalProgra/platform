@@ -20,7 +20,7 @@ Mientras ves el video, práctica creando algunas funciones o variables sencillas
 
 <head>
   ...
-<script type="module" src="main.js"></script>
+<script type="module" src="main.js" defer></script>
   ...
 </head>
 
