@@ -13,6 +13,10 @@ Por ejemplo, mostrar los elementos de una lista uno tras otro o simplemente ejec
 
 Los Bucles son una forma de repetir el mismo código varias veces.
 
+Aqui te dejo un video práctico de como aplicarlo, sin embargo pueden tambien leer el contenido de esta sección para complementar la información:
+
+{{< youtube Lunwp-6aoGo >}}
+
 ### El bucle "while"
 
 El bucle `while` (mientras) tiene la siguiente sintaxis:
