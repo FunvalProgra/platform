@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Configuración y Uso de Apache, Nginx y CMD en Windows"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Configuración y Uso de Apache, Nginx y CMD en Windows
 
-**Resumen:** En este artículo, exploraremos la configuración y el uso de los servidores web Apache y Nginx, así como la línea de comandos (CMD) en el entorno de Windows. A través de ejemplos prácticos,  aprenderán a instalar y configurar estos servidores web, y a utilizar el CMD para realizar diversas tareas administrativas.
+**Resumen:** En este artículo, exploraremos la configuración y el uso de los servidores web Apache y Nginx, así como la línea de comandos (CMD) en el entorno de Windows. A través de ejemplos prácticos, aprenderán a instalar y configurar estos servidores web, y a utilizar el CMD para realizar diversas tareas administrativas.
 
 ## 1. Introducción a Apache y Nginx
 
@@ -61,8 +60,11 @@ Para aplicar lo aprendido, pueden llevar a cabo un proyecto práctico: configura
 
 {{< youtube itDrFPM3Kdw >}}
 
+<br>
+
 {{< youtube 9nyiY-psbMs >}}
 
+### Documentación oficial
 
 https://kinsta.com/es/base-de-conocimiento/instalar-nginx/
 

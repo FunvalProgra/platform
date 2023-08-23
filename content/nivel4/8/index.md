@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Creando Formularios Interactivos con Laravel: Guía Práctica para Estudiantes"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Creando Formularios Interactivos con Laravel: Guía Práctica para Estudiantes
 
-**Resumen:** Los formularios son una parte esencial de las aplicaciones web, permitiendo a los usuarios interactuar con la aplicación y enviar datos al servidor. En este artículo, exploraremos cómo crear formularios interactivos utilizando el marco de trabajo Laravel. A través de ejemplos prácticos,  aprenderán a construir formularios, validar datos y procesar envíos en sus aplicaciones web.
+**Resumen:** Los formularios son una parte esencial de las aplicaciones web, permitiendo a los usuarios interactuar con la aplicación y enviar datos al servidor. En este artículo, exploraremos cómo crear formularios interactivos utilizando el marco de trabajo Laravel. A través de ejemplos prácticos, aprenderán a construir formularios, validar datos y procesar envíos en sus aplicaciones web.
 
 ## 1. Introducción a los Formularios en Laravel
 
@@ -92,7 +91,10 @@ Para aplicar lo aprendido, pueden crear un formulario de registro de usuarios en
 
 {{< youtube KbpbqZshUus >}}
 
+<br>
+
 {{< youtube Ze-Sg2BT3mc >}}
 
+### Documentación oficial
 
 https://laravel.com/docs/10.x/blade#forms

@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Explorando Rutas y Controladores en Laravel"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Explorando Rutas y Controladores en Laravel
 
-**Resumen:** En el vasto panorama del desarrollo web, comprender cómo manejar las rutas y los controladores es esencial para construir aplicaciones sólidas y eficientes. Laravel, un marco de trabajo PHP de renombre, proporciona un sistema robusto para gestionar las solicitudes HTTP a través de rutas y controladores. Este artículo se sumerge en los fundamentos de las rutas y los controladores en Laravel, brindando a  la oportunidad de practicar intensamente a lo largo del día. A través de ejemplos prácticos y ejercicios desafiantes,  adquirirán un conocimiento sólido de cómo diseñar y manipular las rutas y los controladores en sus proyectos.
+**Resumen:** En el vasto panorama del desarrollo web, comprender cómo manejar las rutas y los controladores es esencial para construir aplicaciones sólidas y eficientes. Laravel, un marco de trabajo PHP de renombre, proporciona un sistema robusto para gestionar las solicitudes HTTP a través de rutas y controladores. Este artículo se sumerge en los fundamentos de las rutas y los controladores en Laravel, brindando a la oportunidad de practicar intensamente a lo largo del día. A través de ejemplos prácticos y ejercicios desafiantes, adquirirán un conocimiento sólido de cómo diseñar y manipular las rutas y los controladores en sus proyectos.
 
 ## 1. Introducción a Rutas y Controladores en Laravel
 
@@ -68,16 +67,18 @@ Route::get('/usuario/{id}', [UsuarioController::class, 'mostrar']);
 
 ## Recursos
 
+### Rutas
+
 {{< youtube PDbOsGlCf7o >}}
+
+<br>
 
 {{< youtube srDHQLqbwwk >}}
 
-Rutas
+Documentación: https://laravel.com/docs/10.x/routing
 
-https://laravel.com/docs/10.x/routing
+### Controladores
 
 {{< youtube 0YxgCH2R2bE >}}
 
-Controladores
-
-https://laravel.com/docs/10.x/controllers#main-content
+Documentación: https://laravel.com/docs/10.x/controllers#main-content

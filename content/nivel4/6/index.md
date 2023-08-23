@@ -1,10 +1,9 @@
 ---
-title: "Intro"
+title: "Explorando Middlewares en Laravel: Gestión Avanzada de Solicitudes y Respuestas"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Explorando Middlewares en Laravel: Gestión Avanzada de Solicitudes y Respuestas
 
 **Resumen:** Los middlewares son una parte fundamental en el desarrollo web con Laravel. Permiten el filtrado y procesamiento de solicitudes HTTP antes de que lleguen a los controladores y la manipulación de respuestas antes de ser enviadas al cliente. En este artículo, exploraremos en detalle los middlewares en Laravel y cómo se pueden utilizar para mejorar la seguridad, la autenticación y la manipulación de datos en una aplicación web.
 
@@ -49,7 +48,7 @@ Route::middleware(['auth'])->group(function () {
 
 ## 6. Práctica Guiada: Implementación de Autenticación Avanzada
 
-Para poner en práctica lo aprendido,  pueden emprender un emocionante proyecto práctico: implementar un sistema de autenticación avanzada utilizando middlewares en Laravel. Algunas tareas incluyen:
+Para poner en práctica lo aprendido, pueden emprender un emocionante proyecto práctico: implementar un sistema de autenticación avanzada utilizando middlewares en Laravel. Algunas tareas incluyen:
 
 - Crear middlewares para verificar roles y permisos de usuario.
 - Implementar autenticación de dos factores con middlewares.

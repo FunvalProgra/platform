@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Automatización con Cron Jobs en Laravel: Tareas Programadas y Eficientes"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Automatización con Cron Jobs en Laravel: Tareas Programadas y Eficientes
 
-**Resumen:** Los Cron Jobs son una herramienta esencial para automatizar tareas programadas en aplicaciones web. En este artículo, exploraremos cómo configurar y utilizar Cron Jobs en Laravel para ejecutar tareas automatizadas de manera eficiente y en intervalos específicos. A través de ejemplos prácticos,  aprenderán a programar tareas, mantener la consistencia de datos y mejorar la experiencia del usuario.
+**Resumen:** Los Cron Jobs son una herramienta esencial para automatizar tareas programadas en aplicaciones web. En este artículo, exploraremos cómo configurar y utilizar Cron Jobs en Laravel para ejecutar tareas automatizadas de manera eficiente y en intervalos específicos. A través de ejemplos prácticos, aprenderán a programar tareas, mantener la consistencia de datos y mejorar la experiencia del usuario.
 
 ## 1. Introducción a Cron Jobs en Laravel
 
@@ -53,5 +52,7 @@ Para aplicar lo aprendido, pueden llevar a cabo un emocionante proyecto práctic
 ## Recursos
 
 {{< youtube p2P6eMNRfCo >}}
+
+### Documentación oficial
 
 https://laravel.com/docs/10.x/scheduling#main-content

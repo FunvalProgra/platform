@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Introducción a la Construcción de una API RESTful con Laravel"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Introducción a la Construcción de una API RESTful con Laravel
 
-**Resumen:** En este artículo, exploraremos cómo construir una API RESTful utilizando el marco de trabajo Laravel, centrándonos en los conceptos esenciales y pasos fundamentales para crear una API funcional sin detallar la configuración del entorno. A través de ejemplos prácticos,  obtendrán una comprensión sólida de los componentes clave para construir una API RESTful con Laravel.
+**Resumen:** En este artículo, exploraremos cómo construir una API RESTful utilizando el marco de trabajo Laravel, centrándonos en los conceptos esenciales y pasos fundamentales para crear una API funcional sin detallar la configuración del entorno. A través de ejemplos prácticos, obtendrán una comprensión sólida de los componentes clave para construir una API RESTful con Laravel.
 
 ## 1. ¿Qué es una API RESTful?
 
@@ -76,9 +75,15 @@ Para practicar la construcción de una API RESTful, podemos crear una API simple
 
 {{< youtube bisZbFOB_Io >}}
 
+<br>
+
 {{< youtube oBxfBlV_2sU >}}
 
+<br>
+
 {{< youtube 3uUW1IviXns >}}
+
+### Documentación oficial
 
 https://laravel.com/docs/10.x/requests
 

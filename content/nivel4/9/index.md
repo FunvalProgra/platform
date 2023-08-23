@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Explorando la Autenticación en Laravel: Creación de Sistemas de Acceso Seguro"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Explorando la Autenticación en Laravel: Creación de Sistemas de Acceso Seguro
 
-**Resumen:** La autenticación es un componente esencial en muchas aplicaciones web modernas. En este artículo, exploraremos cómo implementar un sistema de autenticación seguro utilizando el marco de trabajo Laravel. A través de ejemplos y pasos prácticos,  aprenderán a crear sistemas de registro, inicio de sesión y administración de usuarios en sus aplicaciones web.
+**Resumen:** La autenticación es un componente esencial en muchas aplicaciones web modernas. En este artículo, exploraremos cómo implementar un sistema de autenticación seguro utilizando el marco de trabajo Laravel. A través de ejemplos y pasos prácticos, aprenderán a crear sistemas de registro, inicio de sesión y administración de usuarios en sus aplicaciones web.
 
 ## 1. Introducción a la Autenticación en Laravel
 
@@ -70,9 +69,10 @@ Para aplicar lo aprendido, pueden emprender un emocionante proyecto práctico: i
 - Personalizar las vistas de registro e inicio de sesión.
 - Proteger rutas y recursos sensibles con middleware de autenticación.
 
-
 ## Recursos
 
-https://www.youtube.com/watch?v=RL2gBNlFjPg&list=PLpKWS6gp0jd-nJe6BFgHT06APfxp5YIsL
+{{< youtube RL2gBNlFjPg >}}
+
+### Documentación oficial
 
 https://laravel.com/docs/10.x/authentication#main-content

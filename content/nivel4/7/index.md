@@ -1,10 +1,9 @@
 ---
-title: "Intro"
+title: "Profundizando en Blade: Plantillas Eficientes en Laravel"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Profundizando en Blade: Plantillas Eficientes en Laravel
 
 **Resumen:** Blade es el poderoso motor de plantillas de Laravel que permite la creación de interfaces web de manera eficiente y elegante. En este artículo, exploraremos las características y funcionalidades clave de Blade, así como su uso en la creación de vistas dinámicas y reutilizables en aplicaciones web Laravel.
 
@@ -102,7 +101,7 @@ Blade permite la creación de componentes reutilizables y su inclusión en múlt
 
 ## 6. Práctica Guiada: Construcción de una Vista Dinámica
 
-Para aplicar lo aprendido,  pueden emprender un emocionante proyecto práctico: construir una vista dinámica que muestre una lista de tareas pendientes utilizando Blade en Laravel. Algunos pasos clave incluyen:
+Para aplicar lo aprendido, pueden emprender un emocionante proyecto práctico: construir una vista dinámica que muestre una lista de tareas pendientes utilizando Blade en Laravel. Algunos pasos clave incluyen:
 
 - Crear una plantilla base para la aplicación.
 - Extender la plantilla base en una vista específica.
