@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Explorando Eloquent Models, Seeders y Factories en Laravel"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Explorando Eloquent Models, Seeders y Factories en Laravel
 
-**Resumen:** En el emocionante mundo del desarrollo web con Laravel, el manejo de bases de datos es fundamental. Eloquent Models, Seeders y Factories son componentes esenciales que permiten a los desarrolladores crear, poblar y manipular datos de manera eficiente en aplicaciones Laravel. Este artículo tiene como objetivo proporcionar a  una comprensión sólida y práctica de Eloquent Models, Seeders y Factories, a través de ejemplos concretos y ejercicios desafiantes para practicar durante todo el día.
+**Resumen:** En el emocionante mundo del desarrollo web con Laravel, el manejo de bases de datos es fundamental. Eloquent Models, Seeders y Factories son componentes esenciales que permiten a los desarrolladores crear, poblar y manipular datos de manera eficiente en aplicaciones Laravel. Este artículo tiene como objetivo proporcionar a una comprensión sólida y práctica de Eloquent Models, Seeders y Factories, a través de ejemplos concretos y ejercicios desafiantes para practicar durante todo el día.
 
 ## 1. Introducción a Eloquent Models, Seeders y Factories
 
@@ -118,19 +117,26 @@ $tarea = Tarea::factory()->create();
 // Crear múltiples tareas utilizando la Factory
 $tareas = Tarea::factory()->count(5)->create();
 ```
+
 ## Recursos
+
+### Base de datos
 
 {{< youtube vEY-b6-2cao >}}
 
-Base de datos
+<br>
 
 {{< youtube C91FOKq7v-k >}}
 
+<br>
+
 {{< youtube zNTF3U2Hsq0 >}}
+
+<br>
 
 {{< youtube lLyWpWA8J0s >}}
 
-Migraciones
+### Documentación oficial
 
 https://laravel.com/docs/10.x/database
 

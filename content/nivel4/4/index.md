@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Explorando Eloquent con Relaciones y Migrations Avanzadas en Laravel: Un Enfoque de Práctica Integral"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Explorando Eloquent con Relaciones y Migrations Avanzadas en Laravel: Un Enfoque de Práctica Integral
 
-**Resumen:** En el vasto universo del desarrollo web con Laravel, comprender y dominar las relaciones de bases de datos y las migraciones avanzadas es esencial para construir aplicaciones potentes y flexibles. Eloquent, el poderoso ORM de Laravel, ofrece un conjunto de herramientas sofisticadas para manejar estas tareas de manera eficiente y efectiva. En este artículo, proporcionaremos a  una guía práctica para explorar Eloquent con relaciones y migrations avanzadas, a través de ejemplos concretos y desafiantes ejercicios que les permitirán practicar durante todo el día.
+**Resumen:** En el vasto universo del desarrollo web con Laravel, comprender y dominar las relaciones de bases de datos y las migraciones avanzadas es esencial para construir aplicaciones potentes y flexibles. Eloquent, el poderoso ORM de Laravel, ofrece un conjunto de herramientas sofisticadas para manejar estas tareas de manera eficiente y efectiva. En este artículo, proporcionaremos a una guía práctica para explorar Eloquent con relaciones y migrations avanzadas, a través de ejemplos concretos y desafiantes ejercicios que les permitirán practicar durante todo el día.
 
 ## 1. Introducción a Eloquent con Relaciones y Migrations Avanzadas
 
@@ -88,12 +87,15 @@ class CrearTablaProductos extends Migration
 
 {{< youtube 2pppMAtIlro >}}
 
+<br>
+
 {{< youtube xG-u2ffa04Y >}}
+
+<br>
 
 {{< youtube 0st6AA_7fBA >}}
 
-
-
+### Documentación oficial
 
 https://laravel.com/docs/10.x/eloquent-relationships
 

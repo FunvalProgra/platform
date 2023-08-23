@@ -1,12 +1,11 @@
 ---
-title: "Intro"
+title: "Introducción a Laravel"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Introducción a Laravel:
 
-**Resumen:** En el mundo actual del desarrollo web, es esencial que  de informática adquieran habilidades prácticas en marcos de trabajo modernos. Laravel, un popular marco de trabajo de código abierto basado en PHP, ha ganado reconocimiento por su elegante sintaxis, amplias características y comunidad activa. Este artículo tiene como objetivo proporcionar una introducción práctica a Laravel para estudiantes, permitiéndoles practicar y desarrollar sus habilidades durante todo el día. Exploraremos los conceptos fundamentales de Laravel a través de ejemplos concretos y ejercicios prácticos.
+**Resumen:** En el mundo actual del desarrollo web, es esencial que de informática adquieran habilidades prácticas en marcos de trabajo modernos. Laravel, un popular marco de trabajo de código abierto basado en PHP, ha ganado reconocimiento por su elegante sintaxis, amplias características y comunidad activa. Este artículo tiene como objetivo proporcionar una introducción práctica a Laravel para estudiantes, permitiéndoles practicar y desarrollar sus habilidades durante todo el día. Exploraremos los conceptos fundamentales de Laravel a través de ejemplos concretos y ejercicios prácticos.
 
 ## 1. Introducción a Laravel
 
@@ -90,12 +89,12 @@ Las vistas permiten presentar contenido al usuario, y Laravel utiliza el motor d
 ```html
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Saludo</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>{{ $mensaje }}</h1>
-</body>
+  </body>
 </html>
 ```
 
@@ -113,17 +112,18 @@ Visita `http://localhost:8000/saludo` nuevamente para ver la vista renderizada.
 
 ## Conclusión
 
-En este artículo, hemos explorado los conceptos básicos de Laravel a través de ejemplos prácticos y ejercicios. Hemos cubierto la configuración del entorno, la creación de un proyecto Laravel, la definición de rutas y controladores, y la creación de vistas con Blade. Estos fundamentos sientan las bases para que  puedan practicar y desarrollar sus habilidades en Laravel durante todo el día. A medida que  adquieran más experiencia, podrán explorar características avanzadas como las migraciones de bases de datos, el manejo de autenticación y la creación de API. ¡Continúa explorando y expandiendo tus conocimientos en el emocionante mundo de Laravel!
+En este artículo, hemos explorado los conceptos básicos de Laravel a través de ejemplos prácticos y ejercicios. Hemos cubierto la configuración del entorno, la creación de un proyecto Laravel, la definición de rutas y controladores, y la creación de vistas con Blade. Estos fundamentos sientan las bases para que puedan practicar y desarrollar sus habilidades en Laravel durante todo el día. A medida que adquieran más experiencia, podrán explorar características avanzadas como las migraciones de bases de datos, el manejo de autenticación y la creación de API. ¡Continúa explorando y expandiendo tus conocimientos en el emocionante mundo de Laravel!
+
 ## Recursos
+
+### Primeros pasos
 
 {{< youtube 3e1IsZJuYAw >}}
 
-Primeros pasos
-
+<br>
 
 {{< youtube NdsFC4FnzXQ >}}
 
-Estensiones utiles
+### Estensiones útiles
 
 https://laravel.com/docs/10.x
-

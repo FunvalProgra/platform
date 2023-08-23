@@ -1,10 +1,9 @@
 ---
-title: "Intro"
+title: "Introducción a Amazon Web Services (AWS): Potenciando la Nube para el Éxito Empresarial"
 date: 2023-03-09T10:55:15-06:00
 draft: false
 showPagination: false
 ---
-# Introducción a Amazon Web Services (AWS): Potenciando la Nube para el Éxito Empresarial
 
 **Resumen:** Amazon Web Services (AWS) es una plataforma de servicios en la nube líder en la industria que ofrece una amplia gama de recursos y soluciones para satisfacer las necesidades de empresas y desarrolladores. En este artículo, exploraremos una introducción completa a AWS, desde sus beneficios clave hasta una descripción general de algunos de sus servicios más populares.
 
@@ -68,7 +67,11 @@ A medida que continúen explorando y practicando con AWS, estarán mejor prepara
 
 {{< youtube x2vrg7HuM6g >}}
 
+<br>
+
 {{< youtube oBxfBlV_2sU >}}
+
+### Documentación oficial
 
 https://www.youtube.com/watch?v=EDfV2zJOBPA&list=PLdOotbFwzDIgjeTHvCSLiGmKKzTpDsLLI
 
