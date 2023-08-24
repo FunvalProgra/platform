@@ -1,5 +1,5 @@
 ---
-title: "REACT INICIO RAPIDO"
+title: "Componentes y props"
 date: 2023-07-14T18:32:03-05:00
 draft: false
 showPagination: false
