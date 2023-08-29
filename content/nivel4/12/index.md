@@ -69,7 +69,7 @@ A medida que continúen explorando y practicando con AWS, estarán mejor prepara
 
 <br>
 
-{{< youtube oBxfBlV_2sU >}}
+{{< youtube ym_oHKnoneE >}}
 
 ### Documentación oficial
 
