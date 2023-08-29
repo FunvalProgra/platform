@@ -1,11 +1,10 @@
 ---
 title: "Día 5"
-date: 2022-12-16T11:18:33-05:00 
+date: 2022-12-16T11:18:33-05:05 
 draft: false
 ---
 
-
-## Día 5 : Tipos de Datos y Operadores
+## Día 5 : JavaScript - Continuación curso Platzi
 
 <div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
@@ -18,37 +17,17 @@ draft: false
   </span>
 </div>
 
-En JavaScript trabajamos con distintos valores, cada valor pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.
-En JavaScript hay ocho tipos de datos básicos. En esta sección aprenderemos sobre algunos de ellos. 
+Hoy continuaremos aprendiendo las bases de la programación con el curso de platzi, te recomendamos ver **desde la lección 12 hasta la lección 15**.
 
-Recuerda que podemos almacenar cualquier tipo de dato en una variable, incluso podemos reasignar el valor de una variable con un tipo de dato distinto:
+[Programación básica - Platzi](https://platzi.com/cursos/programacion-basica/)
 
-```js
-// Sin error
-let number = "3"; // variable que contiene un string
-number = 6; // cambiamos el valor a un dato tipo number
-```
 
-### Cadenas de Texto (Strings)
+## FreeCodeCamp
 
-En esta seccion te recomendamos ver hasta el minuto 10, donde se aprenden las bases de este tipo de dato. La información que viene despues no se incluirá en el examen pero podría serte util dentro del curso.
+Puedes continuar este curso incluso luego de terminar estos primeros dias de capacitación:
 
-{{< youtube s-C8OpALC6E >}}
+- [FreeCodeCamp - JavaScript](https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/).
 
-### Números
+## Recomendaciones Finales
 
-En este tutorial, dentro de los primeros 5 minutos se cubre los aspectos básicos de este tipo de dato. La información que viene despues no se incluirá en el examen pero podría serte util dentro del curso.
-
-{{< youtube o4p6p1z2P5A >}}
-
-### Booleanos
-
-{{< youtube Csu9tRuuX0M >}}
-
-### Tipos de Operadores
-
-Hasta este punto, hemos visto los tipos de datos más básicos dentro del lenguaje, conocidos como **primitivos**. Existen otros tipos de datos llamados **compuestos** como: Objetos, Arrays, Functions y Classes; los cuales por ahora no cubriremos. Con los tipos de datos primitivos tenemos una base para entender más conceptos de JavaScript.
-
-En este video solo mira los 10 primeros minutos donde se varios de los operadores que usarás al trabajar con JavaScript y los necesarios para el examen.  La información que viene despues no se incluirá en el examen pero podría serte util dentro del curso.
-
-{{< youtube _8Z5AeGVIXE >}}
+Estos días han sido cargados de información, por lo que te recomendamos que como preparación para tu examen, revises los temas que hemos visto en estos días, en especial la lógica de javascript para hacer operaciones con la información de las variables, los operadores, etc.

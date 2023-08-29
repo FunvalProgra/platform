@@ -135,12 +135,18 @@ Es una buena práctica reducir el uso de variables globales. El código moderno 
 </div>
 
 ## Tutorial de Funciones
+En los siguientes tutoriales aprenderás más sobre como puedes usar esta estructura, sin embargo sientete libre a investigar un poco mas por tu cuenta 😄.
 
-En el siguiente tutorial aprenderás a crear funciones, a pasarle parámetros y a retornar valores.
+### AprendeJavascript.dev
 
-{{< youtube H6U1Pm7x60E >}}
+- [Tu primera funcion](https://www.aprendejavascript.dev/clase/funciones/tu-primera-funcion)
+- [Parametros](https://www.aprendejavascript.dev/clase/funciones/parametros)
+- [Function Expression](https://www.aprendejavascript.dev/clase/funciones/function-expression)
 
-Puedes encontrar más información acerca de las funciones en la página de MDN:
+### 30 días de Javascript
 
-[Funciones - MDN web docs](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions)
+[Funciones](https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/Spanish/dia_07_Funciones/dia_07_funciones.md)
 
+### Javascript.info
+
+[Funciones](https://es.javascript.info/function-basics)

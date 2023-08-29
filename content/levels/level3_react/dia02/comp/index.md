@@ -4,7 +4,6 @@ date: 2023-03-12T11:45:29-06:00
 draft: false
 showPagination: false
 ---
-# Components & Props
 
 ## Un componente simple
 

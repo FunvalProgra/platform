@@ -60,6 +60,30 @@ El motor aplica optimizaciones en cada paso del proceso. Incluso observa como el
   </span>
 </div>
 
+## Tutorial de JavaScript
+
+El siguiente tutorial explica de manera sencilla los conceptos base de este lenguaje de programación, asímismo, te dejamos un enlace a FreeCodeCamp para que puedas practicar lo aprendido.
+
+<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <div style="gap: 1rem;" class="flex py-3 items-center ltr:pr-3 rtl:pl-3 text-primary-400">
+    <span>{{< icon "circle-info" >}}</span>
+    <b>¿Como usar esta guía?</b>
+  </div>
+  <span class="dark:text-neutral-300">
+La informacion que está debajo, utilizalo como apoyo en caso quieras profundizar los conceptos que verás en estos dos recursos.
+
+  </span>
+</div>
+
+<br>
+{{< youtube Z34BF9PCfYg >}}
+
+<br>
+<br>
+{{< youtube dGrZbd33R3A >}}
+
+- [FreeCodeCamp - JavaScript](https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/)
+
 ## Tipos de datos
 
 Un valor en JavaScript siempre pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.

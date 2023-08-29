@@ -1,5 +1,5 @@
 ---
-title: "Introducción al DOMimage.png"
+title: "Introducción al DOM"
 date: 2023-05-11T12:07:10-05:00
 draft: false
 showPagination: false
@@ -108,3 +108,13 @@ En otros casos todo es sencillo -- si hay espacios (como cualquier carácter) en
 Para reforzar lo que hemos visto, mira el siguiente video donde se introduce el DOM:
 
 {{< youtube dF7lp_qBfV0 >}}
+
+## Recursos extra
+
+[30 dias de Javascript - DOM](https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/Spanish/dia_21_DOM/dia_21_dom.md)
+
+## Prácticar el DOM
+
+EN el siguiente enlaces encontrarás diversos ejercicios para practicar el DOM, te recomiendo comenzarlos en orden y recuerda que siempre puedes preguntar o pedir ayuda si algo no te queda claro:
+
+[Ejercicios DOM](https://jschallenger.com/javascript-dom-exercises)
