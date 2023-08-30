@@ -35,9 +35,3 @@ Así mismo te dejo otros recursos que serán utiles para complementar esa secci�
 {{< youtube LYF4FeJyccc >}}
 
 <br>
-
-{{< youtube qnl2WDmvER8 >}}
-
-<br>
-
-{{< youtube B8-RBdKVKug >}}
