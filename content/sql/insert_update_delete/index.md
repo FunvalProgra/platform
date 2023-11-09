@@ -1,53 +1,11 @@
 ---
-title: "Comandos SELECT, INSERT, UPDATE y DELETE en SQL"
+title: "Comandos INSERT, UPDATE y DELETE en SQL"
 date: 2023-07-11T19:14:06-05:00
 draft: false
 showPagination: false
 ---
 
-## ¿Qué es un comando en SQL?
-
-En SQL, un comando es una instrucción que se utiliza para realizar una acción específica en una base de datos. Los comandos en SQL se utilizan para interactuar con la base de datos y manipular los datos almacenados en ella. Algunos de los comandos más comunes en SQL incluyen SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER y DROP, entre otros.
-
-Cada comando en SQL tiene una sintaxis específica y realiza una tarea particular. En esta lección estudiaremos cuatro de ellos: SELECT, INSERT, UPDATE y DELETE.
-
-## SELECT
-
-El comando SELECT se utiliza para recuperar datos de una o varias tablas en una base de datos. Permite especificar las columnas que deseas seleccionar, las tablas de las cuales obtener los datos y opcionalmente, establecer condiciones para filtrar los resultados.
-
-### Sintaxis básica
-
-La sintaxis básica del comando SELECT es la siguiente:
-
-```sql
-SELECT columnas
-FROM tabla
-WHERE condiciones;
-```
-
-- **columnas**: especifica las columnas que deseas seleccionar en la consulta. Puedes enumerar las columnas separadas por comas o utilizar el asterisco (\*) para seleccionar todas las columnas de la tabla.
-- **tabla**: especifica la tabla o tablas de donde obtener los datos.
-- **condiciones** (opcional): permite establecer condiciones para filtrar los resultados. Puedes utilizar operadores lógicos como "=", ">", "<", etc., y operadores como "AND" y "OR" para combinar múltiples condiciones.
-
-### Ejemplos
-
-- Seleccionar todas las columnas de una tabla:
-
-```sql
-SELECT * FROM empleados;
-```
-
-- Seleccionar todas las columnas de una tabla:
-
-```sql
-SELECT * FROM empleados;
-```
-
-- Seleccionar columnas específicas:
-
-```sql
-SELECT nombre, edad, salario FROM empleados;
-```
+Cada comando en SQL tiene una sintaxis específica y realiza una tarea particular. En esta lección estudiaremos tres de ellos: INSERT, UPDATE y DELETE.
 
 ## INSERT
 
