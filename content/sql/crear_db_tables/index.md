@@ -15,16 +15,6 @@ Hasta este punto ya debes tener instalado WAMP o XAMPP porque te permitirá gest
 
 Necesitamos acceder a phpMyAdmin y aquí te dejaré las instrucciones:
 
-### En WAMP:
-
-1. Asegúrate de que WampServer esté instalado y en ejecución en tu computadora.
-2. Abre tu navegador web (por ejemplo, Google Chrome, Mozilla Firefox).
-3. En la barra de direcciones del navegador, escribe lo siguiente: http://localhost/phpmyadmin y presiona Enter.
-4. Esto te llevará a la página de inicio de sesión de phpMyAdmin.
-5. Ingresa tu nombre de usuario y contraseña de MySQL. Por defecto, el nombre de usuario es "root" y la contraseña se deja en blanco. Si has establecido una contraseña durante la instalación de WampServer, deberás ingresarla aquí.
-6. Haz clic en el botón "Log in" o presiona Enter para iniciar sesión.
-7. Después de iniciar sesión correctamente, se abrirá el panel de control de phpMyAdmin, donde podrás administrar tus bases de datos MySQL.
-
 ### En XAMPP:
 
 1. Asegúrate de que XAMPP esté instalado y en ejecución en tu computadora.
