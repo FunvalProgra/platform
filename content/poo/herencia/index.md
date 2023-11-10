@@ -219,6 +219,8 @@ La herencia en Programación Orientada a Objetos en PHP es una herramienta poder
 
 ## Recursos
 
+### Videos
+
 {{< youtube yh8bTKqCOtU >}}
 
 <br>
@@ -228,3 +230,9 @@ La herencia en Programación Orientada a Objetos en PHP es una herramienta poder
 <br>
 
 {{< youtube _9V0k7subus >}}
+
+### Más lectura
+
+Esta página está en inglés pero puedes traducirla en tu navegador.
+
+https://www.w3schools.com/php/php_oop_inheritance.asp

@@ -72,6 +72,8 @@ Las clases, atributos y métodos son conceptos fundamentales de la Programación
 
 ## Recursos
 
+### Videos
+
 {{< youtube YxlmXbxH8v0 >}}
 
 <br>
@@ -81,3 +83,9 @@ Las clases, atributos y métodos son conceptos fundamentales de la Programación
 <br>
 
 {{< youtube BSsx7QGlhpo >}}
+
+### Más lectura
+
+Esta página está en inglés pero puedes traducirla en tu navegador.
+
+https://www.w3schools.com/php/php_oop_classes_objects.asp

@@ -33,6 +33,8 @@ La Programación Orientada a Objetos es un poderoso paradigma de programación q
 
 ## Recursos
 
+### Videos
+
 {{< youtube DlphYPc_HKk >}}
 
 <br>
@@ -42,3 +44,7 @@ La Programación Orientada a Objetos es un poderoso paradigma de programación q
 <br>
 
 {{< youtube uNlB7141umY >}}
+
+### Más lectura
+
+https://www.w3schools.com/php/php_oop_what_is.asp

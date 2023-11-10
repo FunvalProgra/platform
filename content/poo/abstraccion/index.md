@@ -57,8 +57,16 @@ La abstracción es un concepto fundamental en la programación orientada a objet
 
 ## Recursos
 
+### Videos
+
 {{< youtube 7npqxD4XB7s >}}
 
 <br>
 
 {{< youtube R5MTvkRgeMk >}}
+
+### Más lectura
+
+Esta página está en inglés pero puedes traducirla en tu navegador.
+
+https://www.w3schools.com/php/php_oop_classes_abstract.asp
