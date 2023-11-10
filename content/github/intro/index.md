@@ -108,8 +108,6 @@ En resumen, GitHub se ha convertido en una herramienta esencial para la colabora
 
 {{< youtube eQMcIGVc8N0 >}}
 
-Este video te enseñará cómo hacer deploy de un proyecto de React en GitHub. Sin embargo, **omite la parte de crear tokens** porque esta no es necesaria.
+<br>
 
-{{< youtube TgfD0pywZAQ >}}
-
-Página mostrada en el video de Vite: https://vitejs.dev/guide/static-deploy.html#github-pages
+{{< youtube osO_eYMIKxM >}}
