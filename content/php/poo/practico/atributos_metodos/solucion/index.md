@@ -5,7 +5,11 @@ draft: false
 showPagination: false
 ---
 
+[Regresar a ver los ejercicios](../ejercicios/)
+
 Aquí tienes una implementación básica para cada uno de los ejercicios propuestos. Ten en cuenta que estas soluciones son simples y pueden mejorarse o modificarse según los requisitos específicos.
+
+Además, es recomendable que tú, como estudiante, intentes resolver los ejercicios por ti mismo antes de revisar esta solución debido a que así lograrás una comprensión más profunda de los conceptos.
 
 ### Ejercicio 1: Biblioteca Virtual
 
@@ -216,5 +220,3 @@ echo "Salario total de la empresa: $" . $empresa->calcularSalarioTotal() . PHP_E
 
 ?>
 ```
-
-Estas soluciones son solo ejemplos básicos y pueden adaptarse según las necesidades específicas del ejercicio. Además, es recomendable que los estudiantes intenten resolver los ejercicios por sí mismos antes de revisar estas soluciones para una comprensión más profunda de los conceptos.
