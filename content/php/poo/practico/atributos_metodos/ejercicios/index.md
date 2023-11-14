@@ -29,6 +29,6 @@ Diseña un sistema de gestión de empleados en PHP. Crea las clases `Empleado`, 
 
 ---
 
-Si estas luchando mucho tiempo con estos ejercicios, aquí te dejaré una posible solución a estos ejercicios, pero recuerda que no debes ver la solución hasta que hayas hecho tu mejor esfuerzo. Además, puede que tú hayas pensado una solución ligeramente diferente a la que te propondremos. Esto es debido a que existen muchas formas de resolver un mismo asunto. Sin embargo, esto te puede servir de guía.
+Si estas luchando mucho tiempo con estos ejercicios, aquí te dejaré una posible solución, pero recuerda que no debes ver la solución hasta que hayas hecho tu mejor esfuerzo. Además, puede que tú hayas pensado una solución ligeramente diferente a la que te propondremos. Esto es debido a que existen muchas formas de resolver un mismo asunto. Sin embargo, esto te puede servir de guía.
 
 [Ver solución](../solucion/)
