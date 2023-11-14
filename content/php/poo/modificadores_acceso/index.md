@@ -5,8 +5,6 @@ draft: false
 showPagination: false
 ---
 
-# Modificadores de Acceso en Programación Orientada a Objetos (POO) con PHP
-
 ## Introducción
 
 Los modificadores de acceso son una característica fundamental de la Programación Orientada a Objetos (POO). Estos modificadores definen el nivel de visibilidad de las propiedades y métodos de una clase. En PHP, existen tres tipos de modificadores de acceso: `public`, `protected` y `private`.

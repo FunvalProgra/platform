@@ -109,10 +109,6 @@ HTTP, con sus verbos y códigos de estado, forma el tejido conectivo de la web m
 
 ## Recursos
 
-{{< youtube 49zdlyLSwhQ >}}
-
-<br>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/l2MihYAj0Iw?start=74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>

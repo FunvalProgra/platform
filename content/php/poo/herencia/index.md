@@ -1,11 +1,9 @@
 ---
-title: "Herencia"
+title: "La Herencia en Programación Orientada a Objetos (POO) en PHP"
 date: 2023-11-10T13:06:42-05:00
 draft: false
 showPagination: false
 ---
-
-# La Herencia en Programación Orientada a Objetos (POO) en PHP: Un Análisis Exhaustivo
 
 ## Resumen
 
