@@ -1,13 +1,18 @@
 ---
-title: "COMPONENTES"
+title: "Componentes en React"
 date: 2023-07-14T18:32:03-05:00
 draft: false
 showPagination: false
 ---
-## Describir la UI 
+
+## Describir la UI
+
 La UI se construye a partir de pequeñas unidades como botones, texto e imágenes. React te permite combinarlas en componentes reutilizables y anidables. Desde sitios web hasta aplicaciones de teléfonos, todo en la pantalla se puede descomponer en componentes.
-## Tu primer componente 
+
+## Tu primer componente
+
 Las aplicaciones de React se construyen a partir de piezas independientes de UI llamadas componentes. Un componente de React es una función de JavaScript a la que le puedes agregar un poco de marcado (markup). Los componentes pueden ser tan pequeños como un botón, o tan grandes como una página entera. Aquí vemos un componente Gallery que renderiza tres components Profile:
+
 ```JS
 function Profile() {
   return (
@@ -29,7 +34,9 @@ export default function Gallery() {
   );
 }
 ```
+
 ## Importar y exportar componentes
+
 Es posible declarar muchos componentes en un archivo, pero los archivos grandes pueden resultar difíciles de navegar. Como solución, puedes exportar un componente a su propio archivo, y luego importar ese componente desde otro archivo:
 
 ```JS
@@ -43,6 +50,7 @@ export default function Profile() {
   );
 }
 ```
+
 ```JS
 //Gallery.js
 import Profile from './Profile.js';
@@ -61,17 +69,20 @@ export default function Gallery() {
 ```
 
 ## Escribir marcado(HTML) con JSX
+
 Cada componente de React es una función de JavaScript que puede contener algo de marcado que React renderiza en el navegador. Los componentes de React utilizan una sintaxis extendida que se llama JSX para representar ese marcado. JSX se parece muchísimo a HTML, pero es un poco más estricto y puede mostrar información dinámica.
 
 ## JavaScript en JSX con llaves
+
 JSX te permite escribir marcado similar a HTML dentro de un archivo JavaScript, manteniendo la lógica de renderizado y el contenido en el mismo lugar. En ocasiones será deseable añadir un poco de lógica en JavaScript o referenciar una propiedad dinámica dentro del marcado. En esta situación, puedes utilizar llaves en tu JSX para «abrir una ventana» hacia JavaScript:
+
 ```js
 const person = {
-  name: 'Gregorio Y. Zara',
+  name: "Gregorio Y. Zara",
   theme: {
-    backgroundColor: 'black',
-    color: 'pink'
-  }
+    backgroundColor: "black",
+    color: "pink",
+  },
 };
 
 export default function TodoList() {
@@ -92,8 +103,11 @@ export default function TodoList() {
   );
 }
 ```
-## Pasar props a un componente 
+
+<!-- ## Pasar props a un componente
+
 Los componentes de React utilizan props para comunicarse entre ellos. Cada componente padre puede pasar alguna información a sus componentes hijos dándoles props. Las props pueden recodarte a los atributos de HTML, pero puedes pasar cualquier valor de JavaScript con ellas, incluyendo objetos, arreglos, funciones, ¡e incluso JSX!
+
 ```JS
 //App.js
 import { getImageUrl } from './utils.js'
@@ -112,6 +126,7 @@ export default function Profile() {
   );
 }
 ```
+
 ```JS
 //utils.js
 export function getImageUrl(person, size = 's') {
@@ -122,4 +137,12 @@ export function getImageUrl(person, size = 's') {
     '.jpg'
   );
 }
-```
+``` -->
+
+## Recursos
+
+Este video tiene marcado el inicio y el final específico.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/7iobxzd_2wY?start=3240&end=4167" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
