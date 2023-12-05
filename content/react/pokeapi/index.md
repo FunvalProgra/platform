@@ -64,6 +64,5 @@ En el día 3, hemos agregado funciones de búsqueda y filtrado a la aplicación 
 
 https://keepcoding.io/blog/crear-un-filtro-de-busqueda-en-react/
 
-{{< youtube BVQrG-Bp-94 >}}
-
 {{< youtube CF_lbDaSo48 >}}
+
