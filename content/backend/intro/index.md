@@ -1,11 +1,9 @@
 ---
-title: "Introducción"
+title: "¿Qué es el backend y cuál es su importancia?"
 date: 2023-07-07T18:19:21-05:00
 draft: false
 showPagination: false
 ---
-
-# ¿Qué es el backend y cuál es su importancia?
 
 ## ¿Qué es el Backend?
 
