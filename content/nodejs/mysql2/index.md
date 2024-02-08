@@ -115,6 +115,6 @@ MySQL2 ofrece dos formas de gestionar las conexiones a bases de datos en aplicac
 
 ## Video
 
-Mira este video desde 20:41 hasta 58:29 minutos (ya está marcado en el video).
+Mira este video completo.
 
 {{< youtube DylHfRlT8ts >}}

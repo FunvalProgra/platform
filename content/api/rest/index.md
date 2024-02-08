@@ -79,11 +79,13 @@ DELETE /api/usuarios/1
 
 Las APIs REST han revolucionado la forma en que los sistemas se comunican en la era digital. Al adherirse a principios arquitecturales coherentes y estandarizados, las APIs REST ofrecen simplicidad, escalabilidad y independencia de plataforma. A medida que continuamos construyendo aplicaciones interconectadas y servicios web, comprender y aprovechar las capacidades de las APIs REST se convierte en una habilidad esencial para los desarrolladores modernos.
 
-## Recursos
+## Videos
 
-Activa los subtítulos en este video.
+Mira este video desde 06:04 hasta 15:01 minutos (ya está marcado).
 
-{{< youtube lsMQRaeKNDk >}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/-9d3KhCqOtU?start=364&end=901" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 <br>
 
