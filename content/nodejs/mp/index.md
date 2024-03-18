@@ -58,15 +58,12 @@ El objetivo de este mini proyecto es crear una API en Node.js que sirva datos de
 
    ```js
    try {
-     // Obtener una conexión
-     const connection = await pool.getConnection();
-
      // Definir la consulta preparada
      const sql = "SELECT * FROM usuarios WHERE nombre = ?";
 
      // Ejecutar la consulta preparada con el parámetro proporcionado
      const nombre = "Juan";
-     const result = await connection.execute(sql, [nombre]);
+     const result = await pool.execute(sql, [nombre]);
 
      // Obtener las filas resultantes de la consulta
      const rows = result[0];
