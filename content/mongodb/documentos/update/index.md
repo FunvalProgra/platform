@@ -126,3 +126,13 @@ db.posts.updateOne(
 ## Conclusiones
 
 La actualización de documentos en MongoDB es una tarea fundamental en el desarrollo de aplicaciones que utilizan esta base de datos NoSQL. Con métodos como `updateOne()`, `updateMany()` y `replaceOne()` junto con una variedad de operadores de actualización, los desarrolladores pueden realizar actualizaciones eficientes y precisas en sus bases de datos MongoDB. Al comprender las mejores prácticas y las capacidades avanzadas de actualización que ofrece MongoDB, los desarrolladores pueden optimizar el rendimiento y la seguridad de sus aplicaciones.
+
+## Recursos
+
+- Lee la siguiente documentación oficial: [Actualizar documentos](https://www.mongodb.com/docs/manual/tutorial/update-documents/)
+
+- Mira este video desde 00:55:29 hasta 01:11:57 minutos (ya está marcado).
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/lWMemPN9t6Q?start=3329&end=4317" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
