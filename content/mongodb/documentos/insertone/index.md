@@ -58,7 +58,7 @@ MongoDB valida los documentos antes de insertarlos. Si la validación falla, se 
 - Mira este video desde 07:37 hasta 12:56 minutos. (Ya está marcado)
 
 {{< alert >}}
-**Nota:** En este video se está usando una interfaz gráfica para interactuar con la base de datos. No te preocupes, el código que muestran es el mismo que nosotros utilizaremos.
+**Nota:** En este video se está utilizando una interfaz gráfica para interactuar con la base de datos. No te preocupes, no hace falta que lo instales ni nada por el estilo. Procura prestar especial atención al código que muestran.
 {{< /alert >}}
 <br>
 

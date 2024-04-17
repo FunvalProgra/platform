@@ -50,3 +50,16 @@ Es importante tener en cuenta que `insertMany` puede generar errores si alguno d
 ## Recursos
 
 - Lee la siguiente documentación oficial: [Insertar varios documentos](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany)
+
+- Mira este video de principio a fin.
+  {{< alert >}}
+  **Nota:** En estos video se está utilizando una interfaz gráfica para interactuar con la base de datos. No te preocupes, no hace falta que lo instales ni nada por el estilo. Procura prestar especial atención al código que muestran.
+  {{< /alert >}}
+
+  {{< youtube yI0FeuzTXd0 >}}
+
+- Mira este video desde 06:40 hasta 14:45 minutos (ya está marcado).
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/nyXljAr9xys?start=400&end=885" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
