@@ -129,10 +129,21 @@ La actualización de documentos en MongoDB es una tarea fundamental en el desarr
 
 ## Recursos
 
-- Lee la siguiente documentación oficial: [Actualizar documentos](https://www.mongodb.com/docs/manual/tutorial/update-documents/)
-
 - Mira este video desde 00:55:29 hasta 01:11:57 minutos (ya está marcado).
 
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/lWMemPN9t6Q?start=3329&end=4317" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
+
+- Mira estos videos de inicio a fin:
+  {{< youtube 3lOKiIyc3Hk >}}
+
+  <br>
+
+  {{< youtube OQT9FXnvE28 >}}
+
+  <br>
+
+  {{< youtube nC35FS8Rw1g >}}
+
+- Lee la siguiente documentación oficial: [Actualizar documentos](https://www.mongodb.com/docs/manual/tutorial/update-documents/)

@@ -99,5 +99,12 @@ Los operadores de consulta en MongoDB proporcionan una amplia gama de herramient
     <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/lWMemPN9t6Q?start=2370&end=3656" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
-- Mira este video de principio a fin.
+- Mira estos videos de principio a fin.
   {{< youtube FblL-TT_n4o >}}
+
+  <br>
+
+  {{< youtube G_iHBcUXc6c >}}
+  <br>
+
+  {{< youtube FuNtVEc0f9c >}}

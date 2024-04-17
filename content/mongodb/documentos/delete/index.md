@@ -65,7 +65,7 @@ db.users.deleteOne({ _id: ObjectId('user_id') });
 db.users.deleteMany({ status: 'inactive' });
 ```
 
-## Consideraciones Importantes:\*\*
+## Consideraciones Importantes
 
 Al utilizar `deleteOne` y `deleteMany` en MongoDB, es importante considerar el impacto en el rendimiento de la base de datos, especialmente cuando se trabaja con grandes conjuntos de datos. Eliminar documentos puede afectar la distribución de los datos y el rendimiento de las consultas futuras. Además, es crucial asegurarse de que los criterios de selección sean lo suficientemente específicos para evitar la eliminación accidental de datos importantes.
 
