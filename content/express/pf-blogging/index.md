@@ -1,5 +1,5 @@
 ---
-title: "Sistema de Blogging"
+title: 'Sistema de Blogging'
 date: 2024-03-15T12:49:48-05:00
 draft: false
 showPagination: false
@@ -46,20 +46,21 @@ El propósito de este proyecto es desarrollar una API RESTful utilizando Express
      - Eliminar sus propios comentarios.
    - Los comentarios solo serán visibles a través de la publicación a la que pertenecen.
 
-## Requisitos No Funcionales
+## Requisitos
 
 1. La API deberá seguir las mejores prácticas de diseño REST.
-2. Se deberá utilizar `mysl2` como dependencia para interactuar con la base de datos MySQL.
+2. Se deberá utilizar `mysql2` como dependencia para interactuar con la base de datos MySQL.
 3. Se proporcionará documentación completa de la API.
 4. **NO ES NECESARIO REALIZAR FRONTEND (HTM, CSS, JavaScript), SOLO LA API.**
+5. **No está permitido utilizar dependencias o librerías que no se han enseñado en clase.**
+6. Documentación con Swagger en una ruta de tu API: `/api-docs`.
 
-## Entregables:
+## Entregables
 
 Envía un documento PDF con lo siguiente:
 
-1. Un repositorio en GitHub que contenga el código fuente de la API.
+1. Link a tu repositorio en GitHub que contenga el código fuente de la API.
 2. Un diagrama Entidad-Relación (ERD) que represente la estructura de la base de datos.
-3. Documentación detallada de la API con los endpoints disponibles **(dentro del PDF como texto o usando Swagger)**.
 
 **Nota:**
 La evaluación del proyecto se basará en la funcionalidad, la calidad del código, la organización del proyecto, y el cumplimiento de los requisitos establecidos. Se espera una implementación robusta y escalable de la API de blogging.
