@@ -1,5 +1,5 @@
 ---
-title: "Arquitectura Cliente-Servidor"
+title: 'Arquitectura Cliente-Servidor'
 date: 2023-11-09T14:44:49-05:00
 draft: false
 showPagination: false
