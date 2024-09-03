@@ -1,5 +1,5 @@
 ---
-title: 'Formulario de Suscripción al Boletín'
+title: 'Formulario de Suscripción'
 date: 2024-09-03T00:03:04-05:00
 draft: false
 showPagination: false
