@@ -31,7 +31,7 @@ Ejemplo:
 
 ---
 
-## Entregables
+### Entregables
 
 - Crea un archivo `.zip` que contenga lo siguiente:
   - `index.html` (el código HTML de la barra de navegación)
