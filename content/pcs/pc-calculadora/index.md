@@ -45,7 +45,7 @@ En esta segunda parte, agregarás la **funcionalidad** a la calculadora que dise
 
 3. **Ejemplo de funcionalidad:**
 
-   - [Click aquí para ver video de funcionalidad](https://funvalintenacional-my.sharepoint.com/personal/jorgesosa_funvalinternacional_org/_layouts/15/stream.aspx?id=%2Fpersonal%2Fjorgesosa%5Ffunvalinternacional%5Forg%2FDocuments%2FEjemplo%20Calculadora%20B%C3%A1sica%2Ewebm&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ef9d5b2bb%2Dbebc%2D4a4f%2D98f9%2D336a077aa658)
+   - [Click aquí para ver video de funcionalidad](https://funvalintenacional-my.sharepoint.com/:v:/g/personal/jorgesosa_funvalinternacional_org/EbRarRgKZIZBhgGFBHeaJpQBd5JhFqcEVxWiUwKG6VVp3A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=MVPNE1)
 
 ## Entregables:
 
