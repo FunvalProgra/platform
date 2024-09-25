@@ -7,10 +7,6 @@ showPagination: false
 
 En esta práctica calificada, trabajarás en el desarrollo de una página de equipo (**Team Page**) utilizando **React** y **TailwindCSS**. El objetivo es que la página muestre un listado de miembros del equipo, sus roles y otra información relevante, siguiendo el desafío de [Team Page Challenge](https://legacy.devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U).
 
-## Objetivo
-
-Crear una página web que muestre un equipo de trabajo, presentando cada miembro en un formato limpio y estilizado. Utilizarás **React** para la estructura y funcionalidad, y **TailwindCSS** para los estilos.
-
 ## Instrucciones
 
 1. **Accede al desafío:**  
