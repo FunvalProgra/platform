@@ -27,7 +27,7 @@ En esta práctica calificada, trabajarás en el desarrollo de una página de equ
 
 ---
 
-### Entregables
+## Entregables
 
 - Tienes 2 días para realizar esta práctica calificada.
 - Link a tu repositorio de GitHub, el cual debe contener el código del proyecto. Además, debe incluir el link a la página desplegada en el apartado **"About"** del repositorio. Como se muestra a continuación:
