@@ -20,12 +20,19 @@ Cada usuario debe iniciar sesión en la plataforma utilizando su correo electró
 
 ### Administrador
 
-Los usuarios con el rol de **Administrador** tendrán acceso completo a la gestión de usuarios y reportes:
+Los usuarios con el rol de **Administrador** tendrán acceso completo a la gestión de usuarios, reportes y otras entidades de la plataforma, como escuelas y países:
+
+- **Gestión de Escuelas y Países:**
+
+  - **Crear nueva escuela:** Registrar una nueva institución educativa.
+  - **Crear nuevo país:** Agregar un nuevo país a la base de datos.
 
 - **Gestión de Usuarios:**
-  - **Mostrar**: Ver la lista de usuarios registrados.
-  - **Crear**: Registrar nuevos usuarios.
-  - **Modificar**: Editar la información de los usuarios existentes.
+
+  - **Mostrar:** Ver la lista de usuarios registrados.
+  - **Crear:** Registrar nuevos usuarios (controllers, alumnos, reclutadores).
+  - **Modificar:** Editar la información de los usuarios existentes.
+
 - **Vista de Reportes:**
 
   - Acceso a todos los reportes de horas de servicio enviados por los alumnos.
@@ -76,7 +83,12 @@ El **Alumno** es el principal usuario para el envío de reportes. Tendrá acceso
 ### 2. Gestión de Usuarios (Administrador)
 
 - **Panel de Administración:**
+
   - Los Administradores tendrán acceso a una lista de usuarios, con opciones para filtrar, buscar, crear, y modificar usuarios.
+
+- **Gestión de Escuelas y Países:**
+  - **Crear nueva escuela:** Desde el panel de administración, los Administradores podrán registrar nuevas escuelas.
+  - **Crear nuevo país:** También tendrán la opción de agregar nuevos países que estarán disponibles como parte de la información del sistema.
 
 ### 3. Envío de Reportes (Alumno)
 
@@ -113,4 +125,4 @@ La aplicación se conectará a la **API existente** cuya documentación puede en
 
 ## Resumen
 
-La aplicación permitirá a los alumnos registrar y gestionar sus horas de servicio, mientras que los Administradores podrán revisar y aprobar los reportes. El frontend basado en **Next.js** garantizará una experiencia de usuario ágil y eficiente, mientras que la integración con la **API ya existente** permitirá un desarrollo rápido y escalable.
+La aplicación permitirá a los alumnos registrar y gestionar sus horas de servicio, mientras que los Administradores podrán revisar y aprobar los reportes, así como gestionar usuarios, escuelas y países. El frontend basado en **Next.js** garantizará una experiencia de usuario ágil y eficiente, mientras que la integración con la **API ya existente** permitirá un desarrollo rápido y escalable.
