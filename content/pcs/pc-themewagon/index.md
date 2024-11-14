@@ -14,7 +14,7 @@ En esta práctica, deberás replicar el diseño de la página proporcionada util
    - Crea una nueva aplicación con `create-next-app`.
    - Instala y configura TailwindCSS.
    - Analiza el diseño del Figma: [Click aquí](<https://www.figma.com/design/DyLm1Cod4TETL8YUE9Mt8X/Klean-Multipurpose-Landing-Page-(Community)?node-id=150-31&node-type=canvas&t=nv9PgnLZ6XxAFDbX-0>)
-   - Descarga el siguiente archivo `.zip` que contienen los archivos del diseño: [Click aquí](https://drive.google.com/file/d/1iL8_sE6e625yI5s6GuJyrcWdGV1tgS6V/view?usp=sharing)
+   - Descarga el siguiente archivo `.zip` que contienen los archivos del diseño: [Click aquí](https://drive.google.com/file/d/1PITx6mOSKpRiRs7vCMwMcF5gl7c0kRyw/view?usp=sharing)
 
 2. **Barra de navegación y rutas**:
 
@@ -25,10 +25,8 @@ En esta práctica, deberás replicar el diseño de la página proporcionada util
      - `/features`
      - `/projects`
      - `/team`
-     - `/testimonial`
-     - `/blog`
      - `/contact`
-   - Encontrarás una carpeta para cada una de las rutas mencionadas en el archivo `.zip` que te pedimos que descargues previamente. De todas maneras, te dejamos el link [aquí](https://drive.google.com/file/d/1iL8_sE6e625yI5s6GuJyrcWdGV1tgS6V/view?usp=sharing) para que lo descargues nuevamente.
+   - Encontrarás una carpeta para cada una de las rutas mencionadas en el archivo `.zip` que te pedimos que descargues previamente. De todas maneras, te dejamos el link [aquí](https://drive.google.com/file/d/1PITx6mOSKpRiRs7vCMwMcF5gl7c0kRyw/view?usp=sharing) para que lo descargues nuevamente.
 
 3. **Estilos**:
 
