@@ -24,7 +24,7 @@ Este proceso está estructurado para funcionar de la siguiente forma:
 
 - 5 días de aprendizaje
 - 3 horas de estudio en cada día aprox. de material (15 horas en total)
-- 1 hora de estudio por zoom (5 horas en total)
+- 2 hora de estudio por zoom (10 horas en total)
 -  un día de evaluación
 
 ## Acerca del material
