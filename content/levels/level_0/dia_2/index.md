@@ -4,58 +4,62 @@ date: 2022-12-15T17:39:29-05:01
 draft: false
 ---
 
-## Día 3 : Más estilos CSS
+# Introducción a la Lógica de Programación
 
-Hoy profundizaremos en los estilos de CSS. El siguiente video creado por el canal de youtube **Hola Mundo** explican de manera clara más estilos que debes tener en cuenta al momento de desarrollar para la web. Antes de ello, te menciono 3 formas comunes de escribir estilos CSS: inline, internal y external.
+## ¿Qué es la lógica de programación?
 
-<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
-  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
-    <span>{{< icon "circle-info" >}}</span>
-    <b>Importancia de los temas que aprenderás</b>
-  </div>
-  <span class="dark:text-neutral-300">
+La **lógica de programación** es la base fundamental para desarrollar software. Consiste en una serie de reglas y estructuras que permiten escribir instrucciones de manera ordenada para que una computadora pueda ejecutarlas correctamente.
 
-  Si bien es cierto que estos temas te ayudarán a prepararte para el exámen de admisión, esperamos que puedas analizarlo y prácticar de la mano con los tutoriales que hemos añadido. Al ingresar al programa, esta información será de gran ayuda para empezar tu camino como programador, recuerda que esperamos que llegues a entender de forma básica los temas que aprenderás y al iniciar el curso, podremos profundizar en ellos. También, tendremos en cuenta que leiste estos temas y partiremos de ahí para avanzar en el curso.
-  </span>
-</div>
+## ¿Por qué es importante?
 
-### Inline
-Son los estilos CSS que se indican dentro del atributo `style` de la etiqueta HTML
+- Facilita la resolución de problemas mediante el uso de algoritmos.
+- Permite escribir código más estructurado, eficiente y fácil de mantener.
+- Es independiente del lenguaje de programación, lo que ayuda a aprender nuevos lenguajes con mayor facilidad.
 
-```html
-<p style="color: red;">Hola mundo</p>
+## Conceptos básicos
+
+### 1. Algoritmos
+Un **algoritmo** es un conjunto de pasos secuenciales que resuelven un problema específico. Un buen algoritmo debe ser:
+
+- **Preciso**: cada paso debe estar bien definido.
+- **Finito**: debe terminar en algún punto.
+- **Definido**: si se ejecuta varias veces con los mismos datos, debe producir el mismo resultado.
+
+Ejemplo de un algoritmo en lenguaje natural:
+
+1. Ingresar dos números.
+2. Sumar los dos números.
+3. Mostrar el resultado.
+
+### 2. Diagramas de flujo
+Los **diagramas de flujo** son representaciones gráficas de algoritmos utilizando símbolos estándar:
+
+- **Óvalo**: Inicio o fin del programa.
+- **Paralelogramo**: Entrada o salida de datos.
+- **Rectángulo**: Procesos o cálculos.
+- **Rombo**: Decisiones lógicas.
+
+Ejemplo:
+```
+Inicio → [Ingresar número A] → [Ingresar número B] → [Sumar A + B] → [Mostrar resultado] → Fin
 ```
 
-### Internal
-Son los estilos CSS que se colocan dentro de la etiqueta `<style>` ubicada dentro del head de la estructura HTML.
+### 3. Pseudocódigo
+El **pseudocódigo** es una forma de escribir algoritmos en lenguaje cercano al humano, sin seguir una sintaxis estricta de un lenguaje de programación.
 
-```html
-<head>
-  ...
-  <style>
-    p {
-      color: red;
-    }
-  </style>
-  ...
-</head>
+Ejemplo:
+```plaintext
+Inicio
+    Leer A, B
+    Suma ← A + B
+    Escribir "La suma es:", Suma
+Fin
 ```
 
-### External
-La forma de escribir estos estilos es similar a **Internal** con la diferencia que se escriben dentro de un archivo `.css` aparte, el cual se une al archivo HTML por medio de la etiqueta `<link>`, de esta forma, los estilos serán aplicados aunque sean dos archivos distintos.
+### BASES DE LA PROGRAMACIÓN 
 
-```html
-<link rel="stylesheet" href="style.css"> 
-<!-- Dentro  del atributo `href` indicamos 
-la ruta del archivo CSS--> 
-```
+En el siguiente video podrás encontrar las bases de la lógica de programación por el canal de youtube "La Geekipedia de Ernesto".
+Dentro del video se mostrará el uso simple de un programa llamado "Raptor" el cual puede ser descargado de la siguiente pagina. 
+<a href="https://raptor.martincarlisle.com/" target="_blank"> Raptor Descarga</a> 
 
-Al igual que ayer, te recomiendo darte una vuelta por el tutorial de Khan Academy donde darás unos primeros pasos con CSS, luego revisa el video tutorial a continuación.
-
-[Khan Academy - CSS](https://es.khanacademy.org/computing/computer-programming/html-css/intro-to-css/pt/css-basics)
-
-### CSS con Hola Mundo
-
-En este tutorial, Puedes aprender desde el inicio hasta la seccion en la que aprendes de `background`(minuto 56:10). En caso sientas que puedes ir un poco más alla, puedes ir a la seccion siguiente donde se habla de `box model` (termina en 1:04:55) pero esta ultima no se incluirá dentro del examen.
-
-{{< youtube wZniZEbPAzk >}}
+{{< youtube UzYgNZlKA4k >}}
