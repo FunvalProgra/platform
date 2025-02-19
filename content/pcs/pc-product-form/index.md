@@ -15,8 +15,11 @@ Crearás un formulario para registrar productos, y al enviarlo, los datos se agr
 ```
 📁 ejercicio-formulario/
 ├── 📄 index.html (Estructura del formulario y la tabla)
-├── 📄 styles.css (Aplicación del Box Model)
-└── 📄 script.js (Captura y muestra los datos en la tabla) Este archivo te lo encontraras en los recursos
+└── 📁 src/
+    ├── 📁 styles/
+    |   └──📄 styles.css (Aplicación del Box Model)
+    └── 📁 scripts/
+        └── 📄 script.js (Captura y muestra los datos en la tabla) Este archivo te lo encontraras en los recursos
 ```
 
 #### Instrucciones
@@ -42,7 +45,7 @@ Crearás un formulario para registrar productos, y al enviarlo, los datos se agr
 
 5. Copia y pega esta linea de codigo antes de la etiqueta `</head>`
 ```js 
-    <script src="script.js" defer></script>
+    <script src="./src/scripts/script.js" defer></script>
 ```
 
 6. Prueba el formulario y la tabla para asegurarte de que funcionan correctamente y que los datos se muestran como se espera. (El archivo script que te hemos proporcionado te ayudara con la captura de datos siempre y cuando hayas seguido todas las instrucciones.)
