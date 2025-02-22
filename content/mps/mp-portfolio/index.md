@@ -137,6 +137,6 @@ body {
 
 ¡Con esto, los alumnos podrán crear su propio portafolio y mostrar sus habilidades al mundo!
 
-
+> **Nota:** Los estilos deben ser los proporcionados en la siguiente imagen.
 
 <img src="portfolio.jpg" alt="alt text" width="500px">
