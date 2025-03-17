@@ -11,6 +11,22 @@ showPagination: false
 Eres el encargado de manejar los datos de una tienda en línea. La tienda tiene una lista de productos disponibles y una lista de pedidos realizados por los clientes.  
 
 ---
+```js
+   const productos = [
+    { nombre: "Laptop", precio: 1200 },
+    { nombre: "Mouse", precio: 25 },
+    { nombre: "Teclado", precio: 50 },
+    { nombre: "Monitor", precio: 300 },
+    { nombre: "Silla Gamer", precio: 450 },
+    { nombre: "Audífonos", precio: 80 },
+    { nombre: "Webcam", precio: 60 },
+    { nombre: "USB 128GB", precio: 30 },
+    { nombre: "Impresora", precio: 200 },
+    { nombre: "Tablet", precio: 500 }
+ ]; 
+```
+
+---
 
 ## **1️⃣ Recorrer y mostrar productos** (`forEach`)  
 📢 Recorre el array de productos y muestra en la consola el **nombre** y el **precio** de cada uno.  
