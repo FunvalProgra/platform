@@ -32,6 +32,7 @@ Ahora puedes declarar una variable de estado dentro de tu componente:
 function MyButton() {
   const [count, setCount] = useState(0);
   // ...
+}
 ```
 Obtendrás dos cosas de useState: el estado actual (count), y la función que te permite actualizarlo (setCount). Puedes nombrarlos de cualquier forma, pero la convención es llamarlos algo como [something, setSomething].
 
