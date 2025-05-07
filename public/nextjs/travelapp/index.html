@@ -1,0 +1,513 @@
+
+
+
+<!DOCTYPE html>
+<html
+  lang="es"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  
+  
+    <meta http-equiv="content-language" content="es" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="rgb(255,255,255)" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Travel Explorer &middot; Funval International</title>
+    <meta name="title" content="Travel Explorer &middot; Funval International" />
+  
+  <meta name="description" content="&ldquo;Travel Explorer&rdquo; es una aplicación web frontend creada con Next." />
+  
+  
+  
+  <link rel="canonical" href="https://funvalprogra.github.io/platform/nextjs/travelapp/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/platform/css/main.bundle.min.f2df16eaa2254cb2cbdb50c88227e9e648d2d03928ce0db7a6b45b9aae2b5b590d1835b5a0b2a6fef3ccf909200384081f18673a10fc046d258e163b23f4eca9.css"
+    integrity="sha512-8t8W6qIlTLLL21DIgifp5kjS0Dkozg23prRbmq4rW1kNGDW1oLKm/vPM&#43;QkgA4QIHxhnOhD8BG0ljhY7I/TsqQ=="
+  />
+  
+  
+  <script type="text/javascript" src="/platform/js/appearance.min.1e44157c1e51b46341ce2c94716dd3dd1ef30c28e7d1c9f3b9db80877bfe72bc66b00d8a662f317840016acbed93c5f18c3d9268c8b957021ee74d0b04adf6c5.js" integrity="sha512-HkQVfB5RtGNBziyUcW3T3R7zDCjn0cnzuduAh3v&#43;crxmsA2KZi8xeEABasvtk8XxjD2SaMi5VwIe500LBK32xQ=="></script>
+  
+  
+    
+    
+  
+  
+  
+    
+    <script defer type="text/javascript" id="script-bundle" src="/platform/js/main.bundle.min.9947db70e5b36e741e53f8531bd734741b3fc7a688f7b5d749fc5433c48efc252f47bdf44e471570a550fc051b87712799014040e6349b38d64448b94e84e45a.js" integrity="sha512-mUfbcOWzbnQeU/hTG9c0dBs/x6aI97XXSfxUM8SO/CUvR730TkcVcKVQ/AUbh3EnmQFAQOY0mzjWREi5ToTkWg==" data-copy="Copiar" data-copied="Copiado"></script>
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/platform/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/platform/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/platform/favicon-16x16.png" />
+    <link rel="manifest" href="/platform/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Travel Explorer" />
+<meta property="og:description" content="&ldquo;Travel Explorer&rdquo; es una aplicación web frontend creada con Next." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://funvalprogra.github.io/platform/nextjs/travelapp/" /><meta property="article:section" content="nextjs" />
+<meta property="article:published_time" content="2024-11-12T11:35:45-05:00" />
+<meta property="article:modified_time" content="2024-11-12T11:35:45-05:00" /><meta property="og:site_name" content="Funval International" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Travel Explorer"/>
+<meta name="twitter:description" content="&ldquo;Travel Explorer&rdquo; es una aplicación web frontend creada con Next."/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Nextjs",
+    "name": "Travel Explorer",
+    "headline": "Travel Explorer",
+    
+    "abstract": "\u0026ldquo;Travel Explorer\u0026rdquo; es una aplicación web frontend creada con Next.",
+    "inLanguage": "es",
+    "url" : "https:\/\/funvalprogra.github.io\/platform\/nextjs\/travelapp\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-11-12T11:35:45-05:00",
+    "datePublished": "2024-11-12T11:35:45-05:00",
+    
+    "dateModified": "2024-11-12T11:35:45-05:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "722"
+  }]
+  </script>
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400"
+          >&darr;</span
+        >Ir al contenido</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral print:hidden sm:py-10">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  
+  <h1>Funval International</h1
+  >
+
+      
+
+    </div>
+    
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Travel Explorer
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span title="Tiempo de lectura">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+      </div>
+      
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+          <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Tabla de contenido
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
+        <li><a href="#api-utilizada">API Utilizada</a></li>
+        <li><a href="#funcionalidades-detalladas">Funcionalidades Detalladas</a></li>
+        <li><a href="#consideraciones">Consideraciones</a></li>
+        <li><a href="#milla-extra">Milla Extra</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      
+
+      
+      <div class="min-w-0 min-h-0 max-w-3xl grow">
+        <p>&ldquo;Travel Explorer&rdquo; es una aplicación web frontend creada con <strong>Next.js</strong> y <strong>TailwindCSS</strong> que permite a los usuarios buscar vuelos y hoteles en tiempo real utilizando la API gratuita de <strong><a href="https://developers.amadeus.com/"   target="_blank">Amadeus</a></strong>. La aplicación está diseñada para ayudar a los viajeros a planificar sus viajes de manera eficiente, brindándoles acceso a información detallada sobre vuelos y opciones de alojamiento. Con una interfaz intuitiva y moderna, la aplicación facilita la búsqueda, comparación y visualización de resultados para que los usuarios encuentren la mejor opción para sus necesidades.</p>
+<h2 id="tecnologías-utilizadas" class="relative group">Tecnologías Utilizadas <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tecnolog%c3%adas-utilizadas" aria-label="Ancla">#</a></span></h2>
+<ul>
+<li><strong>Framework:</strong> Next.js (para estructura, rutas y optimización de carga).</li>
+<li><strong>Estilo:</strong> TailwindCSS (para diseño responsive y estilizado).</li>
+<li><strong>Fetch API o Axios:</strong> Para realizar las peticiones HTTP a la API de Amadeus.</li>
+<li><strong>No Backend Adicional:</strong> Todas las peticiones se manejarán directamente desde el frontend.</li>
+</ul>
+<h2 id="api-utilizada" class="relative group">API Utilizada <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#api-utilizada" aria-label="Ancla">#</a></span></h2>
+<p>La aplicación utilizará la <strong><a href="https://developers.amadeus.com/"   target="_blank">API de Amadeus</a></strong>, aprovechando los endpoints gratuitos disponibles en el plan de prueba:</p>
+<ol>
+<li>
+<p><strong>Flight Offers Search Endpoint:</strong></p>
+<ul>
+<li>URL: <code>https://test.api.amadeus.com/v2/shopping/flight-offers</code></li>
+<li>Permite buscar ofertas de vuelos en tiempo real.</li>
+<li><strong>Parámetros relevantes:</strong>
+<ul>
+<li><code>originLocationCode</code>: Código del aeropuerto de origen (ejemplo: <code>JFK</code>, <code>LIM</code>).</li>
+<li><code>destinationLocationCode</code>: Código del aeropuerto de destino.</li>
+<li><code>departureDate</code>: Fecha de salida (formato: <code>YYYY-MM-DD</code>).</li>
+<li><code>adults</code>: Número de pasajeros adultos.</li>
+<li><code>max</code>: Número máximo de resultados a devolver.</li>
+<li><code>apiKey</code>: Clave de API gratuita (requerida).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Hotel Search Endpoint:</strong></p>
+<ul>
+<li>URL: <code>https://test.api.amadeus.com/v2/shopping/hotel-offers</code></li>
+<li>Permite buscar ofertas de hoteles en una ubicación específica.</li>
+<li><strong>Parámetros relevantes:</strong>
+<ul>
+<li><code>cityCode</code>: Código de la ciudad (ejemplo: <code>NYC</code>, <code>MAD</code>, <code>PAR</code>).</li>
+<li><code>checkInDate</code>: Fecha de check-in (formato: <code>YYYY-MM-DD</code>).</li>
+<li><code>checkOutDate</code>: Fecha de check-out.</li>
+<li><code>adults</code>: Número de adultos para la reserva.</li>
+<li><code>radius</code>: Radio de búsqueda desde el centro de la ciudad.</li>
+<li><code>apiKey</code>: Clave de API gratuita (requerida).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Airport &amp; City Search Endpoint:</strong></p>
+<ul>
+<li>URL: <code>https://test.api.amadeus.com/v1/reference-data/locations</code></li>
+<li>Permite buscar códigos de aeropuerto y ciudad.</li>
+<li><strong>Parámetros relevantes:</strong>
+<ul>
+<li><code>keyword</code>: Palabra clave para búsqueda (ejemplo: nombre de ciudad o aeropuerto).</li>
+<li><code>subType</code>: Tipo de búsqueda (<code>AIRPORT</code>, <code>CITY</code>).</li>
+<li><code>apiKey</code>: Clave de API gratuita (requerida).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="funcionalidades-detalladas" class="relative group">Funcionalidades Detalladas <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#funcionalidades-detalladas" aria-label="Ancla">#</a></span></h2>
+<ol>
+<li>
+<p><strong>Búsqueda de Vuelos</strong></p>
+<ul>
+<li>Formulario para que los usuarios ingresen:
+<ul>
+<li><strong>Aeropuerto de origen</strong> y <strong>aeropuerto de destino</strong>.</li>
+<li><strong>Fecha de salida</strong> y <strong>número de pasajeros</strong>.</li>
+</ul>
+</li>
+<li>Mostrar resultados de búsqueda en una tabla o lista con información relevante:
+<ul>
+<li>Aerolínea.</li>
+<li>Hora de salida y llegada.</li>
+<li>Duración del vuelo.</li>
+<li>Precio total.</li>
+</ul>
+</li>
+<li>Botón para &ldquo;Ver Detalles&rdquo;, que muestra información adicional del vuelo y un enlace para completar la reserva en una nueva pestaña.</li>
+</ul>
+</li>
+<li>
+<p><strong>Búsqueda de Hoteles</strong></p>
+<ul>
+<li>Formulario para buscar hoteles por:
+<ul>
+<li><strong>Código de ciudad</strong> (por ejemplo, <code>NYC</code> para Nueva York).</li>
+<li><strong>Fechas de check-in y check-out</strong>.</li>
+<li><strong>Número de adultos</strong>.</li>
+</ul>
+</li>
+<li>Mostrar resultados con información de los hoteles:
+<ul>
+<li>Nombre del hotel.</li>
+<li>Dirección.</li>
+<li>Precio por noche.</li>
+<li>Imagen destacada del hotel.</li>
+<li>Botón para &ldquo;Reservar&rdquo;, que redirige al sitio web del hotel para completar la reserva.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Búsqueda de Códigos de Aeropuertos y Ciudades</strong></p>
+<ul>
+<li>Barra de búsqueda para ayudar a los usuarios a encontrar códigos de aeropuerto o ciudad mientras escriben.</li>
+<li>Mostrar sugerencias dinámicas basadas en la entrada del usuario utilizando el endpoint <strong>Locations</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Modo Oscuro/Claro</strong></p>
+<ul>
+<li>Botón para alternar entre modo oscuro y claro usando TailwindCSS.</li>
+<li>Guardar la preferencia del usuario en <code>localStorage</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Paginación y Filtrado Avanzado</strong></p>
+<ul>
+<li>Implementar paginación para mostrar un máximo de 10 resultados por página, evitando sobrecargar la API.</li>
+<li>Permitir filtrar los resultados por:
+<ul>
+<li><strong>Precio</strong> (de menor a mayor o viceversa).</li>
+<li><strong>Duración del vuelo</strong> (solo para la búsqueda de vuelos).</li>
+<li><strong>Número de estrellas del hotel</strong> (solo para la búsqueda de hoteles).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Manejo de Errores y Mensajes al Usuario</strong></p>
+<ul>
+<li>Mostrar mensajes de error claros si ocurre un problema con la API (por ejemplo, límite de peticiones alcanzado).</li>
+<li>Validar todos los campos de los formularios antes de hacer las peticiones a la API.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimización con Next.js</strong></p>
+<ul>
+<li>Implementar la carga optimizada de imágenes utilizando el componente <code>Image</code> de Next.js.</li>
+</ul>
+</li>
+</ol>
+<h2 id="consideraciones" class="relative group">Consideraciones <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#consideraciones" aria-label="Ancla">#</a></span></h2>
+<ul>
+<li>El plan gratuito de <strong>Amadeus API</strong> permite hasta <strong>200 solicitudes por mes</strong>, por lo que es importante manejar eficientemente las peticiones y evitar consultas innecesarias.</li>
+<li>La clave de API debe protegerse utilizando variables de entorno (<code>.env.local</code>) para evitar exponerla en el código fuente al desplegar la aplicación.</li>
+<li>La aplicación debe ser <strong>100% responsive</strong>, proporcionando una experiencia óptima en dispositivos móviles y desktop.</li>
+</ul>
+<h2 id="milla-extra" class="relative group">Milla Extra <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#milla-extra" aria-label="Ancla">#</a></span></h2>
+<ul>
+<li>Implementar un componente de <strong>Loading</strong> para indicar al usuario que los resultados están siendo cargados.</li>
+<li>Añadir gráficos de precios para visualizar la variación del costo de los vuelos durante diferentes días.</li>
+<li>Crear un mapa interactivo que muestre la ubicación del hotel utilizando la API de <strong>Google Maps</strong>.</li>
+<li>Añadir una funcionalidad de <strong>notificaciones</strong> para alertar a los usuarios sobre ofertas especiales o cambios en los precios.</li>
+</ul>
+
+      </div>
+    </section>
+    
+
+    
+    <footer class="pt-8 max-w-3xl print:hidden">
+      
+  <div class="flex">
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+
+      
+    </footer>
+  </article>
+
+        
+          <div
+            class="pointer-events-none absolute top-[100vh] bottom-0 w-12 ltr:right-0 rtl:left-0"
+          >
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Ir arriba"
+              title="Ir arriba"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2025
+            
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Desarrollada con <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+      <div
+        class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+      >
+        <button id="appearance-switcher" type="button">
+          <div
+            class="flex items-center justify-center w-12 h-12 dark:hidden"
+            title="Cambiar a modo oscuro"
+          >
+            
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+          </div>
+          <div
+            class="items-center justify-center hidden w-12 h-12 dark:flex"
+            title="Cambiar a modo claro"
+          >
+            
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+          </div>
+        </button>
+      </div>
+    
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

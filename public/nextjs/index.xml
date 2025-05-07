@@ -6,7 +6,25 @@
     <description>Recent content in Nextjs on Funval International</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Tue, 22 Oct 2024 16:12:46 -0500</lastBuildDate><atom:link href="https://funvalprogra.github.io/platform/nextjs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Nov 2024 11:35:45 -0500</lastBuildDate><atom:link href="https://funvalprogra.github.io/platform/nextjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Travel Explorer</title>
+      <link>https://funvalprogra.github.io/platform/nextjs/travelapp/</link>
+      <pubDate>Tue, 12 Nov 2024 11:35:45 -0500</pubDate>
+      
+      <guid>https://funvalprogra.github.io/platform/nextjs/travelapp/</guid>
+      <description>&amp;ldquo;Travel Explorer&amp;rdquo; es una aplicación web frontend creada con Next.</description>
+    </item>
+    
+    <item>
+      <title>News App</title>
+      <link>https://funvalprogra.github.io/platform/nextjs/newsapp/</link>
+      <pubDate>Tue, 12 Nov 2024 11:35:29 -0500</pubDate>
+      
+      <guid>https://funvalprogra.github.io/platform/nextjs/newsapp/</guid>
+      <description>&amp;ldquo;News App&amp;rdquo; es una aplicación web frontend desarrollada con Next.</description>
+    </item>
+    
     <item>
       <title>Registro de Horas de Servicio</title>
       <link>https://funvalprogra.github.io/platform/nextjs/horas_servicio/</link>
