@@ -1,46 +1,105 @@
 ---
 title: "Día 4"
-date: 2022-12-16T11:18:33-05:04 
+date: 2022-12-16T11:18:33-05:04
 draft: false
 ---
 
-## Día 4 : Prácticas
+## Día 4 : Intro a JavaScript
 
-Durante los días 4 y 5 nos concentraremos en poner en practica los conceptos de Lógica de programación y los diagramas de flujo mediante el desarrollo de un ejecicio práctico que se realizará durante las clases.
+# Introducción a JavaScript
 
-<br>
+JavaScript es un lenguaje de programación que permite crear interactividad en páginas web. Es uno de los lenguajes más utilizados en el desarrollo web.
 
-## Ejercicios de ejemplo
+---
 
-{{< youtube Fn-MV_dytE0 >}}
+## ¿Para qué sirve JavaScript?
 
-## La serie de Fibonacci
+- Hacer sitios web interactivos (botones, formularios, animaciones).
+- Crear aplicaciones web y móviles.
+- Controlar contenido dinámico, etc.
 
-{{< youtube 6_Y-2-50SSA >}}
+---
 
-## Recomendaciones
-<div class="flex flex-col px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
-  <div style="gap: 1rem;" class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
-    <span>{{< icon "circle-info" >}}</span>
-    <b>Importancia de los temas que aprenderás</b>
-  </div>
-  <span class="dark:text-neutral-300">
+## ¿Dónde se usa?
 
-  Si bien es cierto que estos temas te ayudarán a prepararte para el exámen de admisión, esperamos que puedas analizarlo y prácticar de la mano con los tutoriales que hemos añadido. Al ingresar al programa, esta información será de gran ayuda para empezar tu camino como programador, recuerda que esperamos que llegues a entender de forma básica los temas que aprenderás y al iniciar el curso, podremos profundizar en ellos. También, tendremos en cuenta que leiste estos temas y partiremos de ahí para avanzar en el curso.
-  </span>
-</div>
+En el navegador, junto con HTML y CSS.
 
-Tambien para que continues aprendiendo las bases de la programación con JavaScript, te recomendamos ver el curso de platzi **desde la lección 1 hasta la lección 8**.
+---
 
-[Programación básica - Platzi](https://platzi.com/cursos/programacion-basica/)
+## Primer programa: ¡Hola Mundo!
 
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi primera página</title>
+  </head>
+  <body>
+    <h1>Hola JavaScript</h1>
+    <script>
+      alert("¡Hola mundo!");
+      console.log("Esto se muestra en la consola.");
+    </script>
+  </body>
+</html>
+```
 
-## FreeCodeCamp
+## Tipos de Datos y Operadores
 
-Te dejo aqui tambien la continuación del curso de FreeCodeCamp:
+En JavaScript trabajamos con distintos valores, cada valor pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.
+En JavaScript hay ocho tipos de datos básicos. En esta sección aprenderemos sobre algunos de ellos.
 
-- [FreeCodeCamp - JavaScript](https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/).
+Recuerda que podemos almacenar cualquier tipo de dato en una variable, incluso podemos reasignar el valor de una variable con un tipo de dato distinto:
 
-## Recurso adicional
+```js
+// Sin error
+let number = "3"; // variable que contiene un string
+number = 6; // cambiamos el valor a un dato tipo number
+```
 
-- [Javascript.info](https://es.javascript.info/)
+### Cadenas de Texto (Strings)
+
+{{< youtube s-C8OpALC6E >}}
+
+### Números
+
+{{< youtube o4p6p1z2P5A >}}
+
+### Booleanos
+
+{{< youtube Csu9tRuuX0M >}}
+
+### Tipos de Operadores
+
+Hasta este punto, hemos visto los tipos de datos más básicos dentro del lenguaje, conocidos como **primitivos**. Existen otros tipos de datos llamados **compuestos** como: Objetos, Arrays, Functions y Classes; los cuales por ahora no cubriremos. Con los tipos de datos primitivos tenemos una base para entender más conceptos de JavaScript.
+
+{{< youtube _8Z5AeGVIXE >}}
+
+### Condicionales
+
+Algunas veces, necesitamos ejecutar diferentes acciones basadas en diferentes condiciones.
+
+Para esto podemos usar la sentencia `if(...)` la cual evalúa la condicion entre los paréntesis, y si el resultado es `true` ejecuta un bloque de código.
+
+Por ejemplo:
+
+```js
+if (year == 2015) alert("¡Estás en lo cierto!");
+```
+
+Aquí la condición es de igualdad (`year == 2015`), en caso sea `true` se ejecutará la alerta, pero podría ser más compleja.
+
+Si quisiéramos ejecutar más de una sentencia, debemos encerrar nuestro bloque de código entre llaves:
+
+```js
+if (year == 2015) {
+  alert("¡Es Correcto!");
+  alert("¡Eres muy inteligente!");
+}
+```
+
+Se recomienda siempre encerrar nuestro bloque de código en llaves `{}` siempre que se utilice la sentencia `if`, inclusive si solo se va a ejecutar una sola sentencia en este caso. Hacer eso mejora la legibilidad.
+
+Para aprender más de este concepto, mira el siguiente video. Por el momento solo es importante la seccion donde se menciona el uso de la condicional `if`, `else` y `else if`. **La sección sobre la condición `switch` , y los bucles `for` no es necesaria por el momento**.
+
+{{< youtube  9h5hyh_wDjo >}}

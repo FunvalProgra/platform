@@ -19,6 +19,7 @@ La **lógica de programación** es la base fundamental para desarrollar software
 ## Conceptos básicos
 
 ### 1. Algoritmos
+
 Un **algoritmo** es un conjunto de pasos secuenciales que resuelven un problema específico. Un buen algoritmo debe ser:
 
 - **Preciso**: cada paso debe estar bien definido.
@@ -32,6 +33,7 @@ Ejemplo de un algoritmo en lenguaje natural:
 3. Mostrar el resultado.
 
 ### 2. Diagramas de flujo
+
 Los **diagramas de flujo** son representaciones gráficas de algoritmos utilizando símbolos estándar:
 
 - **Óvalo**: Inicio o fin del programa.
@@ -40,26 +42,17 @@ Los **diagramas de flujo** son representaciones gráficas de algoritmos utilizan
 - **Rombo**: Decisiones lógicas.
 
 Ejemplo:
+
 ```
 Inicio → [Ingresar número A] → [Ingresar número B] → [Sumar A + B] → [Mostrar resultado] → Fin
 ```
 
-### 3. Pseudocódigo
-El **pseudocódigo** es una forma de escribir algoritmos en lenguaje cercano al humano, sin seguir una sintaxis estricta de un lenguaje de programación.
+<img src="./diagrama.png" width="300">
 
-Ejemplo:
-```plaintext
-Inicio
-    Leer A, B
-    Suma ← A + B
-    Escribir "La suma es:", Suma
-Fin
-```
-
-### BASES DE LA PROGRAMACIÓN 
+### BASES DE LA PROGRAMACIÓN
 
 En el siguiente video podrás encontrar las bases de la lógica de programación por el canal de youtube "La Geekipedia de Ernesto".
-Dentro del video se mostrará el uso simple de un programa llamado "Raptor" el cual puede ser descargado de la siguiente pagina. 
-<a href="https://raptor.martincarlisle.com/" target="_blank"> Raptor Descarga</a> 
+Dentro del video se mostrará el uso simple de un programa llamado "Raptor" el cual puede ser descargado de la siguiente pagina.
+<a href="https://raptor.martincarlisle.com/" target="_blank"> Raptor Descarga</a>
 
 {{< youtube UzYgNZlKA4k >}}
