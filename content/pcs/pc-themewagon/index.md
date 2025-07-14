@@ -1,5 +1,5 @@
 ---
-title: 'ThemeWagon: Implementación de Rutas y Diseño'
+title: "ThemeWagon: Implementación de Rutas y Diseño"
 date: 2024-10-04T12:13:17-05:00
 draft: false
 showPagination: false
@@ -11,7 +11,7 @@ En esta práctica, deberás replicar el diseño de la página proporcionada util
 
 1. **Configuración inicial**:
 
-   - Crea una nueva aplicación con `create-next-app`.
+   - Crea una nueva aplicación con `npm create vite@latest`.
    - Instala y configura TailwindCSS.
    - Analiza el diseño del Figma: [Click aquí](<https://www.figma.com/design/DyLm1Cod4TETL8YUE9Mt8X/Klean-Multipurpose-Landing-Page-(Community)?node-id=150-31&node-type=canvas&t=nv9PgnLZ6XxAFDbX-0>)
    - Descarga el siguiente archivo `.zip` que contienen los archivos del diseño: [Click aquí](https://drive.google.com/file/d/1PITx6mOSKpRiRs7vCMwMcF5gl7c0kRyw/view?usp=sharing)
